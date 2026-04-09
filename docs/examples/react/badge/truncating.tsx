@@ -1,4 +1,4 @@
-import { Badge, VStack } from "@rui/react";
+import { Badge, VStack } from "@rideds/react";
 
 export default function BadgeTruncating() {
   return (

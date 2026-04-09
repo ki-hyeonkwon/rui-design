@@ -1,8 +1,8 @@
-import { PullToRefresh as PullToRefreshPrimitive } from "@rui/react-pull-to-refresh";
+import { PullToRefresh as PullToRefreshPrimitive } from "@rideds/react-pull-to-refresh";
 import {
   pullToRefresh,
   type PullToRefreshVariantProps,
-} from "@rui/css/recipes/pull-to-refresh";
+} from "@rideds/css/recipes/pull-to-refresh";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 
 const { withContext, withProvider } = createSlotRecipeContext(pullToRefresh);

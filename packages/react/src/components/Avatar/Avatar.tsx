@@ -1,7 +1,7 @@
-import { Image } from "@rui/react-image";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { avatar, type AvatarVariantProps } from "@rui/css/recipes/avatar";
-import { avatarStack, type AvatarStackVariantProps } from "@rui/css/recipes/avatar-stack";
+import { Image } from "@rideds/react-image";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { avatar, type AvatarVariantProps } from "@rideds/css/recipes/avatar";
+import { avatarStack, type AvatarStackVariantProps } from "@rideds/css/recipes/avatar-stack";
 import clsx from "clsx";
 import * as React from "react";
 import { useMemo } from "react";

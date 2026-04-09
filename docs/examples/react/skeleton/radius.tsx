@@ -1,4 +1,4 @@
-import { Flex, Skeleton } from "@rui/react";
+import { Flex, Skeleton } from "@rideds/react";
 
 export default function SkeletonRadius() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { PullToRefreshRoot, PullToRefreshContent, PullToRefreshIndicator } from "./pull-to-refresh";
-import { AppScreen as SeedAppScreen } from "@rui/stackflow";
+import { AppScreen as SeedAppScreen } from "@rideds/stackflow";
 import { useActions, useActivity } from "@stackflow/react";
 import { forwardRef } from "react";
 

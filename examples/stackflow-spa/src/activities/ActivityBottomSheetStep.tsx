@@ -1,5 +1,5 @@
-import { HStack, Portal, VStack } from "@rui/react";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { HStack, Portal, VStack } from "@rideds/react";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import {
   useActivityParams,
   useFlow,

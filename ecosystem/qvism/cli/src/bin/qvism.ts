@@ -13,7 +13,7 @@ import {
   generateJs,
   generateSharedJs,
   type Config,
-} from "@rui/qvism-core";
+} from "@rideds/qvism-core";
 
 async function writeBundles(outputDir: string, config: Config) {
   const allCss = await generateAllBundle(config);

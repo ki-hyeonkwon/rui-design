@@ -56,7 +56,7 @@ docs/content/*/components/[name].mdx    # 문서
 grep -l "@rui" packages/*/package.json
 
 # import 구문에서 내부 패키지 참조 확인
-grep -r "from ['\"]@rui/" packages/*/src/
+grep -r "from ['\"]@rideds/" packages/*/src/
 ```
 
 ## 출력 형식

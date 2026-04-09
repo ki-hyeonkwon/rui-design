@@ -1,5 +1,5 @@
 import { List, ListItem } from "rui/ui/list";
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { Avatar } from "rui/ui/avatar";
 

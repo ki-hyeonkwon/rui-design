@@ -1,5 +1,5 @@
 import { IconHashLine, IconTimerLine } from "@karrotmarket/react-monochrome-icon";
-import { AST } from "@rui/rootage-core";
+import { AST } from "@rideds/rootage-core";
 import { IconLayers, IconRuler, IconSpline } from "./icons";
 
 // Gradient를 CSS linear-gradient로 변환하는 유틸리티 함수

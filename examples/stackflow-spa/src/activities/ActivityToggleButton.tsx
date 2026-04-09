@@ -10,12 +10,12 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { toggleButtonVariantMap } from "@rui/css/recipes/toggle-button";
+import { toggleButtonVariantMap } from "@rideds/css/recipes/toggle-button";
 
 import { IconThumbUpFill, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { ToggleButton, type ToggleButtonProps } from "rui/ui/toggle-button";
-import { PrefixIcon } from "@rui/react";
+import { PrefixIcon } from "@rideds/react";
 
 const initialVariants = {
   variant: "brandSolid",

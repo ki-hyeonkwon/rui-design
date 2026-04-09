@@ -1,4 +1,4 @@
-import { Dialog } from "@rui/react";
+import { Dialog } from "@rideds/react";
 import { forwardRef } from "react";
 import { ActionButton, type ActionButtonProps } from "./action-button";
 import type * as React from "react";

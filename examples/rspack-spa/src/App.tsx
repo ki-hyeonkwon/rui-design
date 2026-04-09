@@ -1,4 +1,4 @@
-import { ActionButton, Box } from "@rui/react";
+import { ActionButton, Box } from "@rideds/react";
 
 function App() {
   return (

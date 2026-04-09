@@ -1,4 +1,4 @@
-import { Box, Skeleton, VStack } from "@rui/react";
+import { Box, Skeleton, VStack } from "@rideds/react";
 
 export default function SkeletonTone() {
   return (

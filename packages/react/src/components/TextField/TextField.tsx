@@ -1,8 +1,8 @@
 import { useLayoutEffect } from "@radix-ui/react-use-layout-effect";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { TextField, useTextFieldContext } from "@rui/react-text-field";
-import { useFieldContext } from "@rui/react-field";
-import { textInput, type TextInputVariantProps } from "@rui/css/recipes/text-input";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { TextField, useTextFieldContext } from "@rideds/react-text-field";
+import { useFieldContext } from "@rideds/react-field";
+import { textInput, type TextInputVariantProps } from "@rideds/css/recipes/text-input";
 import clsx from "clsx";
 import type * as React from "react";
 import { forwardRef, useCallback, useRef } from "react";
@@ -10,7 +10,7 @@ import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { createWithStateProps } from "../../utils/createWithStateProps";
 import { InternalIcon, type InternalIconProps } from "../private/Icon";
 import { composeRefs } from "@radix-ui/react-compose-refs";
-import { mergeProps } from "@rui/dom-utils";
+import { mergeProps } from "@rideds/dom-utils";
 
 const { withProvider, withContext, useClassNames } = createSlotRecipeContext(textInput);
 

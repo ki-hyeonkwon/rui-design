@@ -1,6 +1,6 @@
 import { composeRefs } from "@radix-ui/react-compose-refs";
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { forwardRef } from "react";
 import { useAppBar, type UseAppBarProps } from "./useAppBar";
 import { AppBarProvider, useAppBarContext } from "./useAppBarContext";

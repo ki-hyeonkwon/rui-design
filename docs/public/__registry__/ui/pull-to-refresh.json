@@ -1,7 +1,7 @@
 {
   "id": "pull-to-refresh",
   "dependencies": [
-    "@rui/react"
+    "@rideds/react"
   ],
   "innerDependencies": [
     {
@@ -14,10 +14,10 @@
   "snippets": [
     {
       "path": "pull-to-refresh.tsx",
-      "content": "/**\n * @file ui:pull-to-refresh\n * @requires @rui/react@~1.0.0\n * @requires @rui/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { PullToRefresh } from \"@rui/react\";\nimport { forwardRef } from \"react\";\nimport { ProgressCircle } from \"./progress-circle\";\n\nexport interface PullToRefreshRootProps extends PullToRefresh.RootProps {}\n\nexport const PullToRefreshRoot = PullToRefresh.Root;\n\nexport interface PullToRefreshIndicatorProps\n  extends Omit<PullToRefresh.IndicatorProps, \"children\"> {}\n\nexport const PullToRefreshIndicator = forwardRef<HTMLDivElement, PullToRefreshIndicatorProps>(\n  ({ ...otherProps }, ref) => {\n    return (\n      <PullToRefresh.Indicator ref={ref} {...otherProps}>\n        {(props) => <ProgressCircle size=\"24\" tone=\"brand\" {...props} />}\n      </PullToRefresh.Indicator>\n    );\n  },\n);\n\nexport interface PullToRefreshContentProps extends PullToRefresh.ContentProps {}\n\nexport const PullToRefreshContent = PullToRefresh.Content;\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rui/* packages.\n * You can extend this snippet however you want.\n */\n",
+      "content": "/**\n * @file ui:pull-to-refresh\n * @requires @rideds/react@~1.0.0\n * @requires @rideds/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { PullToRefresh } from \"@rideds/react\";\nimport { forwardRef } from \"react\";\nimport { ProgressCircle } from \"./progress-circle\";\n\nexport interface PullToRefreshRootProps extends PullToRefresh.RootProps {}\n\nexport const PullToRefreshRoot = PullToRefresh.Root;\n\nexport interface PullToRefreshIndicatorProps\n  extends Omit<PullToRefresh.IndicatorProps, \"children\"> {}\n\nexport const PullToRefreshIndicator = forwardRef<HTMLDivElement, PullToRefreshIndicatorProps>(\n  ({ ...otherProps }, ref) => {\n    return (\n      <PullToRefresh.Indicator ref={ref} {...otherProps}>\n        {(props) => <ProgressCircle size=\"24\" tone=\"brand\" {...props} />}\n      </PullToRefresh.Indicator>\n    );\n  },\n);\n\nexport interface PullToRefreshContentProps extends PullToRefresh.ContentProps {}\n\nexport const PullToRefreshContent = PullToRefresh.Content;\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rideds/* packages.\n * You can extend this snippet however you want.\n */\n",
       "dependencies": {
-        "@rui/react": "~1.0.0",
-        "@rui/css": "~1.0.0"
+        "@rideds/react": "~1.0.0",
+        "@rideds/css": "~1.0.0"
       }
     }
   ]

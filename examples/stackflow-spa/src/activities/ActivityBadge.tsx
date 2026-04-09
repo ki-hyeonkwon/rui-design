@@ -11,8 +11,8 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { Badge, HStack, Text, VStack } from "@rui/react";
-import { badgeVariantMap } from "@rui/css/recipes/badge";
+import { Badge, HStack, Text, VStack } from "@rideds/react";
+import { badgeVariantMap } from "@rideds/css/recipes/badge";
 
 declare module "@stackflow/config" {
   interface Register {

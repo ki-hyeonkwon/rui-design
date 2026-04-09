@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { ActionChip } from "@rui/react";
+import { ActionChip } from "@rideds/react";
 
-import { actionChipVariantMap } from "@rui/css/recipes/action-chip";
+import { actionChipVariantMap } from "@rideds/css/recipes/action-chip";
 import { VariantTable } from "./components/variant-table";
 import { IconBellFill, IconChevronDownFill } from "@karrotmarket/react-monochrome-icon";
 import { SeedThemeDecorator } from "./components/decorator";
 import { createStoryWithParameters } from "@/stories/utils/parameters";
-import { Count, Icon, PrefixIcon, SuffixIcon } from "@rui/react";
+import { Count, Icon, PrefixIcon, SuffixIcon } from "@rideds/react";
 
 const meta = {
   component: ActionChip,

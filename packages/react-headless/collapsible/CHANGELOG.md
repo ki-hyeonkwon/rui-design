@@ -1,4 +1,4 @@
-# @rui/react-collapsible
+# @rideds/react-collapsible
 
 ## 0.1.0
 

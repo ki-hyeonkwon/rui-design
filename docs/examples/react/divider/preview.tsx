@@ -1,4 +1,4 @@
-import { Box, Divider, VStack } from "@rui/react";
+import { Box, Divider, VStack } from "@rideds/react";
 
 export default function DividerPreview() {
   return (

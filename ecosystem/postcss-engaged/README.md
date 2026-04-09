@@ -1,4 +1,4 @@
-# @rui/postcss-engaged
+# @rideds/postcss-engaged
 
 A PostCSS plugin that expands the custom `:--engaged` pseudo-class into device-adaptive interaction styles.
 
@@ -19,13 +19,13 @@ A PostCSS plugin that expands the custom `:--engaged` pseudo-class into device-a
 ## Install
 
 ```bash
-bun add @rui/postcss-engaged
+bun add @rideds/postcss-engaged
 ```
 
 ## Usage
 
 ```js
-import postcssEngaged from "@rui/postcss-engaged";
+import postcssEngaged from "@rideds/postcss-engaged";
 
 // PostCSS config
 export default {

@@ -1,9 +1,9 @@
 import {
   identityPlaceholder,
   type IdentityPlaceholderVariantProps,
-} from "@rui/css/recipes/identity-placeholder";
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/identity-placeholder";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import * as React from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 

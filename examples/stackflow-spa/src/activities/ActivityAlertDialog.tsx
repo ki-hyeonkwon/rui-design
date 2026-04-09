@@ -11,9 +11,9 @@ import {
   AlertDialogRoot,
   AlertDialogTitle,
 } from "rui/ui/alert-dialog";
-import { Divider, ResponsivePair, VStack } from "@rui/react";
+import { Divider, ResponsivePair, VStack } from "@rideds/react";
 import { send } from "@stackflow/compat-await-push";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { Switch } from "rui/ui/switch";
 
 declare module "@stackflow/config" {

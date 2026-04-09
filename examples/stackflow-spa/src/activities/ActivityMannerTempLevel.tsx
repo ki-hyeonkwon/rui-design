@@ -11,7 +11,7 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { mannerTempBadgeVariantMap } from "@rui/css/recipes/manner-temp-badge";
+import { mannerTempBadgeVariantMap } from "@rideds/css/recipes/manner-temp-badge";
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { MannerTempBadge, type MannerTempBadgeProps } from "rui/ui/manner-temp-badge";
 

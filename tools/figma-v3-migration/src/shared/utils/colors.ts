@@ -1,4 +1,4 @@
-import { colorMappings } from "@rui/migration-index/color";
+import { colorMappings } from "@rideds/migration-index/color";
 import { deltaE } from "color-delta-e";
 import type {
   DetachedResultWithColorSuggestions,

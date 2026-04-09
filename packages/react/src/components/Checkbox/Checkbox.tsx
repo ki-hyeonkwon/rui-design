@@ -1,9 +1,9 @@
-import { checkbox, type CheckboxVariantProps } from "@rui/css/recipes/checkbox";
-import { checkmark, type CheckmarkVariantProps } from "@rui/css/recipes/checkmark";
+import { checkbox, type CheckboxVariantProps } from "@rideds/css/recipes/checkbox";
+import { checkmark, type CheckmarkVariantProps } from "@rideds/css/recipes/checkmark";
 import { splitMultipleVariantsProps } from "../../utils/splitMultipleVariantsProps";
-import { mergeProps } from "@rui/dom-utils";
-import { Checkbox as CheckboxPrimitive, useCheckboxContext } from "@rui/react-checkbox";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Checkbox as CheckboxPrimitive, useCheckboxContext } from "@rideds/react-checkbox";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import { forwardRef } from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
@@ -13,7 +13,7 @@ import { createRecipeContext } from "../../utils/createRecipeContext";
 import {
   checkboxGroup,
   type CheckboxGroupVariantProps,
-} from "@rui/css/recipes/checkbox-group";
+} from "@rideds/css/recipes/checkbox-group";
 
 const { withContext: withGroupContext } = createRecipeContext(checkboxGroup);
 const { ClassNamesProvider, withContext } = createSlotRecipeContext(checkbox);
@@ -54,7 +54,7 @@ export const CheckboxRoot = Object.assign(
       (props.weight === "default" || props.weight === "stronger")
     ) {
       console.warn(
-        `[RUI Design System] Checkbox weight='${props.weight}' is deprecated and will be removed in @rui/react@1.3.0. Use weight='${props.weight === "default" ? "regular" : "bold"}' instead.`,
+        `[RUI Design System] Checkbox weight='${props.weight}' is deprecated and will be removed in @rideds/react@1.3.0. Use weight='${props.weight === "default" ? "regular" : "bold"}' instead.`,
       );
     }
 

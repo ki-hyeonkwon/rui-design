@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ActivityComponentType } from "@stackflow/react/future";
 import { AppBar, AppBarMain } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";

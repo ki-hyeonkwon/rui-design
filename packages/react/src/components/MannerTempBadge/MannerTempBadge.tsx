@@ -1,8 +1,8 @@
 import {
   mannerTempBadge,
   type MannerTempBadgeVariantProps,
-} from "@rui/css/recipes/manner-temp-badge";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/manner-temp-badge";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 

@@ -29,7 +29,7 @@ function SidebarTabIconContainer({
  * Docs Layout: app/docs/layout.tsx
  */
 export const baseOptions: Omit<DocsLayoutProps, "tree"> = {
-  githubUrl: "https://github.com/rui-design/rui-design",
+  githubUrl: "https://github.com/ki-hyeonkwon/rui-design",
   sidebar: {
     tabs: [
       {

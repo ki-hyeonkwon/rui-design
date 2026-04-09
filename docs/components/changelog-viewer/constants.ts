@@ -1,13 +1,13 @@
 export const ALL = "all";
 
 export const PINNED_PACKAGES = [
-  "@rui/react",
-  "@rui/css",
-  "@rui/stackflow",
-  "@rui/cli",
-  "@rui/tailwind4-theme",
-  "@rui/tailwind3-plugin",
-  "@rui/vite-plugin",
-  "@rui/webpack-plugin",
-  "@rui/rsbuild-plugin",
+  "@rideds/react",
+  "@rideds/css",
+  "@rideds/stackflow",
+  "@rideds/cli",
+  "@rideds/tailwind4-theme",
+  "@rideds/tailwind3-plugin",
+  "@rideds/vite-plugin",
+  "@rideds/webpack-plugin",
+  "@rideds/rsbuild-plugin",
 ];

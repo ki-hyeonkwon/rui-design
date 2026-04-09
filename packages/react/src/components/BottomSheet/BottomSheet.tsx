@@ -1,7 +1,7 @@
-import { bottomSheet, type BottomSheetVariantProps } from "@rui/css/recipes/bottom-sheet";
-import { dataAttr } from "@rui/dom-utils";
-import { Drawer, useDrawerContext } from "@rui/react-drawer";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { bottomSheet, type BottomSheetVariantProps } from "@rideds/css/recipes/bottom-sheet";
+import { dataAttr } from "@rideds/dom-utils";
+import { Drawer, useDrawerContext } from "@rideds/react-drawer";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { forwardRef } from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { withStyleProps, type StyleProps } from "../../utils/styled";

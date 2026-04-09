@@ -1,4 +1,4 @@
-import { Box, HStack, Portal, PullToRefresh, Tabs, Text, VStack } from "@rui/react";
+import { Box, HStack, Portal, PullToRefresh, Tabs, Text, VStack } from "@rideds/react";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import {
   AppBar,
@@ -24,7 +24,7 @@ import {
 import { ListButtonItem } from "rui/ui/list";
 import { ActionButton } from "rui/ui/action-button";
 import { useStepOverlay } from "rui/stackflow/use-step-overlay";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 
 declare module "@stackflow/config" {

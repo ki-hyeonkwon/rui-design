@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { ProgressCircle } from "rui/ui/progress-circle";
 
-import { progressCircleVariantMap } from "@rui/css/recipes/progress-circle";
+import { progressCircleVariantMap } from "@rideds/css/recipes/progress-circle";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

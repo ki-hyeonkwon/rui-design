@@ -1,4 +1,4 @@
-import { typographyMappings } from "@rui/migration-index/typography";
+import { typographyMappings } from "@rideds/migration-index/typography";
 import { kebabCase } from "change-case";
 import type { Transform } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";

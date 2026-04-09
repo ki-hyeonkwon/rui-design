@@ -18,7 +18,7 @@ const riskPatterns: Record<string, RiskPattern> = {
     patterns: [/docs\/content\/react\/components\/.*\.mdx$/, /examples\/react\/.*\.tsx$/],
     risks: [
       "ComponentExample 래퍼가 누락되지 않았나요?",
-      "Import 경로가 올바른가요? (@/components/ui vs @rui/react)",
+      "Import 경로가 올바른가요? (@/components/ui vs @rideds/react)",
       "한국어 설명이 포함되어 있나요?",
       "doc-gen:file 경로가 정확한가요?",
     ],

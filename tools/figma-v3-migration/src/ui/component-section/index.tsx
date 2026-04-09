@@ -1,4 +1,4 @@
-import { Flex } from "@rui/react";
+import { Flex } from "@rideds/react";
 import { Footer } from "common/components/footer";
 import { useComponentSection } from "./context";
 import { ComponentSuggestionsList } from "./list";

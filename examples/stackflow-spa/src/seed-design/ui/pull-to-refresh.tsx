@@ -1,4 +1,4 @@
-import { PullToRefresh } from "@rui/react";
+import { PullToRefresh } from "@rideds/react";
 import { forwardRef } from "react";
 import { ProgressCircle } from "./progress-circle";
 

@@ -1,8 +1,8 @@
 import {
   contextualFloatingButton,
   type ContextualFloatingButtonVariantProps,
-} from "@rui/css/recipes/contextual-floating-button";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/contextual-floating-button";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import * as React from "react";
 import { IconRequired } from "../Icon/Icon";

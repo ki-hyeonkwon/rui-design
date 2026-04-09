@@ -10,13 +10,13 @@ import {
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { useFlow } from "@stackflow/react/future";
 
-import { chipVariantMap } from "@rui/css/recipes/chip";
+import { chipVariantMap } from "@rideds/css/recipes/chip";
 
 import IconPlusFill from "@karrotmarket/react-monochrome-icon/IconPlusFill";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { Chip, type ToggleChipProps } from "rui/ui/chip";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 
 const initialVariants = {
   size: "medium",

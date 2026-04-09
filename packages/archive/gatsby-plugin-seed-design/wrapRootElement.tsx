@@ -1,4 +1,4 @@
-import { type ColorMode, ThemeContext, useThemeBehavior } from "@rui/react-theming";
+import { type ColorMode, ThemeContext, useThemeBehavior } from "@rideds/react-theming";
 import type * as React from "react";
 
 export type Options = {

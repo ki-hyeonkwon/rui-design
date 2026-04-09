@@ -1,4 +1,4 @@
-import { text, type TextVariantProps } from "@rui/css/recipes/text";
+import { text, type TextVariantProps } from "@rideds/css/recipes/text";
 import {
   vars,
   type FontSize,
@@ -6,7 +6,7 @@ import {
   type LineHeight,
   type ScopedColorFg,
   type ScopedColorPalette,
-} from "@rui/css/vars";
+} from "@rideds/css/vars";
 import clsx from "clsx";
 import type * as React from "react";
 import { forwardRef, useMemo } from "react";

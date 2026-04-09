@@ -4,21 +4,21 @@
 
 Phase 1 public packages are validated for external consumers with:
 
-- `@rui/react`
-- `@rui/css`
-- `@rui/stackflow`
-- `@rui/cli`
-- `@rui/tailwind4-theme`
+- `@rideds/react`
+- `@rideds/css`
+- `@rideds/stackflow`
+- `@rideds/cli`
+- `@rideds/tailwind4-theme`
 
 ### React UI
 
 ```bash
-bun add @rui/react @rui/css
+bun add @rideds/react @rideds/css
 ```
 
 ```tsx
-import "@rui/css/all.css";
-import { ActionButton } from "@rui/react";
+import "@rideds/css/all.css";
+import { ActionButton } from "@rideds/react";
 
 export function App() {
   return <ActionButton>RUI</ActionButton>;
@@ -28,12 +28,12 @@ export function App() {
 ### Stackflow Integration
 
 ```bash
-bun add @rui/stackflow @rui/css @stackflow/core @stackflow/react
+bun add @rideds/stackflow @rideds/css @stackflow/core @stackflow/react
 ```
 
 ```ts
-import "@rui/css/all.css";
-import { ruiPlugin } from "@rui/stackflow";
+import "@rideds/css/all.css";
+import { ruiPlugin } from "@rideds/stackflow";
 
 const plugin = ruiPlugin({ theme: "android" });
 
@@ -43,18 +43,18 @@ void plugin;
 ### CLI
 
 ```bash
-bunx @rui/cli@latest --help
+bunx @rideds/cli@latest --help
 ```
 
 ### Tailwind CSS 4
 
 ```bash
-bun add @rui/css @rui/tailwind4-theme tailwindcss@^4
+bun add @rideds/css @rideds/tailwind4-theme tailwindcss@^4
 ```
 
 ```css
 @import "tailwindcss";
-@import "@rui/tailwind4-theme";
+@import "@rideds/tailwind4-theme";
 ```
 
 ## Maintainers
@@ -67,30 +67,30 @@ bun phase1:validate
 
 **Definitions**
 
-- [@rui/rootage](./packages/rootage)
-- [@rui/qvism-preset](./packages/qvism-preset)
+- [@rideds/rootage](./packages/rootage)
+- [@rideds/qvism-preset](./packages/qvism-preset)
 
 **Base Libraries**
 
-- [@rui/css](./packages/css)
+- [@rideds/css](./packages/css)
 
 **React Libraries**
 
-- [@rui/react-headless](./packages/react-headless)
-- [@rui/react](./packages/react)
-- [@rui/stackflow](./packages/stackflow)
+- [@rideds/react-headless](./packages/react-headless)
+- [@rideds/react](./packages/react)
+- [@rideds/stackflow](./packages/stackflow)
 
 **Integrations**
 
-- [@rui/figma](./packages/figma)
-- [@rui/mcp](./packages/mcp)
+- [@rideds/figma](./packages/figma)
+- [@rideds/mcp](./packages/mcp)
 
 **Ecosystem**
 
-- [@rui/ecosystem/rootage](./ecosystem/rootage)
-- [@rui/ecosystem/qvism](./ecosystem/qvism)
-- [@rui/ecosystem/figma-extractor](./ecosystem/figma-extractor)
+- [@rideds/ecosystem/rootage](./ecosystem/rootage)
+- [@rideds/ecosystem/qvism](./ecosystem/qvism)
+- [@rideds/ecosystem/figma-extractor](./ecosystem/figma-extractor)
 
 **Documentation**
 
-- [@rui/docs](./docs)
+- [@rideds/docs](./docs)

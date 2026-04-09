@@ -1,10 +1,10 @@
 {
-  "name": "@rui/rootage-cli",
+  "name": "@rideds/rootage-cli",
   "version": "0.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "ecosystem/rootage/cli"
   },
   "license": "MIT",
@@ -24,8 +24,8 @@
     "lint:publish": "bun publint"
   },
   "dependencies": {
-    "@rui/rootage-artifacts": "1.2.6",
-    "@rui/rootage-core": "0.0.0",
+    "@rideds/rootage-artifacts": "1.2.6",
+    "@rideds/rootage-core": "0.0.0",
     "fs-extra": "^11.3.0",
     "yaml": "^2.7.1",
     "yargs": "^18.0.0"

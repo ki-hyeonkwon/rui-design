@@ -1,5 +1,5 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { badge, type BadgeVariantProps } from "@rui/css/recipes/badge";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { badge, type BadgeVariantProps } from "@rideds/css/recipes/badge";
 import type * as React from "react";
 import { forwardRef } from "react";
 import clsx from "clsx";

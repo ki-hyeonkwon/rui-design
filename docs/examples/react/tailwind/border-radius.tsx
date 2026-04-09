@@ -1,4 +1,4 @@
-import { HStack, VStack, Text } from "@rui/react";
+import { HStack, VStack, Text } from "@rideds/react";
 
 export default function TailwindBorderRadius() {
   return (

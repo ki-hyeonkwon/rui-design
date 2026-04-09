@@ -1,5 +1,5 @@
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
-import { Box, Float, PrefixIcon } from "@rui/react";
+import { Box, Float, PrefixIcon } from "@rideds/react";
 import { ContextualFloatingButton } from "rui/ui/contextual-floating-button";
 
 export default function ContextualFloatingButtonFloatComposition() {

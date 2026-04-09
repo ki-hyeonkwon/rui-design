@@ -1,5 +1,5 @@
 import { IconSparkle2 } from "@karrotmarket/react-multicolor-icon";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import {
   ActionablePageBanner,
   DismissiblePageBanner,

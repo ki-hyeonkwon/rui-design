@@ -1,9 +1,9 @@
 // import Seed Design
-import "@rui/css/all.css";
+import "@rideds/css/all.css";
 
 import type { Preview } from "@storybook/nextjs";
 
-// TODO: Replace with @rui/css/breakpoints when responsive styling lands
+// TODO: Replace with @rideds/css/breakpoints when responsive styling lands
 const breakpoints = { base: 0, sm: 480, md: 768, lg: 1280, xl: 1440 };
 const breakpointValues = Object.values(breakpoints);
 

@@ -1,4 +1,4 @@
-import { Flex, VStack } from "@rui/react";
+import { Flex, VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import {
   Snackbar,

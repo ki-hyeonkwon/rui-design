@@ -5,7 +5,7 @@ import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { Avatar } from "rui/ui/avatar";
 import { ToggleButton } from "rui/ui/toggle-button";
 import { IconPlusFill, IconStarFill, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { Box, VStack, HStack, Text, Icon, PrefixIcon } from "@rui/react";
+import { Box, VStack, HStack, Text, Icon, PrefixIcon } from "@rideds/react";
 
 declare module "@stackflow/config" {
   interface Register {

@@ -1,4 +1,4 @@
-# @rui/react-image
+# @rideds/react-image
 
 ## 0.1.1
 

@@ -1,4 +1,4 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import { forwardRef } from "react";
 

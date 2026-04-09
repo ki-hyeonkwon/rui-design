@@ -1,6 +1,6 @@
 import type { Compiler } from "webpack";
 import type { Compiler as RspackCompiler } from "@rspack/core";
-import { generateThemingScript, type ColorMode } from "@rui/css/theming";
+import { generateThemingScript, type ColorMode } from "@rideds/css/theming";
 
 // Optional import attempt for html-webpack-plugin
 let HtmlWebpackPlugin: typeof import("html-webpack-plugin") | undefined;

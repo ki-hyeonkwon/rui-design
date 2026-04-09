@@ -7,7 +7,7 @@ import {
   ChipTabsList,
 } from "rui/ui/chip-tabs";
 
-import { chipTabsVariantMap } from "@rui/css/recipes/chip-tabs";
+import { chipTabsVariantMap } from "@rideds/css/recipes/chip-tabs";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

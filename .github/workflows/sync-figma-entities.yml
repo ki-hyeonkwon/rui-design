@@ -28,18 +28,18 @@ jobs:
 
       - name: figma-extractor를 빌드해요
         run: |
-          bun --filter @rui/figma-extractor build
+          bun --filter @rideds/figma-extractor build
           bun install --frozen-lockfile
 
       - name: Figma entity 데이터를 동기화해요
-        run: bun --filter @rui/figma sync-entities
+        run: bun --filter @rideds/figma sync-entities
         env:
           FIGMA_PERSONAL_ACCESS_TOKEN: ${{ secrets.FIGMA_PERSONAL_ACCESS_TOKEN }}
           FIGMA_FOUNDATIONS_FILE_KEY: ${{ secrets.FIGMA_FOUNDATIONS_FILE_KEY }}
           FIGMA_COMPONENTS_FILE_KEY: ${{ secrets.FIGMA_COMPONENTS_FILE_KEY }}
           FIGMA_TEMPLATES_FILE_KEY: ${{ secrets.FIGMA_TEMPLATES_FILE_KEY }}
 
-      - name: "@rui/figma를 타입체크하고 빌드해요"
+      - name: "@rideds/figma를 타입체크하고 빌드해요"
         id: build
         continue-on-error: true
         working-directory: packages/figma

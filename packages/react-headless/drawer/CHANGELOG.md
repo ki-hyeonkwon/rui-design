@@ -1,4 +1,4 @@
-# @rui/react-drawer
+# @rideds/react-drawer
 
 ## 1.0.9
 
@@ -15,7 +15,7 @@
   `DialogAction`을 `DialogPrimitive.CloseButton`으로 교체합니다. `AlertDialogAction` `onClick` 핸들러에서 `event.preventDefault()`를 호출하여 닫기 동작을 방지할 수 있습니다. [(예제)](https://rui-design.io/react/components/alert-dialog#prevent-close)
 
 - Updated dependencies [576c2e6]
-  - @rui/react-use-controllable-state@1.0.0
+  - @rideds/react-use-controllable-state@1.0.0
 
 ## 1.0.6
 
@@ -62,10 +62,10 @@
 
 ### Patch Changes
 
-- 68b5eab: @rui/react-drawer 패키지 배포
+- 68b5eab: @rideds/react-drawer 패키지 배포
 
 ## 1.0.0
 
 ### Major Changes
 
-- 33def2d: `@rui/react-drawer` 1.0.0
+- 33def2d: `@rideds/react-drawer` 1.0.0

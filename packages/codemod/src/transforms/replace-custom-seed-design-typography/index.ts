@@ -1,4 +1,4 @@
-import { typographyMappings, type FoundationTokenMapping } from "@rui/migration-index";
+import { typographyMappings, type FoundationTokenMapping } from "@rideds/migration-index";
 import type { API, FileInfo, Options } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";
 

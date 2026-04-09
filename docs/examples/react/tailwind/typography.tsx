@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 
 export default function TailwindTypography() {
   return (

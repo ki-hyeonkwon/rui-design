@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { Chip } from "rui/ui/chip";
 import { Avatar } from "rui/ui/avatar";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";

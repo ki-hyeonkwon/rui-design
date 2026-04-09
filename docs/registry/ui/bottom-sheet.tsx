@@ -1,7 +1,7 @@
 "use client";
 
 import IconXmarkLine from "@karrotmarket/react-monochrome-icon/IconXmarkLine";
-import { Icon, BottomSheet as SeedBottomSheet, VisuallyHidden } from "@rui/react";
+import { Icon, BottomSheet as SeedBottomSheet, VisuallyHidden } from "@rideds/react";
 import type * as React from "react";
 import { forwardRef } from "react";
 

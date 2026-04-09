@@ -48,39 +48,39 @@ export type Phase1SmokeScenario = {
 };
 
 export const PHASE1_PUBLIC_PACKAGE_NAMES = [
-  "@rui/react",
-  "@rui/css",
-  "@rui/stackflow",
-  "@rui/cli",
-  "@rui/tailwind4-theme",
+  "@rideds/react",
+  "@rideds/css",
+  "@rideds/stackflow",
+  "@rideds/cli",
+  "@rideds/tailwind4-theme",
 ] as const;
 
 export const PHASE1_REACT_PUBLISH_CLOSURE_PACKAGE_NAMES = [
-  "@rui/dom-utils",
-  "@rui/react-primitive",
-  "@rui/react-supports",
-  "@rui/react-use-controllable-state",
-  "@rui/react-avatar",
-  "@rui/react-checkbox",
-  "@rui/react-collapsible",
-  "@rui/react-dialog",
-  "@rui/react-drawer",
-  "@rui/react-field",
-  "@rui/react-field-button",
-  "@rui/react-fieldset",
-  "@rui/react-image",
-  "@rui/react-popover",
-  "@rui/react-portal",
-  "@rui/react-progress",
-  "@rui/react-pull-to-refresh",
-  "@rui/react-radio-group",
-  "@rui/react-segmented-control",
-  "@rui/react-slider",
-  "@rui/react-snackbar",
-  "@rui/react-switch",
-  "@rui/react-tabs",
-  "@rui/react-text-field",
-  "@rui/react-toggle",
+  "@rideds/dom-utils",
+  "@rideds/react-primitive",
+  "@rideds/react-supports",
+  "@rideds/react-use-controllable-state",
+  "@rideds/react-avatar",
+  "@rideds/react-checkbox",
+  "@rideds/react-collapsible",
+  "@rideds/react-dialog",
+  "@rideds/react-drawer",
+  "@rideds/react-field",
+  "@rideds/react-field-button",
+  "@rideds/react-fieldset",
+  "@rideds/react-image",
+  "@rideds/react-popover",
+  "@rideds/react-portal",
+  "@rideds/react-progress",
+  "@rideds/react-pull-to-refresh",
+  "@rideds/react-radio-group",
+  "@rideds/react-segmented-control",
+  "@rideds/react-slider",
+  "@rideds/react-snackbar",
+  "@rideds/react-switch",
+  "@rideds/react-tabs",
+  "@rideds/react-text-field",
+  "@rideds/react-toggle",
 ] as const;
 
 export const PHASE1_SMOKE_INSTALL_PACKAGE_NAMES = [
@@ -91,13 +91,13 @@ export const PHASE1_SMOKE_INSTALL_PACKAGE_NAMES = [
 export const PHASE1_SMOKE_SCENARIOS = [
   {
     id: "react-css-consumer",
-    publicPackageNames: ["@rui/css", "@rui/react"],
+    publicPackageNames: ["@rideds/css", "@rideds/react"],
     localToolPackageNames: ["react", "react-dom", "typescript", "@types/react", "@types/react-dom"],
     files: {
       "tsconfig.json": createTypecheckConsumerTsconfig(),
       "src/index.tsx": [
-        'import "@rui/css/all.css";',
-        'import { ActionButton } from "@rui/react";',
+        'import "@rideds/css/all.css";',
+        'import { ActionButton } from "@rideds/react";',
         'import { createElement } from "react";',
         "",
         'export const App = () => createElement(ActionButton, null, "Phase 1");',
@@ -113,7 +113,7 @@ export const PHASE1_SMOKE_SCENARIOS = [
   },
   {
     id: "stackflow-consumer",
-    publicPackageNames: ["@rui/stackflow"],
+    publicPackageNames: ["@rideds/stackflow"],
     localToolPackageNames: [
       "react",
       "react-dom",
@@ -126,8 +126,8 @@ export const PHASE1_SMOKE_SCENARIOS = [
     files: {
       "tsconfig.json": createTypecheckConsumerTsconfig(),
       "src/index.ts": [
-        'import "@rui/css/all.css";',
-        'import { ruiPlugin } from "@rui/stackflow";',
+        'import "@rideds/css/all.css";',
+        'import { ruiPlugin } from "@rideds/stackflow";',
         'import { stackflow } from "@stackflow/react";',
         "",
         'const plugin = ruiPlugin({ theme: "android" });',
@@ -144,17 +144,17 @@ export const PHASE1_SMOKE_SCENARIOS = [
   },
   {
     id: "cli-install",
-    publicPackageNames: ["@rui/cli"],
+    publicPackageNames: ["@rideds/cli"],
     localToolPackageNames: [],
     files: {},
-    steps: [{ kind: "exec", command: "node", args: ["./node_modules/@rui/cli/bin/index.mjs", "--help"] }],
+    steps: [{ kind: "exec", command: "node", args: ["./node_modules/@rideds/cli/bin/index.mjs", "--help"] }],
   },
   {
     id: "tailwind4-theme-consumer",
-    publicPackageNames: ["@rui/tailwind4-theme"],
+    publicPackageNames: ["@rideds/tailwind4-theme"],
     localToolPackageNames: ["tailwindcss"],
     files: {
-      "src/theme.css": ['@import "@rui/tailwind4-theme";', ""].join("\n"),
+      "src/theme.css": ['@import "@rideds/tailwind4-theme";', ""].join("\n"),
     },
     steps: [{ kind: "bun-build", entrypoint: "./src/theme.css", outdir: "./dist" }],
   },

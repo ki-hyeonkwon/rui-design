@@ -1,4 +1,4 @@
-import { ImageFrame, ImageFrameFloater } from "@rui/react";
+import { ImageFrame, ImageFrameFloater } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 export default function ImageFrameOverlayCustomExample() {

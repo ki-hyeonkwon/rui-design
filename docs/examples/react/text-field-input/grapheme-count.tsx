@@ -1,5 +1,5 @@
 import { TextField, TextFieldInput } from "rui/ui/text-field";
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 
 export default function TextFieldInputGraphemeCount() {
   return (

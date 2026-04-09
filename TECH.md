@@ -99,8 +99,8 @@ react (스타일드 컴포넌트) ← react-headless (로직)
 
 | 명령어 | 설명 |
 |--------|------|
-| `bun --filter @rui/docs dev` | 문서 사이트 개발 서버 |
-| `bun --filter @rui/docs storybook` | Storybook 실행 |
+| `bun --filter @rideds/docs dev` | 문서 사이트 개발 서버 |
+| `bun --filter @rideds/docs storybook` | Storybook 실행 |
 | `bun figma:sync` | Figma에서 토큰 동기화 |
 
 ### 린트/포맷
@@ -192,8 +192,8 @@ const recipe = defineRecipe({
 ### 단일 컴포넌트 (ActionButton 등)
 
 ```typescript
-import { recipe } from "@rui/css/recipes/component";
-import { Primitive } from "@rui/react-primitive";
+import { recipe } from "@rideds/css/recipes/component";
+import { Primitive } from "@rideds/react-primitive";
 
 export const Component = React.forwardRef<HTMLElement, Props>((props, ref) => {
   const className = recipe({ variant, size });
@@ -205,7 +205,7 @@ export const Component = React.forwardRef<HTMLElement, Props>((props, ref) => {
 
 ```typescript
 // Headless에서 로직 가져옴
-import { CheckboxRoot, CheckboxControl } from "@rui/react-checkbox";
+import { CheckboxRoot, CheckboxControl } from "@rideds/react-checkbox";
 
 // Styled 컴포넌트에서 스타일 적용
 export const Checkbox = { Root, Control, HiddenInput, ... };

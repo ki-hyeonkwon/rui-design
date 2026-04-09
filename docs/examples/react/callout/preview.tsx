@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ActionableCallout, Callout, DismissibleCallout } from "rui/ui/callout";
 
 export default function CalloutPreview() {

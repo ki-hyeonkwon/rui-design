@@ -1,6 +1,6 @@
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { Avatar, AvatarBadge } from "rui/ui/avatar";
-import { Box, HStack } from "@rui/react";
+import { Box, HStack } from "@rideds/react";
 
 export default function () {
   return (

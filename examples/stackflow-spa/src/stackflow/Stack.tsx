@@ -1,5 +1,5 @@
 import { basicRendererPlugin } from "@stackflow/plugin-renderer-basic";
-import { ruiPlugin } from "@rui/stackflow";
+import { ruiPlugin } from "@rideds/stackflow";
 import ActivityHome from "../activities/ActivityHome";
 import ActivityNotFound from "../activities/ActivityNotFound";
 import { iframeSyncPlugin } from "./iframeSyncPlugin";

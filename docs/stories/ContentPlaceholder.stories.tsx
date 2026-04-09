@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 import { createStoryWithParameters } from "@/stories/utils/parameters";
-import { contentPlaceholderVariantMap } from "@rui/css/recipes/content-placeholder";
+import { contentPlaceholderVariantMap } from "@rideds/css/recipes/content-placeholder";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { IconSparkle2Fill } from "@karrotmarket/react-monochrome-icon";

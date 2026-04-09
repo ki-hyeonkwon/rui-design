@@ -10,7 +10,7 @@ import {
   IconILowercaseSerifCircleLine,
   IconPersonCircleLine,
 } from "@karrotmarket/react-monochrome-icon";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { Avatar } from "rui/ui/avatar";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { ActionButton } from "rui/ui/action-button";

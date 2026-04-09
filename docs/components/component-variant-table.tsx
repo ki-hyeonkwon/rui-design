@@ -1,6 +1,6 @@
 "use client";
 
-import { AST, resolveToken, RootageCtx } from "@rui/rootage-core";
+import { AST, resolveToken, RootageCtx } from "@rideds/rootage-core";
 import { useMemo, useState } from "react";
 import { DescriptionButton } from "./description-button";
 import { stringifyStates, stringifyTokenLit, stringifyValueLit } from "./rootage";

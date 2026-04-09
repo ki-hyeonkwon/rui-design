@@ -1,4 +1,4 @@
-import { Flex, Text } from "@rui/react";
+import { Flex, Text } from "@rideds/react";
 
 export default function TextFontSizes() {
   return (

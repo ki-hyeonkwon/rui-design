@@ -4,7 +4,7 @@ import {
   IconILowercaseSerifCircleLine,
   IconPersonCircleLine,
 } from "@karrotmarket/react-monochrome-icon";
-import { Icon, VStack } from "@rui/react";
+import { Icon, VStack } from "@rideds/react";
 
 export default function ListPreview() {
   return (

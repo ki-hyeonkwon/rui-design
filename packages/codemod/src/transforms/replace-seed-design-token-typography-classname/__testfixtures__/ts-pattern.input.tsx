@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { classNames } from "@rui/design-token";
+import { classNames } from "@rideds/design-token";
 import { match } from "ts-pattern";
 
 match(size)

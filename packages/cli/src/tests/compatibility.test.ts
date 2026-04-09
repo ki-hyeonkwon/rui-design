@@ -18,8 +18,8 @@ const registries: PublicRegistry[] = [
           {
             path: "action-button.tsx",
             dependencies: {
-              "@rui/react": "~1.0.0",
-              "@rui/css": "~1.0.0",
+              "@rideds/react": "~1.0.0",
+              "@rideds/css": "~1.0.0",
             },
           },
         ],
@@ -30,8 +30,8 @@ const registries: PublicRegistry[] = [
           {
             path: "checkbox.tsx",
             dependencies: {
-              "@rui/react": "~1.2.0",
-              "@rui/css": "~1.2.0",
+              "@rideds/react": "~1.2.0",
+              "@rideds/css": "~1.2.0",
             },
           },
         ],
@@ -46,8 +46,8 @@ describe("analyzeRegistryItemCompatibility", () => {
       publicRegistries: registries,
       itemKeys: ["ui:action-button"],
       projectPackageVersions: {
-        "@rui/react": "1.0.9",
-        "@rui/css": "1.0.2",
+        "@rideds/react": "1.0.9",
+        "@rideds/css": "1.0.2",
       },
     });
 
@@ -59,15 +59,15 @@ describe("analyzeRegistryItemCompatibility", () => {
       publicRegistries: registries,
       itemKeys: ["ui:checkbox"],
       projectPackageVersions: {
-        "@rui/react": "1.1.0",
-        "@rui/css": "1.2.1",
+        "@rideds/react": "1.1.0",
+        "@rideds/css": "1.2.1",
       },
     });
 
     expect(report.issues).toHaveLength(1);
     expect(report.issues[0]).toMatchObject({
       itemKey: "ui:checkbox",
-      packageName: "@rui/react",
+      packageName: "@rideds/react",
       type: "incompatible-version",
     });
   });
@@ -77,14 +77,14 @@ describe("analyzeRegistryItemCompatibility", () => {
       publicRegistries: registries,
       itemKeys: ["ui:action-button"],
       projectPackageVersions: {
-        "@rui/react": "1.0.9",
+        "@rideds/react": "1.0.9",
       },
     });
 
     expect(report.issues).toHaveLength(1);
     expect(report.issues[0]).toMatchObject({
       itemKey: "ui:action-button",
-      packageName: "@rui/css",
+      packageName: "@rideds/css",
       type: "missing-package",
     });
   });
@@ -94,8 +94,8 @@ describe("analyzeRegistryItemCompatibility", () => {
       publicRegistries: registries,
       itemKeys: ["ui:action-button"],
       projectPackageVersions: {
-        "@rui/react": "workspace:^1.0.0",
-        "@rui/css": "workspace:^1.0.0",
+        "@rideds/react": "workspace:^1.0.0",
+        "@rideds/css": "workspace:^1.0.0",
       },
     });
 
@@ -107,15 +107,15 @@ describe("analyzeRegistryItemCompatibility", () => {
       publicRegistries: registries,
       itemKeys: ["ui:action-button"],
       projectPackageVersions: {
-        "@rui/react": "workspace:*",
-        "@rui/css": "1.0.2",
+        "@rideds/react": "workspace:*",
+        "@rideds/css": "1.0.2",
       },
     });
 
     expect(report.issues).toHaveLength(1);
     expect(report.issues[0]).toMatchObject({
       itemKey: "ui:action-button",
-      packageName: "@rui/react",
+      packageName: "@rideds/react",
       type: "invalid-version-spec",
     });
   });

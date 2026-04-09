@@ -6,7 +6,7 @@ import {
   PullToRefresh,
   VStack,
   useSnackbarAdapter,
-} from "@rui/react";
+} from "@rideds/react";
 import { useActivity, useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import * as React from "react";
 import { List, ListButtonItem } from "rui/ui/list";
@@ -35,12 +35,12 @@ import { Snackbar } from "rui/ui/snackbar";
 import { useStepOverlay } from "rui/stackflow/use-step-overlay";
 import { menuSheetCallback } from "./ActivityMenuSheet";
 import { Callout } from "rui/ui/callout";
-import { appScreenVariantMap } from "@rui/css/recipes/app-screen";
+import { appScreenVariantMap } from "@rideds/css/recipes/app-screen";
 
 import { IconHandPointUpLine } from "@karrotmarket/react-monochrome-icon";
 import { IconBellLine } from "@karrotmarket/react-monochrome-icon";
 import { receive } from "@stackflow/compat-await-push";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 
 type NavigationItem =
   | { title: string; onClick: () => void; component?: never }

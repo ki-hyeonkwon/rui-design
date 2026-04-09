@@ -1,4 +1,4 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { Checkbox, CheckboxGroup } from "rui/ui/checkbox";
 
 export default function CheckboxSize() {

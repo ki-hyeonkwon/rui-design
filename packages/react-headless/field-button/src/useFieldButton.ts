@@ -1,7 +1,7 @@
-import { ariaAttr, buttonProps, dataAttr, elementProps, inputProps } from "@rui/dom-utils";
+import { ariaAttr, buttonProps, dataAttr, elementProps, inputProps } from "@rideds/dom-utils";
 import { useCallback, useId, useState } from "react";
 import { getDescriptionId, getErrorMessageId } from "./dom";
-import { useSupports } from "@rui/react-supports";
+import { useSupports } from "@rideds/react-supports";
 
 interface UseFieldButtonStateProps {
   values?: string[];

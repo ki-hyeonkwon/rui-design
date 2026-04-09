@@ -1,7 +1,7 @@
-import { listHeader, type ListHeaderVariantProps } from "@rui/css/recipes/list-header";
+import { listHeader, type ListHeaderVariantProps } from "@rideds/css/recipes/list-header";
 import { forwardRef } from "react";
 import clsx from "clsx";
-import type { PrimitiveProps } from "@rui/react-primitive";
+import type { PrimitiveProps } from "@rideds/react-primitive";
 
 export interface ListHeaderProps
   extends PrimitiveProps,

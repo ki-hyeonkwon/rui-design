@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { useController, useForm } from "react-hook-form";
 import { FieldButton, FieldButtonValue, FieldButtonPlaceholder } from "rui/ui/field-button";
 import { ActionButton } from "rui/ui/action-button";
@@ -10,7 +10,7 @@ import {
   BottomSheetFooter,
 } from "rui/ui/bottom-sheet";
 import { TextField, TextFieldInput } from "rui/ui/text-field";
-import { Portal } from "@rui/react";
+import { Portal } from "@rideds/react";
 
 interface ProductFormData {
   category: string;

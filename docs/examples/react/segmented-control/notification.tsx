@@ -1,4 +1,4 @@
-import { ActionButton, VStack } from "@rui/react";
+import { ActionButton, VStack } from "@rideds/react";
 import { useState } from "react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 

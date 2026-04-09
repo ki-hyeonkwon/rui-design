@@ -3,8 +3,8 @@ import type * as React from "react";
 import {
   inlineBanner,
   type InlineBannerVariantProps,
-} from "@rui/css/recipes/inline-banner";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/inline-banner";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import {
   DismissibleCloseButton,

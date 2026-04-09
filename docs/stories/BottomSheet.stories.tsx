@@ -4,8 +4,8 @@ import { createStoryWithParameters } from "@/stories/utils/parameters";
 import {
   bottomSheetVariantMap,
   type BottomSheetVariantProps,
-} from "@rui/css/recipes/bottom-sheet";
-import { Box, Text } from "@rui/react";
+} from "@rideds/css/recipes/bottom-sheet";
+import { Box, Text } from "@rideds/react";
 import type { ReactNode } from "react";
 import { ActionButton } from "rui/ui/action-button";
 import {

@@ -1,4 +1,4 @@
-import { Divider, VStack } from "@rui/react";
+import { Divider, VStack } from "@rideds/react";
 import { Slider } from "rui/ui/slider";
 
 const markers = [

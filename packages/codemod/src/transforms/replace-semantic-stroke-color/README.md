@@ -4,7 +4,7 @@
 
 ## 목적
 
-@rui/css v0.2.0에서 업데이트된 시맨틱 stroke 컬러 토큰을 자동으로 마이그레이션합니다.
+@rideds/css v0.2.0에서 업데이트된 시맨틱 stroke 컬러 토큰을 자동으로 마이그레이션합니다.
 이전 버전의 stroke 토큰들을 새로운 네이밍 규칙에 맞게 변환합니다.
 
 ## 변환 매핑
@@ -41,12 +41,12 @@
 ### 기본 사용
 ```typescript
 // Before
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 const borderColor = vars.$color.stroke.neutralMuted;
 const outlineColor = vars.$color.stroke.neutral;
 
 // After
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 const borderColor = vars.$color.stroke.neutralSubtle;
 const outlineColor = vars.$color.stroke.neutralMuted;
 ```

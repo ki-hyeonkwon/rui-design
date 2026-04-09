@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Box, type BoxProps } from "../Box/Box";
 import clsx from "clsx";
-import { article } from "@rui/css/recipes/article";
+import { article } from "@rideds/css/recipes/article";
 
 export interface ArticleProps extends BoxProps {}
 

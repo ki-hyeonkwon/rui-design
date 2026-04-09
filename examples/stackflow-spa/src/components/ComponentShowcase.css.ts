@@ -1,4 +1,4 @@
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 import { style } from "@vanilla-extract/css";
 
 export const root = style({

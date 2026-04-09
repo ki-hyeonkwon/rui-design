@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { Checkbox } from "rui/ui/checkbox";
 
-import { checkboxVariantMap } from "@rui/css/recipes/checkbox";
+import { checkboxVariantMap } from "@rideds/css/recipes/checkbox";
 import { VariantTable } from "./components/variant-table";
 import { SeedThemeDecorator } from "./components/decorator";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

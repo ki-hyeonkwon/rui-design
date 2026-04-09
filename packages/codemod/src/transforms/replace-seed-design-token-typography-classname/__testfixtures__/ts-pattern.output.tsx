@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { text } from "@rui/css/recipes/text";
+import { text } from "@rideds/css/recipes/text";
 import { match } from "ts-pattern";
 
 match(size)

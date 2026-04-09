@@ -1,5 +1,5 @@
 import { IconFaceSmileCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { Count, PrefixIcon } from "@rui/react";
+import { Count, PrefixIcon } from "@rideds/react";
 import { ReactionButton } from "rui/ui/reaction-button";
 
 export default function ReactionButtonXsmall() {

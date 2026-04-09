@@ -1,4 +1,4 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { FieldButton, FieldButtonValue, FieldButtonPlaceholder } from "rui/ui/field-button";
 import { useCallback, useState } from "react";
 

@@ -1,5 +1,5 @@
-import { visuallyHidden } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { visuallyHidden } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { forwardRef } from "react";
 

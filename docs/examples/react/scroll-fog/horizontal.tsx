@@ -1,4 +1,4 @@
-import { HStack, ScrollFog } from "@rui/react";
+import { HStack, ScrollFog } from "@rideds/react";
 
 export default function ScrollFogHorizontal() {
   return (

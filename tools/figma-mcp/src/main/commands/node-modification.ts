@@ -1,4 +1,4 @@
-import { getFigmaVariableKey } from "@rui/figma";
+import { getFigmaVariableKey } from "@rideds/figma";
 
 export interface FillColorParams {
   nodeId: string;

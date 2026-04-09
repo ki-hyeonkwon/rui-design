@@ -1,9 +1,9 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 import { useActivity, useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import { useState } from "react";
 import { ActionButton } from "rui/ui/action-button";
 import { BottomSheetBody, BottomSheetContent, BottomSheetRoot } from "rui/ui/bottom-sheet";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { Switch } from "rui/ui/switch";
 
 declare module "@stackflow/config" {

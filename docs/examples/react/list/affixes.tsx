@@ -2,7 +2,7 @@ import {
   IconArrowUpBracketDownLine,
   IconILowercaseSerifCircleLine,
 } from "@karrotmarket/react-monochrome-icon";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { useState } from "react";
 import { ActionButton } from "rui/ui/action-button";
 import { Avatar } from "rui/ui/avatar";

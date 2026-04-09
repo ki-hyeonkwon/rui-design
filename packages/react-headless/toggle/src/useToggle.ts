@@ -1,7 +1,7 @@
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { useCallback, useMemo } from "react";
 
-import { ariaAttr, buttonProps, dataAttr, elementProps } from "@rui/dom-utils";
+import { ariaAttr, buttonProps, dataAttr, elementProps } from "@rideds/dom-utils";
 
 export interface UseToggleStateProps {
   pressed?: boolean;

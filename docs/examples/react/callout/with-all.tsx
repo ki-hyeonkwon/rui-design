@@ -1,5 +1,5 @@
 import { IconCalendarFill } from "@karrotmarket/react-monochrome-icon";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { Callout, DismissibleCallout } from "rui/ui/callout";
 
 export default function CalloutWithAll() {

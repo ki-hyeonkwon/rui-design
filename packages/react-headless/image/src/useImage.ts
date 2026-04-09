@@ -1,6 +1,6 @@
 import { useCallbackRef } from "@radix-ui/react-use-callback-ref";
 import { useLayoutEffect } from "@radix-ui/react-use-layout-effect";
-import { dataAttr, elementProps, imgProps } from "@rui/dom-utils";
+import { dataAttr, elementProps, imgProps } from "@rideds/dom-utils";
 import { useCallback, useMemo, useRef, useState } from "react";
 
 export type ImageLoadingStatus = "loading" | "loaded" | "error";

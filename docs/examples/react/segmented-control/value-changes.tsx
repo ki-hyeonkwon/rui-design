@@ -1,4 +1,4 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 import { useState } from "react";
 

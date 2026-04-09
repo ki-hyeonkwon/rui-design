@@ -1,4 +1,4 @@
-import { useSnackbarContext, type CreateSnackbarOptions } from "@rui/react-snackbar";
+import { useSnackbarContext, type CreateSnackbarOptions } from "@rideds/react-snackbar";
 import { useMemo } from "react";
 
 export type UseSnackbarAdapterReturn = ReturnType<typeof useSnackbarAdapter>;

@@ -1,5 +1,5 @@
-import "@rui/stylesheet/global.css";
-import { generateNoFlashScript } from "@rui/react-theming";
+import "@rideds/stylesheet/global.css";
+import { generateNoFlashScript } from "@rideds/react-theming";
 import type {
   GatsbySSR,
   PluginOptions,

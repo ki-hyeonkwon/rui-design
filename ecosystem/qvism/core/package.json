@@ -1,10 +1,10 @@
 {
-  "name": "@rui/qvism-core",
+  "name": "@rideds/qvism-core",
   "version": "0.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "ecosystem/qvism/core"
   },
   "sideEffects": false,

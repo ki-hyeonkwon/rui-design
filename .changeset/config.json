@@ -6,8 +6,8 @@
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
   "linked": [
-    ["@rui/figma", "@rui/mcp"],
-    ["@rui/codemod", "@rui/migration-index"]
+    ["@rideds/figma", "@rideds/mcp"],
+    ["@rideds/codemod", "@rideds/migration-index"]
   ],
   "access": "public",
   "baseBranch": "dev",

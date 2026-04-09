@@ -1,5 +1,5 @@
 import { IconFaceSmileCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { PrefixIcon } from "@rui/react";
+import { PrefixIcon } from "@rideds/react";
 import { ReactionButton } from "rui/ui/reaction-button";
 
 export default function ReactionButtonDisabled() {

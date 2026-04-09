@@ -1,20 +1,20 @@
 import {
   imageFrame as imageFrameRecipe,
   type ImageFrameVariantProps,
-} from "@rui/css/recipes/image-frame";
+} from "@rideds/css/recipes/image-frame";
 import {
   imageFrameIcon,
   type ImageFrameIconVariantProps,
-} from "@rui/css/recipes/image-frame-icon";
+} from "@rideds/css/recipes/image-frame-icon";
 import {
   imageFrameIndicator,
   type ImageFrameIndicatorVariantProps,
-} from "@rui/css/recipes/image-frame-indicator";
-import { imageFrameReactionButton } from "@rui/css/recipes/image-frame-reaction-button";
-import { imageFrameFloater as floaterVars } from "@rui/css/vars/component";
-import { mergeProps } from "@rui/dom-utils";
-import { Image } from "@rui/react-image";
-import { Toggle as TogglePrimitive, useToggleContext } from "@rui/react-toggle";
+} from "@rideds/css/recipes/image-frame-indicator";
+import { imageFrameReactionButton } from "@rideds/css/recipes/image-frame-reaction-button";
+import { imageFrameFloater as floaterVars } from "@rideds/css/vars/component";
+import { mergeProps } from "@rideds/dom-utils";
+import { Image } from "@rideds/react-image";
+import { Toggle as TogglePrimitive, useToggleContext } from "@rideds/react-toggle";
 import clsx from "clsx";
 import * as React from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
@@ -30,7 +30,7 @@ export interface ImageFrameProps
   extends Omit<AspectRatioProps, "children">,
     ImageFrameVariantProps {
   /**
-   * @deprecated Deprecated in `@rui/react@1.2.x`; will be removed in 1.3.0.
+   * @deprecated Deprecated in `@rideds/react@1.2.x`; will be removed in 1.3.0.
    * Use borderRadius="r2" instead.
    * Reason: 모서리 스타일은 borderRadius prop으로 통일합니다.
    */

@@ -8,7 +8,7 @@ import {
   MenuSheetRoot,
 } from "rui/ui/menu-sheet";
 import { createCallbackActivity } from "../stackflow/createCallbackActivity";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 
 type Action = "add" | "edit" | "delete" | "test1" | "test2";
 

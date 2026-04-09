@@ -6,7 +6,7 @@ import type {
   SlotRecipeDefinition,
   SlotRecipeVariantRecord,
   StyleObject,
-} from "@rui/qvism-core";
+} from "@rideds/qvism-core";
 
 export function defineRecipe<T extends RecipeVariantRecord>(
   definition: RecipeDefinition<T>,

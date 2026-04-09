@@ -4,7 +4,7 @@ import { describe, expect, it, mock } from "bun:test";
 import type { ReactElement } from "react";
 import React from "react";
 
-import { Field } from "@rui/react-field";
+import { Field } from "@rideds/react-field";
 import {
   TextFieldRoot,
   TextFieldInput,

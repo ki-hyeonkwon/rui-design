@@ -1,4 +1,4 @@
-# @rui/react-fieldset
+# @rideds/react-fieldset
 
 ## 0.1.0
 

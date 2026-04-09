@@ -1,4 +1,4 @@
-import { Flex, Icon } from "@rui/react";
+import { Flex, Icon } from "@rideds/react";
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
 import type { ActivityComponentType } from "@stackflow/react/future";
 import { AppBar, AppBarIconButton, AppBarMain, AppBarRight } from "rui/ui/app-bar";

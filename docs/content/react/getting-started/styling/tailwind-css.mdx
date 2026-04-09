@@ -17,7 +17,7 @@ SEED에서 제공하는 토큰을 Tailwind CSS 3과 4 유틸리티 클래스를 
 ### 의존성 설치
 
 ```package-install
-@rui/css @rui/tailwind4-theme
+@rideds/css @rideds/tailwind4-theme
 ```
 
 </Step>
@@ -28,9 +28,9 @@ SEED에서 제공하는 토큰을 Tailwind CSS 3과 4 유틸리티 클래스를 
 
 ```css title="style.css"
 @layer theme, base, seed-base, components, seed-components, utilities;
-@import "@rui/css/base.layered.css";
+@import "@rideds/css/base.layered.css";
 @import "tailwindcss";
-@import "@rui/tailwind4-theme";
+@import "@rideds/tailwind4-theme";
 ```
 
 <Callout>
@@ -76,7 +76,7 @@ Tailwind CSS 스타일시트는 theming 스크립트와 별개로 작동합니�
 ### 의존성 설치
 
 ```package-install
-@rui/css @rui/tailwind3-plugin
+@rideds/css @rideds/tailwind3-plugin
 ```
 
 </Step>
@@ -86,7 +86,7 @@ Tailwind CSS 스타일시트는 theming 스크립트와 별개로 작동합니�
 ### base.css import
 
 ```ts title="index.tsx"
-import "@rui/css/base.css";
+import "@rideds/css/base.css";
 ```
 
 </Step>
@@ -96,7 +96,7 @@ import "@rui/css/base.css";
 ### Tailwind 설정 파일 수정
 
 ```js title="tailwind.config.js"
-import ruiPlugin from "@rui/tailwind3-plugin"; // [!code highlight]
+import ruiPlugin from "@rideds/tailwind3-plugin"; // [!code highlight]
 
 /** @type {import('tailwindcss').Config} */
 export default {

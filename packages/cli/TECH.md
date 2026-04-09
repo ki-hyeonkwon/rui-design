@@ -1,8 +1,8 @@
-# @rui/cli TECH
+# @rideds/cli TECH
 
 ## 개요
 
-- 패키지: `@rui/cli`
+- 패키지: `@rideds/cli`
 - 런타임: Node.js >= 18
 - 언어/모듈: TypeScript, ESM
 - 핵심 의존성: `cac`, `@clack/prompts@1`, `cosmiconfig`, `zod`, `execa`

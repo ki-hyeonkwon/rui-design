@@ -1,5 +1,5 @@
 import type { Transform } from "jscodeshift";
-import { typographyMappings } from "@rui/migration-index/typography";
+import { typographyMappings } from "@rideds/migration-index/typography";
 import { createTransformLogger } from "../../utils/logger.js";
 import type { ASTPath, MemberExpression } from "jscodeshift";
 
@@ -64,7 +64,7 @@ function handleImports(j: any, root: any, hasTransformedTokens: boolean) {
 
   // design-token import 찾기
   const designTokenImports = root.find(j.ImportDeclaration, {
-    source: { value: "@rui/design-token" },
+    source: { value: "@rideds/design-token" },
   });
 
   // design-token import가 없으면 처리하지 않음
@@ -88,7 +88,7 @@ function handleImports(j: any, root: any, hasTransformedTokens: boolean) {
 
     if (classNamesSpecifier) {
       // 이 import 문을 text recipe import로 대체
-      path.node.source.value = "@rui/css/recipes/text";
+      path.node.source.value = "@rideds/css/recipes/text";
       path.node.specifiers = [j.importSpecifier(j.identifier("text"))];
     }
 
@@ -121,7 +121,7 @@ function cleanupUnusedImports(j: any, root: any) {
 
     // text import 찾기
     const textImports = root.find(j.ImportDeclaration, {
-      source: { value: "@rui/css/recipes/text" },
+      source: { value: "@rideds/css/recipes/text" },
     });
 
     // import 주석 보존

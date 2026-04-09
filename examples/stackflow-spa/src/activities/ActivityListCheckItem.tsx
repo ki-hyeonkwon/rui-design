@@ -12,7 +12,7 @@ import {
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { List, ListDivider, ListCheckItem } from "rui/ui/list";
 import { Checkmark } from "rui/ui/checkbox";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { Avatar } from "rui/ui/avatar";
 import {

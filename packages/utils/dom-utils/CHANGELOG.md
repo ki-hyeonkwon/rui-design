@@ -1,4 +1,4 @@
-# @rui/dom-utils
+# @rideds/dom-utils
 
 ## 1.0.0
 

@@ -1,4 +1,4 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { FieldButton, FieldButtonPlaceholder } from "rui/ui/field-button";
 import { IconWonLine } from "@karrotmarket/react-monochrome-icon";
 

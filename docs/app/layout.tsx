@@ -1,5 +1,5 @@
 import "./layer-order.css";
-import "@rui/css/base.layered.min.css";
+import "@rideds/css/base.layered.min.css";
 import "simple-reveal/index.css";
 import "./global.css";
 

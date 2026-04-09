@@ -1,4 +1,4 @@
-import { Text, VStack } from "@rui/react";
+import { Text, VStack } from "@rideds/react";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import {
   AppBar,
@@ -10,7 +10,7 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent, type AppScreenProps } from "rui/ui/app-screen";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { appScreenVariantMap } from "@rui/css/recipes/app-screen";
+import { appScreenVariantMap } from "@rideds/css/recipes/app-screen";
 import { ActionButton } from "rui/ui/action-button";
 
 declare module "@stackflow/config" {

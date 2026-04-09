@@ -1,4 +1,4 @@
-# @rui/react-portal
+# @rideds/react-portal
 
 ## 1.0.0
 

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { VStack, HStack } from "@rui/react";
+import { VStack, HStack } from "@rideds/react";
 import { VariantTable } from "./components/variant-table";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VIEWPORT_MODES } from "./utils/parameters";

@@ -1,4 +1,4 @@
-import { Box, VStack } from "@rui/react";
+import { Box, VStack } from "@rideds/react";
 import type { StaticActivityComponentType } from "@stackflow/react/future";
 import { useFlow } from "@stackflow/react/future";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";

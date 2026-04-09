@@ -1,4 +1,4 @@
-import "@rui/stylesheet/global.css";
+import "@rideds/stylesheet/global.css";
 import type { PluginOptions, WrapPageElementBrowserArgs, WrapRootElementNodeArgs } from "gatsby";
 import * as React from "react";
 import { type Options, Wrapper } from "./wrapRootElement";

@@ -1,5 +1,5 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { fab, type FabVariantProps } from "@rui/css/recipes/fab";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { fab, type FabVariantProps } from "@rideds/css/recipes/fab";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 

@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-dialog",
+  "name": "@rideds/react-dialog",
   "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/dialog"
   },
   "sideEffects": false,
@@ -29,10 +29,10 @@
   "dependencies": {
     "@radix-ui/react-dismissable-layer": "^1.1.7",
     "@radix-ui/react-focus-scope": "^1.1.4",
-    "@rui/react-use-controllable-state": "1.0.0",
+    "@rideds/react-use-controllable-state": "1.0.0",
     "@radix-ui/react-use-layout-effect": "^1.1.1",
-    "@rui/dom-utils": "1.0.0",
-    "@rui/react-primitive": "1.0.0"
+    "@rideds/dom-utils": "1.0.0",
+    "@rideds/react-primitive": "1.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.6",

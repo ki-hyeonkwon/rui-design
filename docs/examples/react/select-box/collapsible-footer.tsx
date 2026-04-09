@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from "@rui/react";
+import { Box, HStack, Text } from "@rideds/react";
 import {
   CheckSelectBox,
   CheckSelectBoxCheckmark,

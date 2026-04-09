@@ -1,11 +1,11 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { Field, useFieldContext } from "@rui/react-field";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { Field, useFieldContext } from "@rideds/react-field";
 import type * as React from "react";
 import { forwardRef } from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { createWithStateProps } from "../../utils/createWithStateProps";
-import { field, type FieldVariantProps } from "@rui/css/recipes/field";
-import { fieldLabel, type FieldLabelVariantProps } from "@rui/css/recipes/field-label";
+import { field, type FieldVariantProps } from "@rideds/css/recipes/field";
+import { fieldLabel, type FieldLabelVariantProps } from "@rideds/css/recipes/field-label";
 import { InternalIcon } from "../private/Icon";
 import clsx from "clsx";
 

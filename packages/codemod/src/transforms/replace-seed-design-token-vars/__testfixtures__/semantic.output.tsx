@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 
 const style1 = {
   color: vars.$color.fg.brand,

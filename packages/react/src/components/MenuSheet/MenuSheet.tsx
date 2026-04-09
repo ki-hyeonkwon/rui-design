@@ -1,10 +1,10 @@
-import { Dialog as DialogPrimitive, useDialogContext } from "@rui/react-dialog";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { menuSheet, type MenuSheetVariantProps } from "@rui/css/recipes/menu-sheet";
+import { Dialog as DialogPrimitive, useDialogContext } from "@rideds/react-dialog";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { menuSheet, type MenuSheetVariantProps } from "@rideds/css/recipes/menu-sheet";
 import {
   menuSheetItem,
   type MenuSheetItemVariantProps,
-} from "@rui/css/recipes/menu-sheet-item";
+} from "@rideds/css/recipes/menu-sheet-item";
 import * as React from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { createWithStateProps } from "../../utils/createWithStateProps";

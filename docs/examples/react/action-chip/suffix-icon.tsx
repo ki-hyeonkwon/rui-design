@@ -1,5 +1,5 @@
 import { IconChevronDownFill } from "@karrotmarket/react-monochrome-icon";
-import { ActionChip, SuffixIcon } from "@rui/react";
+import { ActionChip, SuffixIcon } from "@rideds/react";
 
 export default function ActionChipSuffixIcon() {
   return (

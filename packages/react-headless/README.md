@@ -6,8 +6,8 @@ SEED 디자인 시스템의 컴포넌트 요구사항을 위한 최소한의 기
 
 ## Common Dependencies
 
-- `@rui/react-primitive`
-- `@rui/dom-utils`
+- `@rideds/react-primitive`
+- `@rideds/dom-utils`
 - `@radix-ui/react-compose-refs`
 - `@radix-ui/react-use-controllable-state`
 - `@radix-ui/react-use-layout-effect`

@@ -1,5 +1,5 @@
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
-import { Flex } from "@rui/react";
+import { Flex } from "@rideds/react";
 import type { ActivityComponentType } from "@stackflow/react/future";
 import { useEffect, useRef, useState } from "react";
 import {

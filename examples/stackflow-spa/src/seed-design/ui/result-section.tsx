@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Text, VStack, type TextProps, type VStackProps } from "@rui/react";
+import { Text, VStack, type TextProps, type VStackProps } from "@rideds/react";
 import { ActionButton, type ActionButtonProps } from "./action-button";
 
 export interface ResultSectionProps

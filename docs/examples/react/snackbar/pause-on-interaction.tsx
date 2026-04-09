@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import { Snackbar, SnackbarProvider, useSnackbarAdapter } from "rui/ui/snackbar";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";

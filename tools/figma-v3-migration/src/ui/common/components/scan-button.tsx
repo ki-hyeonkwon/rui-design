@@ -1,4 +1,4 @@
-import { ActionButton } from "@rui/react";
+import { ActionButton } from "@rideds/react";
 import type { SerializedBaseNode } from "shared/types";
 
 interface ScanButtonProps {

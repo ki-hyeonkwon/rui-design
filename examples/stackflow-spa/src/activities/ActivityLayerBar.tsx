@@ -14,7 +14,7 @@ import {
   IconHouseLine,
 } from "@karrotmarket/react-monochrome-icon";
 import { ActionButton } from "rui/ui/action-button";
-import { HStack, PrefixIcon, VStack } from "@rui/react";
+import { HStack, PrefixIcon, VStack } from "@rideds/react";
 import { useState } from "react";
 
 declare module "@stackflow/config" {

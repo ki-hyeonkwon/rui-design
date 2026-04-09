@@ -1,4 +1,4 @@
-import { Box, Inline } from "@rui/react";
+import { Box, Inline } from "@rideds/react";
 
 /**
  * @deprecated Use `HStack` instead.

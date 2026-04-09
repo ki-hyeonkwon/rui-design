@@ -1,4 +1,4 @@
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { ActivityComponentType, useFlow } from "@stackflow/react/future";
 import {
   AlertDialogAction,

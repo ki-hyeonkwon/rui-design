@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { Switch } from "rui/ui/switch";
 
-import { switchVariantMap } from "@rui/css/recipes/switch";
+import { switchVariantMap } from "@rideds/css/recipes/switch";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

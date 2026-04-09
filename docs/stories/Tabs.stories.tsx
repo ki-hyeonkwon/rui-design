@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { TabsRoot, TabsRootProps, TabsTrigger, TabsList } from "rui/ui/tabs";
 
-import { tabsVariantMap } from "@rui/css/recipes/tabs";
+import { tabsVariantMap } from "@rideds/css/recipes/tabs";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

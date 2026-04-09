@@ -1,4 +1,4 @@
-## 프로젝트 컨텍스트: `@rui/figma`
+## 프로젝트 컨텍스트: `@rideds/figma`
 
 ### 1. 프로젝트 개요 (Project Overview)
 
@@ -15,19 +15,19 @@
 
 - **주요 프로그래밍 언어:** TypeScript
 - **주요 프레임워크 및 라이브러리:**
-  - `@rui/figma-extractor`: Figma 데이터 추출 및 기본 변환.
+  - `@rideds/figma-extractor`: Figma 데이터 추출 및 기본 변환.
   - `ts-pattern`: 타입 기반 패턴 매칭을 통한 분기 처리.
   - `change-case`: 문자열 케이스 변환 (컴포넌트/props 이름 생성 등에 활용 가능성).
   - (개발) `@figma/plugin-typings`, `@figma/rest-api-spec`: Figma 타입 정보.
 - **데이터베이스:** 사용하지 않음.
-- **주요 외부 서비스 또는 API 의존성:** Figma API (간접적으로 `@rui/figma-extractor` 및 `normalizer` 모듈을 통해 사용).
+- **주요 외부 서비스 또는 API 의존성:** Figma API (간접적으로 `@rideds/figma-extractor` 및 `normalizer` 모듈을 통해 사용).
 - **빌드 도구:** `bunchee`.
 
 ### 3. 아키텍처 개요 (Architecture Overview)
 
 ```mermaid
 flowchart TB
-    subgraph "@rui/figma"
+    subgraph "@rideds/figma"
         config["figma-extractor.config.ts"]
 
         subgraph "src/normalizer"
@@ -73,7 +73,7 @@ flowchart TB
         end
     end
 
-    figmaExtractor["@rui/figma-extractor"] --> config
+    figmaExtractor["@rideds/figma-extractor"] --> config
     figmaExtractor --> fromRest
     figmaExtractor --> fromPlugin
 
@@ -283,7 +283,7 @@ flowchart LR
 - **주요 설정 파일:**
   - `packages/figma/figma-extractor.config.ts`: Figma 데이터 추출 필터링 및 기본 변환 규칙 정의.
   - 코드 생성 옵션 (`CodegenOptions`): 코드 생성기(`createPipeline` 등) 사용 시 인자로 전달. (예: `shouldInferAutoLayout`, `shouldPrintSource`)
-- **중요한 환경 변수:** 명시적인 사용은 확인되지 않음. Figma API 통신을 위한 토큰 등은 `@rui/figma-extractor` 또는 상위 실행 환경에서 관리될 것으로 추정.
+- **중요한 환경 변수:** 명시적인 사용은 확인되지 않음. Figma API 통신을 위한 토큰 등은 `@rideds/figma-extractor` 또는 상위 실행 환경에서 관리될 것으로 추정.
 
 ### 8. 주의사항 또는 특이점 (Caveats or Peculiarities)
 

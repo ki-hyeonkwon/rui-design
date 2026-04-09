@@ -1,4 +1,4 @@
-import { Box, Tabs } from "@rui/react";
+import { Box, Tabs } from "@rideds/react";
 import { TabsCarousel, TabsContent, TabsList, TabsRoot, TabsTrigger } from "rui/ui/tabs";
 
 export default function TabsCarouselPreventDrag() {

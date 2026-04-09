@@ -1,4 +1,4 @@
-# @rui/migration-index
+# @rideds/migration-index
 
 ## 1.0.0
 

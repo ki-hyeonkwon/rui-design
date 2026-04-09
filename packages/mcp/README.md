@@ -1,4 +1,4 @@
-# @rui/mcp
+# @rideds/mcp
 
 RUI Design의 MCP 서버를 제공합니다.
 

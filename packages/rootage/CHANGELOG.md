@@ -1,4 +1,4 @@
-# @rui/rootage-artifacts
+# @rideds/rootage-artifacts
 
 ## 1.2.6
 
@@ -53,7 +53,7 @@
 - 0ecb893: [Help Bubble](/react/components/help-bubble) 관련 컴포넌트를 업데이트합니다.
 
   - **1.1 → 1.2 업그레이드 시 snippet 업데이트 필요**: `HelpBubbleTrigger` 및 `HelpBubbleAnchor`의 내부 구조가 변경되었습니다. snippet을 다시 내려받아 주세요.
-    - `npx @rui/cli@latest add ui:help-bubble`
+    - `npx @rideds/cli@latest add ui:help-bubble`
     - **인터페이스 변경사항이 없으므로 `HelpBubbleAnchor`와 `HelpBubbleTrigger`를 사용하는 기존 코드를 변경할 필요가 없습니다.**
     - `HelpBubble.Body`를 사용하여 `HelpBubble.Title`과 `HelpBubble.Description`을 감싸도록 변경되었습니다.
     - `zIndexOffset`을 활용하여 `HelpBubble.Positioner`의 z-index를 조정할 수 있습니다. ([예시](/react/components/help-bubble#z-index-offset))
@@ -62,7 +62,7 @@
 
   - **1.1 → 1.2 업그레이드 시 변경 권장**: snippet을 다시 내려받고, `SwitchMark`, `RadioMark`를 사용하는 코드를 아래와 같이 변경하세요.
 
-    - `npx @rui/cli@latest add ui:switch ui:radio-group`
+    - `npx @rideds/cli@latest add ui:switch ui:radio-group`
     - snippet에 `SwitchMark`, `RadioMark` 정의가 존재하지만, 1.3 릴리즈 시 snippet에서 해당 맵핑이 제거될 예정이므로 미리 변경해두시길 권장드립니다.
 
     ```tsx
@@ -108,7 +108,7 @@
 - 98dbac4: [Checkbox](/react/components/checkbox) 관련 컴포넌트를 추가합니다.
 
   - `CheckboxGroup` snippet 컴포넌트가 추가되었습니다. 사용하려면 snippet을 다시 내려받아 주세요.
-    - `npx @rui/cli@latest add ui:checkbox`
+    - `npx @rideds/cli@latest add ui:checkbox`
     - `CheckboxGroup`은 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `Checkbox`를 묶지 않아도 됩니다.
       - 기존 `Checkbox`를 `CheckboxGroup`으로 감쌀 필요는 없습니다. `CheckboxGroup`은 선택적으로 사용할 수 있습니다.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
@@ -117,16 +117,16 @@
 
   - **1.1 → 1.2 업그레이드 시 snippet 업데이트 필요**: `RadioGroup` snippet의 내부 구조가 변경되었습니다. snippet을 다시 내려받아 주세요.
 
-    - `npx @rui/cli@latest add ui:radio-group`
+    - `npx @rideds/cli@latest add ui:radio-group`
     - `RadioGroup`이 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `RadioGroupItem`을 묶는 코드를 제거합니다.
       - **1.1 → 1.2 업그레이드 시 변경 필요**: `RadioGroupItem`을 묶어서 사용하던 `VStack`을 제거하여 `RadioGroupItem`이 `RadioGroup`의 direct child가 되도록 변경하세요.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
-    - `@rui/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
-      - `@rui/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rui/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
+    - `@rideds/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
+      - `@rideds/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rideds/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
 
     ```tsx
     // 전
-    import { VStack } from "@rui/react";
+    import { VStack } from "@rideds/react";
     import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 
     <RadioGroup defaultValue="apple" aria-label="Fruit selection">
@@ -152,7 +152,7 @@
 
     ```tsx
     // 전
-    import { RadioGroup } from "@rui/react";
+    import { RadioGroup } from "@rideds/react";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -171,7 +171,7 @@
 
     ```tsx
     // 후
-    import { RadioGroup } from "@rui/react/primitive";
+    import { RadioGroup } from "@rideds/react/primitive";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -195,7 +195,7 @@
 - 2643d17: [Select Box](/react/components/select-box) 관련 컴포넌트를 업데이트합니다.
 
   - **1.1 → 1.2 업그레이드 시 snippet을 다시 내려받아 주세요.**
-    - `npx @rui/cli@latest add ui:select-box`
+    - `npx @rideds/cli@latest add ui:select-box`
   - `CheckSelectBoxGroup`, `RadioSelectBoxRoot`의 children이 기본적으로 gap이 포함된 그리드 레이아웃으로 정렬됩니다.
     - **1.1 → 1.2 업그레이드 시 변경 필요**: `CheckSelectBox`, `RadioSelectBoxItem`을 묶어서 사용하던 `VStack`을 제거하여 `CheckSelectBox`와 `RadioSelectBoxItem`이 `CheckSelectBoxGroup` 또는 `RadioSelectBoxRoot`의 direct child가 되도록 변경하세요. `VStack`에 `gap` 이외의 스타일이 적용된 경우 `<VStack paddingX="x4"><CheckSelectBoxGroup>...</CheckSelectBoxGroup></VStack>`와 같이 `VStack`을 외부에 남겨두세요.
     - **기능 추가**: `CheckSelectBoxGroup`와 `RadioSelectBoxRoot`에 `columns`를 지정할 수 있습니다. `columns`가 `2` 이상인 경우 하위 항목에 기본적으로 `layout="vertical"`이 적용됩니다. 기본 `layout`은 하위 항목에서 오버라이드할 수 있습니다.
@@ -218,7 +218,7 @@
 - db49a84: Chip 컴포넌트 스펙에 `layout=withText` variant를 명시합니다. (스타일 변경사항 없음)
 - 6fab0e7: Skeleton 가시성 향상을 위해 `$gradient.shimmer-magic` 및 `$gradient.shimmer-neutral` 토큰의 색상을 업데이트합니다.
 - 5faef3a: 주석, 참고 사항 및 상세 리스트 등 부가 정보에 사용할 수 있는 시맨틱 텍스트 스타일 `articleNote`를 추가합니다.
-- 50ee0a6: `@rui/css@1.3` 및 `@rui/react@1.3`에서 제거되는 토큰 및 옵션에 관한 경고를 추가합니다.
+- 50ee0a6: `@rideds/css@1.3` 및 `@rideds/react@1.3`에서 제거되는 토큰 및 옵션에 관한 경고를 추가합니다.
 
   - 1.3에서 제거 예정인 색상 토큰
     - [`$color.bg.layer-fill`](/docs/foundation/design-token/%24color.bg.layer-fill)
@@ -357,7 +357,7 @@
 
   - vaul headless 코드 기반으로 seed에 맞게 커스텀하여 구현했습니다.
   - vaul과 동일한 인터페이스를 가지고 있습니다. (snap-points, fade-from-index, etc.)
-  - `npx @rui/cli@latest add ui:bottom-sheet`로 snippet을 최신화하세요.
+  - `npx @rideds/cli@latest add ui:bottom-sheet`로 snippet을 최신화하세요.
 
 ### Patch Changes
 
@@ -429,7 +429,7 @@
 - 39a96f1: (**BREAKING CHANGE**: Snackbar Snippet을 다시 설치해야합니다) Snackbar 컴포넌트 변경
   - Snackbar의 배경색이 다크모드에서 흰색으로 변경됩니다.
   - Prefix 요소유무에 따라 여백이 변경됩니다.
-  - `npx @rui/cli@latest add ui:snackbar` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:snackbar` 명령어로 설치하세요.
 
 ### Patch Changes
 
@@ -438,18 +438,18 @@
   - snippet 내 오타 수정
   - 신규 10단계 반영
   - 업데이트 가이드
-    1. `@rui/css@latest @rui/react@latest` 설치
-    2. `npx @rui/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
+    1. `@rideds/css@latest @rideds/react@latest` 설치
+    2. `npx @rideds/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
     3. 온도 범위가 변경되었으므로, `<MannerTemp level="l1" />` 혹은 `<MannerTempBadge level="l1" />`과 같이 `level`을 직접 지정하여 사용하고 있는 경우가 있는지 확인
 
 - 4153ca5: HelpBubble 컴포넌트의 배경색이 다크모드에서 흰색으로 변경됩니다.
 - a7d07f0: (**BREAKING CHANGE**: `SwitchMark` 사용을 위해서는 Snippet을 다시 설치해야 합니다.) Switch의 토글 영역만을 정의한 Switch Mark 컴포넌트를 추가합니다.
 
-  - `npx @rui/cli@latest add ui:switch` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:switch` 명령어로 설치하세요.
 
   (**BREAKING CHANGE**: `ListHeader` 사용을 위해서는 Snippet을 다시 설치해야 합니다.) List Header 컴포넌트를 추가합니다.
 
-  - `npx @rui/cli@latest add ui:list` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:list` 명령어로 설치하세요.
 
 ## 0.1.4
 

@@ -3,7 +3,7 @@ import {
   stringifyValueExpression,
   stringifyTokenExpression,
   type ComponentSpecExpression,
-} from "@rui/rootage-core/legacy";
+} from "@rideds/rootage-core/legacy";
 import YAML from "yaml";
 import { stringifyConditions, stringifyVariants } from "./stringify";
 
@@ -20,7 +20,7 @@ const COMPONENT_KEYS = [
   "radio",
 ];
 const getSpecUrl = (key: string) =>
-  `https://raw.githubusercontent.com/rui-design/rui-design/dev/packages/rootage/artifacts/${key}.yaml`;
+  `https://raw.githubusercontent.com/ki-hyeonkwon/rui-design/dev/packages/rootage/artifacts/${key}.yaml`;
 
 function Widget() {
   const [componentKey, setComponentKey] = useSyncedState<string>("componentKey", "");

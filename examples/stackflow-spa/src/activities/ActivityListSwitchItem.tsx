@@ -11,7 +11,7 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { List, ListDivider, ListSwitchItem } from "rui/ui/list";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { Avatar } from "rui/ui/avatar";
 import {

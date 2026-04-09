@@ -1,4 +1,4 @@
-import { ActionSheet as SeedActionSheet } from "@rui/react";
+import { ActionSheet as SeedActionSheet } from "@rideds/react";
 import { forwardRef } from "react";
 import type * as React from "react";
 

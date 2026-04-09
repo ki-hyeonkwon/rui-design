@@ -1,6 +1,6 @@
 import colors from "picocolors";
 
-export const LOG_PREFIX = colors.bold("@rui/codemod");
+export const LOG_PREFIX = colors.bold("@rideds/codemod");
 
 interface TrackParams {
   event: string;

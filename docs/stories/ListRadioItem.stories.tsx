@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 import { Fragment } from "react";
 
-import { Icon } from "@rui/react";
-import { RadioGroup } from "@rui/react/primitive";
+import { Icon } from "@rideds/react";
+import { RadioGroup } from "@rideds/react/primitive";
 
 import { List, ListRadioItem, ListDivider } from "rui/ui/list";
 import { Radiomark } from "rui/ui/radio-group";

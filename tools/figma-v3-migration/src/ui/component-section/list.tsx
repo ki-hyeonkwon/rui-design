@@ -1,4 +1,4 @@
-import { Box, Flex, Stack, Text } from "@rui/react";
+import { Box, Flex, Stack, Text } from "@rideds/react";
 import type { InstanceInfo } from "shared/types";
 import { useComponentSection } from "./context";
 import type { ReactNode } from "react";

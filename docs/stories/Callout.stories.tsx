@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { Callout } from "rui/ui/callout";
 
-import { calloutVariantMap } from "@rui/css/recipes/callout";
+import { calloutVariantMap } from "@rideds/css/recipes/callout";
 import { VariantTable } from "./components/variant-table";
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
 import { SeedThemeDecorator } from "./components/decorator";

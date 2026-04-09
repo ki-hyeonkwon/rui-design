@@ -6,7 +6,7 @@ const withMDX = createMDX();
 const config = {
   output: "export",
   reactStrictMode: true,
-  transpilePackages: ["@rui/react", "@rui/stackflow"],
+  transpilePackages: ["@rideds/react", "@rideds/stackflow"],
   serverExternalPackages: [
     "ts-morph",
     "typescript",

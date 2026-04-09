@@ -1,5 +1,5 @@
 import { IconArrow2ClockwiseCircularLine } from "@karrotmarket/react-monochrome-icon";
-import { ActionButton, Box, Flex, Icon } from "@rui/react";
+import { ActionButton, Box, Flex, Icon } from "@rideds/react";
 import type { ReactNode } from "react";
 
 interface FooterProps {

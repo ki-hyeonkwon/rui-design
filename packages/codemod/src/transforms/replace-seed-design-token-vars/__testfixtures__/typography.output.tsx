@@ -1,6 +1,6 @@
-import { vars as legacyVars } from "@rui/design-token";
+import { vars as legacyVars } from "@rideds/design-token";
 
-import { vars as typoVars } from "@rui/css/vars/component/typography";
+import { vars as typoVars } from "@rideds/css/vars/component/typography";
 
 // Basic typography
 const basicTypography = {

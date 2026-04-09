@@ -1,5 +1,5 @@
-import { HStack, Text, VStack } from "@rui/react";
-import { Checkbox } from "@rui/react/primitive";
+import { HStack, Text, VStack } from "@rideds/react";
+import { Checkbox } from "@rideds/react/primitive";
 import { Checkmark } from "rui/ui/checkbox";
 
 function CustomCheckbox({ children, ...props }: Checkbox.RootProps) {

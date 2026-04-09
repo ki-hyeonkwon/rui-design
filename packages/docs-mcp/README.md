@@ -1,13 +1,13 @@
-# @rui/docs-mcp
+# @rideds/docs-mcp
 
 MCP (Model Context Protocol) tools for accessing RUI Design documentation. This package provides LLMs with structured access to RUI Design's React and Breeze component documentation, design guidelines, Rootage specifications, and more.
 
 ## Installation
 
 ```bash
-npm install @rui/docs-mcp
+npm install @rideds/docs-mcp
 # or
-bun add @rui/docs-mcp
+bun add @rideds/docs-mcp
 ```
 
 ## Usage
@@ -18,11 +18,11 @@ For use with Claude Desktop or other MCP clients:
 
 ```bash
 # Global installation
-npm install -g @rui/docs-mcp
+npm install -g @rideds/docs-mcp
 rui-docs-mcp
 
 # Or via npx
-npx @rui/docs-mcp
+npx @rideds/docs-mcp
 ```
 
 ### Integration with Claude Desktop
@@ -34,7 +34,7 @@ Add to your Claude Desktop configuration (`~/Library/Application Support/Claude/
   "mcpServers": {
     "rui-docs": {
       "command": "npx",
-      "args": ["-y", "@rui/docs-mcp"]
+      "args": ["-y", "@rideds/docs-mcp"]
     }
   }
 }
@@ -57,8 +57,8 @@ Or if installed globally:
 For building custom MCP servers or integrating into your own applications:
 
 ```javascript
-import { server } from "@rui/docs-mcp/server";
-import { initializeTools } from "@rui/docs-mcp/tools";
+import { server } from "@rideds/docs-mcp/server";
+import { initializeTools } from "@rideds/docs-mcp/tools";
 
 // Initialize the tools
 await initializeTools(server);

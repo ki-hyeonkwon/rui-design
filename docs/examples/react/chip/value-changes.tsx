@@ -1,4 +1,4 @@
-import { HStack, VStack, Text } from "@rui/react";
+import { HStack, VStack, Text } from "@rideds/react";
 import { Chip } from "rui/ui/chip";
 import { useState } from "react";
 

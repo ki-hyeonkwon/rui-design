@@ -1,4 +1,4 @@
-import { Article, Text, VStack } from "@rui/react";
+import { Article, Text, VStack } from "@rideds/react";
 
 export default function ArticlePreview() {
   return (

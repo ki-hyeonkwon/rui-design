@@ -1,15 +1,15 @@
 {
   "id": "progress-circle",
   "dependencies": [
-    "@rui/react"
+    "@rideds/react"
   ],
   "snippets": [
     {
       "path": "progress-circle.tsx",
-      "content": "/**\n * @file ui:progress-circle\n * @requires @rui/react@~1.0.0\n * @requires @rui/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { ProgressCircle as SeedProgressCircle } from \"@rui/react\";\nimport * as React from \"react\";\n\nexport interface ProgressCircleProps extends SeedProgressCircle.RootProps {}\n\n/**\n * @see https://rui-design.io/react/components/progress-circle\n */\nexport const ProgressCircle = React.forwardRef<SVGSVGElement, ProgressCircleProps>((props, ref) => {\n  return (\n    <SeedProgressCircle.Root ref={ref} {...props}>\n      <SeedProgressCircle.Track />\n      <SeedProgressCircle.Range />\n    </SeedProgressCircle.Root>\n  );\n});\n\nProgressCircle.displayName = \"ProgressCircle\";\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rui/* packages.\n * You can extend this snippet however you want.\n */\n",
+      "content": "/**\n * @file ui:progress-circle\n * @requires @rideds/react@~1.0.0\n * @requires @rideds/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { ProgressCircle as SeedProgressCircle } from \"@rideds/react\";\nimport * as React from \"react\";\n\nexport interface ProgressCircleProps extends SeedProgressCircle.RootProps {}\n\n/**\n * @see https://rui-design.io/react/components/progress-circle\n */\nexport const ProgressCircle = React.forwardRef<SVGSVGElement, ProgressCircleProps>((props, ref) => {\n  return (\n    <SeedProgressCircle.Root ref={ref} {...props}>\n      <SeedProgressCircle.Track />\n      <SeedProgressCircle.Range />\n    </SeedProgressCircle.Root>\n  );\n});\n\nProgressCircle.displayName = \"ProgressCircle\";\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rideds/* packages.\n * You can extend this snippet however you want.\n */\n",
       "dependencies": {
-        "@rui/react": "~1.0.0",
-        "@rui/css": "~1.0.0"
+        "@rideds/react": "~1.0.0",
+        "@rideds/css": "~1.0.0"
       }
     }
   ]

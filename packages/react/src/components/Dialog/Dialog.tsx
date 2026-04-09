@@ -1,6 +1,6 @@
-import { Dialog as DialogPrimitive, useDialogContext } from "@rui/react-dialog";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { dialog, type DialogVariantProps } from "@rui/css/recipes/dialog";
+import { Dialog as DialogPrimitive, useDialogContext } from "@rideds/react-dialog";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { dialog, type DialogVariantProps } from "@rideds/css/recipes/dialog";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { createWithStateProps } from "../../utils/createWithStateProps";
 

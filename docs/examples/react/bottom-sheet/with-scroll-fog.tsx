@@ -1,4 +1,4 @@
-import { Box, ScrollFog, VStack } from "@rui/react";
+import { Box, ScrollFog, VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import {
   BottomSheetBody,

@@ -1,9 +1,9 @@
 {
-  "name": "@rui/mcp",
+  "name": "@rideds/mcp",
   "version": "1.3.9",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/mcp"
   },
   "author": "Asher <asher@daangn.com>",
@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.3",
-    "@rui/figma": "1.3.9",
+    "@rideds/figma": "1.3.9",
     "cac": "^6.7.14",
     "figma-api": "^2.1.0-beta",
     "uuid": "^13.0.0",

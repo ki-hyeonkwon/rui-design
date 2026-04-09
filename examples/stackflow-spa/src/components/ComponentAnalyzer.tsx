@@ -3,7 +3,7 @@ import { useMemo, useRef, useState } from "react";
 import { getGridColumnCount, getVariantCombination } from "../helper";
 import { ComponentShowcase } from "./ComponentShowcase";
 import ControlPanel from "./ControlPanel";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 
 type ComponentAnalyzerProviderProps<T extends Record<string, string[]>> = {
   variantsMap: T;

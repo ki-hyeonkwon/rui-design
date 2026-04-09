@@ -1,8 +1,8 @@
 import type * as React from "react";
 import { forwardRef } from "react";
 
-import { pageBanner, type PageBannerVariantProps } from "@rui/css/recipes/page-banner";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { pageBanner, type PageBannerVariantProps } from "@rideds/css/recipes/page-banner";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import {
   DismissibleCloseButton,

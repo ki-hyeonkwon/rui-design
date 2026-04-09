@@ -1,7 +1,7 @@
 import { basicRendererPlugin } from "@stackflow/plugin-renderer-basic";
 import { type ActivityComponentType, stackflow } from "@stackflow/react/future";
 import { defineConfig, type RegisteredActivityName } from "@stackflow/config";
-import { ruiPlugin } from "@rui/stackflow";
+import { ruiPlugin } from "@rideds/stackflow";
 
 interface MakeStackProps {
   activities: {

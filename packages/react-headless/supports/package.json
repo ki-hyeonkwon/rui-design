@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-supports",
+  "name": "@rideds/react-supports",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/supports"
   },
   "main": "./lib/index.cjs",

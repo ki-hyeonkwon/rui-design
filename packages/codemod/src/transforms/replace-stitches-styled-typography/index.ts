@@ -1,4 +1,4 @@
-import { typographyMappings } from "@rui/migration-index/typography";
+import { typographyMappings } from "@rideds/migration-index/typography";
 import type { ObjectExpression, ObjectMethod, ObjectProperty, Transform } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";
 

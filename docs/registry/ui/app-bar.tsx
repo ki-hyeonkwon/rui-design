@@ -1,8 +1,8 @@
 "use client";
 
 import { IconChevronLeftLine, IconXmarkLine } from "@karrotmarket/react-monochrome-icon"; // "@daangn/react-monochrome-icon"과 동일합니다.
-import { VStack } from "@rui/react";
-import { AppBar as SeedAppBar } from "@rui/stackflow";
+import { VStack } from "@rideds/react";
+import { AppBar as SeedAppBar } from "@rideds/stackflow";
 import { useActions, useActivity } from "@stackflow/react";
 import * as React from "react";
 import { forwardRef } from "react";

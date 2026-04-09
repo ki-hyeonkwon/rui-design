@@ -5,21 +5,21 @@
 업데이트 전에 먼저 `compat` 명령으로 현재 설치된 스니펫의 버전 호환 상태를 확인합니다.
 
 ```bash
-npx @rui/cli@latest compat
+npx @rideds/cli@latest compat
 ```
 
 호환성 이슈가 있으면 종료 코드 `1`로 끝나므로 CI에서도 게이트로 사용할 수 있습니다.
 
 ## Install Compatible Snippets
 
-프로젝트의 `@rui/react` 버전과 맞는 스니펫이 필요하면 `--baseUrl`을 사용합니다.
+프로젝트의 `@rideds/react` 버전과 맞는 스니펫이 필요하면 `--baseUrl`을 사용합니다.
 
 ```bash
-npx @rui/cli@latest add --baseUrl https://1-0.rui.pages.dev ui:action-button
+npx @rideds/cli@latest add --baseUrl https://1-0.rui.pages.dev ui:action-button
 ```
 
 ```bash
-npx @rui/cli@latest add-all --baseUrl https://1-1.rui.pages.dev ui
+npx @rideds/cli@latest add-all --baseUrl https://1-1.rui.pages.dev ui
 ```
 
 ## Resolve Custom File Conflicts

@@ -1,4 +1,4 @@
-import { ImageFrame, Flex, VStack, Text } from "@rui/react";
+import { ImageFrame, Flex, VStack, Text } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 export default function ImageFrameStroke() {

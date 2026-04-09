@@ -1,4 +1,4 @@
-import { Flex } from "@rui/react";
+import { Flex } from "@rideds/react";
 import { Avatar } from "rui/ui/avatar";
 
 export default function AvatarSize() {

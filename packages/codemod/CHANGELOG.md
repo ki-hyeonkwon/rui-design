@@ -1,4 +1,4 @@
-# @rui/codemod
+# @rideds/codemod
 
 ## 1.0.0
 
@@ -9,7 +9,7 @@
 ### Patch Changes
 
 - Updated dependencies [34f92f2]
-  - @rui/migration-index@1.0.0
+  - @rideds/migration-index@1.0.0
 
 ## 0.0.31
 
@@ -17,15 +17,15 @@
 
 - 91952e4: `replace-semantic-stroke-color` transform을 추가합니다.
 
-  - `@rui/css` v0.2.0에 맞춰 `replace-semantic-stroke-color` transform을 추가합니다.
-  - `@rui/css/vars`에서 사용한 stroke 토큰을 업데이트하는 마이그레이션 코드모드를 추가합니다.
+  - `@rideds/css` v0.2.0에 맞춰 `replace-semantic-stroke-color` transform을 추가합니다.
+  - `@rideds/css/vars`에서 사용한 stroke 토큰을 업데이트하는 마이그레이션 코드모드를 추가합니다.
 
 ## 0.0.30
 
 ### Patch Changes
 
 - Updated dependencies [8448880]
-  - @rui/migration-index@0.0.30
+  - @rideds/migration-index@0.0.30
 
 ## 0.0.29
 
@@ -40,7 +40,7 @@
 - ab52481: `replace-custom-rui-typography`, `replace-custom-color-to-rui-vars-color` 로직 변경
 - f801300: 새로운 black, white alpha 값 추가에 대해서 대응하고, V3로 이미 마이그레이션 된 프로젝트의 alpha 값들 변환해주는 transform을 추가합니다 (replace-alpha-color)
 - Updated dependencies [f801300]
-  - @rui/migration-index@0.0.28
+  - @rideds/migration-index@0.0.28
 
 ## 0.0.27
 
@@ -115,7 +115,7 @@
     - replace-typography-design-token → replace-rui-token-typography-classname
     - replace-v2-icon → replace-react-icon
 - Updated dependencies [f17f842]
-  - @rui/migration-index@0.0.20
+  - @rideds/migration-index@0.0.20
 
 ## 0.0.19
 
@@ -129,7 +129,7 @@
 
 - 5ef19b3: feat: remove custom `--reporter` option, add `log` in all transfomers
 - Updated dependencies [a7e2571]
-  - @rui/migration-index@0.0.18
+  - @rideds/migration-index@0.0.18
 
 ## 0.0.17
 
@@ -154,7 +154,7 @@
   - add replace-typography-design-token
   - add replace-css-typography-variable
 - Updated dependencies [4f465ba]
-  - @rui/migration-index@0.0.3
+  - @rideds/migration-index@0.0.3
 
 ## 0.0.14
 
@@ -167,13 +167,13 @@
 ### Patch Changes
 
 - Updated dependencies [9f55b8f]
-  - @rui/migration-index@0.0.2
+  - @rideds/migration-index@0.0.2
 
 ## 0.0.12
 
 ### Patch Changes
 
-- @rui/migration-index@0.0.1
+- @rideds/migration-index@0.0.1
 
 ## 0.0.12-rc.4
 
@@ -207,7 +207,7 @@
 
 - f83bbf8: migration index, codemod (vars, tailwind)
 - Updated dependencies [f83bbf8]
-  - @rui/migration-index@0.0.1-rc.0
+  - @rideds/migration-index@0.0.1-rc.0
 
 ## 0.0.11
 

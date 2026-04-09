@@ -21,7 +21,7 @@ run_with_feedback() {
 # docs
 # ============================================================
 if [[ "$FILE_PATH" == *"docs/registry/"* ]]; then
-  run_with_feedback bun --filter @rui/docs generate:registry
+  run_with_feedback bun --filter @rideds/docs generate:registry
 fi
 
 if [[ "$FILE_PATH" == *"docs/"* ]]; then
@@ -40,35 +40,35 @@ elif [[ "$FILE_PATH" == *"packages/qvism-preset/"* ]]; then
 elif [[ "$FILE_PATH" == *"packages/react-headless/"* ]]; then
   run_with_feedback bun headless:build
   run_with_feedback bun headless:test --dots
-  run_with_feedback bun --filter @rui/react build
+  run_with_feedback bun --filter @rideds/react build
   run_with_feedback bun react:test --dots
 
 elif [[ "$FILE_PATH" == *"packages/react/"* ]]; then
-  run_with_feedback bun --filter @rui/react build
+  run_with_feedback bun --filter @rideds/react build
   run_with_feedback bun react:test --dots
 
 elif [[ "$FILE_PATH" == *"packages/figma/"* ]]; then
-  run_with_feedback bun --filter @rui/figma build
+  run_with_feedback bun --filter @rideds/figma build
 
 elif [[ "$FILE_PATH" == *"packages/cli/"* ]]; then
-  run_with_feedback bun --filter @rui/cli build
-  run_with_feedback bun --filter @rui/cli test --dots
+  run_with_feedback bun --filter @rideds/cli build
+  run_with_feedback bun --filter @rideds/cli test --dots
   
 elif [[ "$FILE_PATH" == *"packages/stackflow/"* ]]; then
-  run_with_feedback bun --filter @rui/stackflow build
+  run_with_feedback bun --filter @rideds/stackflow build
 fi
 
 # ============================================================
 # ecosystem
 # ============================================================
 if [[ "$FILE_PATH" == *"ecosystem/rootage/"* ]]; then
-  run_with_feedback bun --filter @rui/rootage-core build
-  run_with_feedback bun --filter @rui/rootage-cli build
+  run_with_feedback bun --filter @rideds/rootage-core build
+  run_with_feedback bun --filter @rideds/rootage-cli build
   run_with_feedback bun rootage:test --dots
 elif [[ "$FILE_PATH" == *"ecosystem/qvism/"* ]]; then
-  run_with_feedback bun --filter @rui/qvism-core build
-  run_with_feedback bun --filter @rui/qvism-cli build
-  run_with_feedback bun --filter @rui/qvism-core test --dots
+  run_with_feedback bun --filter @rideds/qvism-core build
+  run_with_feedback bun --filter @rideds/qvism-cli build
+  run_with_feedback bun --filter @rideds/qvism-core test --dots
 fi
 
 # ============================================================

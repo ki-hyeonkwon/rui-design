@@ -1,6 +1,6 @@
 import { ActionButton } from "rui/ui/action-button";
-import { actionButtonVariantMap } from "@rui/css/recipes/action-button";
-import { Text, VStack } from "@rui/react";
+import { actionButtonVariantMap } from "@rideds/css/recipes/action-button";
+import { Text, VStack } from "@rideds/react";
 
 function Demo() {
   return (

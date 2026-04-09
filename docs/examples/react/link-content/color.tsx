@@ -1,5 +1,5 @@
 import { IconChevronRightLine } from "@karrotmarket/react-monochrome-icon";
-import { LinkContent, VStack, SuffixIcon } from "@rui/react";
+import { LinkContent, VStack, SuffixIcon } from "@rideds/react";
 
 export default function LinkContentColor() {
   return (

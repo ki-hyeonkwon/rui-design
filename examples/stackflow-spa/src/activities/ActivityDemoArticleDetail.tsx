@@ -8,15 +8,15 @@ import {
   AppBarLeft,
 } from "rui/ui/app-bar";
 import type { AppBarProps } from "rui/ui/app-bar";
-import { VStack, HStack, Box, Article as SeedArticle } from "@rui/react";
+import { VStack, HStack, Box, Article as SeedArticle } from "@rideds/react";
 import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
-import { Text } from "@rui/react";
-import { Badge } from "@rui/react";
+import { Text } from "@rideds/react";
+import { Badge } from "@rideds/react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 import { Callout } from "rui/ui/callout";
 import { TextField, TextFieldTextarea } from "rui/ui/text-field";
 import { ActionButton } from "rui/ui/action-button";
-import { Skeleton } from "@rui/react";
+import { Skeleton } from "@rideds/react";
 import { IconILowercaseSerifCircleFill } from "@karrotmarket/react-monochrome-icon";
 import { useState, useEffect, useRef } from "react";
 import { ResultSection } from "rui/ui/result-section";

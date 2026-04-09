@@ -1,4 +1,4 @@
-import { classNames } from "@rui/design-token";
+import { classNames } from "@rideds/design-token";
 
 const label3Bold = classNames.$semantic.typography.label3Bold;
 const label3Regular = classNames.$semantic.typography.label3Regular;

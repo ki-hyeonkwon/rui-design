@@ -5,7 +5,7 @@ import {
   useSnackbarAdapter as useSeedSnackbarAdapter,
   useSnackbarContext,
   type CreateSnackbarOptions as SeedCreateSnackbarOptions,
-} from "@rui/react";
+} from "@rideds/react";
 import * as React from "react";
 
 import IconCheckmarkCircleFill from "@karrotmarket/react-monochrome-icon/IconCheckmarkCircleFill";

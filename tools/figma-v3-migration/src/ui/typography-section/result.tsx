@@ -1,4 +1,4 @@
-import { ActionButton, Flex, Text } from "@rui/react";
+import { ActionButton, Flex, Text } from "@rideds/react";
 import type { SerializedTextStyleSuggestionsResults } from "shared/types";
 import { useTypographyMigration } from "./context";
 

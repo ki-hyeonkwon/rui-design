@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 const sizes = [

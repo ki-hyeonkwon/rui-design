@@ -4,8 +4,8 @@ import { Chip } from "rui/ui/chip";
 
 import { createStoryWithParameters } from "@/stories/utils/parameters";
 import { IconHeartFill } from "@karrotmarket/react-monochrome-icon";
-import { chipVariantMap } from "@rui/css/recipes/chip";
-import { Icon } from "@rui/react";
+import { chipVariantMap } from "@rideds/css/recipes/chip";
+import { Icon } from "@rideds/react";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 

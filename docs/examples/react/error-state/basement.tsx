@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ErrorState } from "rui/ui/error-state";
 
 export default function ErrorStateBasement() {

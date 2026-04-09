@@ -1,4 +1,4 @@
-# @rui/react
+# @rideds/react
 
 ## 1.2.8
 
@@ -29,7 +29,7 @@
 - c9fb0c5: Box의 배경 색상을 class 기반으로 지정하는 경우 `:active` 스타일 선언이 배경 색상을 덮어쓰는 문제를 수정합니다.
 - Updated dependencies [2552b1d]
 - Updated dependencies [a465d74]
-  - @rui/react-tabs@1.0.3
+  - @rideds/react-tabs@1.0.3
 
 ## 1.2.6
 
@@ -39,9 +39,9 @@
 - Updated dependencies [fe1cdb3]
 - Updated dependencies [751e952]
 - Updated dependencies [7e0728a]
-  - @rui/react-slider@1.0.2
-  - @rui/react-field-button@1.0.2
-  - @rui/react-toggle@1.0.1
+  - @rideds/react-slider@1.0.2
+  - @rideds/react-field-button@1.0.2
+  - @rideds/react-toggle@1.0.1
 
 ## 1.2.5
 
@@ -51,8 +51,8 @@
 - 6fb6dc2: AspectRatio 스타일시트의 `position: relative`와 `overflow: hidden` 선언을 React 레이어로 이동하여 CSS specificity 문제를 수정합니다.
 - Updated dependencies [c46d593]
 - Updated dependencies [0420c89]
-  - @rui/react-image@0.1.1
-  - @rui/react-drawer@1.0.9
+  - @rideds/react-image@0.1.1
+  - @rideds/react-drawer@1.0.9
 
 ## 1.2.4
 
@@ -66,7 +66,7 @@
 ### Patch Changes
 
 - Updated dependencies [acae645]
-  - @rui/react-snackbar@1.0.1
+  - @rideds/react-snackbar@1.0.1
 
 ## 1.2.2
 
@@ -77,8 +77,8 @@
   `DialogAction`을 `DialogPrimitive.CloseButton`으로 교체합니다. `AlertDialogAction` `onClick` 핸들러에서 `event.preventDefault()`를 호출하여 닫기 동작을 방지할 수 있습니다. [(예제)](https://rui-design.io/react/components/alert-dialog#prevent-close)
 
 - Updated dependencies [576c2e6]
-  - @rui/react-dialog@1.0.2
-  - @rui/react-drawer@1.0.8
+  - @rideds/react-dialog@1.0.2
+  - @rideds/react-drawer@1.0.8
 
 ## 1.2.1
 
@@ -87,7 +87,7 @@
 - 8ad9484: ImageFrameReactionButton의 SVG 사이즈와 Rootage 정의를 수정합니다.
 - Updated dependencies [8188130]
 - Updated dependencies [9cbeba0]
-  - @rui/react-drawer@1.0.6
+  - @rideds/react-drawer@1.0.6
 
 ## 1.2.0
 
@@ -96,7 +96,7 @@
 - 0ecb893: [Help Bubble](/react/components/help-bubble) 관련 컴포넌트를 업데이트합니다.
 
   - **1.1 → 1.2 업그레이드 시 snippet 업데이트 필요**: `HelpBubbleTrigger` 및 `HelpBubbleAnchor`의 내부 구조가 변경되었습니다. snippet을 다시 내려받아 주세요.
-    - `npx @rui/cli@latest add ui:help-bubble`
+    - `npx @rideds/cli@latest add ui:help-bubble`
     - **인터페이스 변경사항이 없으므로 `HelpBubbleAnchor`와 `HelpBubbleTrigger`를 사용하는 기존 코드를 변경할 필요가 없습니다.**
     - `HelpBubble.Body`를 사용하여 `HelpBubble.Title`과 `HelpBubble.Description`을 감싸도록 변경되었습니다.
     - `zIndexOffset`을 활용하여 `HelpBubble.Positioner`의 z-index를 조정할 수 있습니다. ([예시](/react/components/help-bubble#z-index-offset))
@@ -104,7 +104,7 @@
 - 98dbac4: [Checkbox](/react/components/checkbox) 관련 컴포넌트를 추가합니다.
 
   - `CheckboxGroup` snippet 컴포넌트가 추가되었습니다. 사용하려면 snippet을 다시 내려받아 주세요.
-    - `npx @rui/cli@latest add ui:checkbox`
+    - `npx @rideds/cli@latest add ui:checkbox`
     - `CheckboxGroup`은 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `Checkbox`를 묶지 않아도 됩니다.
       - 기존 `Checkbox`를 `CheckboxGroup`으로 감쌀 필요는 없습니다. `CheckboxGroup`은 선택적으로 사용할 수 있습니다.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
@@ -113,16 +113,16 @@
 
   - **1.1 → 1.2 업그레이드 시 snippet 업데이트 필요**: `RadioGroup` snippet의 내부 구조가 변경되었습니다. snippet을 다시 내려받아 주세요.
 
-    - `npx @rui/cli@latest add ui:radio-group`
+    - `npx @rideds/cli@latest add ui:radio-group`
     - `RadioGroup`이 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `RadioGroupItem`을 묶는 코드를 제거합니다.
       - **1.1 → 1.2 업그레이드 시 변경 필요**: `RadioGroupItem`을 묶어서 사용하던 `VStack`을 제거하여 `RadioGroupItem`이 `RadioGroup`의 direct child가 되도록 변경하세요.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
-    - `@rui/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
-      - `@rui/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rui/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
+    - `@rideds/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
+      - `@rideds/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rideds/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
 
     ```tsx
     // 전
-    import { VStack } from "@rui/react";
+    import { VStack } from "@rideds/react";
     import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 
     <RadioGroup defaultValue="apple" aria-label="Fruit selection">
@@ -148,7 +148,7 @@
 
     ```tsx
     // 전
-    import { RadioGroup } from "@rui/react";
+    import { RadioGroup } from "@rideds/react";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -167,7 +167,7 @@
 
     ```tsx
     // 후
-    import { RadioGroup } from "@rui/react/primitive";
+    import { RadioGroup } from "@rideds/react/primitive";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -192,7 +192,7 @@
 
   - **1.1 → 1.2 업그레이드 시 변경 권장**: snippet을 다시 내려받고, `SwitchMark`, `RadioMark`를 사용하는 코드를 아래와 같이 변경하세요.
 
-    - `npx @rui/cli@latest add ui:switch ui:radio-group`
+    - `npx @rideds/cli@latest add ui:switch ui:radio-group`
     - snippet에 `SwitchMark`, `RadioMark` 정의가 존재하지만, 1.3 릴리즈 시 snippet에서 해당 맵핑이 제거될 예정이므로 미리 변경해두시길 권장드립니다.
 
     ```tsx
@@ -236,7 +236,7 @@
 - 2643d17: [Select Box](/react/components/select-box) 관련 컴포넌트를 업데이트합니다.
 
   - **1.1 → 1.2 업그레이드 시 snippet을 다시 내려받아 주세요.**
-    - `npx @rui/cli@latest add ui:select-box`
+    - `npx @rideds/cli@latest add ui:select-box`
   - `CheckSelectBoxGroup`, `RadioSelectBoxRoot`의 children이 기본적으로 gap이 포함된 그리드 레이아웃으로 정렬됩니다.
     - **1.1 → 1.2 업그레이드 시 변경 필요**: `CheckSelectBox`, `RadioSelectBoxItem`을 묶어서 사용하던 `VStack`을 제거하여 `CheckSelectBox`와 `RadioSelectBoxItem`이 `CheckSelectBoxGroup` 또는 `RadioSelectBoxRoot`의 direct child가 되도록 변경하세요. `VStack`에 `gap` 이외의 스타일이 적용된 경우 `<VStack paddingX="x4"><CheckSelectBoxGroup>...</CheckSelectBoxGroup></VStack>`와 같이 `VStack`을 외부에 남겨두세요.
     - **기능 추가**: `CheckSelectBoxGroup`와 `RadioSelectBoxRoot`에 `columns`를 지정할 수 있습니다. `columns`가 `2` 이상인 경우 하위 항목에 기본적으로 `layout="vertical"`이 적용됩니다. 기본 `layout`은 하위 항목에서 오버라이드할 수 있습니다.
@@ -258,11 +258,11 @@
     - `TagGroupItem`에 `flexShrink` prop을 사용하여 말줄임 우선순위를 조정할 수 있습니다.
   - **1.1 → 1.2 업그레이드 시 변경 필요**: `TagGroupItem` 내부 레이블을 `TagGroupItemLabel`로 감싸거나, 신규로 제공되는 Snippet에서 제공하는 API로 교체해주세요.
 
-    - `npx @rui/cli@latest add ui:tag-group` 명령어로 Snippet을 추가할 수 있습니다.
+    - `npx @rideds/cli@latest add ui:tag-group` 명령어로 Snippet을 추가할 수 있습니다.
 
     ```tsx
     // 전
-    import { TagGroupRoot, TagGroupItem } from "@rui/react";
+    import { TagGroupRoot, TagGroupItem } from "@rideds/react";
 
     {
       /* TagGroup.Root, TagGroup.Item처럼 namespace import하는 코드가 있을 수 있습니다. */
@@ -287,7 +287,7 @@
       TagGroupRoot,
       TagGroupItem,
       TagGroupItemLabel,
-    } from "@rui/react";
+    } from "@rideds/react";
 
     <TagGroupRoot>
       <TagGroupItem>
@@ -306,14 +306,14 @@
 
     ```tsx
     // 후 (snippet API로 교체)
-    // snippet 없는 경우, `npx @rui/cli@latest add ui:tag-group`
+    // snippet 없는 경우, `npx @rideds/cli@latest add ui:tag-group`
 
     import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
     import {
       TagGroupRoot as SeedTagGroupRoot,
       TagGroupItem as SeedTagGroupItem,
       TagGroupItemLabel as SeedTagGroupItemLabel,
-    } from "@rui/react";
+    } from "@rideds/react";
 
     <TagGroupRoot>
       <TagGroupItem label="서초4동" prefixIcon={<IconLocationpinFill />} />
@@ -332,7 +332,7 @@
   - `MenuSheetItem`에 설명을 추가할 수 있는 `description` prop이 추가되었습니다.
   - **1.1 → 1.2 업그레이드 시 변경 필요**: snippet을 다시 내려받고, `MenuSheetItem`을 사용하는 코드를 아래와 같이 변경하세요.
 
-    - `npx @rui/cli@latest add ui:menu-sheet`
+    - `npx @rideds/cli@latest add ui:menu-sheet`
     - `children` 대신 `label` prop을 사용합니다.
     - `description`, `prefixIcon` prop이 추가되었습니다.
 
@@ -358,16 +358,16 @@
 - Updated dependencies [2643d17]
 - Updated dependencies [cfd2df4]
 - Updated dependencies [cfd2df4]
-  - @rui/react-radio-group@1.1.0
-  - @rui/react-collapsible@0.1.0
-  - @rui/react-fieldset@0.1.0
-  - @rui/react-image@0.1.0
+  - @rideds/react-radio-group@1.1.0
+  - @rideds/react-collapsible@0.1.0
+  - @rideds/react-fieldset@0.1.0
+  - @rideds/react-image@0.1.0
 
 ## 1.1.17
 
 ### Patch Changes
 
-- 50ee0a6: `@rui/css@1.3` 및 `@rui/react@1.3`에서 제거되는 토큰 및 옵션에 관한 경고를 추가합니다.
+- 50ee0a6: `@rideds/css@1.3` 및 `@rideds/react@1.3`에서 제거되는 토큰 및 옵션에 관한 경고를 추가합니다.
 
   - 1.3에서 제거 예정인 색상 토큰
     - [`$color.bg.layer-fill`](/docs/foundation/design-token/%24color.bg.layer-fill)
@@ -404,7 +404,7 @@
 - Updated dependencies [50ee0a6]
 - Updated dependencies [94bebf8]
 - Updated dependencies [8495fae]
-  - @rui/css@1.1.17
+  - @rideds/css@1.1.17
 
 ## 1.1.16
 
@@ -416,7 +416,7 @@
 - Updated dependencies [6d30b72]
 - Updated dependencies [10c0765]
 - Updated dependencies [5e462db]
-  - @rui/css@1.1.16
+  - @rideds/css@1.1.16
 
 ## 1.1.13
 
@@ -431,7 +431,7 @@
 - Updated dependencies [9be0581]
 - Updated dependencies [cc4a45a]
 - Updated dependencies [739937f]
-  - @rui/css@1.1.13
+  - @rideds/css@1.1.13
 
 ## 1.1.12
 
@@ -441,16 +441,16 @@
 - Updated dependencies [8f31f93]
 - Updated dependencies [69ccc6e]
 - Updated dependencies [279001a]
-  - @rui/css@1.1.12
-  - @rui/react-dialog@1.0.1
-  - @rui/react-drawer@1.0.5
+  - @rideds/css@1.1.12
+  - @rideds/react-dialog@1.0.1
+  - @rideds/react-drawer@1.0.5
 
 ## 1.1.10
 
 ### Patch Changes
 
 - a2b874b: `TagGroupRoot`의 children이 `null` 또는 `undefined`를 포함하는 경우 불필요한 separator가 표시되는 문제를 수정합니다.
-- 12ffece: peerDeps에 `@rui/css` 패키지가 추가됩니다.
+- 12ffece: peerDeps에 `@rideds/css` 패키지가 추가됩니다.
 - db5de74: PageBanner에 tone="magic" 스타일을 추가합니다.
 - a12e49b: Field(TextField)의 스타일을 수정합니다.
 
@@ -462,18 +462,18 @@
 - Updated dependencies [938bf0b]
 - Updated dependencies [c03a3dd]
 - Updated dependencies [a12e49b]
-  - @rui/css@1.1.10
-  - @rui/react-tabs@1.0.2
+  - @rideds/css@1.1.10
+  - @rideds/react-tabs@1.0.2
 
 ## 1.1.8
 
 ### Patch Changes
 
 - 8752805: List Item에 신규 active(pressed) 스타일을 적용하고, disabled 상태에서 detail 영역의 색상을 수정합니다.
-- 8edbf00: @rui/react에서 unicode-segmenter가 externalize되지 않는 문제를 수정합니다.
+- 8edbf00: @rideds/react에서 unicode-segmenter가 externalize되지 않는 문제를 수정합니다.
 - e3806c1: BottomSheet에 handleOnly 옵션이 정상적으로 동작하지 않는 이슈를 수정합니다
 - Updated dependencies [e3806c1]
-  - @rui/react-drawer@1.0.4
+  - @rideds/react-drawer@1.0.4
 
 ## 1.1.7
 
@@ -484,7 +484,7 @@
 - 1340675: Slider Value Indicator가 Track 양 끝에 있을 때 Track 바깥 영역을 차지하지 않도록 수정합니다.
 - Updated dependencies [1340675]
 - Updated dependencies [1340675]
-  - @rui/react-slider@1.0.1
+  - @rideds/react-slider@1.0.1
 
 ## 1.1.5
 
@@ -495,15 +495,15 @@
 - Updated dependencies [53290ab]
 - Updated dependencies [cc8864d]
 - Updated dependencies [ae1b768]
-  - @rui/react-field-button@1.0.1
-  - @rui/react-drawer@1.0.3
-  - @rui/react-segmented-control@1.0.1
-  - @rui/react-radio-group@1.0.1
-  - @rui/react-text-field@1.1.1
-  - @rui/react-checkbox@1.0.1
-  - @rui/react-switch@1.0.1
-  - @rui/react-field@1.0.1
-  - @rui/react-tabs@1.0.1
+  - @rideds/react-field-button@1.0.1
+  - @rideds/react-drawer@1.0.3
+  - @rideds/react-segmented-control@1.0.1
+  - @rideds/react-radio-group@1.0.1
+  - @rideds/react-text-field@1.1.1
+  - @rideds/react-checkbox@1.0.1
+  - @rideds/react-switch@1.0.1
+  - @rideds/react-field@1.0.1
+  - @rideds/react-tabs@1.0.1
 
 ## 1.1.4
 
@@ -523,16 +523,16 @@
 - Updated dependencies [e272ef8]
 - Updated dependencies [fbc9cb0]
 - Updated dependencies [4971dcc]
-  - @rui/react-popover@1.0.3
-  - @rui/react-scrollable@1.0.0
-  - @rui/react-drawer@1.0.2
+  - @rideds/react-popover@1.0.3
+  - @rideds/react-scrollable@1.0.0
+  - @rideds/react-drawer@1.0.2
 
 ## 1.1.1
 
 ### Patch Changes
 
 - Updated dependencies [68b5eab]
-  - @rui/react-drawer@1.0.1
+  - @rideds/react-drawer@1.0.1
 
 ## 1.1.0
 
@@ -547,7 +547,7 @@
 
   - vaul headless 코드 기반으로 seed에 맞게 커스텀하여 구현했습니다.
   - vaul과 동일한 인터페이스를 가지고 있습니다. (snap-points, fade-from-index, etc.)
-  - `npx @rui/cli@latest add ui:bottom-sheet`로 snippet을 최신화하세요.
+  - `npx @rideds/cli@latest add ui:bottom-sheet`로 snippet을 최신화하세요.
 
 ### Patch Changes
 
@@ -568,12 +568,12 @@
 - Updated dependencies [a55f584]
 - Updated dependencies [33def2d]
 - Updated dependencies [0c1ab6a]
-  - @rui/react-field-button@1.0.0
-  - @rui/react-text-field@1.1.0
-  - @rui/react-slider@1.0.0
-  - @rui/react-field@1.0.0
-  - @rui/react-drawer@1.0.0
-  - @rui/react-popover@1.0.2
+  - @rideds/react-field-button@1.0.0
+  - @rideds/react-text-field@1.1.0
+  - @rideds/react-slider@1.0.0
+  - @rideds/react-field@1.0.0
+  - @rideds/react-drawer@1.0.0
+  - @rideds/react-popover@1.0.2
 
 ## 1.0.7
 
@@ -583,7 +583,7 @@
 - Updated dependencies [97669bc]
 - Updated dependencies [15ab93a]
 - Updated dependencies [50366c0]
-  - @rui/css@1.0.7
+  - @rideds/css@1.0.7
 
 ## 1.0.6
 
@@ -600,7 +600,7 @@
 - Updated dependencies [f2ddf29]
 - Updated dependencies [4c33f07]
 - Updated dependencies [3df657f]
-  - @rui/css@1.0.6
+  - @rideds/css@1.0.6
 
 ## 1.0.5
 
@@ -612,15 +612,15 @@
 - Updated dependencies [687b261]
 - Updated dependencies [9b91751]
 - Updated dependencies [3898183]
-  - @rui/css@1.0.5
-  - @rui/react-pull-to-refresh@1.0.1
+  - @rideds/css@1.0.5
+  - @rideds/react-pull-to-refresh@1.0.1
 
 ## 1.0.4
 
 ### Patch Changes
 
 - Updated dependencies [b10ff0b]
-  - @rui/react-popover@1.0.1
+  - @rideds/react-popover@1.0.1
 
 ## 1.0.3
 
@@ -628,21 +628,21 @@
 
 - Updated dependencies [0b8a02e]
 - Updated dependencies [6c6099d]
-  - @rui/css@1.0.3
+  - @rideds/css@1.0.3
 
 ## 1.0.2
 
 ### Patch Changes
 
 - Updated dependencies [6d2e13d]
-  - @rui/css@1.0.2
+  - @rideds/css@1.0.2
 
 ## 1.0.1
 
 ### Patch Changes
 
 - Updated dependencies [1420b68]
-  - @rui/css@1.0.1
+  - @rideds/css@1.0.1
 
 ## 1.0.0
 
@@ -655,7 +655,7 @@
 - 39a96f1: (**BREAKING CHANGE**: Snackbar Snippet을 다시 설치해야합니다) Snackbar 컴포넌트 변경
   - Snackbar의 배경색이 다크모드에서 흰색으로 변경됩니다.
   - Prefix 요소유무에 따라 여백이 변경됩니다.
-  - `npx @rui/cli@latest add ui:snackbar` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:snackbar` 명령어로 설치하세요.
 
 ### Patch Changes
 
@@ -664,40 +664,40 @@
   - snippet 내 오타 수정
   - 신규 10단계 반영
   - 업데이트 가이드
-    1. `@rui/css@latest @rui/react@latest` 설치
-    2. `npx @rui/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
+    1. `@rideds/css@latest @rideds/react@latest` 설치
+    2. `npx @rideds/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
     3. 온도 범위가 변경되었으므로, `<MannerTemp level="l1" />` 혹은 `<MannerTempBadge level="l1" />`과 같이 `level`을 직접 지정하여 사용하고 있는 경우가 있는지 확인
 
 - a7d07f0: (**BREAKING CHANGE**: `SwitchMark` 사용을 위해서는 Snippet을 다시 설치해야 합니다.) Switch의 토글 영역만을 정의한 Switch Mark 컴포넌트를 추가합니다.
 
-  - `npx @rui/cli@latest add ui:switch` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:switch` 명령어로 설치하세요.
 
   (**BREAKING CHANGE**: `ListHeader` 사용을 위해서는 Snippet을 다시 설치해야 합니다.) List Header 컴포넌트를 추가합니다.
 
-  - `npx @rui/cli@latest add ui:list` 명령어로 설치하세요.
+  - `npx @rideds/cli@latest add ui:list` 명령어로 설치하세요.
 
 - Updated dependencies [39a96f1]
 - Updated dependencies [34f92f2]
 - Updated dependencies [e038490]
 - Updated dependencies [4153ca5]
 - Updated dependencies [a7d07f0]
-  - @rui/css@1.0.0
-  - @rui/react-avatar@1.0.0
-  - @rui/react-checkbox@1.0.0
-  - @rui/react-dialog@1.0.0
-  - @rui/react-popover@1.0.0
-  - @rui/react-portal@1.0.0
-  - @rui/react-primitive@1.0.0
-  - @rui/react-progress@1.0.0
-  - @rui/react-pull-to-refresh@1.0.0
-  - @rui/react-radio-group@1.0.0
-  - @rui/react-segmented-control@1.0.0
-  - @rui/react-snackbar@1.0.0
-  - @rui/react-switch@1.0.0
-  - @rui/react-tabs@1.0.0
-  - @rui/react-text-field@1.0.0
-  - @rui/react-toggle@1.0.0
-  - @rui/dom-utils@1.0.0
+  - @rideds/css@1.0.0
+  - @rideds/react-avatar@1.0.0
+  - @rideds/react-checkbox@1.0.0
+  - @rideds/react-dialog@1.0.0
+  - @rideds/react-popover@1.0.0
+  - @rideds/react-portal@1.0.0
+  - @rideds/react-primitive@1.0.0
+  - @rideds/react-progress@1.0.0
+  - @rideds/react-pull-to-refresh@1.0.0
+  - @rideds/react-radio-group@1.0.0
+  - @rideds/react-segmented-control@1.0.0
+  - @rideds/react-snackbar@1.0.0
+  - @rideds/react-switch@1.0.0
+  - @rideds/react-tabs@1.0.0
+  - @rideds/react-text-field@1.0.0
+  - @rideds/react-toggle@1.0.0
+  - @rideds/dom-utils@1.0.0
 
 ## 0.2.5
 
@@ -705,8 +705,8 @@
 
 - Updated dependencies [0ca19c0]
 - Updated dependencies [11f5e76]
-  - @rui/css@0.2.5
-  - @rui/react-snackbar@0.0.7
+  - @rideds/css@0.2.5
+  - @rideds/react-snackbar@0.0.7
 
 ## 0.2.4
 
@@ -722,8 +722,8 @@
 - Updated dependencies [8ebe8a5]
 - Updated dependencies [f61b80d]
 - Updated dependencies [ce047f5]
-  - @rui/css@0.2.4
-  - @rui/react-tabs@0.0.9
+  - @rideds/css@0.2.4
+  - @rideds/react-tabs@0.0.9
 
 ## 0.2.3
 
@@ -739,7 +739,7 @@
 - Updated dependencies [a22b8b9]
 - Updated dependencies [5836976]
 - Updated dependencies [12faf5a]
-  - @rui/css@0.2.3
+  - @rideds/css@0.2.3
 
 ## 0.2.2
 
@@ -758,14 +758,14 @@
 
 - c5bed96: Divider 컴포넌트가 `$color.stroke.neutral-muted` 색상을 기본값으로 사용하도록 수정합니다.
 - Updated dependencies [35984d0]
-  - @rui/css@0.2.1
+  - @rideds/css@0.2.1
 
 ## 0.2.0
 
 ### Patch Changes
 
 - Updated dependencies [8448880]
-  - @rui/css@0.2.0
+  - @rideds/css@0.2.0
 
 ## 0.1.15
 
@@ -786,8 +786,8 @@
 - Updated dependencies [5f2ee39]
 - Updated dependencies [8299ba9]
 - Updated dependencies [3de4cec]
-  - @rui/css@0.1.15
-  - @rui/react-snackbar@0.0.6
+  - @rideds/css@0.1.15
+  - @rideds/react-snackbar@0.0.6
 
 ## 0.1.14
 
@@ -832,14 +832,14 @@
 
 - Updated dependencies [f806356]
 - Updated dependencies [1982494]
-  - @rui/css@0.1.14
+  - @rideds/css@0.1.14
 
 ## 0.1.13
 
 ### Patch Changes
 
 - Updated dependencies [0be9b00]
-  - @rui/css@0.1.13
+  - @rideds/css@0.1.13
 
 ## 0.1.12
 
@@ -850,8 +850,8 @@
   - `placement=left-*` / `placement=right-*`에서 arrow가 content와 떨어져 표시되는 문제를 수정합니다.
 
 - Updated dependencies [62094b6]
-  - @rui/react-popover@0.0.8
-  - @rui/css@0.1.12
+  - @rideds/react-popover@0.0.8
+  - @rideds/css@0.1.12
 
 ## 0.1.11
 
@@ -866,7 +866,7 @@
 ### Patch Changes
 
 - Updated dependencies [ef91c21]
-  - @rui/css@0.1.10
+  - @rideds/css@0.1.10
 
 ## 0.1.9
 
@@ -887,21 +887,21 @@
 - Updated dependencies [5a025b7]
 - Updated dependencies [ac35731]
 - Updated dependencies [f9041e9]
-  - @rui/css@0.1.9
+  - @rideds/css@0.1.9
 
 ## 0.1.8
 
 ### Patch Changes
 
 - Updated dependencies [609b8f3]
-  - @rui/css@0.1.8
+  - @rideds/css@0.1.8
 
 ## 0.1.7
 
 ### Patch Changes
 
 - Updated dependencies [4afe80b]
-  - @rui/css@0.1.7
+  - @rideds/css@0.1.7
 
 ## 0.1.6
 
@@ -909,7 +909,7 @@
 
 - Updated dependencies [235147d]
 - Updated dependencies [3c13ad7]
-  - @rui/css@0.1.6
+  - @rideds/css@0.1.6
 
 ## 0.1.5
 
@@ -922,7 +922,7 @@
 
 - Updated dependencies [861ecb4]
 - Updated dependencies [3889eb6]
-  - @rui/css@0.1.5
+  - @rideds/css@0.1.5
 
 ## 0.1.4
 
@@ -941,7 +941,7 @@
   ```
 
 - Updated dependencies [0ffcd48]
-  - @rui/css@0.1.4
+  - @rideds/css@0.1.4
 
 ## 0.1.3
 
@@ -950,7 +950,7 @@
 - Updated dependencies [cdc0930]
 - Updated dependencies [946faf7]
 - Updated dependencies [71c58fd]
-  - @rui/css@0.1.3
+  - @rideds/css@0.1.3
 
 ## 0.1.2
 
@@ -958,14 +958,14 @@
 
 - 00eafa3: package.json에 `types` 필드를 추가합니다.
 - Updated dependencies [7b2c0f3]
-  - @rui/css@0.1.2
+  - @rideds/css@0.1.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies [e3b782d]
-  - @rui/css@0.1.1
+  - @rideds/css@0.1.1
 
 ## 0.1.0
 
@@ -982,7 +982,7 @@
 
 - Updated dependencies [7cc6087]
 - Updated dependencies [bdca898]
-  - @rui/css@0.1.0
+  - @rideds/css@0.1.0
 
 ## 0.0.41
 
@@ -992,14 +992,14 @@
 - b43de05: Gradient 컬러를 추가합니다
 - Updated dependencies [561f74c]
 - Updated dependencies [b43de05]
-  - @rui/css@0.0.41
+  - @rideds/css@0.0.41
 
 ## 0.0.39
 
 ### Patch Changes
 
 - Updated dependencies [f801300]
-  - @rui/css@0.0.39
+  - @rideds/css@0.0.39
 
 ## 0.0.38
 
@@ -1008,14 +1008,14 @@
 - 145b718: Float 컴포넌트의 기본 display를 inline-flex로 변경합니다.
 - 70fbaaf: Action Button에 type="ghost"를 추가합니다.
 - Updated dependencies [70fbaaf]
-  - @rui/css@0.0.38
+  - @rideds/css@0.0.38
 
 ## 0.0.35
 
 ### Patch Changes
 
 - Updated dependencies [0789dc8]
-  - @rui/css@0.0.35
+  - @rideds/css@0.0.35
 
 ## 0.0.34
 
@@ -1023,7 +1023,7 @@
 
 - 2fc411d: Icon 컴포넌트의 size, color style prop 타입을 다른 컴포넌트와 동일하게 수정합니다.
 - Updated dependencies [92801a2]
-  - @rui/css@0.0.34
+  - @rideds/css@0.0.34
 
 ## 0.0.33
 
@@ -1031,7 +1031,7 @@
 
 - fbdb091: Style prop에 `_active`를 추가합니다. background 속성만을 지원합니다.
 - Updated dependencies [fbdb091]
-  - @rui/css@0.0.33
+  - @rideds/css@0.0.33
 
 ## 0.0.32
 
@@ -1050,8 +1050,8 @@
   - layout=hug일 때 Indicator에서 발생하는 Layout Shift를 수정합니다.
   - lazyMount 옵션이 의도와 다르게 모든 탭이 한꺼번에 마운트되는 문제를 수정합니다.
 - Updated dependencies [fd7c569]
-  - @rui/react-tabs@0.0.8
-  - @rui/css@0.0.31
+  - @rideds/react-tabs@0.0.8
+  - @rideds/css@0.0.31
 
 ## 0.0.30
 
@@ -1068,9 +1068,9 @@
 - Updated dependencies [4610b5b]
 - Updated dependencies [739b6bf]
 - Updated dependencies [285cb9b]
-  - @rui/react-pull-to-refresh@0.0.6
-  - @rui/react-tabs@0.0.7
-  - @rui/css@0.0.30
+  - @rideds/react-pull-to-refresh@0.0.6
+  - @rideds/react-tabs@0.0.7
+  - @rideds/css@0.0.30
 
 ## 0.0.29
 
@@ -1079,28 +1079,28 @@
 - 29ec9f0: `reactSlot.createSlot is not a function` 오류가 발생하지 않도록, radix-ui/react-slot 버전을 1.2.3으로 수정합니다.
 - Updated dependencies [116ee2c]
 - Updated dependencies [29ec9f0]
-  - @rui/css@0.0.29
-  - @rui/react-primitive@0.0.3
-  - @rui/react-avatar@0.0.4
-  - @rui/react-checkbox@0.0.4
-  - @rui/react-dialog@0.0.5
-  - @rui/react-popover@0.0.7
-  - @rui/react-progress@0.0.4
-  - @rui/react-pull-to-refresh@0.0.5
-  - @rui/react-radio-group@0.0.4
-  - @rui/react-segmented-control@0.0.5
-  - @rui/react-snackbar@0.0.5
-  - @rui/react-switch@0.0.4
-  - @rui/react-tabs@0.0.6
-  - @rui/react-text-field@0.0.4
-  - @rui/react-toggle@0.0.4
+  - @rideds/css@0.0.29
+  - @rideds/react-primitive@0.0.3
+  - @rideds/react-avatar@0.0.4
+  - @rideds/react-checkbox@0.0.4
+  - @rideds/react-dialog@0.0.5
+  - @rideds/react-popover@0.0.7
+  - @rideds/react-progress@0.0.4
+  - @rideds/react-pull-to-refresh@0.0.5
+  - @rideds/react-radio-group@0.0.4
+  - @rideds/react-segmented-control@0.0.5
+  - @rideds/react-snackbar@0.0.5
+  - @rideds/react-switch@0.0.4
+  - @rideds/react-tabs@0.0.6
+  - @rideds/react-text-field@0.0.4
+  - @rideds/react-toggle@0.0.4
 
 ## 0.0.28
 
 ### Patch Changes
 
 - Updated dependencies [5337e14]
-  - @rui/css@0.0.28
+  - @rideds/css@0.0.28
 
 ## 0.0.27
 
@@ -1111,21 +1111,21 @@
 - Updated dependencies [d951317]
 - Updated dependencies [7851a31]
 - Updated dependencies [b3f964d]
-  - @rui/css@0.0.27
-  - @rui/react-segmented-control@0.0.4
-  - @rui/react-pull-to-refresh@0.0.4
-  - @rui/react-radio-group@0.0.3
-  - @rui/react-text-field@0.0.3
-  - @rui/react-checkbox@0.0.3
-  - @rui/react-progress@0.0.3
-  - @rui/react-snackbar@0.0.4
-  - @rui/react-popover@0.0.6
-  - @rui/react-avatar@0.0.3
-  - @rui/react-dialog@0.0.4
-  - @rui/react-portal@0.0.2
-  - @rui/react-switch@0.0.3
-  - @rui/react-toggle@0.0.3
-  - @rui/react-tabs@0.0.5
+  - @rideds/css@0.0.27
+  - @rideds/react-segmented-control@0.0.4
+  - @rideds/react-pull-to-refresh@0.0.4
+  - @rideds/react-radio-group@0.0.3
+  - @rideds/react-text-field@0.0.3
+  - @rideds/react-checkbox@0.0.3
+  - @rideds/react-progress@0.0.3
+  - @rideds/react-snackbar@0.0.4
+  - @rideds/react-popover@0.0.6
+  - @rideds/react-avatar@0.0.3
+  - @rideds/react-dialog@0.0.4
+  - @rideds/react-portal@0.0.2
+  - @rideds/react-switch@0.0.3
+  - @rideds/react-toggle@0.0.3
+  - @rideds/react-tabs@0.0.5
 
 ## 0.0.25
 
@@ -1133,7 +1133,7 @@
 
 - c87ede9: Avatar Stack의 디자인을 업데이트합니다.
 - Updated dependencies [c87ede9]
-  - @rui/css@0.0.25
+  - @rideds/css@0.0.25
 
 ## 0.0.24
 
@@ -1143,15 +1143,15 @@
 - 3efe201: `<Portal>` 컴포넌트를 제공합니다.
 - Updated dependencies [4da536f]
 - Updated dependencies [3efe201]
-  - @rui/css@0.0.24
-  - @rui/react-portal@0.0.1
+  - @rideds/css@0.0.24
+  - @rideds/react-portal@0.0.1
 
 ## 0.0.23
 
 ### Patch Changes
 
 - Updated dependencies [63e1541]
-  - @rui/css@0.0.23
+  - @rideds/css@0.0.23
 
 ## 0.0.21
 
@@ -1165,22 +1165,22 @@
 - Updated dependencies [7ae87f8]
 - Updated dependencies [f144d28]
 - Updated dependencies [e368c69]
-  - @rui/css@0.0.21
-  - @rui/react-segmented-control@0.0.3
-  - @rui/react-pull-to-refresh@0.0.3
-  - @rui/react-radio-group@0.0.2
-  - @rui/react-text-field@0.0.2
-  - @rui/react-primitive@0.0.2
-  - @rui/react-checkbox@0.0.2
-  - @rui/react-progress@0.0.2
-  - @rui/react-snackbar@0.0.3
-  - @rui/react-popover@0.0.5
-  - @rui/react-avatar@0.0.2
-  - @rui/react-dialog@0.0.3
-  - @rui/react-switch@0.0.2
-  - @rui/react-toggle@0.0.2
-  - @rui/react-tabs@0.0.4
-  - @rui/dom-utils@0.0.2
+  - @rideds/css@0.0.21
+  - @rideds/react-segmented-control@0.0.3
+  - @rideds/react-pull-to-refresh@0.0.3
+  - @rideds/react-radio-group@0.0.2
+  - @rideds/react-text-field@0.0.2
+  - @rideds/react-primitive@0.0.2
+  - @rideds/react-checkbox@0.0.2
+  - @rideds/react-progress@0.0.2
+  - @rideds/react-snackbar@0.0.3
+  - @rideds/react-popover@0.0.5
+  - @rideds/react-avatar@0.0.2
+  - @rideds/react-dialog@0.0.3
+  - @rideds/react-switch@0.0.2
+  - @rideds/react-toggle@0.0.2
+  - @rideds/react-tabs@0.0.4
+  - @rideds/dom-utils@0.0.2
 
 ## 0.0.19
 
@@ -1188,7 +1188,7 @@
 
 - Updated dependencies [3c9ec66]
 - Updated dependencies [b3bb6e7]
-  - @rui/css@0.0.19
+  - @rideds/css@0.0.19
 
 ## 0.0.17
 
@@ -1196,7 +1196,7 @@
 
 - c042f90: recipe에서 직접 스타일시트 의존성을 표현하도록 변경합니다.
 - Updated dependencies [c042f90]
-  - @rui/css@0.0.17
+  - @rideds/css@0.0.17
 
 ## 0.0.15
 
@@ -1218,8 +1218,8 @@
 - Updated dependencies [4511814]
 - Updated dependencies [f4b0723]
 - Updated dependencies [f4b0723]
-  - @rui/css@0.0.15
-  - @rui/react-popover@0.0.4
+  - @rideds/css@0.0.15
+  - @rideds/react-popover@0.0.4
 
 ## 0.0.14
 
@@ -1230,8 +1230,8 @@
 - c1d94d0: HelpBubble의 enter, exit 모션을 추가합니다.
 - Updated dependencies [92c0b80]
 - Updated dependencies [c1d94d0]
-  - @rui/css@0.0.14
-  - @rui/react-popover@0.0.3
+  - @rideds/css@0.0.14
+  - @rideds/react-popover@0.0.3
 
 ## 0.0.13
 
@@ -1240,8 +1240,8 @@
 - 7fca755: Avatar의 Badge 스펙을 최신화합니다.
 - Updated dependencies [7fca755]
 - Updated dependencies [c0c0b7e]
-  - @rui/css@0.0.13
-  - @rui/react-pull-to-refresh@0.0.2
+  - @rideds/css@0.0.13
+  - @rideds/react-pull-to-refresh@0.0.2
 
 ## 0.0.12
 
@@ -1252,8 +1252,8 @@
 - Updated dependencies [fee050d]
 - Updated dependencies [6426379]
 - Updated dependencies [ee41f37]
-  - @rui/react-tabs@0.0.3
-  - @rui/css@0.0.12
+  - @rideds/react-tabs@0.0.3
+  - @rideds/css@0.0.12
 
 ## 0.0.11
 
@@ -1261,7 +1261,7 @@
 
 - Updated dependencies [e70f340]
 - Updated dependencies [72f344f]
-  - @rui/css@0.0.11
+  - @rideds/css@0.0.11
 
 ## 0.0.10
 
@@ -1271,12 +1271,12 @@
 - de5901d: Icon 컴포넌트에 color, size prop을 추가합니다.
 - Updated dependencies [e4b704c]
 - Updated dependencies [09fecb9]
-  - @rui/css@0.0.10
-  - @rui/react-segmented-control@0.0.2
-  - @rui/react-snackbar@0.0.2
-  - @rui/react-popover@0.0.2
-  - @rui/react-dialog@0.0.2
-  - @rui/react-tabs@0.0.2
+  - @rideds/css@0.0.10
+  - @rideds/react-segmented-control@0.0.2
+  - @rideds/react-snackbar@0.0.2
+  - @rideds/react-popover@0.0.2
+  - @rideds/react-dialog@0.0.2
+  - @rideds/react-tabs@0.0.2
 
 ## 0.0.9
 
@@ -1285,7 +1285,7 @@
 - 63f8651: MannerTemp 컴포넌트를 추가합니다.
 - Updated dependencies [63f8651]
 - Updated dependencies [d9b01a9]
-  - @rui/css@0.0.9
+  - @rideds/css@0.0.9
 
 ## 0.0.8
 
@@ -1297,14 +1297,14 @@
 
 - Updated dependencies [1424700]
 - Updated dependencies [0efeea1]
-  - @rui/css@0.0.8
+  - @rideds/css@0.0.8
 
 ## 0.0.7
 
 ### Patch Changes
 
 - Updated dependencies [8aca3de]
-  - @rui/css@0.0.7
+  - @rideds/css@0.0.7
 
 ## 0.0.6
 
@@ -1315,7 +1315,7 @@
 - Updated dependencies [3d66c5b]
 - Updated dependencies [a8d5242]
 - Updated dependencies [ccf3989]
-  - @rui/css@0.0.6
+  - @rideds/css@0.0.6
 
 ## 0.0.5
 
@@ -1324,7 +1324,7 @@
 - e3234e7: single-slot recipe를 위한 간소화된 인터페이스를 추가합니다.
 - Updated dependencies [e3234e7]
 - Updated dependencies [5502bed]
-  - @rui/css@0.0.5
+  - @rideds/css@0.0.5
 
 ## 0.0.4
 
@@ -1335,7 +1335,7 @@
   - pill shape 삭제
 - Updated dependencies [6df5d19]
 - Updated dependencies [5cb50e7]
-  - @rui/css@0.0.4
+  - @rideds/css@0.0.4
 
 ## 0.0.3
 
@@ -1343,14 +1343,14 @@
 
 - Updated dependencies [a33af94]
 - Updated dependencies [b180822]
-  - @rui/css@0.0.3
+  - @rideds/css@0.0.3
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies [d04e344]
-  - @rui/css@0.0.2
+  - @rideds/css@0.0.2
 
 ## 0.0.1
 
@@ -1358,52 +1358,52 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/css@0.0.1
-  - @rui/react-avatar@0.0.1
-  - @rui/react-checkbox@0.0.1
-  - @rui/react-dialog@0.0.1
-  - @rui/react-popover@0.0.1
-  - @rui/react-primitive@0.0.1
-  - @rui/react-progress@0.0.1
-  - @rui/react-pull-to-refresh@0.0.1
-  - @rui/react-radio-group@0.0.1
-  - @rui/react-segmented-control@0.0.1
-  - @rui/react-snackbar@0.0.1
-  - @rui/react-switch@0.0.1
-  - @rui/react-tabs@0.0.1
-  - @rui/react-text-field@0.0.1
-  - @rui/react-toggle@0.0.1
-  - @rui/dom-utils@0.0.1
+  - @rideds/css@0.0.1
+  - @rideds/react-avatar@0.0.1
+  - @rideds/react-checkbox@0.0.1
+  - @rideds/react-dialog@0.0.1
+  - @rideds/react-popover@0.0.1
+  - @rideds/react-primitive@0.0.1
+  - @rideds/react-progress@0.0.1
+  - @rideds/react-pull-to-refresh@0.0.1
+  - @rideds/react-radio-group@0.0.1
+  - @rideds/react-segmented-control@0.0.1
+  - @rideds/react-snackbar@0.0.1
+  - @rideds/react-switch@0.0.1
+  - @rideds/react-tabs@0.0.1
+  - @rideds/react-text-field@0.0.1
+  - @rideds/react-toggle@0.0.1
+  - @rideds/dom-utils@0.0.1
 
 ## 0.0.1-rc.4
 
 ### Patch Changes
 
 - Updated dependencies [93cfc30]
-  - @rui/css@0.0.1-rc.4
+  - @rideds/css@0.0.1-rc.4
 
 ## 0.0.1-rc.3
 
 ### Patch Changes
 
-- cc4b2c5: fix: externalize subpath imports from `@rui/css`
+- cc4b2c5: fix: externalize subpath imports from `@rideds/css`
   refactor: streamline package configurations
   refactor(qvism): generate recipe-shared module from cli
 - Updated dependencies [cc4b2c5]
-  - @rui/css@0.0.1-rc.3
+  - @rideds/css@0.0.1-rc.3
 
 ## 0.0.1-rc.2
 
 ### Patch Changes
 
 - Updated dependencies [14c9983]
-  - @rui/css@0.0.1-rc.1
+  - @rideds/css@0.0.1-rc.1
 
 ## 0.0.1-rc.1
 
 ### Patch Changes
 
-- 6ee6544: re-export stylesheet from @rui/css package.
+- 6ee6544: re-export stylesheet from @rideds/css package.
 
 ## 0.0.1-rc.0
 
@@ -1411,19 +1411,19 @@
 
 - Seed Design V3 release candidate
 - Updated dependencies
-  - @rui/css@0.0.1-rc.0
-  - @rui/react-avatar@0.0.1-rc.0
-  - @rui/react-checkbox@0.0.1-rc.0
-  - @rui/react-dialog@0.0.1-rc.0
-  - @rui/react-popover@0.0.1-rc.0
-  - @rui/react-primitive@0.0.1-rc.0
-  - @rui/react-progress@0.0.1-rc.0
-  - @rui/react-pull-to-refresh@0.0.1-rc.0
-  - @rui/react-radio-group@0.0.1-rc.0
-  - @rui/react-segmented-control@0.0.1-rc.0
-  - @rui/react-snackbar@0.0.1-rc.0
-  - @rui/react-switch@0.0.1-rc.0
-  - @rui/react-tabs@0.0.1-rc.0
-  - @rui/react-text-field@0.0.1-rc.0
-  - @rui/react-toggle@0.0.1-rc.0
-  - @rui/dom-utils@0.0.1-rc.0
+  - @rideds/css@0.0.1-rc.0
+  - @rideds/react-avatar@0.0.1-rc.0
+  - @rideds/react-checkbox@0.0.1-rc.0
+  - @rideds/react-dialog@0.0.1-rc.0
+  - @rideds/react-popover@0.0.1-rc.0
+  - @rideds/react-primitive@0.0.1-rc.0
+  - @rideds/react-progress@0.0.1-rc.0
+  - @rideds/react-pull-to-refresh@0.0.1-rc.0
+  - @rideds/react-radio-group@0.0.1-rc.0
+  - @rideds/react-segmented-control@0.0.1-rc.0
+  - @rideds/react-snackbar@0.0.1-rc.0
+  - @rideds/react-switch@0.0.1-rc.0
+  - @rideds/react-tabs@0.0.1-rc.0
+  - @rideds/react-text-field@0.0.1-rc.0
+  - @rideds/react-toggle@0.0.1-rc.0
+  - @rideds/dom-utils@0.0.1-rc.0

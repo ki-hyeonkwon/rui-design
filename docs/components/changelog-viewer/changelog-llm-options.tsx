@@ -5,7 +5,7 @@ import { LLMOptions } from "@/components/page-actions";
 import { Suspense } from "react";
 import { useQueryState } from "nuqs";
 
-const SCOPE = "@rui/";
+const SCOPE = "@rideds/";
 
 function toSlug(packageName: string): string {
   return packageName.startsWith(SCOPE) ? packageName.slice(SCOPE.length) : packageName;

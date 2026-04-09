@@ -1,4 +1,4 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 import { Checkbox } from "rui/ui/checkbox";
 import { useState } from "react";
 

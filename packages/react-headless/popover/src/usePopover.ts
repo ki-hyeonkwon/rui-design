@@ -5,7 +5,7 @@ import {
   useRole,
   useTransitionStatus,
 } from "@floating-ui/react";
-import { buttonProps, dataAttr, elementProps } from "@rui/dom-utils";
+import { buttonProps, dataAttr, elementProps } from "@rideds/dom-utils";
 import { useMemo } from "react";
 import { usePositionedFloating, type UsePositionedFloatingProps } from "./floating";
 

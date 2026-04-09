@@ -1,5 +1,5 @@
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { Icon, VStack } from "@rui/react";
+import { Icon, VStack } from "@rideds/react";
 import { AppScreen } from "@stackflow/plugin-basic-ui";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import { ActionButton } from "rui/ui/action-button";

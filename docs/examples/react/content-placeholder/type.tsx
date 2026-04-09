@@ -1,7 +1,7 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
-import { contentPlaceholderVariantMap } from "@rui/css/recipes/content-placeholder";
+import { contentPlaceholderVariantMap } from "@rideds/css/recipes/content-placeholder";
 
 export default function ContentPlaceholderTypeExample() {
   return (

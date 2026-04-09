@@ -1,4 +1,4 @@
-import { Column, Columns } from "@rui/react";
+import { Column, Columns } from "@rideds/react";
 
 /**
  * @deprecated use `HStack` instead.

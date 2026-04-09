@@ -1,5 +1,5 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { skeleton, type SkeletonVariantProps } from "@rui/css/recipes/skeleton";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { skeleton, type SkeletonVariantProps } from "@rideds/css/recipes/skeleton";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { withStyleProps, type StyleProps } from "../../utils/styled";

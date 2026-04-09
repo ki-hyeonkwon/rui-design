@@ -1,10 +1,10 @@
-import { actionSheet, type ActionSheetVariantProps } from "@rui/css/recipes/action-sheet";
+import { actionSheet, type ActionSheetVariantProps } from "@rideds/css/recipes/action-sheet";
 import {
   actionSheetItem,
   type ActionSheetItemVariantProps,
-} from "@rui/css/recipes/action-sheet-item";
-import { Dialog as DialogPrimitive, useDialogContext } from "@rui/react-dialog";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/action-sheet-item";
+import { Dialog as DialogPrimitive, useDialogContext } from "@rideds/react-dialog";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";

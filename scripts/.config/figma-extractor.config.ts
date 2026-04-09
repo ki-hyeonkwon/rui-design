@@ -1,4 +1,4 @@
-import { createConfig, createPipeline, sources } from "@rui/figma-extractor";
+import { createConfig, createPipeline, sources } from "@rideds/figma-extractor";
 
 const config = createConfig({
   pipelines: {

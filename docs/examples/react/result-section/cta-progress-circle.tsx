@@ -4,7 +4,7 @@ import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { ProgressCircle } from "rui/ui/progress-circle";
 import { ResultSection } from "rui/ui/result-section";
 import { IconExclamationmarkCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { Box, Flex, Icon, VStack } from "@rui/react";
+import { Box, Flex, Icon, VStack } from "@rideds/react";
 import { ActivityComponentType } from "@stackflow/react/future";
 import { useEffect, useState, type ComponentProps } from "react";
 

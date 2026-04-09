@@ -1,4 +1,4 @@
-import { PrefixIcon, MenuSheet as SeedMenuSheet } from "@rui/react";
+import { PrefixIcon, MenuSheet as SeedMenuSheet } from "@rideds/react";
 import { forwardRef } from "react";
 import type * as React from "react";
 

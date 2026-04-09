@@ -1,9 +1,9 @@
 {
-  "name": "@rui/codemod",
+  "name": "@rideds/codemod",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/codemod"
   },
   "license": "MIT",
@@ -18,7 +18,7 @@
     "lint:publish": "bun publint"
   },
   "dependencies": {
-    "@rui/migration-index": "^1.0.0",
+    "@rideds/migration-index": "^1.0.0",
     "cac": "^6.7.14",
     "change-case": "^5.4.4",
     "es-toolkit": "^1.35.0",

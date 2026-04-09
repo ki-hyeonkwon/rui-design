@@ -1,4 +1,4 @@
-import { seedDesignPlugin } from "@rui/vite-plugin";
+import { seedDesignPlugin } from "@rideds/vite-plugin";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import legacy from "@vitejs/plugin-legacy";
 import react from "@vitejs/plugin-react-swc";

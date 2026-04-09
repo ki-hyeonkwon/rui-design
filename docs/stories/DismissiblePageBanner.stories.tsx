@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { DismissiblePageBanner } from "rui/ui/page-banner";
 
-import { pageBannerVariantMap } from "@rui/css/recipes/page-banner";
+import { pageBannerVariantMap } from "@rideds/css/recipes/page-banner";
 import { VariantTable } from "./components/variant-table";
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
 import { SeedThemeDecorator } from "./components/decorator";

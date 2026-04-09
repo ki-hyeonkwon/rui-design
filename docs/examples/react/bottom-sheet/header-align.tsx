@@ -1,4 +1,4 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import {
   BottomSheetBody,

@@ -1,20 +1,20 @@
 import { composeRefs } from "@radix-ui/react-compose-refs";
-import { selectBox, type SelectBoxVariantProps } from "@rui/css/recipes/select-box";
+import { selectBox, type SelectBoxVariantProps } from "@rideds/css/recipes/select-box";
 import {
   selectBoxGroup,
   type SelectBoxGroupVariantProps,
-} from "@rui/css/recipes/select-box-group";
+} from "@rideds/css/recipes/select-box-group";
 import {
   Collapsible,
   CollapsibleProvider,
   useCollapsible,
   useCollapsibleContext,
-} from "@rui/react-collapsible";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/react-collapsible";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import {
   RadioGroup as RadioGroupPrimitive,
   useRadioGroupItemContext,
-} from "@rui/react-radio-group";
+} from "@rideds/react-radio-group";
 import {
   createContext,
   forwardRef,

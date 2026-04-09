@@ -1,6 +1,6 @@
 // @ts-nocheck
 
-import { Text } from "@rui/react";
+import { Text } from "@rideds/react";
 
 const Component = () => {
   return (

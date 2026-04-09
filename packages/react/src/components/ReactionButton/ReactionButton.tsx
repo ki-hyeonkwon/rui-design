@@ -1,8 +1,8 @@
 import {
   reactionButton,
   type ReactionButtonVariantProps,
-} from "@rui/css/recipes/reaction-button";
-import { Toggle as TogglePrimitive } from "@rui/react-toggle";
+} from "@rideds/css/recipes/reaction-button";
+import { Toggle as TogglePrimitive } from "@rideds/react-toggle";
 import clsx from "clsx";
 import * as React from "react";
 import {

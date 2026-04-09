@@ -20,7 +20,7 @@ jobs:
       - uses: ./.github/actions/setup
 
       - name: Build common dependencies
-        run: bun --filter @rui/dom-utils build && bun headless:build && bun --filter @rui/react build
+        run: bun --filter @rideds/dom-utils build && bun headless:build && bun --filter @rideds/react build
 
       - name: Run tests
         run: bun react:test

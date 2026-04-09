@@ -1,4 +1,4 @@
-import { css, type AST } from "@rui/rootage-core";
+import { css, type AST } from "@rideds/rootage-core";
 
 type TokenDeclaration = AST.TokenDeclaration;
 type TokenLit = AST.TokenLit;

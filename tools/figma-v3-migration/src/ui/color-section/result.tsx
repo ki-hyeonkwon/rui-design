@@ -1,4 +1,4 @@
-import { ActionButton, Box, Flex, Text } from "@rui/react";
+import { ActionButton, Box, Flex, Text } from "@rideds/react";
 import type { SerializedColorVariablesSuggestionsResults, SerializedVariable } from "shared/types";
 import { getOldFullValueName, getOldValueName, useColorMigration } from "./context";
 

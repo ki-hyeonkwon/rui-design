@@ -1,4 +1,4 @@
-import { ResponsivePair } from "@rui/react";
+import { ResponsivePair } from "@rideds/react";
 import { useState } from "react";
 import { ActionButton } from "rui/ui/action-button";
 import {

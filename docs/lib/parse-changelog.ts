@@ -64,10 +64,10 @@ const processor = remark()
   })
   .use(rehypeStringify);
 
-const RELATED_PACKAGE_REGEX = /^\s*-\s+(@rui\/[^\s@]+)@([^\s]+)\s*$/gm;
+const RELATED_PACKAGE_REGEX = /^\s*-\s+(@rideds\/[^\s@]+)@([^\s]+)\s*$/gm;
 const ENTRY_COMMIT_REGEX = /^-\s+([a-f0-9]{7}):/m;
 const DEPENDENCY_COMMIT_REGEX = /Updated dependencies \[([a-f0-9]{7})\]/g;
-const GITHUB_COMMIT_BASE_URL = "https://github.com/rui-design/rui-design/commit";
+const GITHUB_COMMIT_BASE_URL = "https://github.com/ki-hyeonkwon/rui-design/commit";
 
 // ── I/O ──────────────────────────────────────────────────────────────────────
 
@@ -127,7 +127,7 @@ export async function loadChangelogSources(rootDir: string): Promise<ChangelogSo
       ]);
 
       const packageJson = JSON.parse(packageJsonRaw) as { name?: string };
-      if (!packageJson.name?.startsWith("@rui/")) {
+      if (!packageJson.name?.startsWith("@rideds/")) {
         return null;
       }
 

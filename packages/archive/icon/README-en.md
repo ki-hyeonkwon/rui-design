@@ -1,18 +1,18 @@
-# @rui/icon
+# @rideds/icon
 
 - [한국어](./README.md)
 - [English](./README-en.md)
 
 ## Install
 
-The `@rui/icon` is a command-line tool for generating seed icons.
+The `@rideds/icon` is a command-line tool for generating seed icons.
 
 ```bash
-npm install --dev @rui/icon
+npm install --dev @rideds/icon
 
 # or
 
-yarn add -D @rui/icon
+yarn add -D @rideds/icon
 ```
 
 ## How to use

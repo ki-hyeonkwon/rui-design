@@ -1,8 +1,8 @@
 import {
   floatingActionButton,
   type FloatingActionButtonVariantProps,
-} from "@rui/css/recipes/floating-action-button";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/floating-action-button";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { InternalIcon, type InternalIconProps } from "../private/Icon";

@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { useCallback, type FormEvent } from "react";
 import { useController, useForm, type Control } from "react-hook-form";
 import { ActionButton } from "rui/ui/action-button";

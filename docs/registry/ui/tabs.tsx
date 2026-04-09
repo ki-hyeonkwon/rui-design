@@ -5,7 +5,7 @@ import {
   NotificationBadge,
   NotificationBadgePositioner,
   Tabs as SeedTabs,
-} from "@rui/react";
+} from "@rideds/react";
 import { forwardRef } from "react";
 
 export interface TabsRootProps extends SeedTabs.RootProps {}

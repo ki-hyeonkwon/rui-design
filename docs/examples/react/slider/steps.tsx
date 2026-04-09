@@ -1,6 +1,6 @@
 import { Slider } from "rui/ui/slider";
 import { useState } from "react";
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 
 export default function SliderSteps() {
   const [value, setValue] = useState([50]);

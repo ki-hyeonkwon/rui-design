@@ -1,13 +1,13 @@
-# @rui/codemod
+# @rideds/codemod
 
 코드 마이그레이션 도구
 
 ```shell
-npx @rui/codemod@latest --list
+npx @rideds/codemod@latest --list
 ```
 
 ```shell
-npx @rui/codemod@latest <transform> <...경로> <옵션>
+npx @rideds/codemod@latest <transform> <...경로> <옵션>
 ```
 
 ## 옵션

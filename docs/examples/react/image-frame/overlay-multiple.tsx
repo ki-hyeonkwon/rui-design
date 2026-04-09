@@ -3,7 +3,7 @@ import {
   ImageFrameFloater,
   ImageFrameBadge,
   ImageFrameReactionButton,
-} from "@rui/react";
+} from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 import { useState } from "react";
 

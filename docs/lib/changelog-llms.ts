@@ -4,7 +4,7 @@ import { loadChangelogSources, parseChangelogSources } from "./parse-changelog";
 
 export type { EntryLookup };
 
-const SCOPE = "@rui/";
+const SCOPE = "@rideds/";
 
 export function toSlug(packageName: string): string {
   return packageName.replace(SCOPE, "");

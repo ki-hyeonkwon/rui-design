@@ -1,4 +1,4 @@
-import type { AST } from "@rui/rootage-core";
+import type { AST } from "@rideds/rootage-core";
 import { Fragment } from "react";
 import { ComponentVariantTable } from "./component-variant-table";
 import { getRootage } from "./rootage";

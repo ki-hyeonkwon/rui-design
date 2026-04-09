@@ -1,5 +1,5 @@
 import { IconPlusFill } from "@karrotmarket/react-monochrome-icon";
-import { ActionChip, PrefixIcon } from "@rui/react";
+import { ActionChip, PrefixIcon } from "@rideds/react";
 
 export default function ActionChipPrefixIcon() {
   return (

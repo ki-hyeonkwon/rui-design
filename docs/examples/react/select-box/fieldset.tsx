@@ -1,4 +1,4 @@
-import { ActionButton, HStack, VStack, Box, Text } from "@rui/react";
+import { ActionButton, HStack, VStack, Box, Text } from "@rideds/react";
 import { useState } from "react";
 import {
   CheckSelectBox,

@@ -1,4 +1,4 @@
-import preset from "@rui/qvism-preset";
+import preset from "@rideds/qvism-preset";
 
 export default {
   ...preset,

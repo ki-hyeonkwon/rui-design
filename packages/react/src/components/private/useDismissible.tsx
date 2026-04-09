@@ -1,6 +1,6 @@
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
-import { buttonProps, elementProps, mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { buttonProps, elementProps, mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import * as React from "react";
 
 export interface UseDismissibleProps {

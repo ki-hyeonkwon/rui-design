@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { ToggleButton } from "rui/ui/toggle-button";
 
 import { IconBellFill, IconChevronRightFill } from "@karrotmarket/react-monochrome-icon";
-import { toggleButtonVariantMap } from "@rui/css/recipes/toggle-button";
+import { toggleButtonVariantMap } from "@rideds/css/recipes/toggle-button";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";
-import { PrefixIcon, SuffixIcon } from "@rui/react";
+import { PrefixIcon, SuffixIcon } from "@rideds/react";
 
 const meta = {
   component: ToggleButton,

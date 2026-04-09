@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { Avatar, AvatarBadge } from "rui/ui/avatar";
 
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
-import { avatarVariantMap } from "@rui/css/recipes/avatar";
+import { avatarVariantMap } from "@rideds/css/recipes/avatar";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";
-import { Box } from "@rui/react";
+import { Box } from "@rideds/react";
 
 const meta = {
   component: Avatar,

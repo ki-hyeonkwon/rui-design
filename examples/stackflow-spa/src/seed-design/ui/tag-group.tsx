@@ -1,4 +1,4 @@
-import { PrefixIcon, TagGroup as SeedTagGroup, SuffixIcon } from "@rui/react";
+import { PrefixIcon, TagGroup as SeedTagGroup, SuffixIcon } from "@rideds/react";
 import * as React from "react";
 
 export interface TagGroupRootProps extends SeedTagGroup.RootProps {}

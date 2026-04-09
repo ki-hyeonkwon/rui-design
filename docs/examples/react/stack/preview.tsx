@@ -1,4 +1,4 @@
-import { Box, Stack } from "@rui/react";
+import { Box, Stack } from "@rideds/react";
 
 /**
  * @deprecated Use `VStack` instead.

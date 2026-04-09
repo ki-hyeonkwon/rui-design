@@ -1,4 +1,4 @@
-import { Flex, HStack, VStack } from "@rui/react";
+import { Flex, HStack, VStack } from "@rideds/react";
 import { useState } from "react";
 import { HelpBubbleAnchor } from "rui/ui/help-bubble";
 import { Slider } from "rui/ui/slider";

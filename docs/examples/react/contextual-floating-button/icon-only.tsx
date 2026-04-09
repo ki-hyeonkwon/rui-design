@@ -1,5 +1,5 @@
 import { IconPlusFill } from "@karrotmarket/react-monochrome-icon";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { ContextualFloatingButton } from "rui/ui/contextual-floating-button";
 
 export default function ContextualFloatingButtonIconOnly() {

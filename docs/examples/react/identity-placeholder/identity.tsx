@@ -1,4 +1,4 @@
-import { Grid } from "@rui/react";
+import { Grid } from "@rideds/react";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 
 export default function IdentityPlaceholderPreview() {

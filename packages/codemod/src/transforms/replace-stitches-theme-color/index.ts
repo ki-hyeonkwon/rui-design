@@ -3,7 +3,7 @@ import {
   scaleColorMappings,
   semanticColorMappings,
   staticColorMappings,
-} from "@rui/migration-index/color";
+} from "@rideds/migration-index/color";
 import type { Transform } from "jscodeshift";
 import { getParentPropertyName, processTernaryExpressions } from "../../utils/ast";
 import { isBackgroundProperty, isFgProperty, isStrokeProperty } from "../../utils/color-properties";

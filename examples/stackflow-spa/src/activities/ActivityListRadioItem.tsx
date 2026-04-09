@@ -1,5 +1,5 @@
-import { Icon } from "@rui/react";
-import { RadioGroup } from "@rui/react/primitive";
+import { Icon } from "@rideds/react";
+import { RadioGroup } from "@rideds/react/primitive";
 import type { StaticActivityComponentType } from "@stackflow/react/future";
 import { useFlow } from "@stackflow/react/future";
 import { Fragment } from "react";

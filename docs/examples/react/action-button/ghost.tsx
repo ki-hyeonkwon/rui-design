@@ -1,4 +1,4 @@
-import { HStack, PrefixIcon, VStack } from "@rui/react";
+import { HStack, PrefixIcon, VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import { IconTagLine } from "@karrotmarket/react-monochrome-icon";
 

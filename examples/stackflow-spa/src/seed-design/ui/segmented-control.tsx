@@ -1,5 +1,5 @@
-import { HStack, SegmentedControl as SeedSegmentedControl } from "@rui/react";
-import { NotificationBadgePositioner, NotificationBadge } from "@rui/react";
+import { HStack, SegmentedControl as SeedSegmentedControl } from "@rideds/react";
+import { NotificationBadgePositioner, NotificationBadge } from "@rideds/react";
 import * as React from "react";
 
 export interface SegmentedControlProps extends SeedSegmentedControl.RootProps {}

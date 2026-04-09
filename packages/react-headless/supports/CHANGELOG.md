@@ -1,4 +1,4 @@
-# @rui/react-supports
+# @rideds/react-supports
 
 ## 0.0.1
 

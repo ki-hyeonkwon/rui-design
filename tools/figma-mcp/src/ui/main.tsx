@@ -1,4 +1,4 @@
-import "@rui/css/base.css";
+import "@rideds/css/base.css";
 import "./styles.css";
 
 import React from "react";

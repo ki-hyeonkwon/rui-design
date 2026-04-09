@@ -3,7 +3,7 @@ import {
   scaleColorMappings,
   semanticColorMappings,
   staticColorMappings,
-} from "@rui/migration-index";
+} from "@rideds/migration-index";
 import type { ObjectExpression, ObjectMethod, ObjectProperty, Transform } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";
 import { getTokenTypeForProperty } from "../../utils/color-properties.js";

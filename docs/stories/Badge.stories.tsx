@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
-import { Badge } from "@rui/react";
+import { Badge } from "@rideds/react";
 
-import { badgeVariantMap } from "@rui/css/recipes/badge";
+import { badgeVariantMap } from "@rideds/css/recipes/badge";
 import { VariantTable } from "./components/variant-table";
 import { SeedThemeDecorator } from "./components/decorator";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

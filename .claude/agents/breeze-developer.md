@@ -42,7 +42,7 @@ docs/app/breeze/
 
 ```bash
 # 레지스트리 생성
-bun --filter @rui/docs generate:registry
+bun --filter @rideds/docs generate:registry
 
 # 개발 서버 실행
 bun dev
@@ -61,7 +61,7 @@ bun dev
 ```tsx
 // ActionButton과 HStack 사용
 import { ActionButton } from "rui/ui/action-button";
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 
 // 랜덤 숫자 생성
 Math.floor(Math.random() * 99999) + 1;

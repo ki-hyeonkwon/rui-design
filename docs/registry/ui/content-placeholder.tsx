@@ -1,6 +1,6 @@
 "use client";
 
-import { ContentPlaceholder as SeedContentPlaceholder } from "@rui/react";
+import { ContentPlaceholder as SeedContentPlaceholder } from "@rideds/react";
 import * as React from "react";
 
 export interface ContentPlaceholderProps extends SeedContentPlaceholder.RootProps {}

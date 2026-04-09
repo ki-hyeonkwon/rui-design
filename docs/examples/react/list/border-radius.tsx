@@ -2,8 +2,8 @@ import { List, ListCheckItem, ListRadioItem } from "rui/ui/list";
 import { ListHeader } from "rui/ui/list-header";
 import { Checkmark } from "rui/ui/checkbox";
 import { Radiomark } from "rui/ui/radio-group";
-import { HStack, VStack } from "@rui/react";
-import { RadioGroup } from "@rui/react/primitive";
+import { HStack, VStack } from "@rideds/react";
+import { RadioGroup } from "@rideds/react/primitive";
 
 export default function ListBorderRadius() {
   return (

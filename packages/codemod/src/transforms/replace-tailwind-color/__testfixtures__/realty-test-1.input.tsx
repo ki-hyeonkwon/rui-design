@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { vars } from "@rui/design-token";
+import { vars } from "@rideds/design-token";
 import { cn } from "styles/utils";
 
 const Component1 = ({ children }: { children: React.ReactNode }) => {

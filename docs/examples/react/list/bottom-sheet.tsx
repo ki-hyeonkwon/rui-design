@@ -8,7 +8,7 @@ import {
 import { ActionButton } from "rui/ui/action-button";
 import { Checkmark } from "rui/ui/checkbox";
 import { List, ListCheckItem } from "rui/ui/list";
-import { PrefixIcon, VStack } from "@rui/react";
+import { PrefixIcon, VStack } from "@rideds/react";
 import { useState } from "react";
 import { IconArrowClockwiseCircularFill } from "@karrotmarket/react-monochrome-icon";
 

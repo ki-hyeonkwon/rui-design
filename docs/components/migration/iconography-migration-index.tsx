@@ -4,9 +4,9 @@ import * as V3MonochromeIcons from "@karrotmarket/react-monochrome-icon";
 import {
   monochromeIconMappings,
   multicolorIconMappings,
-} from "@rui/migration-index/iconography";
-import * as V2Icons from "@rui/react-icon";
-import { vars } from "@rui/css/vars";
+} from "@rideds/migration-index/iconography";
+import * as V2Icons from "@rideds/react-icon";
+import { vars } from "@rideds/css/vars";
 
 import { V2Icon, V2IconColor, V3Icon, type V2ServiceIcons } from "./icon";
 

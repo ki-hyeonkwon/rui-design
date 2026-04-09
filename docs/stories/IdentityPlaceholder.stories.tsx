@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 
-import { identityPlaceholderVariantMap } from "@rui/css/recipes/identity-placeholder";
+import { identityPlaceholderVariantMap } from "@rideds/css/recipes/identity-placeholder";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

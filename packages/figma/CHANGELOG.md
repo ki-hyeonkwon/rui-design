@@ -1,4 +1,4 @@
-# @rui/figma
+# @rideds/figma
 
 ## 1.3.9
 
@@ -7,7 +7,7 @@
 - 72dfd8f: Figma Codegen 및 MCP에서 [Slot 레이어](https://help.figma.com/hc/en-us/articles/38231200344599-Use-slots-to-build-flexible-components-in-Figma)을 지원하도록 업데이트합니다.
 - Updated dependencies [846036b]
 - Updated dependencies [e78d460]
-  - @rui/css@1.2.7
+  - @rideds/css@1.2.7
 
 ## 1.3.8
 
@@ -25,14 +25,14 @@
 - Updated dependencies [67a7780]
 - Updated dependencies [3273312]
 - Updated dependencies [9d9b891]
-  - @rui/css@1.2.6
+  - @rideds/css@1.2.6
 
 ## 1.3.6
 
 ### Patch Changes
 
 - Updated dependencies [c9fb0c5]
-  - @rui/css@1.2.5
+  - @rideds/css@1.2.5
 
 ## 1.3.5
 
@@ -51,7 +51,7 @@
 - Updated dependencies [77cdc0e]
 - Updated dependencies [7d6c910]
 - Updated dependencies [751e952]
-  - @rui/css@1.2.4
+  - @rideds/css@1.2.4
 
 ## 1.3.4
 
@@ -68,7 +68,7 @@
 - Updated dependencies [6db2515]
 - Updated dependencies [12789e6]
 - Updated dependencies [6fb6dc2]
-  - @rui/css@1.2.3
+  - @rideds/css@1.2.3
 
 ## 1.3.3
 
@@ -77,7 +77,7 @@
 - Updated dependencies [15010c3]
 - Updated dependencies [a3e6859]
 - Updated dependencies [4287600]
-  - @rui/css@1.2.2
+  - @rideds/css@1.2.2
 
 ## 1.3.2
 
@@ -93,7 +93,7 @@
 - Updated dependencies [9446f2c]
 - Updated dependencies [8ad9484]
 - Updated dependencies [9cbeba0]
-  - @rui/css@1.2.1
+  - @rideds/css@1.2.1
 
 ## 1.2.0
 
@@ -103,7 +103,7 @@
 
   - **1.1 → 1.2 업그레이드 시 변경 권장**: snippet을 다시 내려받고, `SwitchMark`, `RadioMark`를 사용하는 코드를 아래와 같이 변경하세요.
 
-    - `npx @rui/cli@latest add ui:switch ui:radio-group`
+    - `npx @rideds/cli@latest add ui:switch ui:radio-group`
     - snippet에 `SwitchMark`, `RadioMark` 정의가 존재하지만, 1.3 릴리즈 시 snippet에서 해당 맵핑이 제거될 예정이므로 미리 변경해두시길 권장드립니다.
 
     ```tsx
@@ -152,11 +152,11 @@
     - `TagGroupItem`에 `flexShrink` prop을 사용하여 말줄임 우선순위를 조정할 수 있습니다.
   - **1.1 → 1.2 업그레이드 시 변경 필요**: `TagGroupItem` 내부 레이블을 `TagGroupItemLabel`로 감싸거나, 신규로 제공되는 Snippet에서 제공하는 API로 교체해주세요.
 
-    - `npx @rui/cli@latest add ui:tag-group` 명령어로 Snippet을 추가할 수 있습니다.
+    - `npx @rideds/cli@latest add ui:tag-group` 명령어로 Snippet을 추가할 수 있습니다.
 
     ```tsx
     // 전
-    import { TagGroupRoot, TagGroupItem } from "@rui/react";
+    import { TagGroupRoot, TagGroupItem } from "@rideds/react";
 
     {
       /* TagGroup.Root, TagGroup.Item처럼 namespace import하는 코드가 있을 수 있습니다. */
@@ -181,7 +181,7 @@
       TagGroupRoot,
       TagGroupItem,
       TagGroupItemLabel,
-    } from "@rui/react";
+    } from "@rideds/react";
 
     <TagGroupRoot>
       <TagGroupItem>
@@ -200,14 +200,14 @@
 
     ```tsx
     // 후 (snippet API로 교체)
-    // snippet 없는 경우, `npx @rui/cli@latest add ui:tag-group`
+    // snippet 없는 경우, `npx @rideds/cli@latest add ui:tag-group`
 
     import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
     import {
       TagGroupRoot as SeedTagGroupRoot,
       TagGroupItem as SeedTagGroupItem,
       TagGroupItemLabel as SeedTagGroupItemLabel,
-    } from "@rui/react";
+    } from "@rideds/react";
 
     <TagGroupRoot>
       <TagGroupItem label="서초4동" prefixIcon={<IconLocationpinFill />} />
@@ -226,7 +226,7 @@
   - `MenuSheetItem`에 설명을 추가할 수 있는 `description` prop이 추가되었습니다.
   - **1.1 → 1.2 업그레이드 시 변경 필요**: snippet을 다시 내려받고, `MenuSheetItem`을 사용하는 코드를 아래와 같이 변경하세요.
 
-    - `npx @rui/cli@latest add ui:menu-sheet`
+    - `npx @rideds/cli@latest add ui:menu-sheet`
     - `children` 대신 `label` prop을 사용합니다.
     - `description`, `prefixIcon` prop이 추가되었습니다.
 
@@ -256,14 +256,14 @@
 - Updated dependencies [a0e40ca]
 - Updated dependencies [17c0ebd]
 - Updated dependencies [358a1e4]
-  - @rui/css@1.2.0
+  - @rideds/css@1.2.0
 
 ## 1.1.19
 
 ### Patch Changes
 
 - Updated dependencies [6697fbe]
-  - @rui/css@1.1.19
+  - @rideds/css@1.1.19
 
 ## 1.1.18
 
@@ -281,7 +281,7 @@
 - Updated dependencies [50ee0a6]
 - Updated dependencies [94bebf8]
 - Updated dependencies [8495fae]
-  - @rui/css@1.1.17
+  - @rideds/css@1.1.17
 
 ## 1.1.16
 
@@ -292,7 +292,7 @@
 - Updated dependencies [6d30b72]
 - Updated dependencies [10c0765]
 - Updated dependencies [5e462db]
-  - @rui/css@1.1.16
+  - @rideds/css@1.1.16
 
 ## 1.1.15
 
@@ -301,7 +301,7 @@
 - Updated dependencies [76acd7e]
 - Updated dependencies [7a428ec]
 - Updated dependencies [498a9e7]
-  - @rui/css@1.1.15
+  - @rideds/css@1.1.15
 
 ## 1.1.14
 
@@ -316,7 +316,7 @@
 - Updated dependencies [9be0581]
 - Updated dependencies [cc4a45a]
 - Updated dependencies [739937f]
-  - @rui/css@1.1.13
+  - @rideds/css@1.1.13
 
 ## 1.1.12
 
@@ -327,7 +327,7 @@
 - Updated dependencies [8f31f93]
 - Updated dependencies [69ccc6e]
 - Updated dependencies [279001a]
-  - @rui/css@1.1.12
+  - @rideds/css@1.1.12
 
 ## 1.1.10
 
@@ -338,7 +338,7 @@
 - Updated dependencies [70d11b8]
 - Updated dependencies [c03a3dd]
 - Updated dependencies [a12e49b]
-  - @rui/css@1.1.10
+  - @rideds/css@1.1.10
 
 ## 1.1.9
 
@@ -346,7 +346,7 @@
 
 - Updated dependencies [37d332d]
 - Updated dependencies [77517f1]
-  - @rui/css@1.1.9
+  - @rideds/css@1.1.9
 
 ## 1.1.8
 
@@ -354,7 +354,7 @@
 
 - Updated dependencies [8752805]
 - Updated dependencies [ee98674]
-  - @rui/css@1.1.8
+  - @rideds/css@1.1.8
 
 ## 1.1.7
 
@@ -363,7 +363,7 @@
 - Updated dependencies [bee919c]
 - Updated dependencies [1340675]
 - Updated dependencies [1340675]
-  - @rui/css@1.1.7
+  - @rideds/css@1.1.7
 
 ## 1.1.6
 
@@ -371,21 +371,21 @@
 
 - Updated dependencies [dfe6c1e]
 - Updated dependencies [a09e6b4]
-  - @rui/css@1.1.6
+  - @rideds/css@1.1.6
 
 ## 1.1.5
 
 ### Patch Changes
 
 - Updated dependencies [53290ab]
-  - @rui/css@1.1.5
+  - @rideds/css@1.1.5
 
 ## 1.1.4
 
 ### Patch Changes
 
 - Updated dependencies [795668c]
-  - @rui/css@1.1.4
+  - @rideds/css@1.1.4
 
 ## 1.1.3
 
@@ -396,7 +396,7 @@
 - Updated dependencies [f4e07bb]
 - Updated dependencies [114dafd]
 - Updated dependencies [bc3cd6f]
-  - @rui/css@1.1.3
+  - @rideds/css@1.1.3
 
 ## 1.1.2
 
@@ -418,7 +418,7 @@
 - Updated dependencies [b131282]
 - Updated dependencies [6af6501]
 - Updated dependencies [33def2d]
-  - @rui/css@1.1.0
+  - @rideds/css@1.1.0
 
 ## 1.0.7
 
@@ -428,7 +428,7 @@
 - Updated dependencies [97669bc]
 - Updated dependencies [15ab93a]
 - Updated dependencies [50366c0]
-  - @rui/css@1.0.7
+  - @rideds/css@1.0.7
 
 ## 1.0.6
 
@@ -440,7 +440,7 @@
 - Updated dependencies [f2ddf29]
 - Updated dependencies [4c33f07]
 - Updated dependencies [3df657f]
-  - @rui/css@1.0.6
+  - @rideds/css@1.0.6
 
 ## 1.0.5
 
@@ -449,7 +449,7 @@
 - Updated dependencies [f1cf4cd]
 - Updated dependencies [9b91751]
 - Updated dependencies [3898183]
-  - @rui/css@1.0.5
+  - @rideds/css@1.0.5
 
 ## 1.0.3
 
@@ -459,21 +459,21 @@
 - 8b07555: Figma 아이콘 및 스타일 정보를 최신화합니다.
 - Updated dependencies [0b8a02e]
 - Updated dependencies [6c6099d]
-  - @rui/css@1.0.3
+  - @rideds/css@1.0.3
 
 ## 1.0.2
 
 ### Patch Changes
 
 - Updated dependencies [6d2e13d]
-  - @rui/css@1.0.2
+  - @rideds/css@1.0.2
 
 ## 1.0.1
 
 ### Patch Changes
 
 - Updated dependencies [1420b68]
-  - @rui/css@1.0.1
+  - @rideds/css@1.0.1
 
 ## 1.0.0
 
@@ -488,7 +488,7 @@
 - Updated dependencies [e038490]
 - Updated dependencies [4153ca5]
 - Updated dependencies [a7d07f0]
-  - @rui/css@1.0.0
+  - @rideds/css@1.0.0
 
 ## 0.2.5
 
@@ -496,7 +496,7 @@
 
 - bef65a6: Figma Variable & Variable Collection 정보를 최신화합니다.
 - Updated dependencies [0ca19c0]
-  - @rui/css@0.2.5
+  - @rideds/css@0.2.5
 
 ## 0.2.4
 
@@ -509,7 +509,7 @@
 
 - Updated dependencies [8ebe8a5]
 - Updated dependencies [f61b80d]
-  - @rui/css@0.2.4
+  - @rideds/css@0.2.4
 
 ## 0.2.3
 
@@ -518,21 +518,21 @@
 - Updated dependencies [a22b8b9]
 - Updated dependencies [5836976]
 - Updated dependencies [12faf5a]
-  - @rui/css@0.2.3
+  - @rideds/css@0.2.3
 
 ## 0.2.1
 
 ### Patch Changes
 
 - Updated dependencies [35984d0]
-  - @rui/css@0.2.1
+  - @rideds/css@0.2.1
 
 ## 0.2.0
 
 ### Patch Changes
 
 - Updated dependencies [8448880]
-  - @rui/css@0.2.0
+  - @rideds/css@0.2.0
 
 ## 0.1.15
 
@@ -542,7 +542,7 @@
 - Updated dependencies [5f2ee39]
 - Updated dependencies [8299ba9]
 - Updated dependencies [3de4cec]
-  - @rui/css@0.1.15
+  - @rideds/css@0.1.15
 
 ## 0.1.14
 
@@ -587,21 +587,21 @@
 
 - Updated dependencies [f806356]
 - Updated dependencies [1982494]
-  - @rui/css@0.1.14
+  - @rideds/css@0.1.14
 
 ## 0.1.13
 
 ### Patch Changes
 
 - Updated dependencies [0be9b00]
-  - @rui/css@0.1.13
+  - @rideds/css@0.1.13
 
 ## 0.1.12
 
 ### Patch Changes
 
 - Updated dependencies [62094b6]
-  - @rui/css@0.1.12
+  - @rideds/css@0.1.12
 
 ## 0.1.11
 
@@ -620,7 +620,7 @@
   - Instance에 오버라이드한 내용이 있는 경우 주석으로 알립니다.
 
 - Updated dependencies [ef91c21]
-  - @rui/css@0.1.10
+  - @rideds/css@0.1.10
 
 ## 0.1.9
 
@@ -641,7 +641,7 @@
 - Updated dependencies [5a025b7]
 - Updated dependencies [ac35731]
 - Updated dependencies [f9041e9]
-  - @rui/css@0.1.9
+  - @rideds/css@0.1.9
 
 ## 0.1.8
 
@@ -650,14 +650,14 @@
 - 2e2cc53: - Figma 컴포넌트 핸들러 및 스타일 정보를 최신화합니다.
   - normalize 과정에서 그라디언트 정보를 포함하도록 수정합니다.
 - Updated dependencies [609b8f3]
-  - @rui/css@0.1.8
+  - @rideds/css@0.1.8
 
 ## 0.1.7
 
 ### Patch Changes
 
 - Updated dependencies [4afe80b]
-  - @rui/css@0.1.7
+  - @rideds/css@0.1.7
 
 ## 0.1.6
 
@@ -665,7 +665,7 @@
 
 - Updated dependencies [235147d]
 - Updated dependencies [3c13ad7]
-  - @rui/css@0.1.6
+  - @rideds/css@0.1.6
 
 ## 0.1.5
 
@@ -673,14 +673,14 @@
 
 - Updated dependencies [861ecb4]
 - Updated dependencies [3889eb6]
-  - @rui/css@0.1.5
+  - @rideds/css@0.1.5
 
 ## 0.1.4
 
 ### Patch Changes
 
 - Updated dependencies [0ffcd48]
-  - @rui/css@0.1.4
+  - @rideds/css@0.1.4
 
 ## 0.1.3
 
@@ -689,23 +689,23 @@
 - Updated dependencies [cdc0930]
 - Updated dependencies [946faf7]
 - Updated dependencies [71c58fd]
-  - @rui/css@0.1.3
+  - @rideds/css@0.1.3
 
 ## 0.1.2
 
 ### Patch Changes
 
 - 7b2c0f3: Updated dependencies
-  - @rui/react@0.1.1
+  - @rideds/react@0.1.1
 - Updated dependencies [7b2c0f3]
-  - @rui/css@0.1.2
+  - @rideds/css@0.1.2
 
 ## 0.1.1
 
 ### Patch Changes
 
 - Updated dependencies [e3b782d]
-  - @rui/css@0.1.1
+  - @rideds/css@0.1.1
 
 ## 0.1.0
 
@@ -713,7 +713,7 @@
 
 - Updated dependencies [7cc6087]
 - Updated dependencies [bdca898]
-  - @rui/css@0.1.0
+  - @rideds/css@0.1.0
 
 ## 0.0.41
 
@@ -721,7 +721,7 @@
 
 - Updated dependencies [561f74c]
 - Updated dependencies [b43de05]
-  - @rui/css@0.0.41
+  - @rideds/css@0.0.41
 
 ## 0.0.40
 
@@ -734,56 +734,56 @@
 ### Patch Changes
 
 - Updated dependencies [f801300]
-  - @rui/css@0.0.39
+  - @rideds/css@0.0.39
 
 ## 0.0.38
 
 ### Patch Changes
 
 - Updated dependencies [70fbaaf]
-  - @rui/css@0.0.38
+  - @rideds/css@0.0.38
 
 ## 0.0.35
 
 ### Patch Changes
 
 - Updated dependencies [0789dc8]
-  - @rui/css@0.0.35
+  - @rideds/css@0.0.35
 
 ## 0.0.34
 
 ### Patch Changes
 
 - Updated dependencies [92801a2]
-  - @rui/css@0.0.34
+  - @rideds/css@0.0.34
 
 ## 0.0.33
 
 ### Patch Changes
 
 - Updated dependencies [fbdb091]
-  - @rui/css@0.0.33
+  - @rideds/css@0.0.33
 
 ## 0.0.31
 
 ### Patch Changes
 
 - Updated dependencies [fd7c569]
-  - @rui/css@0.0.31
+  - @rideds/css@0.0.31
 
 ## 0.0.30
 
 ### Patch Changes
 
 - Updated dependencies [285cb9b]
-  - @rui/css@0.0.30
+  - @rideds/css@0.0.30
 
 ## 0.0.29
 
 ### Patch Changes
 
 - Updated dependencies [116ee2c]
-  - @rui/css@0.0.29
+  - @rideds/css@0.0.29
 
 ## 0.0.28
 
@@ -791,7 +791,7 @@
 
 - b3da758: Figma XML 타겟에서 instance 노드의 컴포넌트 정보를 제공합니다.
 - Updated dependencies [5337e14]
-  - @rui/css@0.0.28
+  - @rideds/css@0.0.28
 
 ## 0.0.27
 
@@ -801,7 +801,7 @@
 - Updated dependencies [9d85c16]
 - Updated dependencies [d951317]
 - Updated dependencies [b3f964d]
-  - @rui/css@0.0.27
+  - @rideds/css@0.0.27
 
 ## 0.0.25
 
@@ -809,21 +809,21 @@
 
 - c8a6d41: codegen 결과물이 import 문을 함께 반환하는 기능을 추가합니다.
 - Updated dependencies [c87ede9]
-  - @rui/css@0.0.25
+  - @rideds/css@0.0.25
 
 ## 0.0.24
 
 ### Patch Changes
 
 - Updated dependencies [4da536f]
-  - @rui/css@0.0.24
+  - @rideds/css@0.0.24
 
 ## 0.0.23
 
 ### Patch Changes
 
 - Updated dependencies [63e1541]
-  - @rui/css@0.0.23
+  - @rideds/css@0.0.23
 
 ## 0.0.22
 
@@ -844,7 +844,7 @@
 - Updated dependencies [7ae87f8]
 - Updated dependencies [f144d28]
 - Updated dependencies [e368c69]
-  - @rui/css@0.0.21
+  - @rideds/css@0.0.21
 
 ## 0.0.20
 
@@ -858,7 +858,7 @@
 
 - Updated dependencies [3c9ec66]
 - Updated dependencies [b3bb6e7]
-  - @rui/css@0.0.19
+  - @rideds/css@0.0.19
 
 ## 0.0.18
 
@@ -871,7 +871,7 @@
 ### Patch Changes
 
 - Updated dependencies [c042f90]
-  - @rui/css@0.0.17
+  - @rideds/css@0.0.17
 
 ## 0.0.15
 
@@ -887,7 +887,7 @@
 - Updated dependencies [4511814]
 - Updated dependencies [f4b0723]
 - Updated dependencies [f4b0723]
-  - @rui/css@0.0.15
+  - @rideds/css@0.0.15
 
 ## 0.0.6
 
@@ -895,14 +895,14 @@
 
 - Updated dependencies [92c0b80]
 - Updated dependencies [c1d94d0]
-  - @rui/css@0.0.14
+  - @rideds/css@0.0.14
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies [7fca755]
-  - @rui/css@0.0.13
+  - @rideds/css@0.0.13
 
 ## 0.0.4
 
@@ -910,7 +910,7 @@
 
 - Updated dependencies [6426379]
 - Updated dependencies [ee41f37]
-  - @rui/css@0.0.12
+  - @rideds/css@0.0.12
 
 ## 0.0.3
 
@@ -920,7 +920,7 @@
   - BOOLEAN_OPERATION 노드를 지원합니다.
 - Updated dependencies [e70f340]
 - Updated dependencies [72f344f]
-  - @rui/css@0.0.11
+  - @rideds/css@0.0.11
 
 ## 0.0.2
 
@@ -932,4 +932,4 @@
   - Figma Plugin으로 제공되었던 Codegen 기능을 패키지로 제공합니다.
 
 - Updated dependencies [e4b704c]
-  - @rui/css@0.0.10
+  - @rideds/css@0.0.10

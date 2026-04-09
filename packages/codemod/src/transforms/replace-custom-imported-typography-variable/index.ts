@@ -1,5 +1,5 @@
 // packages/codemod/src/transforms/replace-custom-imported-typography-variable/index.ts
-import { typographyMappings } from "@rui/migration-index";
+import { typographyMappings } from "@rideds/migration-index";
 import type { API, FileInfo, Options } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";
 

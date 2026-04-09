@@ -1,15 +1,15 @@
-# @rui/vite-plugin
+# @rideds/vite-plugin
 
 Seed Design의 테마를 Vite 프로젝트에 적용하기 위한 플러그인입니다.
 
 ## 설치
 
 ```sh
-yarn add @rui/vite-plugin
+yarn add @rideds/vite-plugin
 ```
 
 ```sh
-npm install @rui/vite-plugin
+npm install @rideds/vite-plugin
 ```
 
 ## 사용 방법
@@ -17,7 +17,7 @@ npm install @rui/vite-plugin
 ```ts
 // vite.config.ts
 import { defineConfig } from "vite";
-import { seedDesignPlugin } from "@rui/vite-plugin";
+import { seedDesignPlugin } from "@rideds/vite-plugin";
 
 export default defineConfig({
   plugins: [
@@ -53,7 +53,7 @@ interface Options {
 ```ts
 // vite.config.ts
 import { defineConfig } from "vite";
-import { seedDesignPlugin } from "@rui/vite-plugin";
+import { seedDesignPlugin } from "@rideds/vite-plugin";
 
 export default defineConfig({
   plugins: [

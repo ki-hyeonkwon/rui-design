@@ -1,4 +1,4 @@
-import { Box, Float } from "@rui/react";
+import { Box, Float } from "@rideds/react";
 import { ContextualFloatingButton } from "rui/ui/contextual-floating-button";
 
 export default function FloatPreview() {

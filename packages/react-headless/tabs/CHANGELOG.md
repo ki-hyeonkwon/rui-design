@@ -1,4 +1,4 @@
-# @rui/react-tabs
+# @rideds/react-tabs
 
 ## 1.0.3
 
@@ -19,7 +19,7 @@
 
 - ae1b768: :focus-visible selector를 사용하기 전 브라우저에서 selector를 지원하는지 확인합니다.
 - Updated dependencies [ae1b768]
-  - @rui/react-supports@0.0.1
+  - @rideds/react-supports@0.0.1
 
 ## 1.0.0
 
@@ -30,8 +30,8 @@
 ### Patch Changes
 
 - Updated dependencies [34f92f2]
-  - @rui/react-primitive@1.0.0
-  - @rui/dom-utils@1.0.0
+  - @rideds/react-primitive@1.0.0
+  - @rideds/dom-utils@1.0.0
 
 ## 0.0.9
 
@@ -61,7 +61,7 @@
 ### Patch Changes
 
 - Updated dependencies [29ec9f0]
-  - @rui/react-primitive@0.0.3
+  - @rideds/react-primitive@0.0.3
 
 ## 0.0.5
 
@@ -75,8 +75,8 @@
 
 - e368c69: 패키지 의존성을 최신화합니다.
 - Updated dependencies [e368c69]
-  - @rui/react-primitive@0.0.2
-  - @rui/dom-utils@0.0.2
+  - @rideds/react-primitive@0.0.2
+  - @rideds/dom-utils@0.0.2
 
 ## 0.0.3
 
@@ -96,7 +96,7 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/dom-utils@0.0.1
+  - @rideds/dom-utils@0.0.1
 
 ## 0.0.1-rc.0
 
@@ -104,7 +104,7 @@
 
 - Seed Design V3 release candidate
 - Updated dependencies
-  - @rui/dom-utils@0.0.1-rc.0
+  - @rideds/dom-utils@0.0.1-rc.0
 
 ## 0.0.0-alpha-20241209060641
 
@@ -148,7 +148,7 @@
 
 - alpha
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241030023710
+  - @rideds/dom-utils@0.0.0-alpha-20241030023710
 
 ## 0.0.0-alpha-20241014145845
 
@@ -162,4 +162,4 @@
 
 - prerelease
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241004093556
+  - @rideds/dom-utils@0.0.0-alpha-20241004093556

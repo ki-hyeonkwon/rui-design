@@ -4,8 +4,8 @@ import {
   VisuallyHidden,
   Icon,
   PrefixIcon,
-} from "@rui/react";
-import type { FieldLabelVariantProps } from "@rui/css/recipes/field-label";
+} from "@rideds/react";
+import type { FieldLabelVariantProps } from "@rideds/css/recipes/field-label";
 import {
   IconExclamationmarkCircleFill,
   IconXmarkCircleFill,

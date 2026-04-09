@@ -1,8 +1,8 @@
-import { Switch as SwitchPrimitive, useSwitchContext } from "@rui/react-switch";
-import { switchStyle, type SwitchVariantProps } from "@rui/css/recipes/switch";
-import { switchmark, type SwitchmarkVariantProps } from "@rui/css/recipes/switchmark";
+import { Switch as SwitchPrimitive, useSwitchContext } from "@rideds/react-switch";
+import { switchStyle, type SwitchVariantProps } from "@rideds/css/recipes/switch";
+import { switchmark, type SwitchmarkVariantProps } from "@rideds/css/recipes/switchmark";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { createWithStateProps } from "../../utils/createWithStateProps";
 import React from "react";
 import clsx from "clsx";
@@ -37,7 +37,7 @@ export const SwitchRoot = React.forwardRef<HTMLLabelElement, SwitchRootProps>(
       (props.size === "small" || props.size === "medium")
     ) {
       console.warn(
-        `[RUI Design System] Switch size='${props.size}' is deprecated and will be removed in @rui/react@1.3.0. Use size='${props.size === "small" ? "16" : "32"}' instead.`,
+        `[RUI Design System] Switch size='${props.size}' is deprecated and will be removed in @rideds/react@1.3.0. Use size='${props.size === "small" ? "16" : "32"}' instead.`,
       );
     }
 

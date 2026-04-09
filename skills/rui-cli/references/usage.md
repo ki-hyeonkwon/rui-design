@@ -5,63 +5,63 @@
 ### 1) Initialization
 
 ```bash
-npx @rui/cli@latest init
+npx @rideds/cli@latest init
 ```
 
 질문 없이 기본값으로 만들려면:
 
 ```bash
-npx @rui/cli@latest init --yes
+npx @rideds/cli@latest init --yes
 ```
 
 ### 2) Add Snippets
 
 ```bash
-npx @rui/cli@latest add ui:action-button
+npx @rideds/cli@latest add ui:action-button
 ```
 
 여러 항목 추가:
 
 ```bash
-npx @rui/cli@latest add ui:action-button ui:alert-dialog
+npx @rideds/cli@latest add ui:action-button ui:alert-dialog
 ```
 
 ### 3) Add by Registry
 
 ```bash
-npx @rui/cli@latest add-all ui
+npx @rideds/cli@latest add-all ui
 ```
 
 모든 레지스트리:
 
 ```bash
-npx @rui/cli@latest add-all --all
+npx @rideds/cli@latest add-all --all
 ```
 
 ### 4) Compatibility Check
 
-현재 프로젝트의 `@rui/react`, `@rui/css`와 스니펫 요구 버전이 맞는지 검사합니다.
+현재 프로젝트의 `@rideds/react`, `@rideds/css`와 스니펫 요구 버전이 맞는지 검사합니다.
 
 ```bash
-npx @rui/cli@latest compat
+npx @rideds/cli@latest compat
 ```
 
 특정 항목만 검사:
 
 ```bash
-npx @rui/cli@latest compat ui:action-button ui:alert-dialog
+npx @rideds/cli@latest compat ui:action-button ui:alert-dialog
 ```
 
 컴포넌트 shorthand 검사:
 
 ```bash
-npx @rui/cli@latest compat -c action-button -c alert-dialog
+npx @rideds/cli@latest compat -c action-button -c alert-dialog
 ```
 
 모든 레지스트리 항목 검사:
 
 ```bash
-npx @rui/cli@latest compat --all
+npx @rideds/cli@latest compat --all
 ```
 
 ### 5) Docs 조회
@@ -71,13 +71,13 @@ npx @rui/cli@latest compat --all
 인터랙티브 모드 (섹션 → 항목 순서로 선택):
 
 ```bash
-npx @rui/cli@latest docs
+npx @rideds/cli@latest docs
 ```
 
 특정 항목 직접 조회:
 
 ```bash
-npx @rui/cli@latest docs action-button
+npx @rideds/cli@latest docs action-button
 ```
 
 출력 예시:
@@ -86,7 +86,7 @@ npx @rui/cli@latest docs action-button
 action-button
 - docs: https://rui-design.io/react/components/action-button
 - llms.txt: https://rui-design.io/llms/react/components/action-button.txt
-- snippet: https://raw.githubusercontent.com/rui-design/rui-design/refs/heads/dev/docs/registry/ui/action-button.tsx
+- snippet: https://raw.githubusercontent.com/ki-hyeonkwon/rui-design/refs/heads/dev/docs/registry/ui/action-button.tsx
 ```
 
 `snippet` 줄은 `ui` 또는 `breeze` 레지스트리 항목에만 출력됩니다. 파운데이션 등 스니펫이 없는 항목은 `docs`와 `llms.txt`만 출력됩니다.

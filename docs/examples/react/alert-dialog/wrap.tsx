@@ -1,5 +1,5 @@
-import { PrefixIcon, ResponsivePair } from "@rui/react";
-import { IconCheckFill } from "@rui/react-icon";
+import { PrefixIcon, ResponsivePair } from "@rideds/react";
+import { IconCheckFill } from "@rideds/react-icon";
 import { ActionButton } from "rui/ui/action-button";
 import {
   AlertDialogAction,

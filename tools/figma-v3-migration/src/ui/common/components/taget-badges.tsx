@@ -1,4 +1,4 @@
-import { Badge, Flex, Text } from "@rui/react";
+import { Badge, Flex, Text } from "@rideds/react";
 import { events } from "shared/event";
 import type { SerializedBaseNode } from "shared/types";
 

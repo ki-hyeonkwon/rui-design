@@ -11,12 +11,12 @@ import { AppScreen, AppScreenContent, type AppScreenProps } from "rui/ui/app-scr
 
 import { IconBellLine, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import img from "../assets/peng.jpeg";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 import { useState } from "react";
 import { Switch } from "rui/ui/switch";
-import { appScreenVariantMap } from "@rui/css/recipes/app-screen";
+import { appScreenVariantMap } from "@rideds/css/recipes/app-screen";
 
 declare module "@stackflow/config" {
   interface Register {

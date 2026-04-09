@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-drawer",
+  "name": "@rideds/react-drawer",
   "version": "1.0.9",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/drawer"
   },
   "sideEffects": false,
@@ -30,9 +30,9 @@
     "@radix-ui/react-compose-refs": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-use-callback-ref": "^1.1.0",
-    "@rui/react-use-controllable-state": "1.0.0",
-    "@rui/dom-utils": "1.0.0",
-    "@rui/react-primitive": "1.0.0"
+    "@rideds/react-use-controllable-state": "1.0.0",
+    "@rideds/dom-utils": "1.0.0",
+    "@rideds/react-primitive": "1.0.0"
   },
   "devDependencies": {
     "@types/react": "^19.1.6",

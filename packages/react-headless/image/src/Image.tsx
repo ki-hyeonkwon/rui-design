@@ -2,8 +2,8 @@
 
 import { composeRefs } from "@radix-ui/react-compose-refs";
 import { useLayoutEffect } from "@radix-ui/react-use-layout-effect";
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { forwardRef } from "react";
 import { useImage, type UseImageProps } from "./useImage";

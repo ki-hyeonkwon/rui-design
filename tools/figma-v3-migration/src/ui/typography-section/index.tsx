@@ -1,4 +1,4 @@
-import { Box, Flex } from "@rui/react";
+import { Box, Flex } from "@rideds/react";
 import { Footer } from "common/components/footer";
 import type { GroupedSerializedTextStyleSuggestionsResults } from "shared/types";
 import { useTypographyMigration } from "./context";

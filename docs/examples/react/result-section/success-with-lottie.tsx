@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { VStack, Box } from "@rui/react";
+import { VStack, Box } from "@rideds/react";
 import { ResultSection } from "rui/ui/result-section";
 import { useTheme } from "@/hooks/useTheme";
 

@@ -1,4 +1,4 @@
-# @rui/react-primitive
+# @rideds/react-primitive
 
 ## 1.0.0
 

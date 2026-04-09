@@ -10,12 +10,12 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { reactionButtonVariantMap } from "@rui/css/recipes/reaction-button";
+import { reactionButtonVariantMap } from "@rideds/css/recipes/reaction-button";
 
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { ReactionButton, type ReactionButtonProps } from "rui/ui/reaction-button";
 import { IconFaceSmileCircleFill, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { Count, PrefixIcon } from "@rui/react";
+import { Count, PrefixIcon } from "@rideds/react";
 
 const initialVariants = {
   size: "small",

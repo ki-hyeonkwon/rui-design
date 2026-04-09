@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, VStack } from "@rui/react";
+import { Box, Divider, HStack, VStack } from "@rideds/react";
 
 export default function DividerOrientation() {
   return (

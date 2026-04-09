@@ -1,4 +1,4 @@
-import { Box } from "@rui/react";
+import { Box } from "@rideds/react";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import {
   AppBar,

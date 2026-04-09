@@ -1,4 +1,4 @@
-import { Article, Divider, VStack, Text } from "@rui/react";
+import { Article, Divider, VStack, Text } from "@rideds/react";
 
 export default function ArticleAs() {
   return (

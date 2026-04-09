@@ -1,4 +1,4 @@
-import { Divider, Flex, Grid, HStack } from "@rui/react";
+import { Divider, Flex, Grid, HStack } from "@rideds/react";
 
 export default function GridNumber() {
   return (

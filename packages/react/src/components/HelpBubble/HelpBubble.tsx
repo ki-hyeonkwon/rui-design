@@ -1,6 +1,6 @@
-import { Popover as PopoverPrimitive, usePopoverContext } from "@rui/react-popover";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { helpBubble, type HelpBubbleVariantProps } from "@rui/css/recipes/help-bubble";
+import { Popover as PopoverPrimitive, usePopoverContext } from "@rideds/react-popover";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { helpBubble, type HelpBubbleVariantProps } from "@rideds/css/recipes/help-bubble";
 import { forwardRef } from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { createWithStateProps } from "../../utils/createWithStateProps";

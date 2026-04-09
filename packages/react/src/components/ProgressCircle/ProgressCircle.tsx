@@ -1,8 +1,8 @@
-import { ProgressCircle as ProgressCirclePrimitive } from "@rui/react-progress";
+import { ProgressCircle as ProgressCirclePrimitive } from "@rideds/react-progress";
 import {
   progressCircle,
   type ProgressCircleVariantProps,
-} from "@rui/css/recipes/progress-circle";
+} from "@rideds/css/recipes/progress-circle";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 
 const { withContext, withProvider } = createSlotRecipeContext(progressCircle);

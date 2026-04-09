@@ -1,5 +1,5 @@
 import { IconDiamond } from "@karrotmarket/react-multicolor-icon";
-import { VStack, Icon, Box } from "@rui/react";
+import { VStack, Icon, Box } from "@rideds/react";
 import { ResultSection } from "rui/ui/result-section";
 
 export default function ResultSectionPreview() {

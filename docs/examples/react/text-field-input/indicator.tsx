@@ -1,4 +1,4 @@
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { TextField, TextFieldInput } from "rui/ui/text-field";
 
 export default function TextFieldInputIndicator() {

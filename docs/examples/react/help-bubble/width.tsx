@@ -1,6 +1,6 @@
 import { HelpBubbleAnchor } from "rui/ui/help-bubble";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { useState } from "react";
 
 const WIDTH_OPTIONS = ["200px", "300px", "unset"] as const;

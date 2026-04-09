@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { viteSingleFile } from "vite-plugin-singlefile";
 import { resolve } from "node:path";
-import { seedDesignPlugin } from "@rui/vite-plugin";
+import { seedDesignPlugin } from "@rideds/vite-plugin";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/

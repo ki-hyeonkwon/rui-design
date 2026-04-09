@@ -1,22 +1,22 @@
-# @rui/rsbuild-plugin
+# @rideds/rsbuild-plugin
 
 Seed Design의 테마를 Rsbuild 프로젝트에 적용하기 위한 플러그인입니다.
 
 ## 설치
 
 ```sh
-yarn add @rui/rsbuild-plugin
+yarn add @rideds/rsbuild-plugin
 ```
 
 ```sh
-npm install @rui/rsbuild-plugin
+npm install @rideds/rsbuild-plugin
 ```
 
 ## 사용 방법
 
 ```ts
 // rsbuild.config.ts
-import { seedDesignPlugin } from '@rui/rsbuild-plugin';
+import { seedDesignPlugin } from '@rideds/rsbuild-plugin';
 import { defineConfig, type RsbuildConfig } from '@rsbuild/core';
 
 export default defineConfig((): RsbuildConfig => {
@@ -55,7 +55,7 @@ interface Options {
 
 ```ts
 // rsbuild.config.ts
-import { seedDesignPlugin } from '@rui/rsbuild-plugin';
+import { seedDesignPlugin } from '@rideds/rsbuild-plugin';
 import { defineConfig } from '@rsbuild/core';
 
 export default defineConfig({

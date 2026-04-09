@@ -1,4 +1,4 @@
-import { ImageFrame } from "@rui/react";
+import { ImageFrame } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 export default function ImageFramePreview() {

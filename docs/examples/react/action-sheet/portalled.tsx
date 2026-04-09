@@ -1,4 +1,4 @@
-import { Portal } from "@rui/react";
+import { Portal } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import {
   ActionSheetContent,

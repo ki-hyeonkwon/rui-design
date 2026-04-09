@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@rui/react";
+import { Box, Flex, Text } from "@rideds/react";
 
 export interface MigrationProgress {
   total: number;

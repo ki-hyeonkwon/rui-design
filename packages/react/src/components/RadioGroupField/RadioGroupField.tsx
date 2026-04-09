@@ -1,9 +1,9 @@
 "use client";
 
-import { field, type FieldVariantProps } from "@rui/css/recipes/field";
-import { fieldLabel, type FieldLabelVariantProps } from "@rui/css/recipes/field-label";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { RadioGroup as RadioGroupPrimitive } from "@rui/react-radio-group";
+import { field, type FieldVariantProps } from "@rideds/css/recipes/field";
+import { fieldLabel, type FieldLabelVariantProps } from "@rideds/css/recipes/field-label";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { RadioGroup as RadioGroupPrimitive } from "@rideds/react-radio-group";
 import type * as React from "react";
 import { forwardRef } from "react";
 import clsx from "clsx";

@@ -1,10 +1,10 @@
-# @rui/figma-extractor
+# @rideds/figma-extractor
 
 ## 1.1.0
 
 ### Minor Changes
 
-- 15d9587: `@rui/figma-extractor` config 파이프라인에서 `fetchNodes`를 context의 일부로 제공합니다.
+- 15d9587: `@rideds/figma-extractor` config 파이프라인에서 `fetchNodes`를 context의 일부로 제공합니다.
 
 ## 1.0.0
 

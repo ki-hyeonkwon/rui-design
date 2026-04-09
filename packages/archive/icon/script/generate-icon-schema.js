@@ -7,7 +7,7 @@ import pkg from "../package.json" with { type: "json" };
 const iconSchema = dedent`
   {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/rui-design/rui-design/%40rui/icon%40${
+    "$id": "https://raw.githubusercontent.com/ki-hyeonkwon/rui-design/%40rui/icon%40${
       pkg.version
     }/packages/icon/schema/schema.json",
     "title": "Karrot UI Icon Schema",

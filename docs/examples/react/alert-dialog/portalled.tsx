@@ -1,4 +1,4 @@
-import { ResponsivePair, Portal } from "@rui/react";
+import { ResponsivePair, Portal } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 import {
   AlertDialogAction,

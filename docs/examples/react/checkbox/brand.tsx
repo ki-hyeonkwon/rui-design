@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { Checkbox, CheckboxGroup } from "rui/ui/checkbox";
 
 export default function CheckboxBrand() {

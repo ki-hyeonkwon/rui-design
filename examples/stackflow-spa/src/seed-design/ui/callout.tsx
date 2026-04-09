@@ -1,4 +1,4 @@
-import { PrefixIcon, Callout as SeedCallout, SuffixIcon } from "@rui/react";
+import { PrefixIcon, Callout as SeedCallout, SuffixIcon } from "@rideds/react";
 import * as React from "react";
 
 import { IconChevronRightLine, IconXmarkLine } from "@karrotmarket/react-monochrome-icon"; // "@daangn/react-monochrome-icon"과 동일합니다.

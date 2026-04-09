@@ -5,7 +5,7 @@ import {
   IconHouseLine,
 } from "@karrotmarket/react-monochrome-icon";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
-import { Icon, Portal } from "@rui/react";
+import { Icon, Portal } from "@rideds/react";
 import * as React from "react";
 import { Fragment } from "react";
 import {
@@ -32,7 +32,7 @@ import {
 } from "rui/ui/alert-dialog";
 import { useStepOverlay } from "rui/stackflow/use-step-overlay";
 
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 
 const contentVariants = [
   { key: "title", detail: null },

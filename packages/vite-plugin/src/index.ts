@@ -1,4 +1,4 @@
-import { generateThemingScript, type ColorMode } from "@rui/css/theming";
+import { generateThemingScript, type ColorMode } from "@rideds/css/theming";
 import type { HtmlTagDescriptor, Plugin } from "vite";
 
 const PLUGIN_NAME = "vite-plugin-rui";

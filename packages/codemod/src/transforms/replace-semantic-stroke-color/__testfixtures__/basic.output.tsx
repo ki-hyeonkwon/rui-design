@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from "react";
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 
 // 인라인 스타일에서 stroke 토큰 사용
 const Component1 = () => (

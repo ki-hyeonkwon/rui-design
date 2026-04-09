@@ -1,4 +1,4 @@
-# @rui/tailwind3-plugin
+# @rideds/tailwind3-plugin
 
 ## 1.1.18
 
@@ -86,8 +86,8 @@
   - snippet 내 오타 수정
   - 신규 10단계 반영
   - 업데이트 가이드
-    1. `@rui/css@latest @rui/react@latest` 설치
-    2. `npx @rui/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
+    1. `@rideds/css@latest @rideds/react@latest` 설치
+    2. `npx @rideds/cli@latest add ui:manner-temp ui:manner-temp-badge`로 snippet 최신화
     3. 온도 범위가 변경되었으므로, `<MannerTemp level="l1" />` 혹은 `<MannerTempBadge level="l1" />`과 같이 `level`을 직접 지정하여 사용하고 있는 경우가 있는지 확인
 
 ## 0.2.0
@@ -208,7 +208,7 @@
 ### Patch Changes
 
 - 7b2c0f3: Updated dependencies
-  - @rui/react@0.1.1
+  - @rideds/react@0.1.1
 
 ## 0.1.1
 

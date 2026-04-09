@@ -30,7 +30,7 @@ rootage/
 
 ## 패키지별 가이드라인
 
-### Core 패키지 (`@rui/rootage-core`)
+### Core 패키지 (`@rideds/rootage-core`)
 
 **목적**: 범용 토큰 처리 유틸리티와 확장 가능한 인터페이스 제공
 
@@ -63,7 +63,7 @@ export function createStringifier(options: {
 }
 ```
 
-### CLI 패키지 (`@rui/rootage-cli`)
+### CLI 패키지 (`@rideds/rootage-cli`)
 
 **목적**: 커맨드라인 인터페이스 제공 및 확장 가능한 옵션 지원
 
@@ -103,7 +103,7 @@ bun rootage token-css ./src --generator ./lib/my-generator.js --prefix my-system
 
 ```typescript
 // my-design-system-generator.ts
-import { css, type AST } from "@rui/rootage-core";
+import { css, type AST } from "@rideds/rootage-core";
 
 type TokenDeclaration = AST.TokenDeclaration;
 type ValueLit = AST.ValueLit;

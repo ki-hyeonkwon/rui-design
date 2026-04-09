@@ -1,9 +1,9 @@
 {
-  "name": "@rui/vite-plugin",
+  "name": "@rideds/vite-plugin",
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/vite-plugin"
   },
   "author": "Asher <asher@daangn.com>",
@@ -35,11 +35,11 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "@rui/css": "^1.1.0",
+    "@rideds/css": "^1.1.0",
     "vite": "^7.0.0"
   },
   "peerDependencies": {
-    "@rui/css": "^1.1.0",
+    "@rideds/css": "^1.1.0",
     "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
   },
   "publishConfig": {

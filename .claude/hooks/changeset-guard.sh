@@ -15,7 +15,7 @@ Example content of a changeset file:
 
 ```
 ---
-"@rui/cli": minor
+"@rideds/cli": minor
 ---
 
 LLM 친화적 문서 링크를 위한 `docs` 명령어 추가

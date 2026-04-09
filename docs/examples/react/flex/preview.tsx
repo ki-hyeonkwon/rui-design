@@ -1,4 +1,4 @@
-import { Flex } from "@rui/react";
+import { Flex } from "@rideds/react";
 
 export default function FlexPreview() {
   return (

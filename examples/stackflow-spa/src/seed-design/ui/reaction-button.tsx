@@ -1,7 +1,7 @@
 import {
   ReactionButton as SeedReactionButton,
   type ReactionButtonProps as SeedReactionButtonProps,
-} from "@rui/react";
+} from "@rideds/react";
 import * as React from "react";
 import { LoadingIndicator } from "./loading-indicator";
 

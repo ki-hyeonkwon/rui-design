@@ -1,4 +1,4 @@
-import { dataAttr, elementProps } from "@rui/dom-utils";
+import { dataAttr, elementProps } from "@rideds/dom-utils";
 import { useNullableActivity } from "@stackflow/react-ui-core";
 import { useMemo } from "react";
 import { type UseSwipeBackProps, useSwipeBack } from "../GlobalInteraction/useSwipeBack";

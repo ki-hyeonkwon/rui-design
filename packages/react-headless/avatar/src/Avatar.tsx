@@ -1,12 +1,12 @@
 /**
- * @deprecated Use `@rui/react-image` instead.
+ * @deprecated Use `@rideds/react-image` instead.
  * @see https://rui-design.io/docs/react/components/image
  */
 "use client";
 
 import { composeRefs } from "@radix-ui/react-compose-refs";
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { forwardRef } from "react";
 import { useAvatar, type UseAvatarProps } from "./useAvatar";

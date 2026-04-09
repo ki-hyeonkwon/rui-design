@@ -1,5 +1,5 @@
-import { controlChip, type ControlChipVariantProps } from "@rui/css/recipes/control-chip";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { controlChip, type ControlChipVariantProps } from "@rideds/css/recipes/control-chip";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { withIconRequired } from "../Icon/Icon";
@@ -20,7 +20,7 @@ export interface ControlChipBaseProps extends PrimitiveProps, ControlChipVariant
  * <ControlChip size="medium">Label</ControlChip>
  *
  * // After
- * import { Chip } from "@rui/react";
+ * import { Chip } from "@rideds/react";
  * <Chip.Toggle size="medium" variant="outlineStrong">Label</Chip.Toggle>
  * ```
  */

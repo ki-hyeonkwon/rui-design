@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Grid, type GridProps, GridItem, VStack } from "@rui/react";
+import { Grid, type GridProps, GridItem, VStack } from "@rideds/react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 
 type AutoFlow = NonNullable<GridProps["autoFlow"]>;

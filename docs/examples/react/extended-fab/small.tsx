@@ -1,5 +1,5 @@
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
-import { ExtendedFab, PrefixIcon } from "@rui/react";
+import { ExtendedFab, PrefixIcon } from "@rideds/react";
 
 export default function ExtendedFabSmall() {
   return (

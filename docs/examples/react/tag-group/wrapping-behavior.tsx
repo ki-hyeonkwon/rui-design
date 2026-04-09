@@ -1,5 +1,5 @@
 import { IconBellFill, IconLocationpinFill } from "@karrotmarket/react-monochrome-icon";
-import { Flex, Text, VStack } from "@rui/react";
+import { Flex, Text, VStack } from "@rideds/react";
 import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
 import type { PropsWithChildren, ReactNode } from "react";
 

@@ -4,7 +4,7 @@ import { loadChangelogSources } from "@/lib/parse-changelog";
 
 export const revalidate = false;
 
-const CHANGELOG_SOURCE_URL = "https://github.com/rui-design/rui-design/tree/dev/packages";
+const CHANGELOG_SOURCE_URL = "https://github.com/ki-hyeonkwon/rui-design/tree/dev/packages";
 
 function buildBody(sources: ChangelogSource[]): string {
   return sources

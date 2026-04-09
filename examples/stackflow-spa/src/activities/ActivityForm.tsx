@@ -12,7 +12,7 @@ import {
   Text,
   VStack,
   type unstable_StyleProps,
-} from "@rui/react";
+} from "@rideds/react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 import { ActionButton } from "rui/ui/action-button";
 import { PageBanner } from "rui/ui/page-banner";

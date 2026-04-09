@@ -44,7 +44,7 @@ async function main() {
 
 ${content}
 /**
- * This file is a snippet from RUI Design, helping you get started quickly with @rui/* packages.
+ * This file is a snippet from RUI Design, helping you get started quickly with @rideds/* packages.
  * You can extend this snippet however you want.
  */
 `);

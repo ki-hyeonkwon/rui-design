@@ -1,4 +1,4 @@
-import { VStack, Text, HStack } from "@rui/react";
+import { VStack, Text, HStack } from "@rideds/react";
 import { Slider } from "rui/ui/slider";
 import { useState } from "react";
 

@@ -6,7 +6,7 @@ Generate comprehensive React component documentation following RUI Design patter
 
 1. `component-id`, `component-name`, snippet 레이어 유무를 먼저 확인합니다.
 2. 문서 기본 구조(Example/Installation/Usage/Examples)를 채우고 필요한 선택 섹션을 추가합니다.
-3. `doc-gen:file` 경로와 import 경로(`@/components/ui/*` vs `@rui/react`)를 검증합니다.
+3. `doc-gen:file` 경로와 import 경로(`@/components/ui/*` vs `@rideds/react`)를 검증합니다.
 4. 체크리스트로 경로/타입/서술 일관성을 마무리 점검합니다.
 
 ## Table of Contents
@@ -89,7 +89,7 @@ description: { 한국어 설명 }
 `./docs/registry/ui/{component-id}.tsx` 파일이 있는지 확인합니다:
 
 - **Snippet 있음** → Installation 섹션 포함, Usage에서 Snippet import 사용
-- **Snippet 없음** → `@rui/react`에서 직접 import, Usage만 작성
+- **Snippet 없음** → `@rideds/react`에서 직접 import, Usage만 작성
 
 ```bash
 # Snippet 레이어 확인
@@ -100,7 +100,7 @@ ls docs/registry/ui/{component-id}.tsx
 
 **Composite 컴포넌트인 경우**:
 
-- Snippet 파일 또는 `@rui/react` export를 확인하여 sub-component 목록 추출
+- Snippet 파일 또는 `@rideds/react` export를 확인하여 sub-component 목록 추출
 - 예) Alert Dialog: AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, etc.
 
 **Simple 컴포넌트인 경우**:
@@ -144,7 +144,7 @@ Snippet 레이어가 존재하는 경우 CLI 설치 방법을 안내합니다:
 다음 명령어로 컴포넌트를 설치할 수 있습니다:
 
 ```package-install
-npx @rui/cli@latest add ui:{component-id}
+npx @rideds/cli@latest add ui:{component-id}
 ```
 ````
 
@@ -165,7 +165,7 @@ CLI를 사용하지 않고 직접 설치하려면 다음 방법을 사용하세�
 **Snippet 레이어가 없는 경우**:
 
 - Installation 섹션 생략
-- Usage 섹션에서 바로 `@rui/react`에서 import 안내
+- Usage 섹션에서 바로 `@rideds/react`에서 import 안내
 
 ## Usage Section
 
@@ -191,7 +191,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog"; // Snippet이 있는 경우
 // 또는
-// } from "@rui/react"  // Snippet이 없는 경우
+// } from "@rideds/react"  // Snippet이 없는 경우
 ```
 ````
 
@@ -226,7 +226,7 @@ import {
 Badge 컴포넌트를 사용하려면 다음과 같이 import합니다:
 
 ```tsx
-import { Badge } from "@rui/react";
+import { Badge } from "@rideds/react";
 ````
 
 기본 사용 예시:
@@ -240,7 +240,7 @@ import { Badge } from "@rui/react";
 **Usage 작성 가이드**:
 1. **Import 경로 명확히**:
    - Snippet 있음: `@/components/ui/{component-id}`
-   - Snippet 없음: `@rui/react`
+   - Snippet 없음: `@rideds/react`
 2. **Sub-component 목록**: Composite인 경우 모든 sub-component 나열
 3. **기본 구조**: 컴포넌트의 전형적인 계층 구조 예시 제공
 4. **간결함**: Usage는 가장 기본적인 사용법만, 상세한 예시는 Examples 섹션에
@@ -394,7 +394,7 @@ React 문서에서 사용 가능한 특수 컴포넌트들:
 
 ````markdown
 ```package-install
-npx @rui/cli@latest add ui:component-id
+npx @rideds/cli@latest add ui:component-id
 ```
 ````
 
@@ -409,7 +409,7 @@ npx @rui/cli@latest add ui:component-id
 
 - [ ] Frontmatter의 title과 description이 정확한가?
 - [ ] Snippet 레이어 존재 여부에 따라 Installation/Usage 섹션이 올바른가?
-- [ ] Import 경로가 정확한가? (`@/components/ui/*` vs `@rui/react`)
+- [ ] Import 경로가 정확한가? (`@/components/ui/*` vs `@rideds/react`)
 - [ ] ComponentExample의 name 속성이 `react/{component-id}/{example-name}` 패턴인가?
 - [ ] 모든 예시 파일 경로가 실제 파일과 일치하는가?
 - [ ] Composite 컴포넌트의 모든 sub-component가 문서화되었는가?
@@ -428,7 +428,7 @@ npx @rui/cli@latest add ui:component-id
 
 1. **Snippet vs Direct Import**:
    - Snippet이 있으면 사용자가 커스터마이징 가능
-   - Snippet이 없으면 `@rui/react`에서 직접 사용
+   - Snippet이 없으면 `@rideds/react`에서 직접 사용
    - Installation 섹션은 Snippet이 있을 때만 작성
 
 2. **Example 파일 작성**:

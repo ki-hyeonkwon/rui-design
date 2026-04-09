@@ -1,4 +1,4 @@
-import { mergeProps } from "@rui/dom-utils";
+import { mergeProps } from "@rideds/dom-utils";
 import * as React from "react";
 import { Box, type BoxProps } from "../Box/Box";
 

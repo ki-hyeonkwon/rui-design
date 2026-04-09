@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-segmented-control",
+  "name": "@rideds/react-segmented-control",
   "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/segmented-control"
   },
   "sideEffects": false,
@@ -29,9 +29,9 @@
   "dependencies": {
     "@radix-ui/react-compose-refs": "^1.1.2",
     "@radix-ui/react-use-controllable-state": "1.2.2",
-    "@rui/dom-utils": "1.0.0",
-    "@rui/react-primitive": "1.0.0",
-    "@rui/react-supports": "0.0.1"
+    "@rideds/dom-utils": "1.0.0",
+    "@rideds/react-primitive": "1.0.0",
+    "@rideds/react-supports": "0.0.1"
   },
   "devDependencies": {
     "@types/react": "^19.1.6",

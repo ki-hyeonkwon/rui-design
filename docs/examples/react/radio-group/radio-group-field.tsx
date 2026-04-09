@@ -1,4 +1,4 @@
-import { ActionButton, HStack, VStack } from "@rui/react";
+import { ActionButton, HStack, VStack } from "@rideds/react";
 import { useState } from "react";
 import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 

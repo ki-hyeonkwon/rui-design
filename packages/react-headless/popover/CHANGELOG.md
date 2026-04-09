@@ -1,4 +1,4 @@
-# @rui/react-popover
+# @rideds/react-popover
 
 ## 1.0.3
 
@@ -27,8 +27,8 @@
 ### Patch Changes
 
 - Updated dependencies [34f92f2]
-  - @rui/react-primitive@1.0.0
-  - @rui/dom-utils@1.0.0
+  - @rideds/react-primitive@1.0.0
+  - @rideds/dom-utils@1.0.0
 
 ## 0.0.8
 
@@ -43,7 +43,7 @@
 ### Patch Changes
 
 - Updated dependencies [29ec9f0]
-  - @rui/react-primitive@0.0.3
+  - @rideds/react-primitive@0.0.3
 
 ## 0.0.6
 
@@ -57,8 +57,8 @@
 
 - e368c69: 패키지 의존성을 최신화합니다.
 - Updated dependencies [e368c69]
-  - @rui/react-primitive@0.0.2
-  - @rui/dom-utils@0.0.2
+  - @rideds/react-primitive@0.0.2
+  - @rideds/dom-utils@0.0.2
 
 ## 0.0.4
 
@@ -84,7 +84,7 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/dom-utils@0.0.1
+  - @rideds/dom-utils@0.0.1
 
 ## 0.0.1-rc.0
 
@@ -92,7 +92,7 @@
 
 - Seed Design V3 release candidate
 - Updated dependencies
-  - @rui/dom-utils@0.0.1-rc.0
+  - @rideds/dom-utils@0.0.1-rc.0
 
 ## 0.0.0-alpha-20241030023710
 
@@ -100,11 +100,11 @@
 
 - alpha
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241030023710
+  - @rideds/dom-utils@0.0.0-alpha-20241030023710
 
 ## 0.0.0-alpha-20241004093556
 
 ### Patch Changes
 
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241004093556
+  - @rideds/dom-utils@0.0.0-alpha-20241004093556

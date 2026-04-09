@@ -1,4 +1,4 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 
 export default function TailwindColors() {
   return (

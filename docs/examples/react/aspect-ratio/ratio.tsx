@@ -1,4 +1,4 @@
-import { AspectRatio, Box, HStack } from "@rui/react";
+import { AspectRatio, Box, HStack } from "@rideds/react";
 
 export default function AspectRatioRatio() {
   return (

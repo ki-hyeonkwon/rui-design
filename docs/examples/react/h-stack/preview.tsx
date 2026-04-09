@@ -1,4 +1,4 @@
-import { Box, HStack } from "@rui/react";
+import { Box, HStack } from "@rideds/react";
 
 export default function HStackPreview() {
   return (

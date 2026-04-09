@@ -1,4 +1,4 @@
-import { postcssEngaged } from "@rui/postcss-engaged";
+import { postcssEngaged } from "@rideds/postcss-engaged";
 
 import { globalCss } from "./global";
 import { keyframes } from "./keyframes";

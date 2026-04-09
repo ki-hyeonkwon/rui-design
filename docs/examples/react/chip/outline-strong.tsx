@@ -1,4 +1,4 @@
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { Chip } from "rui/ui/chip";
 
 export default function ChipOutlineStrong() {

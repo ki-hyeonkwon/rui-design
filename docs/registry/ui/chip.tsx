@@ -1,8 +1,8 @@
 "use client";
 
-import { Chip as SeedChip } from "@rui/react";
-import { Checkbox, RadioGroup } from "@rui/react/primitive";
-import { chip } from "@rui/css/recipes/chip";
+import { Chip as SeedChip } from "@rideds/react";
+import { Checkbox, RadioGroup } from "@rideds/react/primitive";
+import { chip } from "@rideds/css/recipes/chip";
 import * as React from "react";
 
 // Create a base props interface that doesn't include DOM attributes to avoid conflicts

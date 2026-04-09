@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { MannerTempBadge } from "rui/ui/manner-temp-badge";
 
 export default function BadgePreview() {

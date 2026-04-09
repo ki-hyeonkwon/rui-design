@@ -1,8 +1,8 @@
-# @rui/qvism-preset
+# @rideds/qvism-preset
 
-This package is a preset for [@rui/ecosystem/qvism](../../ecosystem/qvism).
+This package is a preset for [@rideds/ecosystem/qvism](../../ecosystem/qvism).
 
 Following libraries are generated from this preset.
 
-- [@rui/css/*.css](../css)
-- [@rui/css/recipes](../css/recipes)
+- [@rideds/css/*.css](../css)
+- [@rideds/css/recipes](../css/recipes)

@@ -3,8 +3,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 import { Slider } from "rui/ui/slider";
 
 import { createStoryWithParameters } from "@/stories/utils/parameters";
-import { sliderVariantMap } from "@rui/css/recipes/slider";
-import { sliderTickVariantMap } from "@rui/css/recipes/slider-tick";
+import { sliderVariantMap } from "@rideds/css/recipes/slider";
+import { sliderTickVariantMap } from "@rideds/css/recipes/slider-tick";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 

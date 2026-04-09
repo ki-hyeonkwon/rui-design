@@ -5,7 +5,7 @@ import type {
   MdxJsxAttributeValueExpression,
   MdxJsxFlowElement,
 } from "mdast-util-mdx-jsx";
-import type { Exchange } from "@rui/rootage-core";
+import type { Exchange } from "@rideds/rootage-core";
 import type { Rule } from "./types";
 import {
   type ArrayExpressionNode,

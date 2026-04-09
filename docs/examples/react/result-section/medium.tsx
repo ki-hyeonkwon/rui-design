@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { ResultSection } from "rui/ui/result-section";
 
 export default function ResultSectionMedium() {

@@ -1,7 +1,7 @@
 "use client";
 
 import type { Activity } from "@stackflow/core";
-import { Box, Flex, HStack, Text, VStack } from "@rui/react";
+import { Box, Flex, HStack, Text, VStack } from "@rideds/react";
 import { IconArrowUpRightFill } from "@karrotmarket/react-monochrome-icon";
 import { useEffect, useRef, useState } from "react";
 import { ProgressCircle } from "rui/ui/progress-circle";
@@ -229,7 +229,7 @@ function getStackflowSpaUrl(path: string): string {
 }
 
 function getActivityGitHubUrl(activityName: string) {
-  return `https://github.com/rui-design/rui-design/blob/dev/examples/stackflow-spa/src/activities/${activityName}.tsx`;
+  return `https://github.com/ki-hyeonkwon/rui-design/blob/dev/examples/stackflow-spa/src/activities/${activityName}.tsx`;
 }
 
 function formatUrl(urlString: string) {

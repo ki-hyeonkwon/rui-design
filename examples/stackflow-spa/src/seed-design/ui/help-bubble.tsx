@@ -1,5 +1,5 @@
 import IconXmarkLine from "@karrotmarket/react-monochrome-icon/IconXmarkLine";
-import { Icon, HelpBubble as SeedHelpBubble } from "@rui/react";
+import { Icon, HelpBubble as SeedHelpBubble } from "@rideds/react";
 import { forwardRef } from "react";
 import type * as React from "react";
 

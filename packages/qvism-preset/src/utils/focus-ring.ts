@@ -1,4 +1,4 @@
-import type { StyleObject } from "@rui/qvism-core";
+import type { StyleObject } from "@rideds/qvism-core";
 import { vars } from "../vars";
 import * as duration from "../vars/duration";
 import * as timingFunction from "../vars/timing-function";

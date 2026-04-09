@@ -1,7 +1,7 @@
 import {
   ListHeader as SeedListHeader,
   type ListHeaderProps as SeedListHeaderProps,
-} from "@rui/react";
+} from "@rideds/react";
 
 export interface ListHeaderProps extends SeedListHeaderProps {}
 

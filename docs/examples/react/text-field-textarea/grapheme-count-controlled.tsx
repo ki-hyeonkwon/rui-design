@@ -1,6 +1,6 @@
 import { TextField, TextFieldTextarea } from "rui/ui/text-field";
 import { useState } from "react";
-import { Text, VStack } from "@rui/react";
+import { Text, VStack } from "@rideds/react";
 
 export default function TextFieldTextareaGraphemeControlled() {
   const [value, setValue] = useState("");

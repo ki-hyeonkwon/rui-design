@@ -1,5 +1,5 @@
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive } from "@rideds/react-primitive";
 import { forwardRef } from "react";
 import { usePendingButtonContext } from "./usePendingButton";
 

@@ -1,4 +1,4 @@
-import { text } from "@rui/css/recipes/text";
+import { text } from "@rideds/css/recipes/text";
 
 const label3Bold = text({ textStyle: "t4Bold" });
 const label3Regular = text({ textStyle: "t4Regular" });

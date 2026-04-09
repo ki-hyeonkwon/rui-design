@@ -1,4 +1,4 @@
-import { Flex, Grid } from "@rui/react";
+import { Flex, Grid } from "@rideds/react";
 
 export default function GridPreview() {
   return (

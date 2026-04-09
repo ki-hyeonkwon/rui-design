@@ -3,8 +3,8 @@ import {
   IconPersonCircleLine,
   IconSlashCircleLine,
 } from "@karrotmarket/react-monochrome-icon";
-import { Divider, Icon, VStack } from "@rui/react";
-import { RadioGroup } from "@rui/react/primitive";
+import { Divider, Icon, VStack } from "@rideds/react";
+import { RadioGroup } from "@rideds/react/primitive";
 import { List, ListButtonItem, ListCheckItem, ListRadioItem } from "rui/ui/list";
 import { Checkmark } from "rui/ui/checkbox";
 import { Radiomark } from "rui/ui/radio-group";

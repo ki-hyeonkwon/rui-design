@@ -1,7 +1,7 @@
-import { ariaAttr, dataAttr, elementProps, inputProps, labelProps } from "@rui/dom-utils";
+import { ariaAttr, dataAttr, elementProps, inputProps, labelProps } from "@rideds/dom-utils";
 import { useCallback, useId, useState } from "react";
 import { getDescriptionId, getErrorMessageId, getInputId, getLabelId } from "./dom";
-import { useSupports } from "@rui/react-supports";
+import { useSupports } from "@rideds/react-supports";
 
 function useFieldState() {
   const [isHovered, setIsHovered] = useState(false);

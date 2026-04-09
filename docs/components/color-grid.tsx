@@ -1,4 +1,4 @@
-import { resolveToken } from "@rui/rootage-core";
+import { resolveToken } from "@rideds/rootage-core";
 import { getRootage } from "./rootage";
 import { ColorSwatch } from "./color-swatch";
 

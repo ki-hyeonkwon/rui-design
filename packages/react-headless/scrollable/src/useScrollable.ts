@@ -1,4 +1,4 @@
-import { dataAttr, elementProps } from "@rui/dom-utils";
+import { dataAttr, elementProps } from "@rideds/dom-utils";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type ScrollPlacement = "top" | "bottom" | "left" | "right";

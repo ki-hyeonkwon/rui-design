@@ -1,7 +1,7 @@
-import { scrollFog, type ScrollFogVariantProps } from "@rui/css/recipes/scroll-fog";
+import { scrollFog, type ScrollFogVariantProps } from "@rideds/css/recipes/scroll-fog";
 import clsx from "clsx";
 import { forwardRef, useMemo } from "react";
-import { scrollFog as vars } from "@rui/css/vars/component";
+import { scrollFog as vars } from "@rideds/css/vars/component";
 
 type ScrollPlacement = "top" | "bottom" | "left" | "right";
 

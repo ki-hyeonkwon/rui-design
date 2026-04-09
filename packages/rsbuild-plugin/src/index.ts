@@ -1,5 +1,5 @@
 import type { HtmlBasicTag, RsbuildPlugin } from "@rsbuild/core";
-import { generateThemingScript, type ColorMode } from "@rui/css/theming";
+import { generateThemingScript, type ColorMode } from "@rideds/css/theming";
 
 const PLUGIN_NAME = "rsbuild:rui";
 

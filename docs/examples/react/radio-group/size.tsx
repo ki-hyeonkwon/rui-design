@@ -1,5 +1,5 @@
 import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 
 export default function RadioGroupSize() {
   return (

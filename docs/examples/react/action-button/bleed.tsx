@@ -1,4 +1,4 @@
-import { HStack, Text, VStack } from "@rui/react";
+import { HStack, Text, VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 
 export default function ActionButtonBleed() {

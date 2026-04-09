@@ -1,7 +1,7 @@
 import { getRootage } from "@/components/rootage";
-import { FoundationTokenMapping } from "@rui/migration-index";
-import { typographyMappings } from "@rui/migration-index/typography";
-import { Text, TextProps } from "@rui/react";
+import { FoundationTokenMapping } from "@rideds/migration-index";
+import { typographyMappings } from "@rideds/migration-index/typography";
+import { Text, TextProps } from "@rideds/react";
 import { Fragment } from "react";
 
 export async function TypographyMigrationIndex() {

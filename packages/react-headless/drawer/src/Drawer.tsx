@@ -3,8 +3,8 @@
 import { useComposedRefs } from "@radix-ui/react-compose-refs";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { useCallbackRef } from "@radix-ui/react-use-callback-ref";
-import { dataAttr } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { dataAttr } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { forwardRef, useEffect, useRef, useState } from "react";
 import type { DrawerDirection } from "./types";

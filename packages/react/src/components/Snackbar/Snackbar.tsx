@@ -1,8 +1,8 @@
-import { snackbar, type SnackbarVariantProps } from "@rui/css/recipes/snackbar";
-import { snackbarRegion } from "@rui/css/recipes/snackbar-region";
-import { visuallyHidden } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { Snackbar as SnackbarPrimitive } from "@rui/react-snackbar";
+import { snackbar, type SnackbarVariantProps } from "@rideds/css/recipes/snackbar";
+import { snackbarRegion } from "@rideds/css/recipes/snackbar-region";
+import { visuallyHidden } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { Snackbar as SnackbarPrimitive } from "@rideds/react-snackbar";
 import { forwardRef } from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";

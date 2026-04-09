@@ -1,4 +1,4 @@
-# @rui/react-slider
+# @rideds/react-slider
 
 ## 1.0.2
 

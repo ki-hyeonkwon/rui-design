@@ -1,10 +1,10 @@
 {
-  "name": "@rui/docs-mcp",
+  "name": "@rideds/docs-mcp",
   "version": "0.5.1",
   "description": "The official MCP server for RUI Design documentation",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/docs-mcp"
   },
   "homepage": "https://rui-design.io/",

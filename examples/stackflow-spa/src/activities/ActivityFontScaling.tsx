@@ -2,9 +2,9 @@ import type { StaticActivityComponentType } from "@stackflow/react/future";
 import { AppBar, AppBarLeft, AppBarMain, AppBarBackButton } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { Box, VStack, Text } from "@rui/react";
+import { Box, VStack, Text } from "@rideds/react";
 import { Callout } from "rui/ui/callout";
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 import { ActionButton } from "rui/ui/action-button";
 
 const FONT_SCALE_THRESHOLDS = [

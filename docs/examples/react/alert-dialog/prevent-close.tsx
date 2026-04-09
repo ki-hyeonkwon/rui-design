@@ -1,4 +1,4 @@
-import { Box, VStack } from "@rui/react";
+import { Box, VStack } from "@rideds/react";
 import { useState } from "react";
 import { ActionButton } from "rui/ui/action-button";
 import {

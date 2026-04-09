@@ -1,4 +1,4 @@
-import { vars } from "@rui/design-token";
+import { vars } from "@rideds/design-token";
 
 const staticColors = {
   staticBlack: vars.$static.color.staticBlack,

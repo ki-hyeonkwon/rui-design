@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-theming",
+  "name": "@rideds/react-theming",
   "version": "2.1.5",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design",
     "directory": "packages/react-theming"
   },
   "maintainers": [
@@ -43,7 +43,7 @@
     "react-dom": "^17.0.0 || ^18.0.0"
   },
   "dependencies": {
-    "@rui/design-token": "^1.0.3"
+    "@rideds/design-token": "^1.0.3"
   },
   "devDependencies": {
     "@types/react": "^19.1.6",

@@ -1,4 +1,4 @@
-import { Flex } from "@rui/react";
+import { Flex } from "@rideds/react";
 import { Avatar } from "rui/ui/avatar";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 

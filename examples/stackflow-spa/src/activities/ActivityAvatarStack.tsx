@@ -10,7 +10,7 @@ import {
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 
-import { avatarStackVariantMap } from "@rui/css/recipes/avatar-stack";
+import { avatarStackVariantMap } from "@rideds/css/recipes/avatar-stack";
 
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { Avatar, AvatarStack, type AvatarStackProps } from "rui/ui/avatar";

@@ -1,11 +1,11 @@
-import { chip, type ChipVariantProps } from "@rui/css/recipes/chip";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { chip, type ChipVariantProps } from "@rideds/css/recipes/chip";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { withIconRequired } from "../Icon/Icon";
 import { createWithStateProps } from "../../utils/createWithStateProps";
-import { useCheckboxContext } from "@rui/react-checkbox";
-import { useRadioGroupItemContext } from "@rui/react-radio-group";
+import { useCheckboxContext } from "@rideds/react-checkbox";
+import { useRadioGroupItemContext } from "@rideds/react-radio-group";
 
 const { withProvider, withContext } = createSlotRecipeContext(chip);
 const withStateProps = createWithStateProps([

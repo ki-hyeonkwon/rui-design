@@ -1,12 +1,12 @@
-import { appScreen, type AppScreenVariantProps } from "@rui/css/recipes/app-screen";
-import { mergeProps } from "@rui/dom-utils";
+import { appScreen, type AppScreenVariantProps } from "@rideds/css/recipes/app-screen";
+import { mergeProps } from "@rideds/dom-utils";
 import { forwardRef, useMemo } from "react";
 import { AppScreen as AppScreenPrimitive } from "../../primitive";
 import { createStyleContext } from "../../utils/createStyleContext";
 import { AppBarPropsProvider } from "../AppBar/AppBar";
 import { useTopActivity } from "../../primitive/private/useTopActivity";
 import { useActivity } from "@stackflow/react";
-import { appBar } from "@rui/css/recipes/app-bar";
+import { appBar } from "@rideds/css/recipes/app-bar";
 
 const { ClassNamesProvider, PropsProvider, withContext, useProps } = createStyleContext(appScreen);
 

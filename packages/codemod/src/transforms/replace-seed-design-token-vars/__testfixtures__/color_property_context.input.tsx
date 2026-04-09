@@ -1,4 +1,4 @@
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 
 // CSS 속성에 따른 적절한 색상 토큰 타입(bg, fg, stroke) 변환 테스트
 export const styles = {

@@ -1,5 +1,5 @@
 import { useCallbackRef } from "@radix-ui/react-use-callback-ref";
-import { dataAttr, elementProps } from "@rui/dom-utils";
+import { dataAttr, elementProps } from "@rideds/dom-utils";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { getClientY, isLeftPress, touchEnd, touchMove } from "./normalize-event";
 import { Store } from "./store";

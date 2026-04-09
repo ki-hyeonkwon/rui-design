@@ -1,4 +1,4 @@
-# @rui/react-theming
+# @rideds/react-theming
 
 ## 2.1.5
 
@@ -12,7 +12,7 @@
 
 ### Patch Changes
 
-- ee35c53: change `@rui/design-token` version
+- ee35c53: change `@rideds/design-token` version
 
 ## 2.1.3
 
@@ -20,7 +20,7 @@
 
 - cd0f24e: add types field in exports map
 - Updated dependencies [cd0f24e]
-  - @rui/design-token@1.0.2
+  - @rideds/design-token@1.0.2
 
 ## 2.1.2
 
@@ -72,4 +72,4 @@
 
 ### Major Changes
 
-- ae764ec: Initial implementation of @rui/react-theming
+- ae764ec: Initial implementation of @rideds/react-theming

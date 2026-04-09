@@ -1,4 +1,4 @@
-import { Avatar as SeedAvatar } from "@rui/react";
+import { Avatar as SeedAvatar } from "@rideds/react";
 import * as React from "react";
 
 export interface AvatarProps extends SeedAvatar.RootProps {

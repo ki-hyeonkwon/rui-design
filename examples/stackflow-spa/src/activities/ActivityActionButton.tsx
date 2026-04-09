@@ -9,11 +9,11 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { actionButtonVariantMap } from "@rui/css/recipes/action-button";
+import { actionButtonVariantMap } from "@rideds/css/recipes/action-button";
 
 import { IconChevronDownFill, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import IconPlusFill from "@karrotmarket/react-monochrome-icon/IconPlusFill";
-import { Icon, PrefixIcon, SuffixIcon } from "@rui/react";
+import { Icon, PrefixIcon, SuffixIcon } from "@rideds/react";
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { ActionButton, type ActionButtonProps } from "rui/ui/action-button";
 

@@ -1,6 +1,6 @@
 // @ts-nocheck
 import { style } from "@vanilla-extract/css";
-import { vars } from "@rui/css";
+import { vars } from "@rideds/css";
 import { f, reset } from "@/shared/styles";
 import { typography, text } from '@/src/styles/tokens';
 

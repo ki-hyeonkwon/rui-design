@@ -1,5 +1,5 @@
 import { IconCheckmarkCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import {
   ActionableInlineBanner,
   DismissibleInlineBanner,

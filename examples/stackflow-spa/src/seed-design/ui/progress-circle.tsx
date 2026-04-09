@@ -1,4 +1,4 @@
-import { ProgressCircle as SeedProgressCircle } from "@rui/react";
+import { ProgressCircle as SeedProgressCircle } from "@rideds/react";
 import * as React from "react";
 
 export interface ProgressCircleProps extends SeedProgressCircle.RootProps {}

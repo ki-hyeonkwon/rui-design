@@ -1,4 +1,4 @@
-import type { CreatePipelineConfig } from "@rui/figma/codegen/targets/react";
+import type { CreatePipelineConfig } from "@rideds/figma/codegen/targets/react";
 import fs from "node:fs";
 import path from "node:path";
 import { logger } from "./logger";

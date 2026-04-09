@@ -1,15 +1,15 @@
-# @rui/webpack-plugin
+# @rideds/webpack-plugin
 
 Seed Design의 테마를 Webpack 또는 Rspack 프로젝트에 적용하기 위한 플러그인입니다.
 
 ## 설치
 
 ```sh
-yarn add @rui/webpack-plugin
+yarn add @rideds/webpack-plugin
 ```
 
 ```sh
-npm install @rui/webpack-plugin
+npm install @rideds/webpack-plugin
 ```
 
 ## 사용 방법
@@ -18,7 +18,7 @@ npm install @rui/webpack-plugin
 
 ```js
 // webpack.config.js
-const { SeedDesignPlugin } = require('@rui/webpack-plugin');
+const { SeedDesignPlugin } = require('@rideds/webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -34,7 +34,7 @@ module.exports = {
 
 ```js
 // rspack.config.js
-const { SeedDesignPlugin } = require('@rui/webpack-plugin');
+const { SeedDesignPlugin } = require('@rideds/webpack-plugin');
 
 module.exports = {
   // rspack 설정...
@@ -68,7 +68,7 @@ interface Options {
 ### 예시
 
 ```js
-const { SeedDesignPlugin } = require('@rui/webpack-plugin');
+const { SeedDesignPlugin } = require('@rideds/webpack-plugin');
 
 module.exports = {
   // webpack/rspack 설정...

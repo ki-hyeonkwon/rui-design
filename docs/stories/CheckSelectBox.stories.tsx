@@ -6,7 +6,7 @@ import {
   CheckSelectBoxGroup,
 } from "rui/ui/select-box";
 import { IconPersonCircleLine } from "@karrotmarket/react-monochrome-icon";
-import { Box, Text } from "@rui/react";
+import { Box, Text } from "@rideds/react";
 
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";

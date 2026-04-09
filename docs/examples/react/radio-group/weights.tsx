@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 
 export default function RadioGroupWeights() {

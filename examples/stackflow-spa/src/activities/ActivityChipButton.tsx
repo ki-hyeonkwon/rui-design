@@ -9,13 +9,13 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
-import { chipVariantMap } from "@rui/css/recipes/chip";
+import { chipVariantMap } from "@rideds/css/recipes/chip";
 
 import IconPlusFill from "@karrotmarket/react-monochrome-icon/IconPlusFill";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
 import { Chip, type ButtonChipProps } from "rui/ui/chip";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 
 import { useEffect } from "react";
 import { useActivity, useFlow } from "@stackflow/react/future";

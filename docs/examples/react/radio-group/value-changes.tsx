@@ -1,4 +1,4 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 import { useState } from "react";
 

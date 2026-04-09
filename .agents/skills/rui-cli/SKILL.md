@@ -17,11 +17,11 @@ RUI Design CLI를 프로젝트에 안정적으로 적용할 때 사용하는 스
 
 ## Scope
 
-- `npx @rui/cli@latest init`
-- `npx @rui/cli@latest add ...`
-- `npx @rui/cli@latest add-all ...`
-- `npx @rui/cli@latest compat ...`
-- `npx @rui/cli@latest docs [query]`
+- `npx @rideds/cli@latest init`
+- `npx @rideds/cli@latest add ...`
+- `npx @rideds/cli@latest add-all ...`
+- `npx @rideds/cli@latest compat ...`
+- `npx @rideds/cli@latest docs [query]`
 - `rui.json` 운영 (`path`, `tsx`, `rsc`, `telemetry`)
 - 스니펫 버전 호환성과 마이그레이션 운영
 - 컴포넌트/파운데이션 문서 링크, LLM용 텍스트 링크, 스니펫 링크 조회

@@ -1,21 +1,21 @@
 import { composeRefs } from "@radix-ui/react-compose-refs";
-import { selectBox, type SelectBoxVariantProps } from "@rui/css/recipes/select-box";
+import { selectBox, type SelectBoxVariantProps } from "@rideds/css/recipes/select-box";
 import {
   selectBoxCheckmark,
   type SelectBoxCheckmarkVariantProps,
-} from "@rui/css/recipes/selectBoxCheckmark";
+} from "@rideds/css/recipes/selectBoxCheckmark";
 import {
   selectBoxGroup,
   type SelectBoxGroupVariantProps,
-} from "@rui/css/recipes/select-box-group";
-import { Checkbox as CheckboxPrimitive, useCheckboxContext } from "@rui/react-checkbox";
+} from "@rideds/css/recipes/select-box-group";
+import { Checkbox as CheckboxPrimitive, useCheckboxContext } from "@rideds/react-checkbox";
 import {
   Collapsible,
   CollapsibleProvider,
   useCollapsible,
   useCollapsibleContext,
-} from "@rui/react-collapsible";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/react-collapsible";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import {
   createContext,

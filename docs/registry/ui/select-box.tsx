@@ -11,14 +11,14 @@ import {
   Fieldset as SeedFieldset,
   PrefixIcon,
   VisuallyHidden,
-} from "@rui/react";
+} from "@rideds/react";
 import {
   selectBoxGroup,
   type SelectBoxGroupVariantProps,
-} from "@rui/css/recipes/select-box-group";
+} from "@rideds/css/recipes/select-box-group";
 import { Radiomark, type RadiomarkProps } from "./radio-group";
 import * as React from "react";
-import type { FieldLabelVariantProps } from "@rui/css/recipes/field-label";
+import type { FieldLabelVariantProps } from "@rideds/css/recipes/field-label";
 
 export interface RadioSelectBoxRootProps
   extends SeedRadioGroupField.RootProps,

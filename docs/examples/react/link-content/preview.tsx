@@ -1,5 +1,5 @@
 import { IconChevronRightLine } from "@karrotmarket/react-monochrome-icon";
-import { LinkContent, SuffixIcon } from "@rui/react";
+import { LinkContent, SuffixIcon } from "@rideds/react";
 
 export default function LinkContentPreview() {
   return (

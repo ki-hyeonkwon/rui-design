@@ -1,4 +1,4 @@
-import { VStack, HStack } from "@rui/react";
+import { VStack, HStack } from "@rideds/react";
 import { FieldButton, FieldButtonValue } from "rui/ui/field-button";
 import { ActionButton } from "rui/ui/action-button";
 import { TextField, TextFieldInput } from "rui/ui/text-field";

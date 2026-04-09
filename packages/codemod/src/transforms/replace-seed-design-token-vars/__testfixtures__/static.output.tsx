@@ -1,4 +1,4 @@
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 
 const staticColors = {
   staticBlack: vars.$color.palette.staticBlack,

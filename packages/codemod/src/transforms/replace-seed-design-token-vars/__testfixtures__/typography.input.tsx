@@ -1,4 +1,4 @@
-import { vars } from "@rui/design-token";
+import { vars } from "@rideds/design-token";
 
 // Basic typography
 const basicTypography = {

@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-primitive",
+  "name": "@rideds/react-primitive",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/primitive"
   },
   "sideEffects": false,

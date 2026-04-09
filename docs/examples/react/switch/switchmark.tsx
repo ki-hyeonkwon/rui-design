@@ -1,5 +1,5 @@
-import { HStack, Text, VStack } from "@rui/react";
-import { Switch } from "@rui/react/primitive";
+import { HStack, Text, VStack } from "@rideds/react";
+import { Switch } from "@rideds/react/primitive";
 import { Switchmark } from "rui/ui/switch";
 
 function CustomSwitch({ children, ...props }: Switch.RootProps) {

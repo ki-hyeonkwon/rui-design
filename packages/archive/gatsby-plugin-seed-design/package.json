@@ -5,7 +5,7 @@
   "description": "Seed Design Gatsby plugin",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/gatsby-plugin-rui"
   },
   "keywords": [
@@ -30,8 +30,8 @@
     "wrapRootElement.tsx"
   ],
   "dependencies": {
-    "@rui/react-theming": "^2.1.3",
-    "@rui/stylesheet": "0.0.0-alpha-20241014145845"
+    "@rideds/react-theming": "^2.1.3",
+    "@rideds/stylesheet": "0.0.0-alpha-20241014145845"
   },
   "peerDependencies": {
     "gatsby": "^3.0.0 || ^4.0.0 || ^5.0.0",

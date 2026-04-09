@@ -3,7 +3,7 @@ import {
   IconChevronDownLine,
   IconChevronUpLine,
 } from "@karrotmarket/react-monochrome-icon";
-import type { AST } from "@rui/rootage-core";
+import type { AST } from "@rideds/rootage-core";
 import { Fragment } from "react";
 import { CopyValue } from "./copy-value";
 import { TokenLink } from "./token-link";

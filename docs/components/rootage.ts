@@ -1,4 +1,4 @@
-import { AST, buildContext, css, Exchange } from "@rui/rootage-core";
+import { AST, buildContext, css, Exchange } from "@rideds/rootage-core";
 
 export function stringifyVariants(variants: AST.VariantExpression[]) {
   if (variants.length === 0) {

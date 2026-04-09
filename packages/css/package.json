@@ -1,9 +1,9 @@
 {
-  "name": "@rui/css",
+  "name": "@rideds/css",
   "version": "1.2.7",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/css"
   },
   "scripts": {
@@ -68,8 +68,8 @@
     "*.css"
   ],
   "devDependencies": {
-    "@rui/qvism-cli": "0.0.0",
-    "@rui/qvism-preset": "0.0.0"
+    "@rideds/qvism-cli": "0.0.0",
+    "@rideds/qvism-preset": "0.0.0"
   },
   "publishConfig": {
     "access": "public"

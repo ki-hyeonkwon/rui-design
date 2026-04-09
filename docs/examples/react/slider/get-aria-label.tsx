@@ -1,4 +1,4 @@
-import { VStack, Text, type SliderRootProps } from "@rui/react";
+import { VStack, Text, type SliderRootProps } from "@rideds/react";
 import { useState } from "react";
 import { Slider } from "rui/ui/slider";
 

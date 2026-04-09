@@ -1,20 +1,20 @@
 "use client";
 
-import { slider, type SliderVariantProps } from "@rui/css/recipes/slider";
-import { sliderTick, type SliderTickVariantProps } from "@rui/css/recipes/slider-tick";
+import { slider, type SliderVariantProps } from "@rideds/css/recipes/slider";
+import { sliderTick, type SliderTickVariantProps } from "@rideds/css/recipes/slider-tick";
 import {
   sliderMarker,
   type SliderMarkerVariantProps,
-} from "@rui/css/recipes/slider-marker";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/slider-marker";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
-import { Slider, useSliderContext } from "@rui/react-slider";
+import { Slider, useSliderContext } from "@rideds/react-slider";
 import { forwardRef, useState, type HTMLAttributes } from "react";
 import { createWithStateProps } from "../../utils/createWithStateProps";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import clsx from "clsx";
-import { mergeProps } from "@rui/dom-utils";
-import { useFieldContext } from "@rui/react-field";
+import { mergeProps } from "@rideds/dom-utils";
+import { useFieldContext } from "@rideds/react-field";
 import { composeRefs } from "@radix-ui/react-compose-refs";
 
 const { withProvider, withContext, useClassNames } = createSlotRecipeContext(slider);

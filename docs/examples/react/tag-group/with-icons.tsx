@@ -1,5 +1,5 @@
 import { IconLocationpinFill, IconMegaphoneFill } from "@karrotmarket/react-monochrome-icon";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
 
 export default function TagGroupWithIcons() {

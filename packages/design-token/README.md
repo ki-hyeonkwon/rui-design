@@ -1,6 +1,6 @@
-# @rui/design-token
+# @rideds/design-token
 
-DEPRECATED: see [@rui/css](../css) for the latest version.
+DEPRECATED: see [@rideds/css](../css) for the latest version.
 
 > Seed Design 디자인 토큰은 [KDT](https://github.com/daangn/kdt/tree/main/language) 의미론을 따릅니다.
 
@@ -39,13 +39,13 @@ Seed Design 의 디자인 토큰은 [KDT](https://github.com/daangn/kdt)를 통�
 ## 사용법
 
 ```bash
-yarn add @rui/design-token
+yarn add @rideds/design-token
 ```
 
 ### JavaScript (TypeScript)
 
 ```ts
-import { vars } from "@rui/design-token";
+import { vars } from "@rideds/design-token";
 
 // 시맨틱 토큰
 vars.$semantic.color.primary;

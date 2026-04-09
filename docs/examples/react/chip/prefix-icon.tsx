@@ -1,4 +1,4 @@
-import { HStack, VStack, Icon } from "@rui/react";
+import { HStack, VStack, Icon } from "@rideds/react";
 import { Chip } from "rui/ui/chip";
 import { IconHeartFill } from "@karrotmarket/react-monochrome-icon";
 

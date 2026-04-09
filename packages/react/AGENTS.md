@@ -13,8 +13,8 @@
 ## 코드 작성 컨벤션
 
 - `forwardRef` + `displayName` 필수
-- Recipe는 `@rui/css/recipes/`에서 import
-- Headless 로직은 `@rui/react-*`에서 import
+- Recipe는 `@rideds/css/recipes/`에서 import
+- Headless 로직은 `@rideds/react-*`에서 import
 - `clsx`로 className 병합
 - HTML 요소 대신 `Primitive.*` 사용
 - compound component의 경우 Root 컴포넌트가 context를 포함해야 하고 하위 컴포넌트가 상위 context에서 제공하는 값을 바탕으로 동작해야 하므로 `createSlotRecipeContext`가 제공하는 도구를 적극적으로 활용한다.
@@ -56,7 +56,7 @@ context 유틸 없이 컴포넌트 내부에서 `recipe.splitVariantProps(props)
 
 ### import 경로
 
-`createSlotRecipeContext`는 반드시 `../../utils/createSlotRecipeContext` 상대 경로로 import한다. `@rui/react-utils` 같은 패키지는 존재하지 않는다.
+`createSlotRecipeContext`는 반드시 `../../utils/createSlotRecipeContext` 상대 경로로 import한다. `@rideds/react-utils` 같은 패키지는 존재하지 않는다.
 
 ### createSlotRecipeContext 호출 방법
 

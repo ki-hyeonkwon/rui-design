@@ -3,21 +3,21 @@
 현재 이 패키지는 더 이상 사용되지 않습니다.
 자세한 맥락은 [seed-icon](https://github.com/daangn/seed-icon) 레포에서 확인할 수 있습니다.
 
-# @rui/icon (deprecated)
+# @rideds/icon (deprecated)
 
 - [한국어](./README.md)
 - [English](./README-en.md)
 
 ## Installation하기
 
-`@rui/icon`는 seed icon 생성을 위한 커맨드라인 도구입니다.
+`@rideds/icon`는 seed icon 생성을 위한 커맨드라인 도구입니다.
 
 ```bash
-npm install --dev @rui/icon
+npm install --dev @rideds/icon
 
 # or
 
-yarn add -D @rui/icon
+yarn add -D @rideds/icon
 ```
 
 ## 사용 방법

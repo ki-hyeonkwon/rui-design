@@ -1,9 +1,9 @@
-# @rui/figma-extractor
+# @rideds/figma-extractor
 
 ## Installation
 
 ```shell
-bun add -D @rui/figma-extractor
+bun add -D @rideds/figma-extractor
 ```
 
 ## 사용
@@ -30,7 +30,7 @@ import {
   createPipeline,
   sources,
   writers,
-} from "@rui/figma-extractor";
+} from "@rideds/figma-extractor";
 
 const config = createConfig({
   pipelines: {
@@ -133,7 +133,7 @@ import {
   createPipeline,
   sources,
   writers,
-} from "@rui/figma-extractor";
+} from "@rideds/figma-extractor";
 
 const config = createConfig({
   fileKey: process.env.FIGMA_DESIGN_SYSTEM_A_FILE_KEY, // a 파일의 Figma File Key
@@ -154,7 +154,7 @@ import {
   createPipeline,
   sources,
   writers,
-} from "@rui/figma-extractor";
+} from "@rideds/figma-extractor";
 
 const config = createConfig({
   fileKey: process.env.FIGMA_DESIGN_SYSTEM_B_FILE_KEY, // b 파일의 Figma File Key

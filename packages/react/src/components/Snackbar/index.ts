@@ -23,7 +23,7 @@ export {
   useSnackbarContext,
   type UseSnackbarContext,
   type CreateSnackbarOptions,
-} from "@rui/react-snackbar";
+} from "@rideds/react-snackbar";
 export {
   useSnackbarAdapter,
   type UseSnackbarAdapterReturn,

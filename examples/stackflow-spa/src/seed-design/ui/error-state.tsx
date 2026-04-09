@@ -1,7 +1,7 @@
-import { Text, VStack, type TextProps } from "@rui/react";
+import { Text, VStack, type TextProps } from "@rideds/react";
 import * as React from "react";
 import { ActionButton, type ActionButtonProps } from "./action-button";
-import type { ScopedColorBg } from "@rui/css/vars";
+import type { ScopedColorBg } from "@rideds/css/vars";
 
 /**
  * @deprecated Use result-section instead.

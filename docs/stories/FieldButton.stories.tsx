@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { FieldButton, FieldButtonPlaceholder, FieldButtonValue } from "rui/ui/field-button";
-import { inputButtonVariantMap } from "@rui/css/recipes/input-button";
+import { inputButtonVariantMap } from "@rideds/css/recipes/input-button";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

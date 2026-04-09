@@ -6,10 +6,10 @@ import {
   Field as SeedField,
   VisuallyHidden,
   PrefixIcon,
-} from "@rui/react";
-import type { SliderTickVariantProps } from "@rui/css/recipes/slider-tick";
-import type { FieldLabelVariantProps } from "@rui/css/recipes/field-label";
-import type { SliderMarkerVariantProps } from "@rui/css/recipes/slider-marker";
+} from "@rideds/react";
+import type { SliderTickVariantProps } from "@rideds/css/recipes/slider-tick";
+import type { FieldLabelVariantProps } from "@rideds/css/recipes/field-label";
+import type { SliderMarkerVariantProps } from "@rideds/css/recipes/slider-marker";
 import * as React from "react";
 
 export interface SliderProps extends SeedSlider.RootProps {

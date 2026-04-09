@@ -1,7 +1,7 @@
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
-import { ariaAttr, dataAttr, elementProps, inputProps } from "@rui/dom-utils";
+import { ariaAttr, dataAttr, elementProps, inputProps } from "@rideds/dom-utils";
 import { useId, useState, type TextareaHTMLAttributes, type InputHTMLAttributes } from "react";
-import { useSupports } from "@rui/react-supports";
+import { useSupports } from "@rideds/react-supports";
 
 interface UseTextFieldStateProps {
   value?: string;

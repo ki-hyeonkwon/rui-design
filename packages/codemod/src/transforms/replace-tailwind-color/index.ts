@@ -1,4 +1,4 @@
-import { colorMappings } from "@rui/migration-index/color";
+import { colorMappings } from "@rideds/migration-index/color";
 import { camelCase } from "change-case";
 import type { Transform } from "jscodeshift";
 import { createTransformLogger } from "../../utils/logger.js";

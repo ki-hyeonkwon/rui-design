@@ -1,4 +1,4 @@
-# @rui/react-radio-group
+# @rideds/react-radio-group
 
 ## 1.1.0
 
@@ -7,7 +7,7 @@
 - 98dbac4: [Checkbox](/react/components/checkbox) 관련 컴포넌트를 추가합니다.
 
   - `CheckboxGroup` snippet 컴포넌트가 추가되었습니다. 사용하려면 snippet을 다시 내려받아 주세요.
-    - `npx @rui/cli@latest add ui:checkbox`
+    - `npx @rideds/cli@latest add ui:checkbox`
     - `CheckboxGroup`은 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `Checkbox`를 묶지 않아도 됩니다.
       - 기존 `Checkbox`를 `CheckboxGroup`으로 감쌀 필요는 없습니다. `CheckboxGroup`은 선택적으로 사용할 수 있습니다.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
@@ -16,16 +16,16 @@
 
   - **1.1 → 1.2 업그레이드 시 snippet 업데이트 필요**: `RadioGroup` snippet의 내부 구조가 변경되었습니다. snippet을 다시 내려받아 주세요.
 
-    - `npx @rui/cli@latest add ui:radio-group`
+    - `npx @rideds/cli@latest add ui:radio-group`
     - `RadioGroup`이 자체적으로 gap과 100% width를 갖습니다. `VStack`을 사용하여 `RadioGroupItem`을 묶는 코드를 제거합니다.
       - **1.1 → 1.2 업그레이드 시 변경 필요**: `RadioGroupItem`을 묶어서 사용하던 `VStack`을 제거하여 `RadioGroupItem`이 `RadioGroup`의 direct child가 되도록 변경하세요.
     - `label`, `description`, `errorMessage`, `indicator`, `showRequiredIndicator`, `labelWeight` prop을 사용할 수 있습니다.
-    - `@rui/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
-      - `@rui/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rui/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
+    - `@rideds/react`의 `RadioGroup.Root`를 레이아웃 컴포넌트로 변경합니다.
+      - `@rideds/react`에서 직접 import해서 사용하는 코드가 있다면 `RadioGroup.Root`를 `@rideds/react/primitive`의 `RadioGroup.Root`로 변경해주세요.
 
     ```tsx
     // 전
-    import { VStack } from "@rui/react";
+    import { VStack } from "@rideds/react";
     import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 
     <RadioGroup defaultValue="apple" aria-label="Fruit selection">
@@ -51,7 +51,7 @@
 
     ```tsx
     // 전
-    import { RadioGroup } from "@rui/react";
+    import { RadioGroup } from "@rideds/react";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -70,7 +70,7 @@
 
     ```tsx
     // 후
-    import { RadioGroup } from "@rui/react/primitive";
+    import { RadioGroup } from "@rideds/react/primitive";
     import { ListRadioItem } from "rui/ui/list";
 
     <RadioGroup.Root
@@ -94,7 +94,7 @@
 - 2643d17: [Select Box](/react/components/select-box) 관련 컴포넌트를 업데이트합니다.
 
   - **1.1 → 1.2 업그레이드 시 snippet을 다시 내려받아 주세요.**
-    - `npx @rui/cli@latest add ui:select-box`
+    - `npx @rideds/cli@latest add ui:select-box`
   - `CheckSelectBoxGroup`, `RadioSelectBoxRoot`의 children이 기본적으로 gap이 포함된 그리드 레이아웃으로 정렬됩니다.
     - **1.1 → 1.2 업그레이드 시 변경 필요**: `CheckSelectBox`, `RadioSelectBoxItem`을 묶어서 사용하던 `VStack`을 제거하여 `CheckSelectBox`와 `RadioSelectBoxItem`이 `CheckSelectBoxGroup` 또는 `RadioSelectBoxRoot`의 direct child가 되도록 변경하세요. `VStack`에 `gap` 이외의 스타일이 적용된 경우 `<VStack paddingX="x4"><CheckSelectBoxGroup>...</CheckSelectBoxGroup></VStack>`와 같이 `VStack`을 외부에 남겨두세요.
     - **기능 추가**: `CheckSelectBoxGroup`와 `RadioSelectBoxRoot`에 `columns`를 지정할 수 있습니다. `columns`가 `2` 이상인 경우 하위 항목에 기본적으로 `layout="vertical"`이 적용됩니다. 기본 `layout`은 하위 항목에서 오버라이드할 수 있습니다.
@@ -111,7 +111,7 @@
 ### Patch Changes
 
 - Updated dependencies [cfd2df4]
-  - @rui/react-fieldset@0.1.0
+  - @rideds/react-fieldset@0.1.0
 
 ## 1.0.1
 
@@ -119,7 +119,7 @@
 
 - ae1b768: :focus-visible selector를 사용하기 전 브라우저에서 selector를 지원하는지 확인합니다.
 - Updated dependencies [ae1b768]
-  - @rui/react-supports@0.0.1
+  - @rideds/react-supports@0.0.1
 
 ## 1.0.0
 
@@ -130,15 +130,15 @@
 ### Patch Changes
 
 - Updated dependencies [34f92f2]
-  - @rui/react-primitive@1.0.0
-  - @rui/dom-utils@1.0.0
+  - @rideds/react-primitive@1.0.0
+  - @rideds/dom-utils@1.0.0
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [29ec9f0]
-  - @rui/react-primitive@0.0.3
+  - @rideds/react-primitive@0.0.3
 
 ## 0.0.3
 
@@ -152,8 +152,8 @@
 
 - e368c69: 패키지 의존성을 최신화합니다.
 - Updated dependencies [e368c69]
-  - @rui/react-primitive@0.0.2
-  - @rui/dom-utils@0.0.2
+  - @rideds/react-primitive@0.0.2
+  - @rideds/dom-utils@0.0.2
 
 ## 0.0.1
 
@@ -161,8 +161,8 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/react-primitive@0.0.1
-  - @rui/dom-utils@0.0.1
+  - @rideds/react-primitive@0.0.1
+  - @rideds/dom-utils@0.0.1
 
 ## 0.0.1-rc.0
 
@@ -170,8 +170,8 @@
 
 - Seed Design V3 release candidate
 - Updated dependencies
-  - @rui/react-primitive@0.0.1-rc.0
-  - @rui/dom-utils@0.0.1-rc.0
+  - @rideds/react-primitive@0.0.1-rc.0
+  - @rideds/dom-utils@0.0.1-rc.0
 
 ## 0.0.0-alpha-20241030023710
 
@@ -179,11 +179,11 @@
 
 - alpha
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241030023710
+  - @rideds/dom-utils@0.0.0-alpha-20241030023710
 
 ## 0.0.0-alpha-20241004093556
 
 ### Patch Changes
 
 - Updated dependencies
-  - @rui/dom-utils@0.0.0-alpha-20241004093556
+  - @rideds/dom-utils@0.0.0-alpha-20241004093556

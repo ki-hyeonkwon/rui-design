@@ -15,7 +15,7 @@ import {
 import type { DocsCategory, DocsItem, DocsSection } from "../schema";
 
 const GITHUB_SNIPPET_BASE =
-  "https://raw.githubusercontent.com/rui-design/rui-design/refs/heads/dev/docs/registry";
+  "https://raw.githubusercontent.com/ki-hyeonkwon/rui-design/refs/heads/dev/docs/registry";
 
 const docsOptionsSchema = z.object({
   query: z.string().optional(),

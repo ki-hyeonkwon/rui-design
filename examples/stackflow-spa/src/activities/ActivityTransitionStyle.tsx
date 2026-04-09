@@ -1,4 +1,4 @@
-import { VStack, Text } from "@rui/react";
+import { VStack, Text } from "@rideds/react";
 import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import {
   AppBar,
@@ -11,7 +11,7 @@ import {
 import { AppScreen, AppScreenContent, type AppScreenProps } from "rui/ui/app-screen";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import { ActionButton } from "rui/ui/action-button";
-import { appScreenVariantMap } from "@rui/css/recipes/app-screen";
+import { appScreenVariantMap } from "@rideds/css/recipes/app-screen";
 import { Snackbar, useSnackbarAdapter } from "rui/ui/snackbar";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 import { useState } from "react";

@@ -2,8 +2,8 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { createStoryWithParameters } from "@/stories/utils/parameters";
 import { IconEyeSlashLine } from "@karrotmarket/react-monochrome-icon";
-import { menuSheetVariantMap } from "@rui/css/recipes/menu-sheet";
-import { Box } from "@rui/react";
+import { menuSheetVariantMap } from "@rideds/css/recipes/menu-sheet";
+import { Box } from "@rideds/react";
 import {
   MenuSheetRoot,
   MenuSheetContent,

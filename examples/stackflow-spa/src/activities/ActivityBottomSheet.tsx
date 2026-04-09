@@ -1,4 +1,4 @@
-import { Box, Divider, HStack, VStack } from "@rui/react";
+import { Box, Divider, HStack, VStack } from "@rideds/react";
 import { useActivity, useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import { useRef, useState } from "react";
 import { ActionButton } from "rui/ui/action-button";
@@ -11,10 +11,10 @@ import {
 import { Checkbox } from "rui/ui/checkbox";
 import { Snackbar, useSnackbarAdapter } from "rui/ui/snackbar";
 import { TextField, TextFieldInput } from "rui/ui/text-field";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { Switch } from "rui/ui/switch";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
-import { appScreenVariantMap, type AppScreenVariant } from "@rui/css/recipes/app-screen";
+import { appScreenVariantMap, type AppScreenVariant } from "@rideds/css/recipes/app-screen";
 
 declare module "@stackflow/config" {
   interface Register {

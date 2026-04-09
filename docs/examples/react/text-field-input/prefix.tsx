@@ -1,5 +1,5 @@
 import { IconMagnifyingglassLine } from "@karrotmarket/react-monochrome-icon";
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { TextField, TextFieldInput } from "rui/ui/text-field";
 
 export default function TextFieldInputPrefix() {

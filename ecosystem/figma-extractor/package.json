@@ -1,9 +1,9 @@
 {
-  "name": "@rui/figma-extractor",
+  "name": "@rideds/figma-extractor",
   "version": "1.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "ecosystem/figma-extractor"
   },
   "scripts": {

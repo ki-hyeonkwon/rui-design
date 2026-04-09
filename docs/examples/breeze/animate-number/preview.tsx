@@ -1,6 +1,6 @@
 import AnimateNumber from "rui/breeze/animate-number/animate-number";
 import { ActionButton } from "rui/ui/action-button";
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { useState } from "react";
 
 export default function AnimateNumberPreview() {

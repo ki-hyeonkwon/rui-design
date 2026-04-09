@@ -1,4 +1,4 @@
-import { Skeleton, VStack } from "@rui/react";
+import { Skeleton, VStack } from "@rideds/react";
 
 export default function SkeletonPreview() {
   return (

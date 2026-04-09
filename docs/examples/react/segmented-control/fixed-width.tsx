@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
 
 export default function SegmentedControlFixedWidth() {

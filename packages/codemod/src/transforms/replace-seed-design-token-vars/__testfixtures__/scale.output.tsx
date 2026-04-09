@@ -1,4 +1,4 @@
-import { vars } from "@rui/css/vars";
+import { vars } from "@rideds/css/vars";
 
 const scaleColors = {
   // Gray scale

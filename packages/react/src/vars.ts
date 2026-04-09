@@ -1,1 +1,1 @@
-export * from "@rui/css/vars";
+export * from "@rideds/css/vars";

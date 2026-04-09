@@ -1,6 +1,6 @@
 import { FloatingActionButton } from "rui/ui/floating-action-button";
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
-import { Box, Float } from "@rui/react";
+import { Box, Float } from "@rideds/react";
 
 export default function FloatingActionButtonFloatComposition() {
   return (

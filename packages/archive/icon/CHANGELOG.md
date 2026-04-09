@@ -1,4 +1,4 @@
-# @rui/icon
+# @rideds/icon
 
 ## 0.2.1
 

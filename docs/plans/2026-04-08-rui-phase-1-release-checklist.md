@@ -2,7 +2,7 @@
 
 > Role: Release Checklist
 > Purpose: Phase 1 public package release 전 확인 항목과 종료 기준을 정리하는 체크리스트
-> Read this when: `@rui/*` Phase 1 공개 패키지를 배포 직전 다시 점검하거나, Phase 1이 무엇까지 완료되었는지 빠르게 확인할 때
+> Read this when: `@rideds/*` Phase 1 공개 패키지를 배포 직전 다시 점검하거나, Phase 1이 무엇까지 완료되었는지 빠르게 확인할 때
 > Canonical: No
 > Related docs: `2026-04-08-rui-phased-master-plan.md`
 
@@ -12,22 +12,22 @@ This checklist closes Phase 1 at the operational level.
 
 It is narrower than full independence and is focused on one question:
 
-**Can the Phase 1 public `@rui/*` packages be validated and released as external-consumer-ready packages?**
+**Can the Phase 1 public `@rideds/*` packages be validated and released as external-consumer-ready packages?**
 
 Current validated public packages:
 
-- `@rui/react`
-- `@rui/css`
-- `@rui/stackflow`
-- `@rui/cli`
-- `@rui/tailwind4-theme`
+- `@rideds/react`
+- `@rideds/css`
+- `@rideds/stackflow`
+- `@rideds/cli`
+- `@rideds/tailwind4-theme`
 
 ## Release Gates
 
 ### Gate A: Package surface is fixed
 
 - [x] Phase 1 public package list is frozen in source
-- [x] `@rui/react` publish closure is frozen in source
+- [x] `@rideds/react` publish closure is frozen in source
 - [x] Public package manifests expose publishable metadata
   - `publishConfig.access`
   - `files`
@@ -41,10 +41,10 @@ Primary evidence:
 
 ### Gate B: External consumer smoke is automated
 
-- [x] `@rui/react` + `@rui/css` external consumer smoke exists
-- [x] `@rui/stackflow` external consumer smoke exists
-- [x] `@rui/cli` external install/execute smoke exists
-- [x] `@rui/tailwind4-theme` external CSS import/build smoke exists
+- [x] `@rideds/react` + `@rideds/css` external consumer smoke exists
+- [x] `@rideds/stackflow` external consumer smoke exists
+- [x] `@rideds/cli` external install/execute smoke exists
+- [x] `@rideds/tailwind4-theme` external CSS import/build smoke exists
 - [x] Smoke uses packed tarballs, not workspace-only imports
 
 Primary evidence:
@@ -75,10 +75,10 @@ Primary evidence:
 ### Gate E: README install path exists
 
 - [x] Root README includes external install entrypoints
-- [x] `@rui/react` README includes install + usage
-- [x] `@rui/stackflow` README includes install + usage
-- [x] `@rui/cli` README includes external install path
-- [x] `@rui/tailwind4-theme` README is updated to RUI wording and install path
+- [x] `@rideds/react` README includes install + usage
+- [x] `@rideds/stackflow` README includes install + usage
+- [x] `@rideds/cli` README includes external install path
+- [x] `@rideds/tailwind4-theme` README is updated to RUI wording and install path
 
 ## Required Commands Before Release
 

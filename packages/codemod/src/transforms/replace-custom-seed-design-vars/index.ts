@@ -1,5 +1,5 @@
-import { colorMappings } from "@rui/migration-index/color";
-import { typographyMappings } from "@rui/migration-index/typography";
+import { colorMappings } from "@rideds/migration-index/color";
+import { typographyMappings } from "@rideds/migration-index/typography";
 import type * as jscodeshift from "jscodeshift";
 import { camelCaseToKebabCase } from "../../utils/case.js";
 import { getTokenTypeForProperty } from "../../utils/color-properties.js";
@@ -52,11 +52,11 @@ const replaceCustomSeedDesignVars: jscodeshift.Transform = (file, api) => {
 
   logger.startFile(file.path);
 
-  // @rui/design-token 패키지를 직접 사용하는 경우는 변환하지 않음
+  // @rideds/design-token 패키지를 직접 사용하는 경우는 변환하지 않음
   if (
     root
       .find(j.ImportDeclaration)
-      .filter((path) => path.node.source.value === "@rui/design-token")
+      .filter((path) => path.node.source.value === "@rideds/design-token")
       .size() > 0
   ) {
     logger.finishFile(file.path);

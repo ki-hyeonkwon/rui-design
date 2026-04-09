@@ -5,14 +5,14 @@
 ### Patch Changes
 
 - Updated dependencies
-  - @rui/stylesheet@0.0.0-alpha-20241014145845
+  - @rideds/stylesheet@0.0.0-alpha-20241014145845
 
 ## 0.0.0-alpha-20241004093556
 
 ### Patch Changes
 
 - Updated dependencies
-  - @rui/stylesheet@0.0.0-alpha-20241004093556
+  - @rideds/stylesheet@0.0.0-alpha-20241004093556
 
 ## 0.2.7
 
@@ -25,35 +25,35 @@
 ### Patch Changes
 
 - Updated dependencies [cd0f24e]
-  - @rui/react-theming@2.1.3
+  - @rideds/react-theming@2.1.3
 
 ## 0.2.5
 
 ### Patch Changes
 
 - Updated dependencies [19be06c]
-  - @rui/stylesheet@1.0.3
+  - @rideds/stylesheet@1.0.3
 
 ## 0.2.4
 
 ### Patch Changes
 
 - Updated dependencies [fc69b3e]
-  - @rui/stylesheet@1.0.2
+  - @rideds/stylesheet@1.0.2
 
 ## 0.2.3
 
 ### Patch Changes
 
 - Updated dependencies [21773c2]
-  - @rui/stylesheet@1.0.1
+  - @rideds/stylesheet@1.0.1
 
 ## 0.2.2
 
 ### Patch Changes
 
 - Updated dependencies [fcdb8d5]
-  - @rui/react-theming@2.1.2
+  - @rideds/react-theming@2.1.2
 
 ## 0.2.1
 
@@ -62,7 +62,7 @@
 - 6d298fa: processing colorVariant localstorage and mode plugin option.
 - Updated dependencies [6d298fa]
 - Updated dependencies [6d298fa]
-  - @rui/react-theming@2.1.1
+  - @rideds/react-theming@2.1.1
 
 ## 0.2.0
 
@@ -80,21 +80,21 @@
 
 - Updated dependencies [6453963]
 - Updated dependencies [725fa03]
-  - @rui/react-theming@2.1.0
+  - @rideds/react-theming@2.1.0
 
 ## 0.0.4
 
 ### Patch Changes
 
 - Updated dependencies [20c37c5]
-  - @rui/react-theming@2.0.4
+  - @rideds/react-theming@2.0.4
 
 ## 0.0.3
 
 ### Patch Changes
 
 - Updated dependencies [4fe0e8e]
-  - @rui/react-theming@2.0.3
+  - @rideds/react-theming@2.0.3
 
 ## 0.0.2
 
@@ -105,4 +105,4 @@
 - Updated dependencies [8da317b]
 - Updated dependencies [8da317b]
 - Updated dependencies [8da317b]
-  - @rui/react-theming@2.0.2
+  - @rideds/react-theming@2.0.2

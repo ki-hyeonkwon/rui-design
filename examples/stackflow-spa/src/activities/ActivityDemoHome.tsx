@@ -6,7 +6,7 @@ import { TabsRoot, TabsTrigger, TabsList, TabsCarousel, TabsContent } from "rui/
 import { SnackbarProvider } from "rui/ui/snackbar";
 import { ResultSection } from "rui/ui/result-section";
 import { IconArticleFill, IconChevronDownFill } from "@karrotmarket/react-monochrome-icon";
-import { Flex, HStack, VStack, Icon, Box, Text, Badge, Portal } from "@rui/react";
+import { Flex, HStack, VStack, Icon, Box, Text, Badge, Portal } from "@rideds/react";
 import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
 import { Chip } from "rui/ui/chip";
 import {
@@ -23,8 +23,8 @@ import { useFlow } from "@stackflow/react/future";
 import { Avatar } from "rui/ui/avatar";
 import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
 import { formatDate } from "../utils/date";
-import { useActivityZIndexBase } from "@rui/stackflow";
-import { tabsCarouselPreventDrag } from "@rui/react";
+import { useActivityZIndexBase } from "@rideds/stackflow";
+import { tabsCarouselPreventDrag } from "@rideds/react";
 
 declare module "@stackflow/config" {
   interface Register {

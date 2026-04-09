@@ -1,4 +1,4 @@
-# @rui/docs-mcp
+# @rideds/docs-mcp
 
 ## 0.5.1
 
@@ -35,7 +35,7 @@
 
 ### Minor Changes
 
-- 8661d79: `@rui/docs-mcp` 패키지 추가
+- 8661d79: `@rideds/docs-mcp` 패키지 추가
 
   Tools:
 

@@ -1,14 +1,14 @@
 /**
- * @deprecated Use `@rui/react-image` instead.
+ * @deprecated Use `@rideds/react-image` instead.
  * @see https://rui-design.io/docs/react/components/image
  */
 
 import { useCallbackRef } from "@radix-ui/react-use-callback-ref";
 import { useLayoutEffect } from "@radix-ui/react-use-layout-effect";
-import { dataAttr, elementProps, imgProps } from "@rui/dom-utils";
+import { dataAttr, elementProps, imgProps } from "@rideds/dom-utils";
 import { useMemo, useRef, useState } from "react";
 
-/** @deprecated Use `ImageLoadingStatus` from `@rui/react-image` instead. */
+/** @deprecated Use `ImageLoadingStatus` from `@rideds/react-image` instead. */
 type LoadingStatus = "loading" | "loaded" | "error";
 
 interface UseAvatarStateProps {

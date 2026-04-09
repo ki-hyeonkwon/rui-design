@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { useState } from "react";
 import { HelpBubbleTrigger } from "rui/ui/help-bubble";
 import { Switch } from "rui/ui/switch";

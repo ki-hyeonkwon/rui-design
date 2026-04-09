@@ -1,4 +1,4 @@
-# @rui/vite-plugin
+# @rideds/vite-plugin
 
 ## 1.1.0
 
@@ -10,7 +10,7 @@
 - Updated dependencies [b131282]
 - Updated dependencies [6af6501]
 - Updated dependencies [33def2d]
-  - @rui/css@1.1.0
+  - @rideds/css@1.1.0
 
 ## 1.0.0
 
@@ -25,14 +25,14 @@
 - Updated dependencies [e038490]
 - Updated dependencies [4153ca5]
 - Updated dependencies [a7d07f0]
-  - @rui/css@1.0.0
+  - @rideds/css@1.0.0
 
 ## 0.2.0
 
 ### Patch Changes
 
 - Updated dependencies [8448880]
-  - @rui/css@0.2.0
+  - @rideds/css@0.2.0
 
 ## 0.1.3
 
@@ -47,16 +47,16 @@
 - Updated dependencies [cdc0930]
 - Updated dependencies [946faf7]
 - Updated dependencies [71c58fd]
-  - @rui/css@0.1.3
+  - @rideds/css@0.1.3
 
 ## 0.1.2
 
 ### Patch Changes
 
 - 7b2c0f3: Updated dependencies
-  - @rui/react@0.1.1
+  - @rideds/react@0.1.1
 - Updated dependencies [7b2c0f3]
-  - @rui/css@0.1.2
+  - @rideds/css@0.1.2
 
 ## 0.1.0
 
@@ -64,7 +64,7 @@
 
 - Updated dependencies [7cc6087]
 - Updated dependencies [bdca898]
-  - @rui/css@0.1.0
+  - @rideds/css@0.1.0
 
 ## 0.0.41
 
@@ -73,70 +73,70 @@
 - 7382c71: peer dependency에 vite 7을 추가합니다.
 - Updated dependencies [561f74c]
 - Updated dependencies [b43de05]
-  - @rui/css@0.0.41
+  - @rideds/css@0.0.41
 
 ## 0.0.39
 
 ### Patch Changes
 
 - Updated dependencies [f801300]
-  - @rui/css@0.0.39
+  - @rideds/css@0.0.39
 
 ## 0.0.38
 
 ### Patch Changes
 
 - Updated dependencies [70fbaaf]
-  - @rui/css@0.0.38
+  - @rideds/css@0.0.38
 
 ## 0.0.35
 
 ### Patch Changes
 
 - Updated dependencies [0789dc8]
-  - @rui/css@0.0.35
+  - @rideds/css@0.0.35
 
 ## 0.0.34
 
 ### Patch Changes
 
 - Updated dependencies [92801a2]
-  - @rui/css@0.0.34
+  - @rideds/css@0.0.34
 
 ## 0.0.33
 
 ### Patch Changes
 
 - Updated dependencies [fbdb091]
-  - @rui/css@0.0.33
+  - @rideds/css@0.0.33
 
 ## 0.0.31
 
 ### Patch Changes
 
 - Updated dependencies [fd7c569]
-  - @rui/css@0.0.31
+  - @rideds/css@0.0.31
 
 ## 0.0.30
 
 ### Patch Changes
 
 - Updated dependencies [285cb9b]
-  - @rui/css@0.0.30
+  - @rideds/css@0.0.30
 
 ## 0.0.29
 
 ### Patch Changes
 
 - Updated dependencies [116ee2c]
-  - @rui/css@0.0.29
+  - @rideds/css@0.0.29
 
 ## 0.0.28
 
 ### Patch Changes
 
 - Updated dependencies [5337e14]
-  - @rui/css@0.0.28
+  - @rideds/css@0.0.28
 
 ## 0.0.27
 
@@ -145,7 +145,7 @@
 - Updated dependencies [9d85c16]
 - Updated dependencies [d951317]
 - Updated dependencies [b3f964d]
-  - @rui/css@0.0.27
+  - @rideds/css@0.0.27
 
 ## 0.0.26
 
@@ -158,21 +158,21 @@
 ### Patch Changes
 
 - Updated dependencies [c87ede9]
-  - @rui/css@0.0.25
+  - @rideds/css@0.0.25
 
 ## 0.0.24
 
 ### Patch Changes
 
 - Updated dependencies [4da536f]
-  - @rui/css@0.0.24
+  - @rideds/css@0.0.24
 
 ## 0.0.23
 
 ### Patch Changes
 
 - Updated dependencies [63e1541]
-  - @rui/css@0.0.23
+  - @rideds/css@0.0.23
 
 ## 0.0.21
 
@@ -184,7 +184,7 @@
 - Updated dependencies [7ae87f8]
 - Updated dependencies [f144d28]
 - Updated dependencies [e368c69]
-  - @rui/css@0.0.21
+  - @rideds/css@0.0.21
 
 ## 0.0.19
 
@@ -192,14 +192,14 @@
 
 - Updated dependencies [3c9ec66]
 - Updated dependencies [b3bb6e7]
-  - @rui/css@0.0.19
+  - @rideds/css@0.0.19
 
 ## 0.0.17
 
 ### Patch Changes
 
 - Updated dependencies [c042f90]
-  - @rui/css@0.0.17
+  - @rideds/css@0.0.17
 
 ## 0.0.15
 
@@ -211,7 +211,7 @@
 - Updated dependencies [4511814]
 - Updated dependencies [f4b0723]
 - Updated dependencies [f4b0723]
-  - @rui/css@0.0.15
+  - @rideds/css@0.0.15
 
 ## 0.0.14
 
@@ -219,14 +219,14 @@
 
 - Updated dependencies [92c0b80]
 - Updated dependencies [c1d94d0]
-  - @rui/css@0.0.14
+  - @rideds/css@0.0.14
 
 ## 0.0.13
 
 ### Patch Changes
 
 - Updated dependencies [7fca755]
-  - @rui/css@0.0.13
+  - @rideds/css@0.0.13
 
 ## 0.0.12
 
@@ -234,7 +234,7 @@
 
 - Updated dependencies [6426379]
 - Updated dependencies [ee41f37]
-  - @rui/css@0.0.12
+  - @rideds/css@0.0.12
 
 ## 0.0.11
 
@@ -242,14 +242,14 @@
 
 - Updated dependencies [e70f340]
 - Updated dependencies [72f344f]
-  - @rui/css@0.0.11
+  - @rideds/css@0.0.11
 
 ## 0.0.10
 
 ### Patch Changes
 
 - Updated dependencies [e4b704c]
-  - @rui/css@0.0.10
+  - @rideds/css@0.0.10
 
 ## 0.0.9
 
@@ -257,7 +257,7 @@
 
 - Updated dependencies [63f8651]
 - Updated dependencies [d9b01a9]
-  - @rui/css@0.0.9
+  - @rideds/css@0.0.9
 
 ## 0.0.8
 
@@ -265,14 +265,14 @@
 
 - Updated dependencies [1424700]
 - Updated dependencies [0efeea1]
-  - @rui/css@0.0.8
+  - @rideds/css@0.0.8
 
 ## 0.0.7
 
 ### Patch Changes
 
 - Updated dependencies [8aca3de]
-  - @rui/css@0.0.7
+  - @rideds/css@0.0.7
 
 ## 0.0.6
 
@@ -282,7 +282,7 @@
 - Updated dependencies [3d66c5b]
 - Updated dependencies [a8d5242]
 - Updated dependencies [ccf3989]
-  - @rui/css@0.0.6
+  - @rideds/css@0.0.6
 
 ## 0.0.5
 
@@ -290,7 +290,7 @@
 
 - Updated dependencies [e3234e7]
 - Updated dependencies [5502bed]
-  - @rui/css@0.0.5
+  - @rideds/css@0.0.5
 
 ## 0.0.4
 
@@ -298,7 +298,7 @@
 
 - Updated dependencies [6df5d19]
 - Updated dependencies [5cb50e7]
-  - @rui/css@0.0.4
+  - @rideds/css@0.0.4
 
 ## 0.0.3
 
@@ -309,14 +309,14 @@
 - b20de60: Move the injection location of the theming script from pre-body to pre-head.
 - Updated dependencies [a33af94]
 - Updated dependencies [b180822]
-  - @rui/css@0.0.3
+  - @rideds/css@0.0.3
 
 ## 0.0.2
 
 ### Patch Changes
 
 - Updated dependencies [d04e344]
-  - @rui/css@0.0.2
+  - @rideds/css@0.0.2
 
 ## 0.0.1
 
@@ -324,4 +324,4 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/css@0.0.1
+  - @rideds/css@0.0.1

@@ -1,7 +1,7 @@
 "use client";
 
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { forwardRef } from "react";
 import { useProgress, useProgressCircle, type UseProgressProps } from "./useProgress";
 import { ProgressCircleProvider, useProgressCircleContext } from "./useProgressCircleContext";

@@ -7,7 +7,7 @@ import {
   IconPersonCircleLine,
   IconQuestionmarkCircleFill,
 } from "@karrotmarket/react-monochrome-icon";
-import { Divider, Icon, PrefixIcon, VStack } from "@rui/react";
+import { Divider, Icon, PrefixIcon, VStack } from "@rideds/react";
 
 export default function () {
   return (

@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { RadioGroup, RadioGroupItem } from "rui/ui/radio-group";
 
-import { radioVariantMap } from "@rui/css/recipes/radio";
+import { radioVariantMap } from "@rideds/css/recipes/radio";
 import { VariantTable } from "./components/variant-table";
 import { SeedThemeDecorator } from "./components/decorator";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

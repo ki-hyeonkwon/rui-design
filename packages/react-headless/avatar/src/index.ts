@@ -1,5 +1,5 @@
 /**
- * @deprecated Use `@rui/react-image` instead.
+ * @deprecated Use `@rideds/react-image` instead.
  * @see https://rui-design.io/docs/react/components/image
  */
 

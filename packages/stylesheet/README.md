@@ -1,12 +1,12 @@
-# @rui/stylesheet
+# @rideds/stylesheet
 
-DEPRECATED: see [@rui/css](../css) for the latest version.
+DEPRECATED: see [@rideds/css](../css) for the latest version.
 
 ## Installation
 
 ```sh
-npm install @rui/stylesheet
-bun add @rui/stylesheet
+npm install @rideds/stylesheet
+bun add @rideds/stylesheet
 ```
 
 ## 가이드
@@ -37,7 +37,7 @@ Seed Design의 스타일시트 리소스를 사용할 수 있도록 우선 로�
 웹팩 등 자바스크립트 번들러에 의해 처리되는 경우, [MiniCssExtractPlugin](https://webpack.js.org/plugins/mini-css-extract-plugin/) 등으로 사전에 추출되어 [주요 렌더링 경로](https://developer.mozilla.org/ko/docs/Web/Performance/Critical_rendering_path)에 배치해야합니다.
 
 ```js
-import "@rui/stylesheet/global.css";
+import "@rideds/stylesheet/global.css";
 ```
 
 #### 루트 엘리먼트(`<html>`) 초기화

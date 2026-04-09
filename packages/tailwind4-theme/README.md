@@ -1,27 +1,27 @@
-# @rui/tailwind4-theme
+# @rideds/tailwind4-theme
 
 RUI Design 토큰을 Tailwind CSS 4에서 사용할 수 있게 해주는 CSS 파일입니다.
 
 ## 설치
 
 ```bash
-bun add @rui/css @rui/tailwind4-theme tailwindcss@^4
+bun add @rideds/css @rideds/tailwind4-theme tailwindcss@^4
 ```
 
 ## 사용 방법
 
 1. 프로젝트에 RUI 토큰 CSS를 먼저 로드합니다.
    ```js
-   import '@rui/css/base.css';
+   import '@rideds/css/base.css';
    // or
-   import '@rui/css/all.css';
+   import '@rideds/css/all.css';
    ```
 
 2. CSS 파일에 Tailwind CSS와 RUI 테마를 가져옵니다.
    ```css
    /* index.css 또는 main.css 등 */
    @import "tailwindcss";
-   @import "@rui/tailwind4-theme";
+   @import "@rideds/tailwind4-theme";
    ```
 
 3. 이제 RUI 토큰이 Tailwind CSS 4 테마에 등록되며, 다음과 같은 유틸리티 클래스를 사용할 수 있습니다.
@@ -108,4 +108,4 @@ bun add @rui/css @rui/tailwind4-theme tailwindcss@^4
 
 ## 버전 호환성
 
-이 패키지는 Tailwind CSS 4 이상에서만 사용할 수 있습니다. Tailwind CSS 3.x는 `@rui/tailwind3-plugin`을 사용하세요.
+이 패키지는 Tailwind CSS 4 이상에서만 사용할 수 있습니다. Tailwind CSS 3.x는 `@rideds/tailwind3-plugin`을 사용하세요.

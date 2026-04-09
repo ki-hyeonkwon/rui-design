@@ -11,7 +11,7 @@ import {
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 
 import { IconBellLine, IconHouseLine } from "@karrotmarket/react-monochrome-icon";
-import { Box, VStack } from "@rui/react";
+import { Box, VStack } from "@rideds/react";
 
 declare module "@stackflow/config" {
   interface Register {

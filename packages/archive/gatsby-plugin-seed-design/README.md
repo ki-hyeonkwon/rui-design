@@ -36,7 +36,7 @@ module.exports = {
 };
 ```
 
-2. 직접 stylesheet를 활용하거나, `@rui/design-token` 을 활용해 값을 넣어요.
+2. 직접 stylesheet를 활용하거나, `@rideds/design-token` 을 활용해 값을 넣어요.
 
 ```js
 // css-in-js example
@@ -49,12 +49,12 @@ export const wrapper = style({
 // 혹은
 
 ```console
-yarn add -D @rui/design-token
+yarn add -D @rideds/design-token
 ```
 
 ```js
 // css-in-js example
-import { vars } from "@rui/design-token";
+import { vars } from "@rideds/design-token";
 
 export const wrapper = style({
   color: vars.$scale.color.gray00,

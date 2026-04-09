@@ -1,4 +1,4 @@
-import { VStack, HStack, Text } from "@rui/react";
+import { VStack, HStack, Text } from "@rideds/react";
 
 export default function TailwindSpacing() {
   return (

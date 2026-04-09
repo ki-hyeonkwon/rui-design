@@ -1,5 +1,5 @@
 import { IconPersonCircleLine } from "@karrotmarket/react-monochrome-icon";
-import { Text, HStack, Box } from "@rui/react";
+import { Text, HStack, Box } from "@rideds/react";
 import {
   CheckSelectBox,
   CheckSelectBoxCheckmark,

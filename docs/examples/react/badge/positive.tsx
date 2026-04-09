@@ -1,4 +1,4 @@
-import { Badge, HStack, VStack } from "@rui/react";
+import { Badge, HStack, VStack } from "@rideds/react";
 
 export default function BadgePositive() {
   return (

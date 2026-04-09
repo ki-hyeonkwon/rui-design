@@ -1,4 +1,4 @@
-import { RadioGroup } from "@rui/react/primitive";
+import { RadioGroup } from "@rideds/react/primitive";
 import { List, ListDivider, ListRadioItem } from "rui/ui/list";
 import { Radiomark } from "rui/ui/radio-group";
 

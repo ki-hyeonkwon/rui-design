@@ -10,7 +10,7 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { SegmentedControl, SegmentedControlItem } from "rui/ui/segmented-control";
-import { HStack, VStack } from "@rui/react";
+import { HStack, VStack } from "@rideds/react";
 import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
 import { ActionButton } from "rui/ui/action-button";
 

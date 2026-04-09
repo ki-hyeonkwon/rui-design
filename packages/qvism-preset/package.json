@@ -1,10 +1,10 @@
 {
-  "name": "@rui/qvism-preset",
+  "name": "@rideds/qvism-preset",
   "version": "0.0.0",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/qvism-preset"
   },
   "sideEffects": false,
@@ -29,9 +29,9 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@rui/postcss-engaged": "0.0.0",
-    "@rui/qvism-core": "0.0.0",
-    "@rui/rootage-core": "0.0.0"
+    "@rideds/postcss-engaged": "0.0.0",
+    "@rideds/qvism-core": "0.0.0",
+    "@rideds/rootage-core": "0.0.0"
   },
   "publishConfig": {
     "access": "public"

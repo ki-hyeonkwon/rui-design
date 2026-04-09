@@ -1,5 +1,5 @@
 import { IconSparkle2 } from "@karrotmarket/react-multicolor-icon";
-import { Icon } from "@rui/react";
+import { Icon } from "@rideds/react";
 import { HelpBubbleAnchor } from "rui/ui/help-bubble";
 
 export default function HelpBubbleTitleOnly() {

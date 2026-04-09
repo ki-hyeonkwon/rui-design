@@ -1,4 +1,4 @@
-import { typographyMappings } from "@rui/migration-index/typography";
+import { typographyMappings } from "@rideds/migration-index/typography";
 import * as changeCase from "change-case";
 import type {
   GroupedSerializedTextStyleSuggestionsResults,

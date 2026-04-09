@@ -1,8 +1,8 @@
 import {
   actionButton,
   type ActionButtonVariantProps,
-} from "@rui/css/recipes/action-button";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/action-button";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import * as React from "react";
 import { handleColor, useStyleProps, type StyleProps } from "../../utils/styled";
@@ -17,7 +17,7 @@ import {
   type ScopedColorPalette,
   type FontWeight,
   vars,
-} from "@rui/css/vars";
+} from "@rideds/css/vars";
 
 export interface ActionButtonProps
   extends ActionButtonVariantProps,

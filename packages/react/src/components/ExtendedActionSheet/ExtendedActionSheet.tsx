@@ -1,13 +1,13 @@
-import { Dialog as DialogPrimitive, useDialogContext } from "@rui/react-dialog";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { Dialog as DialogPrimitive, useDialogContext } from "@rideds/react-dialog";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import {
   extendedActionSheet,
   type ExtendedActionSheetVariantProps,
-} from "@rui/css/recipes/extended-action-sheet";
+} from "@rideds/css/recipes/extended-action-sheet";
 import {
   extendedActionSheetItem,
   type ExtendedActionSheetItemVariantProps,
-} from "@rui/css/recipes/extended-action-sheet-item";
+} from "@rideds/css/recipes/extended-action-sheet-item";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";

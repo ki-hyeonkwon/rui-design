@@ -86,7 +86,7 @@ export { Dialog };
 **사용 예시**:
 
 ```typescript
-import { Dialog } from "@rui/react-headless";
+import { Dialog } from "@rideds/react-headless";
 
 <Dialog.Root>
   <Dialog.Trigger>Open</Dialog.Trigger>
@@ -115,10 +115,10 @@ export function useDialogContext() {
 
 ## Controlled & Uncontrolled 지원
 
-`@rui/react-use-controllable-state` 패키지를 사용하여 controlled/uncontrolled 상태를 관리합니다.
+`@rideds/react-use-controllable-state` 패키지를 사용하여 controlled/uncontrolled 상태를 관리합니다.
 
 ```typescript
-import { useControllableState } from "@rui/react-use-controllable-state";
+import { useControllableState } from "@rideds/react-use-controllable-state";
 
 export function useCheckbox(props: UseCheckboxProps) {
   // value가 있으면 controlled, 없으면 uncontrolled

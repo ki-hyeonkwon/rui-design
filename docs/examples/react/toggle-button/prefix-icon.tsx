@@ -1,5 +1,5 @@
 import { IconCheckmarkLine, IconPlusLine } from "@karrotmarket/react-monochrome-icon";
-import { PrefixIcon } from "@rui/react";
+import { PrefixIcon } from "@rideds/react";
 import { useState } from "react";
 import { ToggleButton } from "rui/ui/toggle-button";
 

@@ -1,4 +1,4 @@
-# @rui/cli
+# @rideds/cli
 
 RUI Design 컴포넌트를 프로젝트에 추가하기 위한 CLI 도구입니다.
 
@@ -7,13 +7,13 @@ RUI Design 컴포넌트를 프로젝트에 추가하기 위한 CLI 도구입니�
 ### 실행만 할 때
 
 ```bash
-bunx @rui/cli@latest --help
+bunx @rideds/cli@latest --help
 ```
 
 ### 프로젝트에 설치할 때
 
 ```bash
-bun add -d @rui/cli
+bun add -d @rideds/cli
 ```
 
 ```bash
@@ -61,7 +61,7 @@ Dev 모드에서는:
 
 ### 로컬 테스트
 
-1. `@rui/docs`에서 `bun dev` 실행 (snippet 서버)
+1. `@rideds/docs`에서 `bun dev` 실행 (snippet 서버)
 2. `packages/cli`에서 `bun dev` 실행 (watch 모드)
 3. `bun run ./bin/index.mjs` 실행하여 CLI 명령어 테스트:
 

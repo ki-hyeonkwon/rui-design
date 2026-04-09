@@ -45,21 +45,21 @@ Variant Props 처리 패턴, 단일/복합 슬롯 패턴, 금지 패턴 등의 �
 
 ### 반대로 Snippet이 필요 없는 경우
 
-- 단일 컴포넌트 (`<Button>`, `<Badge>` 등): `@rui/react`에서 직접 사용
+- 단일 컴포넌트 (`<Button>`, `<Badge>` 등): `@rideds/react`에서 직접 사용
 - 이미 심플한 API를 가진 경우
 
 ### Snippet 파일 작성 패턴
 
-Snippet 파일은 `"use client"` 선언으로 시작하며, `@rui/react`에서 compound 컴포넌트를 import하여 단순화된 API로 래핑한다. Props 인터페이스는 `SeedComponentName.RootProps`를 extends하고, `src`, `alt`, `fallback` 같은 편의 prop을 추가한다. 반드시 `React.forwardRef`로 감싸고 `displayName`을 설정한다. 하위 컴포넌트가 있으면 별도 인터페이스와 함께 re-export한다.
+Snippet 파일은 `"use client"` 선언으로 시작하며, `@rideds/react`에서 compound 컴포넌트를 import하여 단순화된 API로 래핑한다. Props 인터페이스는 `SeedComponentName.RootProps`를 extends하고, `src`, `alt`, `fallback` 같은 편의 prop을 추가한다. 반드시 `React.forwardRef`로 감싸고 `displayName`을 설정한다. 하위 컴포넌트가 있으면 별도 인터페이스와 함께 re-export한다.
 
 **추가 작업**:
 1. `docs/registry/registry-ui.ts`에 entry 추가 (의존성 버전은 해당 컴포넌트가 추가된 버전 기준)
-2. `bun --filter @rui/docs generate:registry` 실행
+2. `bun --filter @rideds/docs generate:registry` 실행
 
 ### React 문서 업데이트
 
 Snippet 레이어가 있는 컴포넌트의 문서는 반드시 다음 형태로 업데이트해야 합니다:
-- `## Installation` 섹션 추가: `npx @rui/cli@latest add ui:[name]` 명령어
+- `## Installation` 섹션 추가: `npx @rideds/cli@latest add ui:[name]` 명령어
 - `<ManualInstallation name="[name]" />` 컴포넌트 추가
 - `## Usage`의 import 경로를 `rui/ui/[name]`으로 변경
 - Props 섹션 경로를 `./registry/ui/[name].tsx`로 변경
@@ -68,7 +68,7 @@ Snippet 레이어가 있는 컴포넌트의 문서는 반드시 다음 형태로
 
 **위치**: `docs/examples/react/[name]/`
 
-Snippet 레이어가 있는 경우 `rui/ui/[name]`에서 import하고, Layout 컴포넌트(Flex, VStack 등)는 `@rui/react`에서 import한다. Snippet 레이어가 없는 경우 `@rui/react`에서 직접 import한다.
+Snippet 레이어가 있는 경우 `rui/ui/[name]`에서 import하고, Layout 컴포넌트(Flex, VStack 등)는 `@rideds/react`에서 import한다. Snippet 레이어가 없는 경우 `@rideds/react`에서 직접 import한다.
 
 ## Step 7: Storybook
 

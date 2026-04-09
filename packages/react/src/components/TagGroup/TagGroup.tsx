@@ -1,9 +1,9 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { tagGroup, type TagGroupVariantProps } from "@rui/css/recipes/tag-group";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { tagGroup, type TagGroupVariantProps } from "@rideds/css/recipes/tag-group";
 import {
   tagGroupItem,
   type TagGroupItemVariantProps,
-} from "@rui/css/recipes/tag-group-item";
+} from "@rideds/css/recipes/tag-group-item";
 import { forwardRef, Children, Fragment } from "react";
 import clsx from "clsx";
 import { splitMultipleVariantsProps } from "../../utils/splitMultipleVariantsProps";

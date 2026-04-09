@@ -1,7 +1,7 @@
 import { FloatingActionButton } from "rui/ui/floating-action-button";
 import { Switch } from "rui/ui/switch";
 import IconPlusLine from "@karrotmarket/react-monochrome-icon/IconPlusLine";
-import { Flex, VStack } from "@rui/react";
+import { Flex, VStack } from "@rideds/react";
 import { useState } from "react";
 
 export default function FloatingActionButtonExtended() {

@@ -54,7 +54,7 @@ RUI Design의 deprecated 라이프사이클을 표준화합니다. 대상 추가
 
 ```ts
 /**
- * @deprecated Deprecated in @rui/react@1.2.x; will be removed in 1.3.0.
+ * @deprecated Deprecated in @rideds/react@1.2.x; will be removed in 1.3.0.
  * Use borderRadius="r2" instead.
  * Reason: Rounded 옵션을 borderRadius로 통일합니다.
  */
@@ -65,7 +65,7 @@ RUI Design의 deprecated 라이프사이클을 표준화합니다. 대상 추가
 ```yaml
 description: |
   모서리를 둥글게 처리합니다.
-  @deprecated `rounded` 옵션은 @rui/react@1.3.0에서 제거될 예정입니다. `borderRadius="r2"`를 사용하세요.
+  @deprecated `rounded` 옵션은 @rideds/react@1.3.0에서 제거될 예정입니다. `borderRadius="r2"`를 사용하세요.
   Reason: 모서리 스타일은 `borderRadius` prop으로 통일합니다.
 ```
 

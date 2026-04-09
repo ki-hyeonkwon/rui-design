@@ -1,4 +1,4 @@
-import { VStack, Icon, Text, Article, Divider, Tabs } from "@rui/react";
+import { VStack, Icon, Text, Article, Divider, Tabs } from "@rideds/react";
 import { ActivityComponentType } from "@stackflow/react/future";
 import { AppBar, AppBarMain } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";

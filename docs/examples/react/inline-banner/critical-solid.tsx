@@ -1,6 +1,6 @@
 import { ActionableInlineBanner, InlineBanner } from "rui/ui/inline-banner";
 import { IconExclamationmarkCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 
 export default function InlineBannerCriticalSolid() {
   return (

@@ -21,7 +21,7 @@ Transform this SEED-based monorepo into an independent `rui` design system while
 - Validate brand/informative behavior in light and dark themes.
 
 ### Wave 2
-- Rename core package graph from `@rui/*` to `@rui/*`.
+- Rename core package graph from `@rideds/*` to `@rideds/*`.
 - Rename stackflow plugin API to `ruiPlugin` and plugin key to `rui`.
 
 ### Wave 3

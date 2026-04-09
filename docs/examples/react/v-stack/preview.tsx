@@ -1,4 +1,4 @@
-import { Box, VStack } from "@rui/react";
+import { Box, VStack } from "@rideds/react";
 
 export default function VStackPreview() {
   return (

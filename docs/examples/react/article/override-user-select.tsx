@@ -1,5 +1,5 @@
 import { IconExclamationmarkCircleFill } from "@karrotmarket/react-monochrome-icon";
-import { Article, Divider, Icon, Text, VStack } from "@rui/react";
+import { Article, Divider, Icon, Text, VStack } from "@rideds/react";
 import { PageBanner } from "rui/ui/page-banner";
 
 export default function ArticleSelectable() {

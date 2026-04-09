@@ -1,4 +1,4 @@
-import { ScrollFog } from "@rui/react";
+import { ScrollFog } from "@rideds/react";
 
 export default function ScrollFogAllDirections() {
   return (

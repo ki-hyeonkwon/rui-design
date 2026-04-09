@@ -1,4 +1,4 @@
-# @rui/react-dialog
+# @rideds/react-dialog
 
 ## 1.0.2
 
@@ -9,7 +9,7 @@
   `DialogAction`을 `DialogPrimitive.CloseButton`으로 교체합니다. `AlertDialogAction` `onClick` 핸들러에서 `event.preventDefault()`를 호출하여 닫기 동작을 방지할 수 있습니다. [(예제)](https://rui-design.io/react/components/alert-dialog#prevent-close)
 
 - Updated dependencies [576c2e6]
-  - @rui/react-use-controllable-state@1.0.0
+  - @rideds/react-use-controllable-state@1.0.0
 
 ## 1.0.1
 
@@ -26,15 +26,15 @@
 ### Patch Changes
 
 - Updated dependencies [34f92f2]
-  - @rui/react-primitive@1.0.0
-  - @rui/dom-utils@1.0.0
+  - @rideds/react-primitive@1.0.0
+  - @rideds/dom-utils@1.0.0
 
 ## 0.0.5
 
 ### Patch Changes
 
 - Updated dependencies [29ec9f0]
-  - @rui/react-primitive@0.0.3
+  - @rideds/react-primitive@0.0.3
 
 ## 0.0.4
 
@@ -48,8 +48,8 @@
 
 - e368c69: 패키지 의존성을 최신화합니다.
 - Updated dependencies [e368c69]
-  - @rui/react-primitive@0.0.2
-  - @rui/dom-utils@0.0.2
+  - @rideds/react-primitive@0.0.2
+  - @rideds/dom-utils@0.0.2
 
 ## 0.0.2
 
@@ -63,7 +63,7 @@
 
 - b64023c: Initial release of the next version of Seed Design.
 - Updated dependencies [b64023c]
-  - @rui/dom-utils@0.0.1
+  - @rideds/dom-utils@0.0.1
 
 ## 0.0.1-rc.0
 
@@ -71,4 +71,4 @@
 
 - Seed Design V3 release candidate
 - Updated dependencies
-  - @rui/dom-utils@0.0.1-rc.0
+  - @rideds/dom-utils@0.0.1-rc.0

@@ -1,4 +1,4 @@
-# @rui/react-use-controllable-state
+# @rideds/react-use-controllable-state
 
 ## 1.0.0
 

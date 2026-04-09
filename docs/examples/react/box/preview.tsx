@@ -1,4 +1,4 @@
-import { Box } from "@rui/react";
+import { Box } from "@rideds/react";
 
 export default function BoxPreview() {
   return (

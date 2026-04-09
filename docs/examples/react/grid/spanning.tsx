@@ -1,4 +1,4 @@
-import { Divider, Grid, GridItem, HStack } from "@rui/react";
+import { Divider, Grid, GridItem, HStack } from "@rideds/react";
 
 export default function Spanning() {
   return (

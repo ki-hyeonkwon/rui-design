@@ -1,9 +1,9 @@
 {
-  "name": "@rui/react-slider",
+  "name": "@rideds/react-slider",
   "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rui-design/rui-design.git",
+    "url": "git+https://github.com/ki-hyeonkwon/rui-design.git",
     "directory": "packages/react-headless/slider"
   },
   "sideEffects": false,
@@ -43,8 +43,8 @@
     "@radix-ui/react-use-controllable-state": "^1.2.2",
     "@radix-ui/react-use-layout-effect": "^1.1.1",
     "@radix-ui/react-use-size": "^1.1.1",
-    "@rui/dom-utils": "^1.0.0",
-    "@rui/react-primitive": "^1.0.0",
-    "@rui/react-supports": "^0.0.1"
+    "@rideds/dom-utils": "^1.0.0",
+    "@rideds/react-primitive": "^1.0.0",
+    "@rideds/react-supports": "^0.0.1"
   }
 }

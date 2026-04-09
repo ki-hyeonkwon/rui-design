@@ -1,8 +1,8 @@
 import { useControllableState } from "@radix-ui/react-use-controllable-state";
 import { useId, useMemo, useState } from "react";
 
-import { dataAttr, elementProps, inputProps, visuallyHidden } from "@rui/dom-utils";
-import { useSupports } from "@rui/react-supports";
+import { dataAttr, elementProps, inputProps, visuallyHidden } from "@rideds/dom-utils";
+import { useSupports } from "@rideds/react-supports";
 import * as dom from "./dom";
 
 interface UseSegmentedControlStateProps {

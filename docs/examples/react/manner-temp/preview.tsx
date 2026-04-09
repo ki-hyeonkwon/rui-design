@@ -1,4 +1,4 @@
-import { VStack } from "@rui/react";
+import { VStack } from "@rideds/react";
 import { MannerTemp } from "rui/ui/manner-temp";
 
 export default function MannerTempPreview() {

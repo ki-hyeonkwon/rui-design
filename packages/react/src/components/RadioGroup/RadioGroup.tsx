@@ -1,12 +1,12 @@
-import { radio, type RadioVariantProps } from "@rui/css/recipes/radio";
-import { radioGroup, type RadioGroupVariantProps } from "@rui/css/recipes/radio-group";
-import { radiomark, type RadiomarkVariantProps } from "@rui/css/recipes/radiomark";
-import { mergeProps } from "@rui/dom-utils";
+import { radio, type RadioVariantProps } from "@rideds/css/recipes/radio";
+import { radioGroup, type RadioGroupVariantProps } from "@rideds/css/recipes/radio-group";
+import { radiomark, type RadiomarkVariantProps } from "@rideds/css/recipes/radiomark";
+import { mergeProps } from "@rideds/dom-utils";
 import {
   RadioGroup as RadioGroupPrimitive,
   useRadioGroupItemContext,
-} from "@rui/react-radio-group";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/react-radio-group";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import { forwardRef } from "react";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";

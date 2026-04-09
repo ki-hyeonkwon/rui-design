@@ -1,6 +1,6 @@
 ## 디렉토리 개요
 
-`packages/cli`는 `@rui/cli` 패키지의 소스와 빌드 설정을 관리하며, `rui init/add/add-all/compat` 명령을 제공한다. 사용자 문서는 `docs/content/react/getting-started/cli/`와 동기화하고, 기술 상세는 이 폴더의 `TECH.md`를 우선 참고한다.
+`packages/cli`는 `@rideds/cli` 패키지의 소스와 빌드 설정을 관리하며, `rui init/add/add-all/compat` 명령을 제공한다. 사용자 문서는 `docs/content/react/getting-started/cli/`와 동기화하고, 기술 상세는 이 폴더의 `TECH.md`를 우선 참고한다.
 
 ## 파일 작성 컨벤션
 

@@ -4,7 +4,7 @@ import React from "react";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { ResultSection, type ResultSectionProps } from "rui/ui/result-section";
 import { AppBar, AppBarLeft, AppBarMain, AppBarBackButton } from "rui/ui/app-bar";
-import { Box, Icon, VStack } from "@rui/react";
+import { Box, Icon, VStack } from "@rideds/react";
 import { IconDiamond } from "@karrotmarket/react-multicolor-icon";
 
 declare module "@stackflow/config" {

@@ -3,7 +3,7 @@ import {
   IconDiamondFill,
   IconSparkle2Fill,
 } from "@karrotmarket/react-monochrome-icon";
-import { HStack } from "@rui/react";
+import { HStack } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 export default function ContentPlaceholderSvgExample() {

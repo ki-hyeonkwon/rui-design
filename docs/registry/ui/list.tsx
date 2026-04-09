@@ -4,13 +4,13 @@ import {
   List as SeedList,
   Divider as SeedDivider,
   type DividerProps as SeedDividerProps,
-} from "@rui/react";
+} from "@rideds/react";
 import {
   Checkbox as CheckboxPrimitive,
   RadioGroup as RadioGroupPrimitive,
   Switch as SwitchPrimitive,
-} from "@rui/react/primitive";
-import { listItem } from "@rui/css/recipes/list-item";
+} from "@rideds/react/primitive";
+import { listItem } from "@rideds/css/recipes/list-item";
 import * as React from "react";
 
 export interface ListProps extends SeedList.RootProps {}

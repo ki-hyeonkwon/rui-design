@@ -1,5 +1,5 @@
-import { Flex, VStack } from "@rui/react";
-import { useActivityZIndexBase } from "@rui/stackflow";
+import { Flex, VStack } from "@rideds/react";
+import { useActivityZIndexBase } from "@rideds/stackflow";
 import { useActivity, useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
 import { useState } from "react";
 import {

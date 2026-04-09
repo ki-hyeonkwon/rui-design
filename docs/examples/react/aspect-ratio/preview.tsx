@@ -1,4 +1,4 @@
-import { AspectRatio, Text, VStack } from "@rui/react";
+import { AspectRatio, Text, VStack } from "@rideds/react";
 
 export default function AspectRatioPreview() {
   return (

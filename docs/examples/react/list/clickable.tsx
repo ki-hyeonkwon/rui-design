@@ -6,7 +6,7 @@ import {
   IconPlusFill,
   IconSquare2StackedFill,
 } from "@karrotmarket/react-monochrome-icon";
-import { PrefixIcon, Icon, Box } from "@rui/react";
+import { PrefixIcon, Icon, Box } from "@rideds/react";
 import { useCallback, useState } from "react";
 import { List, ListDivider, ListItem, ListButtonItem, ListLinkItem } from "rui/ui/list";
 import { ActionButton } from "rui/ui/action-button";

@@ -3,7 +3,7 @@
     "rui": {
       "type": "stdio",
       "command": "bunx",
-      "args": ["-y", "@rui/mcp@latest"]
+      "args": ["-y", "@rideds/mcp@latest"]
     },
     "playwright": {
       "command": "bunx",

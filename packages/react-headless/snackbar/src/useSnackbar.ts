@@ -1,5 +1,5 @@
-import { ariaAttr, buttonProps, dataAttr, elementProps } from "@rui/dom-utils";
-import { useSupports } from "@rui/react-supports";
+import { ariaAttr, buttonProps, dataAttr, elementProps } from "@rideds/dom-utils";
+import { useSupports } from "@rideds/react-supports";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useSafeOffset } from "./useSafeOffset";
 

@@ -1,5 +1,5 @@
-import { chipTabs, type ChipTabsVariantProps } from "@rui/css/recipes/chip-tabs";
-import { Tabs as TabsPrimitive } from "@rui/react-tabs";
+import { chipTabs, type ChipTabsVariantProps } from "@rideds/css/recipes/chip-tabs";
+import { Tabs as TabsPrimitive } from "@rideds/react-tabs";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import { forwardRef } from "react";
 import clsx from "clsx";
@@ -14,7 +14,7 @@ export const ChipTabsRoot = forwardRef<HTMLDivElement, ChipTabsRootProps>(
   ({ className, ...props }, ref) => {
     if (process.env.NODE_ENV !== "production" && props.variant === "brandSolid") {
       console.warn(
-        "[RUI Design System] ChipTabs variant='brandSolid' is deprecated and will be removed in @rui/react@1.3.0. Use variant='neutralSolid' or variant='neutralOutline' instead.",
+        "[RUI Design System] ChipTabs variant='brandSolid' is deprecated and will be removed in @rideds/react@1.3.0. Use variant='neutralSolid' or variant='neutralOutline' instead.",
       );
     }
 

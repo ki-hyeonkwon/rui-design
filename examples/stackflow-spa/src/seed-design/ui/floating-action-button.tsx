@@ -1,4 +1,4 @@
-import { FloatingActionButton as SeedFloatingActionButton } from "@rui/react";
+import { FloatingActionButton as SeedFloatingActionButton } from "@rideds/react";
 import * as React from "react";
 
 export interface FloatingActionButtonProps

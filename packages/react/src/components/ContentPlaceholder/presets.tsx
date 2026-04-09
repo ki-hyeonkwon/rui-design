@@ -1,4 +1,4 @@
-import type { ContentPlaceholderVariant } from "@rui/css/recipes/content-placeholder";
+import type { ContentPlaceholderVariant } from "@rideds/css/recipes/content-placeholder";
 
 export const contentPlaceholderAssetPresetMap: Record<
   ContentPlaceholderVariant["type"],

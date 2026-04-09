@@ -1,5 +1,5 @@
-import { linkContent, type LinkContentVariantProps } from "@rui/css/recipes/link-content";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { linkContent, type LinkContentVariantProps } from "@rideds/css/recipes/link-content";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import type * as React from "react";
 import { withStyleProps, type StyleProps } from "../../utils/styled";

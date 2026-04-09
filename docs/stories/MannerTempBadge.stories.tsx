@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/nextjs";
 
 import { MannerTempBadge } from "rui/ui/manner-temp-badge";
 
-import { mannerTempBadgeVariantMap } from "@rui/css/recipes/manner-temp-badge";
+import { mannerTempBadgeVariantMap } from "@rideds/css/recipes/manner-temp-badge";
 import { VariantTable } from "./components/variant-table";
 import { SeedThemeDecorator } from "./components/decorator";
 import { createStoryWithParameters } from "@/stories/utils/parameters";

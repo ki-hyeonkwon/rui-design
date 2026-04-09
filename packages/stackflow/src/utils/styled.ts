@@ -1,8 +1,8 @@
-import type { ScopedColorBg, ScopedColorPalette, ScopedColorBanner } from "@rui/css/vars";
-import { vars } from "@rui/css/vars";
+import type { ScopedColorBg, ScopedColorPalette, ScopedColorBanner } from "@rideds/css/vars";
+import { vars } from "@rideds/css/vars";
 
 /**
- * A minimal subset of `StyleProps` from `@rui/react`.
+ * A minimal subset of `StyleProps` from `@rideds/react`.
  * Copied here to avoid package dependency. May be extracted to a shared package later.
  */
 export interface BoxBackgroundProps {

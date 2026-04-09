@@ -17,7 +17,7 @@ const VERSION_PATTERN =
 /**
  * CHANGELOG 항목의 커밋 표기를 Slack 링크 표기로 변환
  * - [`abcdef1`](https://github.com/.../commit/abcdef1) -> <https://...|`abcdef1`>
- * - `abcdef1`: ... -> <https://github.com/rui-design/rui-design/commit/abcdef1|`abcdef1`>: ...
+ * - `abcdef1`: ... -> <https://github.com/ki-hyeonkwon/rui-design/commit/abcdef1|`abcdef1`>: ...
  * @param {string} item
  */
 function toSlackCommitLink(item) {

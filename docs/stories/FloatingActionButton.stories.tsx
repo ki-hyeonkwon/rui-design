@@ -4,7 +4,7 @@ import { FloatingActionButton } from "rui/ui/floating-action-button";
 
 import { createStoryWithParameters } from "@/stories/utils/parameters";
 import { IconBellFill } from "@karrotmarket/react-monochrome-icon";
-import { floatingActionButtonVariantMap } from "@rui/css/recipes/floating-action-button";
+import { floatingActionButtonVariantMap } from "@rideds/css/recipes/floating-action-button";
 import { SeedThemeDecorator } from "./components/decorator";
 import { VariantTable } from "./components/variant-table";
 

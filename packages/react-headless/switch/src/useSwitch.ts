@@ -7,8 +7,8 @@ import {
   inputProps,
   labelProps,
   visuallyHidden,
-} from "@rui/dom-utils";
-import { useSupports } from "@rui/react-supports";
+} from "@rideds/dom-utils";
+import { useSupports } from "@rideds/react-supports";
 
 interface UseSwitchStateProps {
   checked?: boolean;

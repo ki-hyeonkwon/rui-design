@@ -1,7 +1,7 @@
 "use client";
 
-import { mergeProps } from "@rui/dom-utils";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { mergeProps } from "@rideds/dom-utils";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import * as React from "react";
 import { forwardRef, useEffect, useId, useRef } from "react";
 import { useSnackbar, type UseSnackbarProps } from "./useSnackbar";

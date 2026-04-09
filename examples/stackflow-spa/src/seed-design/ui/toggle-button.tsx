@@ -1,7 +1,7 @@
 import {
   ToggleButton as SeedToggleButton,
   type ToggleButtonProps as SeedToggleButtonProps,
-} from "@rui/react";
+} from "@rideds/react";
 import * as React from "react";
 import { LoadingIndicator } from "./loading-indicator";
 

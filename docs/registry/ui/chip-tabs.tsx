@@ -1,6 +1,6 @@
 "use client";
 
-import { HStack, NotificationBadge, ChipTabs as SeedChipTabs } from "@rui/react";
+import { HStack, NotificationBadge, ChipTabs as SeedChipTabs } from "@rideds/react";
 import { forwardRef } from "react";
 
 export interface ChipTabsRootProps extends SeedChipTabs.RootProps {}

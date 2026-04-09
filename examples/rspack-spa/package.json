@@ -1,5 +1,5 @@
 {
-  "name": "@rui/example-rspack",
+  "name": "@rideds/example-rspack",
   "private": true,
   "version": "1.0.0",
   "scripts": {
@@ -7,8 +7,8 @@
     "build": "cross-env NODE_ENV=production rspack build"
   },
   "dependencies": {
-    "@rui/css": "1.2.7",
-    "@rui/react": "1.2.8",
+    "@rideds/css": "1.2.7",
+    "@rideds/react": "1.2.8",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
@@ -16,7 +16,7 @@
     "@rspack/cli": "^1.3.6",
     "@rspack/core": "^1.3.6",
     "@rspack/plugin-react-refresh": "^1.4.1",
-    "@rui/webpack-plugin": "1.1.0",
+    "@rideds/webpack-plugin": "1.1.0",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
     "cross-env": "^10.0.0",

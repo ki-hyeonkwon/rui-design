@@ -1,5 +1,5 @@
-import { actionChip, type ActionChipVariantProps } from "@rui/css/recipes/action-chip";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+import { actionChip, type ActionChipVariantProps } from "@rideds/css/recipes/action-chip";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import type * as React from "react";
 import { createRecipeContext } from "../../utils/createRecipeContext";
 import { withIconRequired } from "../Icon/Icon";
@@ -15,7 +15,7 @@ const { withContext } = createRecipeContext(actionChip);
  * <ActionChip size="medium">Label</ActionChip>
  *
  * // After
- * import { Chip } from "@rui/react";
+ * import { Chip } from "@rideds/react";
  * <Chip.Button size="medium" variant="solid">Label</Chip.Button>
  * ```
  */

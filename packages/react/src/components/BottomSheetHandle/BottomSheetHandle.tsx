@@ -1,6 +1,6 @@
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { Drawer } from "@rui/react-drawer";
-import { bottomSheetHandle } from "@rui/css/recipes/bottom-sheet-handle";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { Drawer } from "@rideds/react-drawer";
+import { bottomSheetHandle } from "@rideds/css/recipes/bottom-sheet-handle";
 import React from "react";
 import clsx from "clsx";
 

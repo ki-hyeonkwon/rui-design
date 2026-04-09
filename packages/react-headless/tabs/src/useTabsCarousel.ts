@@ -1,5 +1,5 @@
 import { useCallbackRef } from "@radix-ui/react-use-callback-ref";
-import { dataAttr, elementProps } from "@rui/dom-utils";
+import { dataAttr, elementProps } from "@rideds/dom-utils";
 import AutoHeight from "embla-carousel-auto-height";
 import useEmblaCarousel from "embla-carousel-react";
 import { useEffect, useRef } from "react";

@@ -1,15 +1,15 @@
 {
   "id": "identity-placeholder",
   "dependencies": [
-    "@rui/react"
+    "@rideds/react"
   ],
   "snippets": [
     {
       "path": "identity-placeholder.tsx",
-      "content": "/**\n * @file ui:identity-placeholder\n * @requires @rui/react@~1.0.0\n * @requires @rui/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { IdentityPlaceholder as SeedIdentityPlaceholder } from \"@rui/react\";\nimport * as React from \"react\";\n\nexport interface IdentityPlaceholderProps extends SeedIdentityPlaceholder.RootProps {}\n\n/**\n * @see https://rui-design.io/react/components/identity-placeholder\n */\nexport const IdentityPlaceholder = React.forwardRef<HTMLDivElement, IdentityPlaceholderProps>(\n  (props, ref) => {\n    return (\n      <SeedIdentityPlaceholder.Root {...props} ref={ref}>\n        <SeedIdentityPlaceholder.Image />\n      </SeedIdentityPlaceholder.Root>\n    );\n  },\n);\nIdentityPlaceholder.displayName = \"IdentityPlaceholder\";\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rui/* packages.\n * You can extend this snippet however you want.\n */\n",
+      "content": "/**\n * @file ui:identity-placeholder\n * @requires @rideds/react@~1.0.0\n * @requires @rideds/css@~1.0.0\n **/\n\n\"use client\";\n\nimport { IdentityPlaceholder as SeedIdentityPlaceholder } from \"@rideds/react\";\nimport * as React from \"react\";\n\nexport interface IdentityPlaceholderProps extends SeedIdentityPlaceholder.RootProps {}\n\n/**\n * @see https://rui-design.io/react/components/identity-placeholder\n */\nexport const IdentityPlaceholder = React.forwardRef<HTMLDivElement, IdentityPlaceholderProps>(\n  (props, ref) => {\n    return (\n      <SeedIdentityPlaceholder.Root {...props} ref={ref}>\n        <SeedIdentityPlaceholder.Image />\n      </SeedIdentityPlaceholder.Root>\n    );\n  },\n);\nIdentityPlaceholder.displayName = \"IdentityPlaceholder\";\n\n/**\n * This file is a snippet from RUI Design, helping you get started quickly with @rideds/* packages.\n * You can extend this snippet however you want.\n */\n",
       "dependencies": {
-        "@rui/react": "~1.0.0",
-        "@rui/css": "~1.0.0"
+        "@rideds/react": "~1.0.0",
+        "@rideds/css": "~1.0.0"
       }
     }
   ]

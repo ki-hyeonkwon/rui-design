@@ -9,7 +9,7 @@ import {
 } from "rui/ui/app-bar";
 import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
 import { IconBellLine } from "@karrotmarket/react-monochrome-icon";
-import { Flex, Text, VStack } from "@rui/react";
+import { Flex, Text, VStack } from "@rideds/react";
 import { ActionButton } from "rui/ui/action-button";
 
 declare module "@stackflow/config" {

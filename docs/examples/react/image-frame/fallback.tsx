@@ -1,4 +1,4 @@
-import { ImageFrame, Flex } from "@rui/react";
+import { ImageFrame, Flex } from "@rideds/react";
 import { ContentPlaceholder } from "rui/ui/content-placeholder";
 
 export default function ImageFrameFallbackExample() {

@@ -1,7 +1,7 @@
 import "./reset.css";
 import "./global.css";
-import "@rui/stylesheet/global.css";
-import "@rui/css/base.css";
+import "@rideds/stylesheet/global.css";
+import "@rideds/css/base.css";
 import "@stackflow/plugin-basic-ui/index.css";
 
 import React, { StrictMode } from "react";

@@ -39,8 +39,8 @@ export interface Registry {
        */
       path: string;
       /**
-       * @description 스니펫 파일에서 의존하는 \@rui/* 패키지와 버전. 스니펫 내부에 \@requires로 기록됨
-       * @example { "@rui/react": "^1.1.0", "@rui/css": "^1.1.0" }
+       * @description 스니펫 파일에서 의존하는 \@rideds/* 패키지와 버전. 스니펫 내부에 \@requires로 기록됨
+       * @example { "@rideds/react": "^1.1.0", "@rideds/css": "^1.1.0" }
        * @see https://github.com/npm/node-semver#caret-ranges-123-025-004
        */
       dependencies?: Record<string, string>;
@@ -58,7 +58,7 @@ export interface GeneratedRegistryItem
   > {
   /**
    * @description snippets에 명시된 파일에서 의존하는 패키지. CLI가 실제로 설치함
-   * @example ["@rui/react-tabs"]
+   * @example ["@rideds/react-tabs"]
    */
   dependencies?: string[];
 
@@ -82,8 +82,8 @@ export interface GeneratedRegistryItem
     path: string;
 
     /**
-     * @description 스니펫 파일에서 의존하는 \@rui/* 패키지와 버전
-     * @example { "@rui/react": "~1.1.0", "@rui/css": "~1.1.0" }
+     * @description 스니펫 파일에서 의존하는 \@rideds/* 패키지와 버전
+     * @example { "@rideds/react": "~1.1.0", "@rideds/css": "~1.1.0" }
      */
     dependencies?: Record<string, string>;
 
@@ -116,7 +116,7 @@ export interface GeneratedRegistry extends Pick<Registry, "id" | "hideFromCLICat
          */
         path: string;
         /**
-         * @description 스니펫 파일에서 의존하는 \@rui/* 패키지와 버전
+         * @description 스니펫 파일에서 의존하는 \@rideds/* 패키지와 버전
          */
         dependencies?: Record<string, string>;
       }[];

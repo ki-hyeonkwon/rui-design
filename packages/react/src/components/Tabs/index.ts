@@ -15,6 +15,6 @@ export {
   type TabsTriggerProps,
 } from "./Tabs";
 
-export { tabsCarouselPreventDrag } from "@rui/react-tabs";
+export { tabsCarouselPreventDrag } from "@rideds/react-tabs";
 
 export * as Tabs from "./Tabs.namespace";

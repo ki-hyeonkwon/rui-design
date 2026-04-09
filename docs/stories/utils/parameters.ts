@@ -12,7 +12,7 @@ export const FONT_SCALE_MAP = {
 
 export type FontScales = keyof typeof FONT_SCALE_MAP;
 
-// TODO: Replace with @rui/css/breakpoints when responsive styling lands
+// TODO: Replace with @rideds/css/breakpoints when responsive styling lands
 export const VIEWPORT_MODES = {
   base: { viewport: "base" },
   sm: { viewport: "sm" },

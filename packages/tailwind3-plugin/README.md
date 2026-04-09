@@ -1,32 +1,32 @@
-# @rui/tailwind3-plugin
+# @rideds/tailwind3-plugin
 
 SEED 디자인 시스템의 디자인 토큰을 Tailwind CSS 3.x에서 쉽게 사용할 수 있는 플러그인입니다.
 
 ## 설치
 
 ```bash
-npm install @rui/tailwind3-plugin
+npm install @rideds/tailwind3-plugin
 ```
 
 또는
 
 ```bash
-yarn add @rui/tailwind3-plugin
+yarn add @rideds/tailwind3-plugin
 ```
 
 ## 사용 방법
 
 1. 프로젝트에 SEED 디자인 토큰 CSS 파일이 먼저 로드되어 있어야 합니다.
    ```js
-   import '@rui/css/base.css';
+   import '@rideds/css/base.css';
    // or
-   import '@rui/css/all.css';
+   import '@rideds/css/all.css';
    ```
 
 2. Tailwind CSS 구성 파일에 플러그인을 추가합니다.
    ```js
    // tailwind.config.js
-   import ruiPlugin from '@rui/tailwind3-plugin';
+   import ruiPlugin from '@rideds/tailwind3-plugin';
    
    /** @type {import('tailwindcss').Config} */
    export default {
@@ -121,4 +121,4 @@ SEED 디자인 시스템의 모든 디자인 토큰은 다음과 같은 유틸�
 
 ## 버전 호환성
 
-이 패키지는 Tailwind CSS 3.x 버전에서 사용할 수 있습니다. Tailwind CSS 4.0 이상 버전은 `@rui/tailwind4`를 사용하세요.
+이 패키지는 Tailwind CSS 3.x 버전에서 사용할 수 있습니다. Tailwind CSS 4.0 이상 버전은 `@rideds/tailwind4`를 사용하세요.

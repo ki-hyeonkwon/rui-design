@@ -1,7 +1,7 @@
 import type * as React from "react";
 
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
-import { callout, type CalloutVariantProps } from "@rui/css/recipes/callout";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
+import { callout, type CalloutVariantProps } from "@rideds/css/recipes/callout";
 import { createSlotRecipeContext } from "../../utils/createSlotRecipeContext";
 import {
   DismissibleCloseButton,

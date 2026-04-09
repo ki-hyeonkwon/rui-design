@@ -1,4 +1,4 @@
-import { elementProps } from "@rui/dom-utils";
+import { elementProps } from "@rideds/dom-utils";
 import * as React from "react";
 
 export interface UsePendingButtonProps {

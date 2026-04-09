@@ -1,12 +1,12 @@
 import {
   notificationBadge,
   type NotificationBadgeVariantProps,
-} from "@rui/css/recipes/notification-badge";
+} from "@rideds/css/recipes/notification-badge";
 import {
   notificationBadgePositioner,
   type NotificationBadgePositionerVariantProps,
-} from "@rui/css/recipes/notification-badge-positioner";
-import { Primitive, type PrimitiveProps } from "@rui/react-primitive";
+} from "@rideds/css/recipes/notification-badge-positioner";
+import { Primitive, type PrimitiveProps } from "@rideds/react-primitive";
 import clsx from "clsx";
 import * as React from "react";
 import { useMemo } from "react";
