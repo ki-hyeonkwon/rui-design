@@ -178,7 +178,7 @@ async function publishWithRetry(
   workspacePackage: WorkspacePackage,
   options: { packageName: string; version: string },
 ): Promise<boolean> {
-  const retryDelays = [30_000, 60_000, 180_000, 600_000] as const;
+  const retryDelays = [10_000, 30_000] as const;
 
   for (let attempt = 0; attempt <= retryDelays.length; attempt += 1) {
     const result = spawnSync("npm", ["publish", "--access", "public"], {
