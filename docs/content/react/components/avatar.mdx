@@ -1,0 +1,83 @@
+---
+title: Avatar
+description: 사용자의 프로필 이미지를 표시하는 컴포넌트입니다.
+---
+
+<ComponentExample name="react/avatar/preview">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/avatar/preview.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+## Installation
+
+```package-install
+npx @rui/cli@latest add ui:avatar
+```
+
+<ManualInstallation name="avatar" />
+
+## Props
+
+### `Avatar`
+
+<react-type-table path="./registry/ui/avatar.tsx" name="AvatarProps" />
+
+### `AvatarBadge`
+
+<react-type-table path="./registry/ui/avatar.tsx" name="AvatarBadgeProps" />
+
+### `AvatarStack`
+
+<react-type-table path="./registry/ui/avatar.tsx" name="AvatarStackProps" />
+
+## Examples
+
+### Size
+
+<ComponentExample name="react/avatar/size">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/avatar/size.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Badge & Badge Mask
+
+<ComponentExample name="react/avatar/badge">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/avatar/badge.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Stack
+
+<ComponentExample name="react/avatar/stack">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/avatar/stack.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Fallback Image
+
+`fallback` prop으로 이미지가 로드되지 않았을 때 보여질 요소를 지정할 수 있습니다. 주로 [IdentityPlaceholder](/react/components/identity-placeholder)를 사용합니다.
+
+<ComponentExample name="react/avatar/fallback">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/avatar/fallback.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>

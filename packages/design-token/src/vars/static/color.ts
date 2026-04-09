@@ -1,0 +1,17 @@
+export const staticBlack = "var(--rui-static-color-static-black)";
+export const staticWhite = "var(--rui-static-color-static-white)";
+export const staticGray900 = "var(--rui-static-color-static-gray-900)";
+export const staticCarrot50 = "var(--rui-static-color-static-carrot-50)";
+export const staticCarrot800 = "var(--rui-static-color-static-carrot-800)";
+export const staticGreen50 = "var(--rui-static-color-static-green-50)";
+export const staticGreen800 = "var(--rui-static-color-static-green-800)";
+export const staticYellow50 = "var(--rui-static-color-static-yellow-50)";
+export const staticYellow800 = "var(--rui-static-color-static-yellow-800)";
+export const staticRed50 = "var(--rui-static-color-static-red-50)";
+export const staticRed800 = "var(--rui-static-color-static-red-800)";
+export const staticBlue50 = "var(--rui-static-color-static-blue-50)";
+export const staticBlue800 = "var(--rui-static-color-static-blue-800)";
+export const staticBlackAlpha200 = "var(--rui-static-color-static-black-alpha-200)";
+export const staticBlackAlpha500 = "var(--rui-static-color-static-black-alpha-500)";
+export const staticWhiteAlpha50 = "var(--rui-static-color-static-white-alpha-50)";
+export const staticWhiteAlpha200 = "var(--rui-static-color-static-white-alpha-200)";

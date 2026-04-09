@@ -1,0 +1,210 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: badge
+  name: Badge
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          maxWidth:
+            type: dimension
+            description: 10글자 이상의 텍스트를 말줄임 처리하기 위해 설정된 최대 너비입니다.
+          minHeight:
+            type: dimension
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          strokeWidth:
+            type: dimension
+          strokeColor:
+            type: color
+          color:
+            type: color
+      label:
+        properties:
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+          color:
+            type: color
+    variants:
+      variant:
+        values:
+          solid:
+            description: 배경이 복잡하거나 이미지 위에 Badge가 겹치는 경우 사용합니다.
+          outline:
+            description: 중간 정도의 주목도가 필요한 본문 또는 상세 화면에서 사용합니다.
+          weak:
+            description: 반복적인 구조를 가진 환경에서 사용합니다. 배경색이 있는 경우에는 권장하지 않습니다.
+      tone:
+        values:
+          neutral:
+            description: 상태가 특별히 없거나, 상태값이 명확하지 않은 초기 상태
+          informative:
+            description: 베타 기능 안내, 사용자 권한 제한, 정보 기반 메시지
+          positive:
+            description: 완료, 적용됨, 승인됨, 발행됨, 저장 성공, 검토 통과
+          warning:
+            description: 만료 임박, 제출 누락, 필수 정보 부족 등 잠재적 문제 상태
+          critical:
+            description: 검수 거절, 제재 상태, 편집 불가, 유효성 검증 실패
+  definitions:
+    size=large:
+      enabled:
+        root:
+          maxWidth: 6.75rem # 108px ÷ 16
+          minHeight: $dimension.x6
+          paddingX: $dimension.x2
+          paddingY: $dimension.x1
+          cornerRadius: $radius.r1_5
+        label:
+          fontSize: $font-size.t2
+          lineHeight: $line-height.t2
+    size=medium:
+      enabled:
+        root:
+          maxWidth: 7.5rem # 120px ÷ 16
+          minHeight: $dimension.x5
+          paddingX: $dimension.x1_5
+          paddingY: $dimension.x0_5
+          cornerRadius: $radius.r1
+        label:
+          fontSize: $font-size.t1
+          lineHeight: $line-height.t1
+
+    variant=weak:
+      enabled:
+        label:
+          fontWeight: $font-weight.medium
+    variant=solid:
+      enabled:
+        label:
+          fontWeight: $font-weight.bold
+    variant=outline:
+      enabled:
+        root:
+          strokeWidth: 1px
+        label:
+          fontWeight: $font-weight.bold
+
+    tone=neutral, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.neutral-weak
+        label:
+          color: $color.fg.neutral-muted
+    tone=neutral, variant=solid:
+      enabled:
+        root:
+          color: $color.palette.gray-800
+        label:
+          color: $color.fg.neutral-inverted
+    tone=neutral, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.neutral-muted
+        label:
+          color: $color.fg.neutral-muted
+
+    tone=brand, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.brand-weak
+        label:
+          color: $color.fg.brand-contrast
+    tone=brand, variant=solid:
+      enabled:
+        root:
+          color: $color.bg.brand-solid
+        label:
+          color: $color.palette.static-white
+    tone=brand, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.brand-weak
+        label:
+          color: $color.fg.brand
+
+    tone=informative, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.informative-weak
+        label:
+          color: $color.fg.informative-contrast
+    tone=informative, variant=solid:
+      enabled:
+        root:
+          color: $color.bg.informative-solid
+        label:
+          color: $color.palette.static-white
+    tone=informative, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.informative-weak
+        label:
+          color: $color.fg.informative
+
+    tone=positive, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.positive-weak
+        label:
+          color: $color.fg.positive-contrast
+    tone=positive, variant=solid:
+      enabled:
+        root:
+          color: $color.bg.positive-solid
+        label:
+          color: $color.palette.static-white
+    tone=positive, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.positive-weak
+        label:
+          color: $color.fg.positive
+
+    tone=warning, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.warning-weak
+        label:
+          color: $color.fg.warning-contrast
+    tone=warning, variant=solid:
+      enabled:
+        root:
+          color: $color.bg.warning-solid
+        label:
+          color: $color.palette.static-black-alpha-900
+    tone=warning, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.warning-weak
+        label:
+          color: $color.fg.warning
+
+    tone=critical, variant=weak:
+      enabled:
+        root:
+          color: $color.bg.critical-weak
+        label:
+          color: $color.fg.critical-contrast
+    tone=critical, variant=solid:
+      enabled:
+        root:
+          color: $color.bg.critical-solid
+        label:
+          color: $color.palette.static-white
+    tone=critical, variant=outline:
+      enabled:
+        root:
+          strokeColor: $color.stroke.critical-weak
+        label:
+          color: $color.fg.critical

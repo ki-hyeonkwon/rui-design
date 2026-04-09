@@ -1,0 +1,30 @@
+/* Radio Label */
+.rui-radio-group[data-size="small"] [data-part="radio-label"] {
+  margin-inline-start: var(--rui-radio-small-label-margin-inline-start);
+  margin-block-start: var(--rui-radio-small-label-margin-block-start);
+
+  font-size: var(--rui-semantic-typography-label4-regular-font-size);
+  font-weight: var(--rui-semantic-typography-label4-regular-font-weight);
+  line-height: var(--rui-semantic-typography-label4-regular-line-height);
+  letter-spacing: var(--rui-semantic-typography-label4-regular-letter-spacing);
+}
+
+.rui-radio-group[data-size="medium"] [data-part="radio-label"] {
+  margin-inline-start: var(--rui-radio-medium-label-margin-inline-start);
+  margin-block-start: var(--rui-radio-medium-label-margin-block-start);
+
+  font-size: var(--rui-semantic-typography-label3-regular-font-size);
+  font-weight: var(--rui-semantic-typography-label3-regular-font-weight);
+  line-height: var(--rui-semantic-typography-label3-regular-line-height);
+  letter-spacing: var(--rui-semantic-typography-label3-regular-letter-spacing);
+}
+
+.rui-radio-group[data-size="large"] [data-part="radio-label"] {
+  margin-inline-start: var(--rui-radio-large-label-margin-inline-start);
+  margin-block-start: var(--rui-radio-large-label-margin-block-start);
+
+  font-size: var(--rui-semantic-typography-label2-regular-font-size);
+  font-weight: var(--rui-semantic-typography-label2-regular-font-weight);
+  line-height: var(--rui-semantic-typography-label2-regular-line-height);
+  letter-spacing: var(--rui-semantic-typography-label2-regular-letter-spacing);
+}

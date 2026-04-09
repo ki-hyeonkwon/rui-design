@@ -1,0 +1,19 @@
+{
+  "name": "@rui/stylesheet",
+  "version": "1.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/stylesheet"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    "./global.css": "./global.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "*.css"
+  ]
+}

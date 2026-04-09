@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "skipLibCheck": true,
+    "typeRoots": ["../node_modules/@types"],
+    "types": ["bun"]
+  },
+  "include": ["./phase1-external-package.ts", "./phase1-external-package-smoke.ts"]
+}

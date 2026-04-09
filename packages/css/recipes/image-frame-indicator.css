@@ -1,0 +1,16 @@
+.seed-image-frame-indicator {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--rui-color-palette-static-black-alpha-800);
+    color: var(--rui-color-palette-static-white);
+    border-radius: var(--rui-radius-full);
+    padding-left: var(--rui-dimension-x1_5);
+    padding-right: var(--rui-dimension-x1_5);
+    padding-top: var(--rui-dimension-x0_5);
+    padding-bottom: var(--rui-dimension-x0_5);
+    font-size: var(--rui-font-size-t1);
+    line-height: var(--rui-line-height-t1);
+    font-weight: var(--rui-font-weight-medium)
+}

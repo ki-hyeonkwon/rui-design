@@ -1,0 +1,86 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: avatar-stack
+  name: Avatar Stack
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          gap:
+            type: dimension
+      item:
+        properties:
+          cornerRadius:
+            type: dimension
+          strokeColor:
+            type: color
+          strokeWidth:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        item:
+          cornerRadius: $radius.full
+          strokeColor: $color.bg.layer-default
+    size=20:
+      enabled:
+        root:
+          gap: -5px
+        item:
+          strokeWidth: 1px
+    size=24:
+      enabled:
+        root:
+          gap: -6px
+        item:
+          strokeWidth: 1px
+    size=36:
+      enabled:
+        root:
+          gap: -8px
+        item:
+          strokeWidth: 2px
+    size=42:
+      enabled:
+        root:
+          gap: -10px
+        item:
+          strokeWidth: 2px
+    size=48:
+      enabled:
+        root:
+          gap: -12px
+        item:
+          strokeWidth: 2px
+    size=56:
+      enabled:
+        root:
+          gap: -13px
+        item:
+          strokeWidth: 3px
+    size=64:
+      enabled:
+        root:
+          gap: -16px
+        item:
+          strokeWidth: 3px
+    size=80:
+      enabled:
+        root:
+          gap: -20px
+        item:
+          strokeWidth: 4px
+    size=96:
+      enabled:
+        root:
+          gap: -24px
+        item:
+          strokeWidth: 5px
+    size=108:
+      enabled:
+        root:
+          gap: -27px
+        item:
+          strokeWidth: 5px

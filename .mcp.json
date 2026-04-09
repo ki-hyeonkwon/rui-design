@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rui": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": ["-y", "@rui/mcp@latest"]
+    },
+    "playwright": {
+      "command": "bunx",
+      "args": ["@playwright/mcp@latest"]
+    }
+  }
+}

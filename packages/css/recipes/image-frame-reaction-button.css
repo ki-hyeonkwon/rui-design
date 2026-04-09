@@ -1,0 +1,52 @@
+.seed-image-frame-reaction-button__root {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    position: relative;
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    background: transparent;
+}
+.seed-image-frame-reaction-button__root::before {
+    content: '';
+    position: absolute;
+    top: calc((var(--rui-dimension-x10) - var(--rui-dimension-x6)) / 2 * -1);
+    right: calc((var(--rui-dimension-x10) - var(--rui-dimension-x6)) / 2 * -1);
+    bottom: calc((var(--rui-dimension-x10) - var(--rui-dimension-x6)) / 2 * -1);
+    left: calc((var(--rui-dimension-x10) - var(--rui-dimension-x6)) / 2 * -1);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+}
+.seed-image-frame-reaction-button__root:is(:focus, [data-focus]) {
+    outline: none;
+}
+.seed-image-frame-reaction-button__root:is(:focus-visible, [data-focus-visible]):before {
+    border-radius: var(--rui-radius-r1);
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+}
+.seed-image-frame-reaction-button__fillIcon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    pointer-events: none;
+}
+.seed-image-frame-reaction-button__lineIcon {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    color: var(--rui-color-palette-static-white);
+    pointer-events: none;
+}
+.seed-image-frame-reaction-button__lineIcon:is([aria-pressed=true], [data-pressed]) {
+    color: var(--rui-color-bg-transparent);
+}

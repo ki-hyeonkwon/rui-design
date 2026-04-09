@@ -1,0 +1,42 @@
+{
+  "name": "figma-mcp",
+  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "bun run build:ui && bun run build:main",
+    "build:ui": "vite build --config vite.ui.config.ts",
+    "build:main": "vite build --config vite.main.config.ts",
+    "watch": "concurrently \"bun run watch:ui\" \"bun run watch:main\"",
+    "watch:ui": "vite build --watch --config vite.ui.config.ts",
+    "watch:main": "vite build --watch --config vite.main.config.ts",
+    "dev": "concurrently \"bun run watch:ui\" \"bun run watch:main\"",
+    "lint": "biome check .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@karrotmarket/react-monochrome-icon": "^1.10.0",
+    "@rui/css": "1.2.7",
+    "@rui/figma": "1.3.9",
+    "@rui/migration-index": "1.0.0",
+    "@rui/react": "1.2.8",
+    "@rui/vite-plugin": "1.1.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.123.0",
+    "@figma/rest-api-spec": "^0.36.0",
+    "@types/node": "^25.0.0",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@vitejs/plugin-react": "^5.0.0",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.31.0",
+    "vite": "^7.3.0",
+    "vite-plugin-singlefile": "^2.2.0",
+    "vite-tsconfig-paths": "^6.0.0"
+  }
+}

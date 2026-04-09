@@ -1,0 +1,41 @@
+{
+  "name": "@rui/rootage-core",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "ecosystem/rootage/core"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    }
+  },
+  "main": "./lib/index.cjs",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "bunchee",
+    "rootage:build": "bun run build",
+    "lint:publish": "bun publint"
+  },
+  "dependencies": {
+    "change-case": "^5.4.4",
+    "dedent": "^1.5.3",
+    "yaml": "^2.7.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

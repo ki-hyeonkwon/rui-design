@@ -1,0 +1,36 @@
+{
+  "name": "@rui/migration-index",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/migration-index"
+  },
+  "type": "module",
+  "main": "./index.mjs",
+  "types": "./index.d.ts",
+  "files": [
+    "*"
+  ],
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.mjs"
+    },
+    "./color": {
+      "types": "./color.d.ts",
+      "import": "./color.mjs"
+    },
+    "./typography": {
+      "types": "./typography.d.ts",
+      "import": "./typography.mjs"
+    },
+    "./iconography": {
+      "types": "./iconography.d.ts",
+      "import": "./iconography.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

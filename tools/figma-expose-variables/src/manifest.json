@@ -1,0 +1,22 @@
+{
+  "name": "Expose Variables",
+  "id": "1420312447239477382",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "main": "main.js",
+  "menu": [
+    {
+      "name": "Color",
+      "command": "add-color-variable-preview-frame"
+    },
+    {
+      "name": "Color (combinations 제외)",
+      "command": "add-color-variable-preview-frame-without-combinations"
+    }
+  ],
+  "relaunchButtons": [{ "command": "update", "name": "이 프리뷰 프레임 업데이트" }],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"]
+  }
+}

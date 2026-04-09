@@ -1,0 +1,161 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: reaction-button
+  name: Reaction Button
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+          colorDuration:
+            type: duration
+          colorTimingFunction:
+            type: cubicBezier
+          strokeColor:
+            type: color
+          strokeWidth:
+            type: dimension
+          minHeight:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          gap:
+            type: dimension
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+      label:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+      count:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+      prefixIcon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      progressCircle:
+        properties:
+          trackColor:
+            type: color
+          rangeColor:
+            type: color
+          size:
+            type: dimension
+          thickness:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        root:
+          strokeColor: $color.stroke.neutral-muted
+          strokeWidth: 1px
+          color: $color.bg.transparent
+          colorDuration: $duration.color-transition
+          colorTimingFunction: $timing-function.easing
+        label:
+          color: $color.fg.neutral
+          fontWeight: $font-weight.medium
+        count:
+          color: $color.fg.neutral
+          fontWeight: $font-weight.bold
+        prefixIcon:
+          color: $color.fg.neutral
+        progressCircle:
+          trackColor: $color.palette.gray-500
+          rangeColor: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      selected:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.brand-weak
+          strokeWidth: 1px
+        label:
+          color: $color.fg.brand
+        count:
+          color: $color.fg.brand
+        prefixIcon:
+          color: $color.fg.brand
+        progressCircle:
+          trackColor: $color.palette.carrot-200
+          rangeColor: $color.fg.brand
+      selected,pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+          strokeWidth: 0px
+        label:
+          color: $color.fg.disabled
+        count:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.neutral-weak-pressed
+      selected,loading:
+        root:
+          color: $color.bg.transparent-pressed
+          strokeWidth: 1px
+    size=xsmall:
+      enabled:
+        root:
+          minHeight: $dimension.x8
+          cornerRadius: $radius.full
+          gap: $dimension.x1
+          paddingX: $dimension.x3
+          paddingY: $dimension.x1_5
+        prefixIcon:
+          size: 18px
+        label:
+          fontSize: $font-size.t3
+          lineHeight: $line-height.t3
+        count:
+          fontSize: $font-size.t3
+          lineHeight: $line-height.t3
+        progressCircle:
+          size: 14px
+          thickness: 2px
+    size=small:
+      enabled:
+        root:
+          minHeight: $dimension.x9
+          cornerRadius: $radius.full
+          gap: $dimension.x1
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x2
+        prefixIcon:
+          size: 18px
+        label:
+          fontSize: $font-size.t3
+          lineHeight: $line-height.t3
+        count:
+          fontSize: $font-size.t3
+          lineHeight: $line-height.t3
+        progressCircle:
+          size: 14px
+          thickness: 2px

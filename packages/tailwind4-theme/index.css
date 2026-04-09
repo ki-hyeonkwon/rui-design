@@ -1,0 +1,825 @@
+@theme {
+  --color-palette-gray-00: var(--rui-color-palette-gray-00);
+  --color-palette-gray-100: var(--rui-color-palette-gray-100);
+  --color-palette-gray-200: var(--rui-color-palette-gray-200);
+  --color-palette-gray-300: var(--rui-color-palette-gray-300);
+  --color-palette-gray-400: var(--rui-color-palette-gray-400);
+  --color-palette-gray-500: var(--rui-color-palette-gray-500);
+  --color-palette-gray-600: var(--rui-color-palette-gray-600);
+  --color-palette-gray-700: var(--rui-color-palette-gray-700);
+  --color-palette-gray-800: var(--rui-color-palette-gray-800);
+  --color-palette-gray-900: var(--rui-color-palette-gray-900);
+  --color-palette-gray-1000: var(--rui-color-palette-gray-1000);
+  --color-palette-carrot-100: var(--rui-color-palette-carrot-100);
+  --color-palette-carrot-200: var(--rui-color-palette-carrot-200);
+  --color-palette-carrot-300: var(--rui-color-palette-carrot-300);
+  --color-palette-carrot-400: var(--rui-color-palette-carrot-400);
+  --color-palette-carrot-500: var(--rui-color-palette-carrot-500);
+  --color-palette-carrot-600: var(--rui-color-palette-carrot-600);
+  --color-palette-carrot-700: var(--rui-color-palette-carrot-700);
+  --color-palette-carrot-800: var(--rui-color-palette-carrot-800);
+  --color-palette-carrot-900: var(--rui-color-palette-carrot-900);
+  --color-palette-carrot-1000: var(--rui-color-palette-carrot-1000);
+  --color-palette-blue-100: var(--rui-color-palette-blue-100);
+  --color-palette-blue-200: var(--rui-color-palette-blue-200);
+  --color-palette-blue-300: var(--rui-color-palette-blue-300);
+  --color-palette-blue-400: var(--rui-color-palette-blue-400);
+  --color-palette-blue-500: var(--rui-color-palette-blue-500);
+  --color-palette-blue-600: var(--rui-color-palette-blue-600);
+  --color-palette-blue-700: var(--rui-color-palette-blue-700);
+  --color-palette-blue-800: var(--rui-color-palette-blue-800);
+  --color-palette-blue-900: var(--rui-color-palette-blue-900);
+  --color-palette-blue-1000: var(--rui-color-palette-blue-1000);
+  --color-palette-red-100: var(--rui-color-palette-red-100);
+  --color-palette-red-200: var(--rui-color-palette-red-200);
+  --color-palette-red-300: var(--rui-color-palette-red-300);
+  --color-palette-red-400: var(--rui-color-palette-red-400);
+  --color-palette-red-500: var(--rui-color-palette-red-500);
+  --color-palette-red-600: var(--rui-color-palette-red-600);
+  --color-palette-red-700: var(--rui-color-palette-red-700);
+  --color-palette-red-800: var(--rui-color-palette-red-800);
+  --color-palette-red-900: var(--rui-color-palette-red-900);
+  --color-palette-red-1000: var(--rui-color-palette-red-1000);
+  --color-palette-green-100: var(--rui-color-palette-green-100);
+  --color-palette-green-200: var(--rui-color-palette-green-200);
+  --color-palette-green-300: var(--rui-color-palette-green-300);
+  --color-palette-green-400: var(--rui-color-palette-green-400);
+  --color-palette-green-500: var(--rui-color-palette-green-500);
+  --color-palette-green-600: var(--rui-color-palette-green-600);
+  --color-palette-green-700: var(--rui-color-palette-green-700);
+  --color-palette-green-800: var(--rui-color-palette-green-800);
+  --color-palette-green-900: var(--rui-color-palette-green-900);
+  --color-palette-green-1000: var(--rui-color-palette-green-1000);
+  --color-palette-yellow-100: var(--rui-color-palette-yellow-100);
+  --color-palette-yellow-200: var(--rui-color-palette-yellow-200);
+  --color-palette-yellow-300: var(--rui-color-palette-yellow-300);
+  --color-palette-yellow-400: var(--rui-color-palette-yellow-400);
+  --color-palette-yellow-500: var(--rui-color-palette-yellow-500);
+  --color-palette-yellow-600: var(--rui-color-palette-yellow-600);
+  --color-palette-yellow-700: var(--rui-color-palette-yellow-700);
+  --color-palette-yellow-800: var(--rui-color-palette-yellow-800);
+  --color-palette-yellow-900: var(--rui-color-palette-yellow-900);
+  --color-palette-yellow-1000: var(--rui-color-palette-yellow-1000);
+  --color-palette-purple-100: var(--rui-color-palette-purple-100);
+  --color-palette-purple-200: var(--rui-color-palette-purple-200);
+  --color-palette-purple-300: var(--rui-color-palette-purple-300);
+  --color-palette-purple-400: var(--rui-color-palette-purple-400);
+  --color-palette-purple-500: var(--rui-color-palette-purple-500);
+  --color-palette-purple-600: var(--rui-color-palette-purple-600);
+  --color-palette-purple-700: var(--rui-color-palette-purple-700);
+  --color-palette-purple-800: var(--rui-color-palette-purple-800);
+  --color-palette-purple-900: var(--rui-color-palette-purple-900);
+  --color-palette-purple-1000: var(--rui-color-palette-purple-1000);
+  --color-palette-static-black: var(--rui-color-palette-static-black);
+  --color-palette-static-black-alpha-100: var(--rui-color-palette-static-black-alpha-100);
+  --color-palette-static-black-alpha-200: var(--rui-color-palette-static-black-alpha-200);
+  --color-palette-static-black-alpha-300: var(--rui-color-palette-static-black-alpha-300);
+  --color-palette-static-black-alpha-400: var(--rui-color-palette-static-black-alpha-400);
+  --color-palette-static-black-alpha-500: var(--rui-color-palette-static-black-alpha-500);
+  --color-palette-static-black-alpha-600: var(--rui-color-palette-static-black-alpha-600);
+  --color-palette-static-black-alpha-700: var(--rui-color-palette-static-black-alpha-700);
+  --color-palette-static-black-alpha-800: var(--rui-color-palette-static-black-alpha-800);
+  --color-palette-static-black-alpha-900: var(--rui-color-palette-static-black-alpha-900);
+  --color-palette-static-black-alpha-1000: var(--rui-color-palette-static-black-alpha-1000);
+  --color-palette-static-white: var(--rui-color-palette-static-white);
+  --color-palette-static-white-alpha-50: var(--rui-color-palette-static-white-alpha-50);
+  --color-palette-static-white-alpha-100: var(--rui-color-palette-static-white-alpha-100);
+  --color-palette-static-white-alpha-200: var(--rui-color-palette-static-white-alpha-200);
+  --color-palette-static-white-alpha-300: var(--rui-color-palette-static-white-alpha-300);
+  --color-palette-static-white-alpha-400: var(--rui-color-palette-static-white-alpha-400);
+  --color-palette-static-white-alpha-500: var(--rui-color-palette-static-white-alpha-500);
+  --color-palette-static-white-alpha-600: var(--rui-color-palette-static-white-alpha-600);
+  --color-palette-static-white-alpha-700: var(--rui-color-palette-static-white-alpha-700);
+  --color-palette-static-white-alpha-800: var(--rui-color-palette-static-white-alpha-800);
+  --color-palette-static-white-alpha-900: var(--rui-color-palette-static-white-alpha-900);
+  --color-palette-static-white-alpha-1000: var(--rui-color-palette-static-white-alpha-1000);
+  --color-fg-brand: var(--rui-color-fg-brand);
+  --color-fg-brand-contrast: var(--rui-color-fg-brand-contrast);
+  --color-fg-critical: var(--rui-color-fg-critical);
+  --color-fg-critical-contrast: var(--rui-color-fg-critical-contrast);
+  --color-fg-disabled: var(--rui-color-fg-disabled);
+  --color-fg-informative: var(--rui-color-fg-informative);
+  --color-fg-informative-contrast: var(--rui-color-fg-informative-contrast);
+  --color-fg-neutral: var(--rui-color-fg-neutral);
+  --color-fg-neutral-inverted: var(--rui-color-fg-neutral-inverted);
+  --color-fg-neutral-muted: var(--rui-color-fg-neutral-muted);
+  --color-fg-neutral-subtle: var(--rui-color-fg-neutral-subtle);
+  --color-fg-placeholder: var(--rui-color-fg-placeholder);
+  --color-fg-positive: var(--rui-color-fg-positive);
+  --color-fg-positive-contrast: var(--rui-color-fg-positive-contrast);
+  --color-fg-warning: var(--rui-color-fg-warning);
+  --color-fg-warning-contrast: var(--rui-color-fg-warning-contrast);
+  --color-bg-brand-solid: var(--rui-color-bg-brand-solid);
+  --color-bg-brand-solid-pressed: var(--rui-color-bg-brand-solid-pressed);
+  --color-bg-brand-weak: var(--rui-color-bg-brand-weak);
+  --color-bg-brand-weak-pressed: var(--rui-color-bg-brand-weak-pressed);
+  --color-bg-critical-solid: var(--rui-color-bg-critical-solid);
+  --color-bg-critical-solid-pressed: var(--rui-color-bg-critical-solid-pressed);
+  --color-bg-critical-weak: var(--rui-color-bg-critical-weak);
+  --color-bg-critical-weak-pressed: var(--rui-color-bg-critical-weak-pressed);
+  --color-bg-disabled: var(--rui-color-bg-disabled);
+  --color-bg-informative-solid: var(--rui-color-bg-informative-solid);
+  --color-bg-informative-solid-pressed: var(--rui-color-bg-informative-solid-pressed);
+  --color-bg-informative-weak: var(--rui-color-bg-informative-weak);
+  --color-bg-informative-weak-pressed: var(--rui-color-bg-informative-weak-pressed);
+  --color-bg-layer-basement: var(--rui-color-bg-layer-basement);
+  --color-bg-layer-default: var(--rui-color-bg-layer-default);
+  --color-bg-layer-default-pressed: var(--rui-color-bg-layer-default-pressed);
+  --color-bg-layer-fill: var(--rui-color-bg-layer-fill);
+  --color-bg-layer-floating: var(--rui-color-bg-layer-floating);
+  --color-bg-layer-floating-pressed: var(--rui-color-bg-layer-floating-pressed);
+  --color-bg-magic-weak: var(--rui-color-bg-magic-weak);
+  --color-bg-neutral-inverted: var(--rui-color-bg-neutral-inverted);
+  --color-bg-neutral-inverted-pressed: var(--rui-color-bg-neutral-inverted-pressed);
+  --color-bg-neutral-solid: var(--rui-color-bg-neutral-solid);
+  --color-bg-neutral-solid-muted: var(--rui-color-bg-neutral-solid-muted);
+  --color-bg-neutral-solid-muted-pressed: var(--rui-color-bg-neutral-solid-muted-pressed);
+  --color-bg-neutral-weak: var(--rui-color-bg-neutral-weak);
+  --color-bg-neutral-weak-alpha: var(--rui-color-bg-neutral-weak-alpha);
+  --color-bg-neutral-weak-alpha-pressed: var(--rui-color-bg-neutral-weak-alpha-pressed);
+  --color-bg-neutral-weak-pressed: var(--rui-color-bg-neutral-weak-pressed);
+  --color-bg-overlay: var(--rui-color-bg-overlay);
+  --color-bg-overlay-muted: var(--rui-color-bg-overlay-muted);
+  --color-bg-positive-solid: var(--rui-color-bg-positive-solid);
+  --color-bg-positive-solid-pressed: var(--rui-color-bg-positive-solid-pressed);
+  --color-bg-positive-weak: var(--rui-color-bg-positive-weak);
+  --color-bg-positive-weak-pressed: var(--rui-color-bg-positive-weak-pressed);
+  --color-bg-transparent: var(--rui-color-bg-transparent);
+  --color-bg-transparent-pressed: var(--rui-color-bg-transparent-pressed);
+  --color-bg-warning-solid: var(--rui-color-bg-warning-solid);
+  --color-bg-warning-solid-pressed: var(--rui-color-bg-warning-solid-pressed);
+  --color-bg-warning-weak: var(--rui-color-bg-warning-weak);
+  --color-bg-warning-weak-pressed: var(--rui-color-bg-warning-weak-pressed);
+  --color-stroke-brand-solid: var(--rui-color-stroke-brand-solid);
+  --color-stroke-brand-weak: var(--rui-color-stroke-brand-weak);
+  --color-stroke-critical-solid: var(--rui-color-stroke-critical-solid);
+  --color-stroke-critical-weak: var(--rui-color-stroke-critical-weak);
+  --color-stroke-informative-solid: var(--rui-color-stroke-informative-solid);
+  --color-stroke-informative-weak: var(--rui-color-stroke-informative-weak);
+  --color-stroke-neutral-contrast: var(--rui-color-stroke-neutral-contrast);
+  --color-stroke-neutral-muted: var(--rui-color-stroke-neutral-muted);
+  --color-stroke-neutral-solid: var(--rui-color-stroke-neutral-solid);
+  --color-stroke-neutral-subtle: var(--rui-color-stroke-neutral-subtle);
+  --color-stroke-neutral-weak: var(--rui-color-stroke-neutral-weak);
+  --color-stroke-positive-solid: var(--rui-color-stroke-positive-solid);
+  --color-stroke-positive-weak: var(--rui-color-stroke-positive-weak);
+  --color-stroke-warning-solid: var(--rui-color-stroke-warning-solid);
+  --color-stroke-warning-weak: var(--rui-color-stroke-warning-weak);
+  --color-stroke-focus-ring: var(--rui-color-stroke-focus-ring);
+  --color-manner-temp-l1-bg: var(--rui-color-manner-temp-l1-bg);
+  --color-manner-temp-l1-text: var(--rui-color-manner-temp-l1-text);
+  --color-manner-temp-l10-bg: var(--rui-color-manner-temp-l10-bg);
+  --color-manner-temp-l10-text: var(--rui-color-manner-temp-l10-text);
+  --color-manner-temp-l2-bg: var(--rui-color-manner-temp-l2-bg);
+  --color-manner-temp-l2-text: var(--rui-color-manner-temp-l2-text);
+  --color-manner-temp-l3-bg: var(--rui-color-manner-temp-l3-bg);
+  --color-manner-temp-l3-text: var(--rui-color-manner-temp-l3-text);
+  --color-manner-temp-l4-bg: var(--rui-color-manner-temp-l4-bg);
+  --color-manner-temp-l4-text: var(--rui-color-manner-temp-l4-text);
+  --color-manner-temp-l5-bg: var(--rui-color-manner-temp-l5-bg);
+  --color-manner-temp-l5-text: var(--rui-color-manner-temp-l5-text);
+  --color-manner-temp-l6-bg: var(--rui-color-manner-temp-l6-bg);
+  --color-manner-temp-l6-text: var(--rui-color-manner-temp-l6-text);
+  --color-manner-temp-l7-bg: var(--rui-color-manner-temp-l7-bg);
+  --color-manner-temp-l7-text: var(--rui-color-manner-temp-l7-text);
+  --color-manner-temp-l8-bg: var(--rui-color-manner-temp-l8-bg);
+  --color-manner-temp-l8-text: var(--rui-color-manner-temp-l8-text);
+  --color-manner-temp-l9-bg: var(--rui-color-manner-temp-l9-bg);
+  --color-manner-temp-l9-text: var(--rui-color-manner-temp-l9-text);
+  --color-banner-blue: var(--rui-color-banner-blue);
+  --color-banner-cool-gray: var(--rui-color-banner-cool-gray);
+  --color-banner-green: var(--rui-color-banner-green);
+  --color-banner-orange: var(--rui-color-banner-orange);
+  --color-banner-pink: var(--rui-color-banner-pink);
+  --color-banner-purple: var(--rui-color-banner-purple);
+  --color-banner-red: var(--rui-color-banner-red);
+  --color-banner-teal: var(--rui-color-banner-teal);
+  --color-banner-warm-gray: var(--rui-color-banner-warm-gray);
+  --color-banner-yellow: var(--rui-color-banner-yellow);
+  --dimension-x0_5: var(--rui-dimension-x0_5);
+  --dimension-x1: var(--rui-dimension-x1);
+  --dimension-x1_5: var(--rui-dimension-x1_5);
+  --dimension-x2: var(--rui-dimension-x2);
+  --dimension-x2_5: var(--rui-dimension-x2_5);
+  --dimension-x3: var(--rui-dimension-x3);
+  --dimension-x3_5: var(--rui-dimension-x3_5);
+  --dimension-x4: var(--rui-dimension-x4);
+  --dimension-x4_5: var(--rui-dimension-x4_5);
+  --dimension-x5: var(--rui-dimension-x5);
+  --dimension-x6: var(--rui-dimension-x6);
+  --dimension-x7: var(--rui-dimension-x7);
+  --dimension-x8: var(--rui-dimension-x8);
+  --dimension-x9: var(--rui-dimension-x9);
+  --dimension-x10: var(--rui-dimension-x10);
+  --dimension-x12: var(--rui-dimension-x12);
+  --dimension-x13: var(--rui-dimension-x13);
+  --dimension-x14: var(--rui-dimension-x14);
+  --dimension-x16: var(--rui-dimension-x16);
+  --dimension-spacing-x-between-chips: var(--rui-dimension-spacing-x-between-chips);
+  --dimension-spacing-x-global-gutter: var(--rui-dimension-spacing-x-global-gutter);
+  --dimension-spacing-y-component-default: var(--rui-dimension-spacing-y-component-default);
+  --dimension-spacing-y-nav-to-title: var(--rui-dimension-spacing-y-nav-to-title);
+  --dimension-spacing-y-screen-bottom: var(--rui-dimension-spacing-y-screen-bottom);
+  --dimension-spacing-y-between-text: var(--rui-dimension-spacing-y-between-text);
+  --duration-d1: var(--rui-duration-d1);
+  --duration-d2: var(--rui-duration-d2);
+  --duration-d3: var(--rui-duration-d3);
+  --duration-d4: var(--rui-duration-d4);
+  --duration-d5: var(--rui-duration-d5);
+  --duration-d6: var(--rui-duration-d6);
+  --duration-color-transition: var(--rui-duration-color-transition);
+  --font-size-t1: var(--rui-font-size-t1);
+  --font-size-t2: var(--rui-font-size-t2);
+  --font-size-t3: var(--rui-font-size-t3);
+  --font-size-t4: var(--rui-font-size-t4);
+  --font-size-t5: var(--rui-font-size-t5);
+  --font-size-t6: var(--rui-font-size-t6);
+  --font-size-t7: var(--rui-font-size-t7);
+  --font-size-t8: var(--rui-font-size-t8);
+  --font-size-t9: var(--rui-font-size-t9);
+  --font-size-t10: var(--rui-font-size-t10);
+  --font-size-t1-static: var(--rui-font-size-t1-static);
+  --font-size-t2-static: var(--rui-font-size-t2-static);
+  --font-size-t3-static: var(--rui-font-size-t3-static);
+  --font-size-t4-static: var(--rui-font-size-t4-static);
+  --font-size-t5-static: var(--rui-font-size-t5-static);
+  --font-size-t6-static: var(--rui-font-size-t6-static);
+  --font-size-t7-static: var(--rui-font-size-t7-static);
+  --font-size-t8-static: var(--rui-font-size-t8-static);
+  --font-size-t9-static: var(--rui-font-size-t9-static);
+  --font-size-t10-static: var(--rui-font-size-t10-static);
+  --font-weight-regular: var(--rui-font-weight-regular);
+  --font-weight-medium: var(--rui-font-weight-medium);
+  --font-weight-bold: var(--rui-font-weight-bold);
+  --gradient-fade-layer-floating: var(--rui-gradient-fade-layer-floating);
+  --gradient-fade-layer-default: var(--rui-gradient-fade-layer-default);
+  --gradient-glow-magic: var(--rui-gradient-glow-magic);
+  --gradient-glow-magic-pressed: var(--rui-gradient-glow-magic-pressed);
+  --gradient-highlight-magic: var(--rui-gradient-highlight-magic);
+  --gradient-highlight-magic-pressed: var(--rui-gradient-highlight-magic-pressed);
+  --gradient-shimmer-magic: var(--rui-gradient-shimmer-magic);
+  --gradient-shimmer-neutral: var(--rui-gradient-shimmer-neutral);
+  --line-height-t1: var(--rui-line-height-t1);
+  --line-height-t2: var(--rui-line-height-t2);
+  --line-height-t3: var(--rui-line-height-t3);
+  --line-height-t4: var(--rui-line-height-t4);
+  --line-height-t5: var(--rui-line-height-t5);
+  --line-height-t6: var(--rui-line-height-t6);
+  --line-height-t7: var(--rui-line-height-t7);
+  --line-height-t8: var(--rui-line-height-t8);
+  --line-height-t9: var(--rui-line-height-t9);
+  --line-height-t10: var(--rui-line-height-t10);
+  --line-height-t1-static: var(--rui-line-height-t1-static);
+  --line-height-t2-static: var(--rui-line-height-t2-static);
+  --line-height-t3-static: var(--rui-line-height-t3-static);
+  --line-height-t4-static: var(--rui-line-height-t4-static);
+  --line-height-t5-static: var(--rui-line-height-t5-static);
+  --line-height-t6-static: var(--rui-line-height-t6-static);
+  --line-height-t7-static: var(--rui-line-height-t7-static);
+  --line-height-t8-static: var(--rui-line-height-t8-static);
+  --line-height-t9-static: var(--rui-line-height-t9-static);
+  --line-height-t10-static: var(--rui-line-height-t10-static);
+  --radius-r0_5: var(--rui-radius-r0_5);
+  --radius-r1: var(--rui-radius-r1);
+  --radius-r1_5: var(--rui-radius-r1_5);
+  --radius-r2: var(--rui-radius-r2);
+  --radius-r2_5: var(--rui-radius-r2_5);
+  --radius-r3: var(--rui-radius-r3);
+  --radius-r3_5: var(--rui-radius-r3_5);
+  --radius-r4: var(--rui-radius-r4);
+  --radius-r5: var(--rui-radius-r5);
+  --radius-r6: var(--rui-radius-r6);
+  --radius-full: var(--rui-radius-full);
+  --shadow-s1: var(--rui-shadow-s1);
+  --shadow-s2: var(--rui-shadow-s2);
+  --shadow-s3: var(--rui-shadow-s3);
+  --timing-function-linear: var(--rui-timing-function-linear);
+  --timing-function-easing: var(--rui-timing-function-easing);
+  --timing-function-enter: var(--rui-timing-function-enter);
+  --timing-function-exit: var(--rui-timing-function-exit);
+  --timing-function-enter-expressive: var(--rui-timing-function-enter-expressive);
+  --timing-function-exit-expressive: var(--rui-timing-function-exit-expressive);
+  --gradient-stops-fade-layer-floating: #ffffff00 0.00%, #000000 100.00%;
+  --gradient-stops-fade-layer-default: #000000 0.00%, #ffffff00 100.00%;
+  --gradient-stops-glow-magic: #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%;
+  --gradient-stops-glow-magic-pressed: #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%;
+  --gradient-stops-highlight-magic: #ff6600 20.00%, #d25aca 100.00%;
+  --gradient-stops-highlight-magic-pressed: #e14f00 20.00%, #ae58bf 100.00%;
+  --gradient-stops-shimmer-magic: #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%;
+  --gradient-stops-shimmer-neutral: #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%;
+  --gradient-fade-layer-floating-to-t: linear-gradient(to top, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-tr: linear-gradient(to top right, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-r: linear-gradient(to right, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-br: linear-gradient(to bottom right, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-b: linear-gradient(to bottom, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-bl: linear-gradient(to bottom left, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-l: linear-gradient(to left, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-floating-to-tl: linear-gradient(to top left, #ffffff00 0.00%, #000000 100.00%);
+  --gradient-fade-layer-default-to-t: linear-gradient(to top, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-tr: linear-gradient(to top right, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-r: linear-gradient(to right, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-br: linear-gradient(to bottom right, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-b: linear-gradient(to bottom, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-bl: linear-gradient(to bottom left, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-l: linear-gradient(to left, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-fade-layer-default-to-tl: linear-gradient(to top left, #000000 0.00%, #ffffff00 100.00%);
+  --gradient-glow-magic-to-t: linear-gradient(to top, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-tr: linear-gradient(to top right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-r: linear-gradient(to right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-br: linear-gradient(to bottom right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-b: linear-gradient(to bottom, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-bl: linear-gradient(to bottom left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-l: linear-gradient(to left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-to-tl: linear-gradient(to top left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%);
+  --gradient-glow-magic-pressed-to-t: linear-gradient(to top, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-tr: linear-gradient(to top right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-r: linear-gradient(to right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-br: linear-gradient(to bottom right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-b: linear-gradient(to bottom, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-bl: linear-gradient(to bottom left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-l: linear-gradient(to left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-glow-magic-pressed-to-tl: linear-gradient(to top left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%);
+  --gradient-highlight-magic-to-t: linear-gradient(to top, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-tr: linear-gradient(to top right, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-r: linear-gradient(to right, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-br: linear-gradient(to bottom right, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-b: linear-gradient(to bottom, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-bl: linear-gradient(to bottom left, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-l: linear-gradient(to left, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-to-tl: linear-gradient(to top left, #ff6600 20.00%, #d25aca 100.00%);
+  --gradient-highlight-magic-pressed-to-t: linear-gradient(to top, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-tr: linear-gradient(to top right, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-r: linear-gradient(to right, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-br: linear-gradient(to bottom right, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-b: linear-gradient(to bottom, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-bl: linear-gradient(to bottom left, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-l: linear-gradient(to left, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-highlight-magic-pressed-to-tl: linear-gradient(to top left, #e14f00 20.00%, #ae58bf 100.00%);
+  --gradient-shimmer-magic-to-t: linear-gradient(to top, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-tr: linear-gradient(to top right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-r: linear-gradient(to right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-br: linear-gradient(to bottom right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-b: linear-gradient(to bottom, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-bl: linear-gradient(to bottom left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-l: linear-gradient(to left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-magic-to-tl: linear-gradient(to top left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%);
+  --gradient-shimmer-neutral-to-t: linear-gradient(to top, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-tr: linear-gradient(to top right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-r: linear-gradient(to right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-br: linear-gradient(to bottom right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-b: linear-gradient(to bottom, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-bl: linear-gradient(to bottom left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-l: linear-gradient(to left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+  --gradient-shimmer-neutral-to-tl: linear-gradient(to top left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%);
+}
+
+@utility screen-title {
+    font-size: var(--rui-font-size-t10);
+    line-height: var(--rui-line-height-t10);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility article-body {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t6);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility article-note {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t1-regular {
+    font-size: var(--rui-font-size-t1);
+    line-height: var(--rui-line-height-t1);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t1-medium {
+    font-size: var(--rui-font-size-t1);
+    line-height: var(--rui-line-height-t1);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t1-bold {
+    font-size: var(--rui-font-size-t1);
+    line-height: var(--rui-line-height-t1);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t2-regular {
+    font-size: var(--rui-font-size-t2);
+    line-height: var(--rui-line-height-t2);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t2-medium {
+    font-size: var(--rui-font-size-t2);
+    line-height: var(--rui-line-height-t2);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t2-bold {
+    font-size: var(--rui-font-size-t2);
+    line-height: var(--rui-line-height-t2);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t3-regular {
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t3-medium {
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t3-bold {
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t4-regular {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t4-medium {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t4-bold {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t5-regular {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t5-medium {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t5-bold {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t6-regular {
+    font-size: var(--rui-font-size-t6);
+    line-height: var(--rui-line-height-t6);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t6-medium {
+    font-size: var(--rui-font-size-t6);
+    line-height: var(--rui-line-height-t6);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t6-bold {
+    font-size: var(--rui-font-size-t6);
+    line-height: var(--rui-line-height-t6);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t7-regular {
+    font-size: var(--rui-font-size-t7);
+    line-height: var(--rui-line-height-t7);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t7-medium {
+    font-size: var(--rui-font-size-t7);
+    line-height: var(--rui-line-height-t7);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t7-bold {
+    font-size: var(--rui-font-size-t7);
+    line-height: var(--rui-line-height-t7);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t8-bold {
+    font-size: var(--rui-font-size-t8);
+    line-height: var(--rui-line-height-t8);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t9-bold {
+    font-size: var(--rui-font-size-t9);
+    line-height: var(--rui-line-height-t9);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t10-bold {
+    font-size: var(--rui-font-size-t10);
+    line-height: var(--rui-line-height-t10);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t1-static-regular {
+    font-size: var(--rui-font-size-t1-static);
+    line-height: var(--rui-line-height-t1-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t1-static-medium {
+    font-size: var(--rui-font-size-t1-static);
+    line-height: var(--rui-line-height-t1-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t1-static-bold {
+    font-size: var(--rui-font-size-t1-static);
+    line-height: var(--rui-line-height-t1-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t2-static-regular {
+    font-size: var(--rui-font-size-t2-static);
+    line-height: var(--rui-line-height-t2-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t2-static-medium {
+    font-size: var(--rui-font-size-t2-static);
+    line-height: var(--rui-line-height-t2-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t2-static-bold {
+    font-size: var(--rui-font-size-t2-static);
+    line-height: var(--rui-line-height-t2-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t3-static-regular {
+    font-size: var(--rui-font-size-t3-static);
+    line-height: var(--rui-line-height-t3-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t3-static-medium {
+    font-size: var(--rui-font-size-t3-static);
+    line-height: var(--rui-line-height-t3-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t3-static-bold {
+    font-size: var(--rui-font-size-t3-static);
+    line-height: var(--rui-line-height-t3-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t4-static-regular {
+    font-size: var(--rui-font-size-t4-static);
+    line-height: var(--rui-line-height-t4-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t4-static-medium {
+    font-size: var(--rui-font-size-t4-static);
+    line-height: var(--rui-line-height-t4-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t4-static-bold {
+    font-size: var(--rui-font-size-t4-static);
+    line-height: var(--rui-line-height-t4-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t5-static-regular {
+    font-size: var(--rui-font-size-t5-static);
+    line-height: var(--rui-line-height-t5-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t5-static-medium {
+    font-size: var(--rui-font-size-t5-static);
+    line-height: var(--rui-line-height-t5-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t5-static-bold {
+    font-size: var(--rui-font-size-t5-static);
+    line-height: var(--rui-line-height-t5-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t6-static-regular {
+    font-size: var(--rui-font-size-t6-static);
+    line-height: var(--rui-line-height-t6-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t6-static-medium {
+    font-size: var(--rui-font-size-t6-static);
+    line-height: var(--rui-line-height-t6-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t6-static-bold {
+    font-size: var(--rui-font-size-t6-static);
+    line-height: var(--rui-line-height-t6-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t7-static-regular {
+    font-size: var(--rui-font-size-t7-static);
+    line-height: var(--rui-line-height-t7-static);
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+@utility t7-static-medium {
+    font-size: var(--rui-font-size-t7-static);
+    line-height: var(--rui-line-height-t7-static);
+    font-weight: var(--rui-font-weight-medium);
+  }
+
+@utility t7-static-bold {
+    font-size: var(--rui-font-size-t7-static);
+    line-height: var(--rui-line-height-t7-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t8-static-bold {
+    font-size: var(--rui-font-size-t8-static);
+    line-height: var(--rui-line-height-t8-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t9-static-bold {
+    font-size: var(--rui-font-size-t9-static);
+    line-height: var(--rui-line-height-t9-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility t10-static-bold {
+    font-size: var(--rui-font-size-t10-static);
+    line-height: var(--rui-line-height-t10-static);
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+@utility size-* {
+  width: --value(--dimension-*);
+  height: --value(--dimension-*);
+}
+
+@utility w-* {
+  width: --value(--dimension-*);
+}
+
+@utility h-* {
+  height: --value(--dimension-*);
+}
+
+@utility p-* {
+  padding: --value(--dimension-*);
+}
+
+@utility pt-* {
+  padding-top: --value(--dimension-*);
+}
+
+@utility pb-* {
+  padding-bottom: --value(--dimension-*);
+}
+
+@utility pl-* {
+  padding-left: --value(--dimension-*);
+}
+
+@utility pr-* {
+  padding-right: --value(--dimension-*);
+}
+
+@utility px-* {
+  padding-left: --value(--dimension-*);
+  padding-right: --value(--dimension-*);
+}
+
+@utility py-* {
+  padding-top: --value(--dimension-*);
+  padding-bottom: --value(--dimension-*);
+}
+
+@utility m-* {
+  margin: --value(--dimension-*);
+}
+
+@utility mt-* {
+  margin-top: --value(--dimension-*);
+}
+
+@utility mb-* {
+  margin-bottom: --value(--dimension-*);
+}
+
+@utility ml-* {
+  margin-left: --value(--dimension-*);
+}
+
+@utility mr-* {
+  margin-right: --value(--dimension-*);
+}
+
+@utility mx-* {
+  margin-left: --value(--dimension-*);
+  margin-right: --value(--dimension-*);
+}
+
+@utility my-* {
+  margin-top: --value(--dimension-*);
+  margin-bottom: --value(--dimension-*);
+}
+
+@utility gap-* {
+  gap: --value(--dimension-*);
+}
+
+@utility gap-x-* {
+  column-gap: --value(--dimension-*);
+}
+
+@utility gap-y-* {
+  row-gap: --value(--dimension-*);
+}
+
+@utility radius-* {
+  border-radius: --value(--radius-*);
+}
+
+@utility text-size-* {
+  font-size: --value(--font-size-*);
+}
+
+@utility leading-* {
+  line-height: --value(--line-height-*);
+}
+
+@utility font-* {
+  font-weight: --value(--font-weight-*);
+}
+
+@utility duration-* {
+  transition-duration: --value(--duration-*);
+}
+
+@utility easing-* {
+  transition-timing-function: --value(--timing-function-*);
+}
+
+@utility shadow-* {
+  box-shadow: --value(--shadow-*);
+}
+
+@utility bg-gradient-fade-layer-floating-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-fade-layer-floating));
+}
+
+@utility bg-gradient-fade-layer-default-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-fade-layer-default));
+}
+
+@utility bg-gradient-glow-magic-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-glow-magic));
+}
+
+@utility bg-gradient-glow-magic-pressed-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-glow-magic-pressed));
+}
+
+@utility bg-gradient-highlight-magic-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-highlight-magic));
+}
+
+@utility bg-gradient-highlight-magic-pressed-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-highlight-magic-pressed));
+}
+
+@utility bg-gradient-shimmer-magic-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-shimmer-magic));
+}
+
+@utility bg-gradient-shimmer-neutral-* {
+  background-image: linear-gradient(--value([angle]), var(--gradient-stops-shimmer-neutral));
+}

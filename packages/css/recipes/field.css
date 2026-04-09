@@ -1,0 +1,69 @@
+.seed-field__root {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--rui-dimension-x2);
+}
+.seed-field__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: var(--rui-dimension-x0_5);
+    padding-right: var(--rui-dimension-x0_5);
+    gap: var(--rui-dimension-x2_5);
+}
+.seed-field__footer {
+    display: flex;
+    align-items: flex-start;
+    padding-left: var(--rui-dimension-x0_5);
+    padding-right: var(--rui-dimension-x0_5);
+    gap: var(--rui-dimension-x2);
+}
+.seed-field__description {
+    display: flex;
+    color: var(--rui-color-fg-neutral-subtle);
+    font-weight: var(--rui-font-weight-regular);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    --rui-prefix-icon-size: var(--rui-dimension-x4);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral-subtle);
+    --rui-prefix-icon-margin-right: var(--rui-dimension-x1_5);
+    --rui-prefix-icon-margin-top: calc((var(--rui-line-height-t4) - var(--rui-dimension-x4)) / 2);
+}
+.seed-field__errorMessage {
+    display: flex;
+    color: var(--rui-color-fg-critical);
+    font-weight: var(--rui-font-weight-regular);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    --rui-prefix-icon-size: var(--rui-dimension-x4);
+    --rui-prefix-icon-color: var(--rui-color-fg-critical);
+    --rui-prefix-icon-margin-right: var(--rui-dimension-x1_5);
+    --rui-prefix-icon-margin-top: calc((var(--rui-line-height-t4) - var(--rui-dimension-x4)) / 2);
+}
+.seed-field__characterCountArea {
+    margin-left: auto;
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+}
+.seed-field__characterCount {
+    color: var(--rui-color-fg-neutral);
+    font-weight: var(--rui-font-weight-regular);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+}
+.seed-field__characterCount[data-empty]:not(:is(:invalid, [data-invalid])) {
+    color: var(--rui-color-fg-neutral-subtle);
+}
+.seed-field__characterCount:is(:invalid, [data-invalid]) {
+    color: var(--rui-color-fg-critical);
+}
+.seed-field__maxCharacterCount {
+    color: var(--rui-color-fg-neutral-subtle);
+    font-weight: var(--rui-font-weight-regular);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+}
+.seed-field__maxCharacterCount:is(:invalid, [data-invalid]) {
+    color: var(--rui-color-fg-critical);
+}

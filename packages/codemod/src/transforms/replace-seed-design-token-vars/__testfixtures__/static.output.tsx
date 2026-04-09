@@ -1,0 +1,21 @@
+import { vars } from "@rui/css/vars";
+
+const staticColors = {
+  staticBlack: vars.$color.palette.staticBlack,
+  staticWhite: vars.$color.palette.staticWhite,
+  staticGray900: vars.$color.palette.staticBlack,
+  staticCarrot50: vars.$color.palette.carrot100,
+  staticCarrot800: vars.$color.palette.carrot700,
+  staticGreen50: vars.$color.palette.green100,
+  staticGreen800: vars.$color.palette.green700,
+  staticYellow50: vars.$color.palette.yellow100,
+  staticYellow800: vars.$color.palette.yellow700,
+  staticRed50: vars.$color.palette.red100,
+  staticRed800: vars.$color.palette.red700,
+  staticBlue50: vars.$color.palette.blue100,
+  staticBlue800: vars.$color.palette.blue700,
+  staticBlackAlpha200: vars.$color.palette.staticBlackAlpha500,
+  staticBlackAlpha500: vars.$color.palette.staticBlackAlpha700,
+  staticWhiteAlpha50: vars.$color.palette.staticWhiteAlpha50,
+  staticWhiteAlpha200: vars.$color.palette.staticWhiteAlpha300,
+};

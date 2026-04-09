@@ -1,0 +1,44 @@
+# .github/workflows/chromatic.yml
+
+# Workflow name
+name: "Chromatic"
+
+env:
+  GITHUB_TOKEN: ${{ github.token }}
+
+# Event for the workflow
+on:
+  push:
+    paths:
+      - "docs/registry/**"
+      - "docs/stories/**"
+      - "docs/.storybook/**"
+      - "packages/react/**"
+      - "packages/css/**"
+      - ".github/workflows/chromatic.yml"
+      - ".github/actions/setup/action.yml"
+
+# List of jobs
+jobs:
+  chromatic-deployment:
+    # Operating System
+    runs-on: ubuntu-latest
+    # Job steps
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/setup
+        with:
+          build-packages: true
+
+      - name: Publish to Chromatic
+        uses: chromaui/action@v15
+        # Chromatic GitHub Action options
+        with:
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          onlyChanged: true
+          workingDir: docs

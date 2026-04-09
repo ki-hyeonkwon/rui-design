@@ -1,0 +1,48 @@
+{
+  "name": "@rui/vite-plugin",
+  "version": "1.1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/vite-plugin"
+  },
+  "author": "Asher <asher@daangn.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./lib/index.d.ts",
+        "default": "./lib/index.js"
+      },
+      "require": {
+        "types": "./lib/index.d.cts",
+        "default": "./lib/index.cjs"
+      }
+    }
+  },
+  "main": "./lib/index.cjs",
+  "types": "./lib/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "bunchee",
+    "lint:publish": "bun publint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@rui/css": "^1.1.0",
+    "vite": "^7.0.0"
+  },
+  "peerDependencies": {
+    "@rui/css": "^1.1.0",
+    "vite": "^5.0.0 || ^6.0.0 || ^7.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

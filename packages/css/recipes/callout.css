@@ -1,0 +1,241 @@
+.seed-callout__root {
+    border: none;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: inherit;
+    font-size: unset;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    width: 100%;
+    min-height: 50px;
+    padding-left: var(--rui-dimension-x3_5);
+    padding-right: var(--rui-dimension-x3_5);
+    padding-top: var(--rui-dimension-x3_5);
+    padding-bottom: var(--rui-dimension-x3_5);
+    gap: var(--rui-dimension-x3);
+    border-radius: var(--rui-radius-r2_5);
+    text-decoration: none;
+    --rui-prefix-icon-size: var(--rui-dimension-x4);
+    --rui-suffix-icon-size: var(--rui-dimension-x4);
+}
+.seed-callout__root:is(button, a) {
+    cursor: pointer;
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__root:is(button, a):is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__content {
+    margin-right: auto;
+    line-height: var(--rui-line-height-t4);
+}
+.seed-callout__title {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-bold);
+}
+.seed-callout__title::after {
+    content: "  ";
+    white-space: pre;
+}
+.seed-callout__description {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-regular);
+}
+.seed-callout__description:not(:last-child)::after {
+    content: "  ";
+    white-space: pre;
+}
+.seed-callout__link {
+    font-family: inherit;
+    display: inline-block;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-regular);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    border-radius: var(--rui-radius-r1);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__link:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__closeButton {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--rui-dimension-x10);
+    height: var(--rui-dimension-x10);
+    margin: calc((var(--rui-dimension-x10) - var(--rui-dimension-x4)) * -0.5);
+    border-radius: var(--rui-radius-r2_5);
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__closeButton:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-callout__root--tone_neutral {
+    background-color: var(--rui-color-bg-neutral-weak);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_neutral:is(button, a):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_neutral:is(button, a):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+.seed-callout__title--tone_neutral {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-callout__description--tone_neutral {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-callout__link--tone_neutral {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-callout__root--tone_informative {
+    background-color: var(--rui-color-bg-informative-weak);
+    --rui-prefix-icon-color: var(--rui-color-fg-informative-contrast);
+    --rui-suffix-icon-color: var(--rui-color-fg-informative-contrast);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_informative:is(button, a):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-informative-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_informative:is(button, a):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-informative-weak-pressed);
+    }
+}
+.seed-callout__title--tone_informative {
+    color: var(--rui-color-fg-informative-contrast);
+}
+.seed-callout__description--tone_informative {
+    color: var(--rui-color-fg-informative-contrast);
+}
+.seed-callout__link--tone_informative {
+    color: var(--rui-color-fg-informative-contrast);
+}
+.seed-callout__root--tone_positive {
+    background-color: var(--rui-color-bg-positive-weak);
+    --rui-prefix-icon-color: var(--rui-color-fg-positive-contrast);
+    --rui-suffix-icon-color: var(--rui-color-fg-positive-contrast);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_positive:is(button, a):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-positive-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_positive:is(button, a):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-positive-weak-pressed);
+    }
+}
+.seed-callout__title--tone_positive {
+    color: var(--rui-color-fg-positive-contrast);
+}
+.seed-callout__description--tone_positive {
+    color: var(--rui-color-fg-positive-contrast);
+}
+.seed-callout__link--tone_positive {
+    color: var(--rui-color-fg-positive-contrast);
+}
+.seed-callout__root--tone_warning {
+    background-color: var(--rui-color-bg-warning-weak);
+    --rui-prefix-icon-color: var(--rui-color-fg-warning-contrast);
+    --rui-suffix-icon-color: var(--rui-color-fg-warning-contrast);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_warning:is(button, a):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-warning-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_warning:is(button, a):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-warning-weak-pressed);
+    }
+}
+.seed-callout__title--tone_warning {
+    color: var(--rui-color-fg-warning-contrast);
+}
+.seed-callout__description--tone_warning {
+    color: var(--rui-color-fg-warning-contrast);
+}
+.seed-callout__link--tone_warning {
+    color: var(--rui-color-fg-warning-contrast);
+}
+.seed-callout__root--tone_critical {
+    background-color: var(--rui-color-bg-critical-weak);
+    --rui-prefix-icon-color: var(--rui-color-fg-critical-contrast);
+    --rui-suffix-icon-color: var(--rui-color-fg-critical-contrast);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_critical:is(button, a):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-critical-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_critical:is(button, a):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-critical-weak-pressed);
+    }
+}
+.seed-callout__title--tone_critical {
+    color: var(--rui-color-fg-critical-contrast);
+}
+.seed-callout__description--tone_critical {
+    color: var(--rui-color-fg-critical-contrast);
+}
+.seed-callout__link--tone_critical {
+    color: var(--rui-color-fg-critical-contrast);
+}
+.seed-callout__root--tone_magic {
+    background-image: linear-gradient(88deg, var(--rui-gradient-glow-magic));
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-callout__root--tone_magic:is(button, a):is(:hover, [data-hover]) {
+        background-image: linear-gradient(88deg, var(--rui-gradient-glow-magic-pressed));
+    }
+}
+@media (hover: none) {
+    .seed-callout__root--tone_magic:is(button, a):is(:active, [data-active]) {
+        background-image: linear-gradient(88deg, var(--rui-gradient-glow-magic-pressed));
+    }
+}
+.seed-callout__title--tone_magic {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-callout__description--tone_magic {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-callout__link--tone_magic {
+    color: var(--rui-color-fg-neutral);
+}

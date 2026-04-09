@@ -1,0 +1,223 @@
+---
+title: Chip
+description: 사용자가 선택하거나 입력하는 값을 표시하는 컴포넌트입니다.
+---
+
+<ComponentExample name="react/chip/preview">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/preview.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+## Installation
+
+```package-install
+npx @rui/cli@latest add ui:chip
+```
+
+<ManualInstallation name="chip" />
+
+## Props
+
+### `Chip.Button`
+
+<react-type-table
+  path="./registry/ui/chip.tsx"
+  name="ButtonChipProps"
+/>
+
+### `Chip.Toggle`
+
+<react-type-table
+  path="./registry/ui/chip.tsx"
+  name="ToggleChipProps"
+/>
+
+### `Chip.RadioRoot`
+
+<react-type-table
+  path="./registry/ui/chip.tsx"
+  name="RadioChipRootProps"
+/>
+
+### `Chip.RadioItem`
+
+<react-type-table
+  path="./registry/ui/chip.tsx"
+  name="RadioChipItemProps"
+/>
+
+## Examples
+
+### Sizes
+
+#### Small
+
+<ComponentExample name="react/chip/small">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/small.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Medium
+
+<ComponentExample name="react/chip/medium">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/medium.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Large
+
+<ComponentExample name="react/chip/large">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/large.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Variants
+
+#### Solid
+
+<ComponentExample name="react/chip/solid">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/solid.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Outline Strong
+
+<ComponentExample name="react/chip/outline-strong">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/outline-strong.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Outline Weak
+
+<ComponentExample name="react/chip/outline-weak">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/outline-weak.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Prefix Icon
+
+<ComponentExample name="react/chip/prefix-icon">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/prefix-icon.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Suffix Icon
+
+<ComponentExample name="react/chip/suffix-icon">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/suffix-icon.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Icon Only
+
+<ComponentExample name="react/chip/icon-only">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/icon-only.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Prefix Avatar
+
+[Avatar](/react/components/avatar)와 함께 사용할 수 있습니다.
+
+<ComponentExample name="react/chip/prefix-avatar">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/prefix-avatar.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Listening to Value Changes
+
+- `Chip.Toggle`
+  - `onCheckedChange`를 사용하여 토글 상태 변경을 감지할 수 있습니다.
+  - 이벤트를 활용해야 하는 경우 `inputProps`를 통해 내부 `<input>` 요소에 직접 이벤트 핸들러를 추가할 수 있습니다.
+- `Chip.RadioRoot` / `Chip.RadioItem`
+  - `Chip.RadioRoot`의 `onValueChange`를 사용하여 라디오 버튼의 선택 값 변경을 감지할 수 있습니다.
+  - 이벤트를 활용해야 하는 경우 `Chip.RadioItem`의 `inputProps`를 통해 내부 `<input>` 요소에 직접 이벤트 핸들러를 추가할 수 있습니다.
+  
+<ComponentExample name="react/chip/value-changes">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/chip/value-changes.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+## Migrating from ActionChip/ControlChip
+
+[Action Chip](/react/components/action-chip)과 [Control Chip](/react/components/control-chip)을 대체합니다.
+
+### ActionChip → Chip.Button
+
+```tsx
+// Before
+import { ActionChip } from "@rui/react";
+
+<ActionChip size="medium">Label</ActionChip>
+
+// After
+import { Chip } from "@rui/react";
+
+<Chip.Button size="medium" variant="solid">
+  <Chip.Label>Label</Chip.Label>
+</Chip.Button>
+```
+
+### ControlChip → Chip.Toggle
+
+```tsx
+// Before
+import { ControlChip } from "@rui/react";
+
+<ControlChip size="medium">Label</ControlChip>
+
+// After
+import { Chip } from "@rui/react";
+
+<Chip.Toggle size="medium" variant="outlineStrong">
+  <Chip.Label>Label</Chip.Label>
+</Chip.Toggle>
+```

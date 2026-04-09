@@ -1,0 +1,41 @@
+.seed-link-content {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: inherit;
+    text-align: center;
+    padding-inline: 0;
+    padding-block: 0;
+    color: var(--rui-box-color);
+    --rui-suffix-icon-color: var(--rui-box-color)
+}
+.seed-link-content--weight_bold {
+    font-weight: var(--rui-font-weight-bold)
+}
+.seed-link-content--weight_regular {
+    font-weight: var(--rui-font-weight-regular)
+}
+.seed-link-content--size_t6 {
+    font-size: var(--rui-font-size-t6);
+    line-height: var(--rui-line-height-t6);
+    gap: var(--rui-dimension-x0_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x4)
+}
+.seed-link-content--size_t5 {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    gap: var(--rui-dimension-x0_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x3_5)
+}
+.seed-link-content--size_t4 {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    gap: var(--rui-dimension-x0_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x3)
+}

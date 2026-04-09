@@ -1,0 +1,150 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: action-chip
+  name: Action Chip
+  deprecated: Use Chip.Button with variant="solid" instead.
+  lastUpdated: 25-07-16
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+          cornerRadius:
+            type: dimension
+          minHeight:
+            type: dimension
+          paddingY:
+            type: dimension
+          gap:
+            type: dimension
+          paddingX:
+            type: dimension
+          minWidth:
+            type: dimension
+      label:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+      prefixIcon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      suffixIcon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      icon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      count:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        root:
+          color: $color.bg.neutral-weak
+          cornerRadius: $radius.full
+        label:
+          color: $color.fg.neutral
+          fontWeight: $font-weight.medium
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral-subtle
+        icon:
+          color: $color.fg.neutral
+        count:
+          color: $color.fg.neutral-muted
+          fontWeight: $font-weight.medium
+      pressed:
+        root:
+          color: $color.bg.neutral-weak-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        count:
+          color: $color.fg.disabled
+    size=small:
+      enabled:
+        root:
+          minHeight: $dimension.x8
+          paddingY: $dimension.x1_5
+          gap: $dimension.x1
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+        prefixIcon:
+          size: $dimension.x4
+        suffixIcon:
+          size: $dimension.x3_5
+        count:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+    size=medium:
+      enabled:
+        root:
+          minHeight: $dimension.x9
+          paddingY: $dimension.x2
+          gap: $dimension.x1
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+        prefixIcon:
+          size: $dimension.x4
+        suffixIcon:
+          size: $dimension.x3_5
+        count:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+    size=small,layout=withText:
+      enabled:
+        root:
+          paddingX: $dimension.x3
+    size=small,layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x8
+        icon:
+          size: $dimension.x4
+    size=medium,layout=withText:
+      enabled:
+        root:
+          paddingX: $dimension.x3_5
+    size=medium,layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x9
+        icon:
+          size: $dimension.x4

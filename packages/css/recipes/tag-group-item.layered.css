@@ -1,0 +1,98 @@
+@layer seed-components {
+  .seed-tag-group-item__root {
+    display: var(--tag-group-item-display);
+    vertical-align: middle;
+    flex-shrink: var(--rui-box-flex-shrink, 1);
+    align-items: center;
+    min-width: 0;
+  }
+
+  .seed-tag-group-item__label {
+    vertical-align: middle;
+    min-width: 0;
+    overflow: var(--tag-group-item-overflow);
+    text-overflow: var(--tag-group-item-text-overflow);
+    white-space: var(--tag-group-item-white-space);
+    word-break: normal;
+    display: inline;
+  }
+
+  .seed-tag-group-item__label:not(:first-child) {
+    margin-left: var(--rui-dimension-x0_5);
+  }
+
+  .seed-tag-group-item__label:not(:last-child) {
+    margin-right: var(--rui-dimension-x0_5);
+  }
+
+  .seed-tag-group-item__root--size_t2 {
+    --rui-prefix-icon-size: var(--rui-dimension-x3);
+    --rui-suffix-icon-size: var(--rui-dimension-x3);
+    --rui-icon-size: var(--rui-dimension-x3);
+  }
+
+  .seed-tag-group-item__label--size_t2 {
+    font-size: var(--rui-font-size-t2);
+    line-height: var(--rui-line-height-t2);
+  }
+
+  .seed-tag-group-item__root--size_t3 {
+    --rui-prefix-icon-size: 13px;
+    --rui-suffix-icon-size: 13px;
+    --rui-icon-size: 13px;
+  }
+
+  .seed-tag-group-item__label--size_t3 {
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+  }
+
+  .seed-tag-group-item__root--size_t4 {
+    --rui-prefix-icon-size: var(--rui-dimension-x3_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x3_5);
+    --rui-icon-size: var(--rui-dimension-x3_5);
+  }
+
+  .seed-tag-group-item__label--size_t4 {
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+  }
+
+  .seed-tag-group-item__label--weight_regular {
+    font-weight: var(--rui-font-weight-regular);
+  }
+
+  .seed-tag-group-item__label--weight_bold {
+    font-weight: var(--rui-font-weight-bold);
+  }
+
+  .seed-tag-group-item__root--tone_neutralSubtle {
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral-subtle);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral-subtle);
+    --rui-icon-color: var(--rui-color-fg-neutral-subtle);
+  }
+
+  .seed-tag-group-item__label--tone_neutralSubtle {
+    color: var(--rui-color-fg-neutral-subtle);
+  }
+
+  .seed-tag-group-item__root--tone_neutral {
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+    --rui-icon-color: var(--rui-color-fg-neutral);
+  }
+
+  .seed-tag-group-item__label--tone_neutral {
+    color: var(--rui-color-fg-neutral);
+  }
+
+  .seed-tag-group-item__root--tone_brand {
+    --rui-prefix-icon-color: var(--rui-color-fg-brand);
+    --rui-suffix-icon-color: var(--rui-color-fg-brand);
+    --rui-icon-color: var(--rui-color-fg-brand);
+  }
+
+  .seed-tag-group-item__label--tone_brand {
+    color: var(--rui-color-fg-brand);
+  }
+}

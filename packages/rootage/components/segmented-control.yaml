@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: segmented-control
+  name: Segmented Control
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          padding:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          color:
+            type: color
+  definitions:
+    base:
+      enabled:
+        root:
+          padding: $dimension.x1
+          cornerRadius: $radius.full
+          color: $color.bg.neutral-weak-alpha

@@ -1,0 +1,18 @@
+@layer seed-components {
+  .seed-snackbar-region {
+    z-index: 2147483647;
+    left: calc(env(safe-area-inset-left, 0px));
+    right: calc(env(safe-area-inset-right, 0px));
+    bottom: calc(env(safe-area-inset-bottom, 0px)  + var(--snackbar-region-offset, 0px));
+    padding-left: var(--rui-dimension-x2);
+    padding-right: var(--rui-dimension-x2);
+    padding-top: var(--rui-dimension-x2);
+    padding-bottom: var(--rui-dimension-x2);
+    transition-property: bottom;
+    transition-duration: var(--rui-duration-d4);
+    transition-timing-function: var(--rui-timing-function-easing);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+}

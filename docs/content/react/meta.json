@@ -1,0 +1,19 @@
+{
+  "title": "React",
+  "description": "SEED React 문서",
+  "icon": "Atom",
+  "pages": [
+    "index",
+    "---Getting Started---",
+    "...getting-started",
+    "...components",
+    "---Stackflow---",
+    "...stackflow",
+    "---Developer Tools---",
+    "...developer-tools",
+    "---Updates---",
+    "...updates",
+    "---Migration---",
+    "...migration"
+  ]
+}

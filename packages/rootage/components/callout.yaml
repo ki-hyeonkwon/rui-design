@@ -1,0 +1,213 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: callout
+  name: Callout
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+          gap:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          minHeight:
+            type: dimension
+          color:
+            type: color
+          gradient:
+            type: gradient
+      prefixIcon:
+        description: 아이콘은 Fill 타입 사용을 권장합니다.
+        properties:
+          size:
+            type: dimension
+          color:
+            type: color
+      title:
+        properties:
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+          color:
+            type: color
+      description:
+        properties:
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+          color:
+            type: color
+      link:
+        description: root가 클릭 영역인 Actionable Callout에서는 표시를 권장하지 않습니다.
+        properties:
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+          color:
+            type: color
+      suffixIcon:
+        properties:
+          size:
+            type: dimension
+          targetSize:
+            type: dimension
+          color:
+            type: color
+    variants:
+      tone:
+        values:
+          neutral:
+            description: 일반적인 정보를 전달합니다.
+          informative:
+            description: 유용한 정보를 제공합니다.
+          positive:
+            description: 긍정적인 상태를 나타냅니다.
+          warning:
+            description: 주의가 필요한 상태를 나타냅니다.
+          critical:
+            description: 중요한 문제를 나타냅니다.
+          magic:
+            description: AI 기능을 나타냅니다.
+  definitions:
+    base:
+      enabled:
+        root:
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x3_5
+          gap: $dimension.x3
+          cornerRadius: $radius.r2_5
+          minHeight: 50px
+        prefixIcon:
+          size: $dimension.x4
+        title:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+          fontWeight: $font-weight.bold
+        description:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+          fontWeight: $font-weight.regular
+        link:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+          fontWeight: $font-weight.regular
+        suffixIcon:
+          size: $dimension.x4
+          targetSize: $dimension.x10
+    tone=neutral:
+      enabled:
+        root:
+          color: $color.bg.neutral-weak
+        prefixIcon:
+          color: $color.fg.neutral
+        title:
+          color: $color.fg.neutral
+        description:
+          color: $color.fg.neutral
+        link:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.neutral-weak-pressed
+    tone=informative:
+      enabled:
+        root:
+          color: $color.bg.informative-weak
+        prefixIcon:
+          color: $color.fg.informative-contrast
+        title:
+          color: $color.fg.informative-contrast
+        description:
+          color: $color.fg.informative-contrast
+        link:
+          color: $color.fg.informative-contrast
+        suffixIcon:
+          color: $color.fg.informative-contrast
+      pressed:
+        root:
+          color: $color.bg.informative-weak-pressed
+    tone=positive:
+      enabled:
+        root:
+          color: $color.bg.positive-weak
+        prefixIcon:
+          color: $color.fg.positive-contrast
+        title:
+          color: $color.fg.positive-contrast
+        description:
+          color: $color.fg.positive-contrast
+        link:
+          color: $color.fg.positive-contrast
+        suffixIcon:
+          color: $color.fg.positive-contrast
+      pressed:
+        root:
+          color: $color.bg.positive-weak-pressed
+    tone=warning:
+      enabled:
+        root:
+          color: $color.bg.warning-weak
+        prefixIcon:
+          color: $color.fg.warning-contrast
+        title:
+          color: $color.fg.warning-contrast
+        description:
+          color: $color.fg.warning-contrast
+        link:
+          color: $color.fg.warning-contrast
+        suffixIcon:
+          color: $color.fg.warning-contrast
+      pressed:
+        root:
+          color: $color.bg.warning-weak-pressed
+    tone=critical:
+      enabled:
+        root:
+          color: $color.bg.critical-weak
+        prefixIcon:
+          color: $color.fg.critical-contrast
+        title:
+          color: $color.fg.critical-contrast
+        description:
+          color: $color.fg.critical-contrast
+        link:
+          color: $color.fg.critical-contrast
+        suffixIcon:
+          color: $color.fg.critical-contrast
+      pressed:
+        root:
+          color: $color.bg.critical-weak-pressed
+    tone=magic:
+      enabled:
+        root:
+          gradient: $gradient.glow-magic
+        prefixIcon:
+          color: $color.fg.neutral
+        title:
+          color: $color.fg.neutral
+        description:
+          color: $color.fg.neutral
+        link:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          gradient: $gradient.glow-magic-pressed

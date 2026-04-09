@@ -1,0 +1,113 @@
+.seed-contextual-floating-button {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    font-family: inherit;
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-contextual-floating-button:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-contextual-floating-button:is(:disabled, [disabled], [data-disabled]) {
+    cursor: not-allowed;
+}
+.seed-contextual-floating-button {
+    border-radius: var(--rui-radius-full);
+    box-shadow: var(--rui-shadow-s3);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    font-weight: var(--rui-font-weight-medium);
+    --rui-box-z-index: initial;
+    z-index: var(--rui-box-z-index);
+    --rui-box-position: initial;
+    position: var(--rui-box-position);
+    --rui-box-top: initial;
+    --rui-box-right: initial;
+    --rui-box-bottom: initial;
+    --rui-box-left: initial;
+    top: var(--rui-box-top);
+    right: var(--rui-box-right);
+    bottom: var(--rui-box-bottom);
+    left: var(--rui-box-left);
+    --rui-icon-size: 22px;
+    --size: 16px;
+    --thickness: 2px;
+    transition: background-color var(--rui-duration-color-transition) var(--rui-timing-function-easing), outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+}
+.seed-contextual-floating-button--variant_solid {
+    background: var(--rui-color-bg-neutral-inverted);
+    color: var(--rui-color-fg-neutral-inverted);
+    --rui-icon-color: var(--rui-color-fg-neutral-inverted);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral-inverted);
+    --track-color: var(--rui-color-palette-gray-700);
+    --range-color: var(--rui-color-fg-neutral-inverted);
+}
+@media (hover: hover) {
+    .seed-contextual-floating-button--variant_solid:is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-neutral-inverted-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-contextual-floating-button--variant_solid:is(:active, [data-active]) {
+        background: var(--rui-color-bg-neutral-inverted-pressed);
+    }
+}
+.seed-contextual-floating-button--variant_solid:is(:disabled, [disabled], [data-disabled]) {
+    background: var(--rui-color-bg-disabled);
+    color: var(--rui-color-fg-disabled);
+    --rui-prefix-icon-color: var(--rui-color-fg-disabled);
+    --rui-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-contextual-floating-button--variant_solid[data-loading] {
+    background: var(--rui-color-bg-neutral-inverted-pressed);
+}
+.seed-contextual-floating-button--variant_layer {
+    background: var(--rui-color-bg-layer-floating);
+    color: var(--rui-color-fg-neutral);
+    --rui-icon-color: var(--rui-color-fg-neutral);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --track-color: var(--rui-color-palette-gray-500);
+    --range-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-contextual-floating-button--variant_layer:is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-layer-floating-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-contextual-floating-button--variant_layer:is(:active, [data-active]) {
+        background: var(--rui-color-bg-layer-floating-pressed);
+    }
+}
+.seed-contextual-floating-button--variant_layer:is(:disabled, [disabled], [data-disabled]) {
+    background: var(--rui-color-bg-disabled);
+    color: var(--rui-color-fg-disabled);
+    --rui-prefix-icon-color: var(--rui-color-fg-disabled);
+    --rui-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-contextual-floating-button--variant_layer[data-loading] {
+    background: var(--rui-color-bg-layer-floating-pressed);
+}
+.seed-contextual-floating-button--layout_withText {
+    min-height: 36px;
+    padding-left: var(--rui-dimension-x3_5);
+    padding-right: var(--rui-dimension-x3_5);
+    padding-top: var(--rui-dimension-x2);
+    padding-bottom: var(--rui-dimension-x2);
+    gap: var(--rui-dimension-x1);
+    --rui-prefix-icon-size: 16px;
+}
+.seed-contextual-floating-button--layout_iconOnly {
+    width: 44px;
+    height: 44px;
+    --rui-icon-size: 22px;
+}

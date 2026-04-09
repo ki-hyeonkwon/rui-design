@@ -1,0 +1,160 @@
+.seed-toggle-button {
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    text-transform: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    flex-shrink: 0;
+    font-family: inherit;
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-toggle-button:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-toggle-button:is(:disabled, [disabled], [data-disabled]) {
+    cursor: not-allowed;
+}
+.seed-toggle-button {
+    transition: background-color var(--rui-duration-color-transition) var(--rui-timing-function-easing), outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    font-weight: var(--rui-font-weight-bold);
+}
+.seed-toggle-button--variant_brandSolid {
+    background: var(--rui-color-bg-brand-solid);
+    color: var(--rui-color-palette-static-white);
+    --track-color: var(--rui-color-palette-static-white-alpha-300);
+    --range-color: var(--rui-color-palette-static-white);
+}
+@media (hover: hover) {
+    .seed-toggle-button--variant_brandSolid:is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-brand-solid-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-toggle-button--variant_brandSolid:is(:active, [data-active]) {
+        background: var(--rui-color-bg-brand-solid-pressed);
+    }
+}
+.seed-toggle-button--variant_brandSolid:is([aria-pressed=true], [data-pressed]) {
+    background: var(--rui-color-bg-neutral-weak);
+    color: var(--rui-color-fg-neutral);
+    --track-color: var(--rui-color-palette-gray-500);
+    --range-color: var(--rui-color-fg-neutral);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-toggle-button--variant_brandSolid:is([aria-pressed=true], [data-pressed]):is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-toggle-button--variant_brandSolid:is([aria-pressed=true], [data-pressed]):is(:active, [data-active]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+.seed-toggle-button--variant_brandSolid:is(:disabled, [disabled], [data-disabled]) {
+    background: var(--rui-color-bg-disabled);
+    color: var(--rui-color-fg-disabled);
+    --rui-prefix-icon-color: var(--rui-color-fg-disabled);
+    --rui-suffix-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-toggle-button--variant_brandSolid[data-loading] {
+    background: var(--rui-color-bg-brand-solid-pressed);
+}
+.seed-toggle-button--variant_brandSolid:is([aria-pressed=true], [data-pressed])[data-loading] {
+    background: var(--rui-color-bg-neutral-weak-pressed);
+}
+.seed-toggle-button--variant_brandSolid {
+    --rui-prefix-icon-color: var(--rui-color-palette-static-white);
+    --rui-suffix-icon-color: var(--rui-color-palette-static-white);
+}
+.seed-toggle-button--variant_neutralWeak {
+    background: var(--rui-color-bg-neutral-weak);
+    color: var(--rui-color-fg-neutral);
+    --track-color: var(--rui-color-palette-gray-500);
+    --range-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-toggle-button--variant_neutralWeak:is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-toggle-button--variant_neutralWeak:is(:active, [data-active]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+.seed-toggle-button--variant_neutralWeak:is([aria-pressed=true], [data-pressed]) {
+    background: var(--rui-color-bg-neutral-weak);
+    color: var(--rui-color-fg-neutral);
+    --track-color: var(--rui-color-palette-gray-500);
+    --range-color: var(--rui-color-fg-neutral);
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+}
+@media (hover: hover) {
+    .seed-toggle-button--variant_neutralWeak:is([aria-pressed=true], [data-pressed]):is(:hover, [data-hover]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-toggle-button--variant_neutralWeak:is([aria-pressed=true], [data-pressed]):is(:active, [data-active]) {
+        background: var(--rui-color-bg-neutral-weak-pressed);
+    }
+}
+.seed-toggle-button--variant_neutralWeak:is(:disabled, [disabled], [data-disabled]) {
+    background: var(--rui-color-bg-disabled);
+    color: var(--rui-color-fg-disabled);
+    --rui-prefix-icon-color: var(--rui-color-fg-disabled);
+    --rui-suffix-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-toggle-button--variant_neutralWeak[data-loading] {
+    background: var(--rui-color-bg-neutral-weak-pressed);
+}
+.seed-toggle-button--variant_neutralWeak:is([aria-pressed=true], [data-pressed])[data-loading] {
+    background: var(--rui-color-bg-neutral-weak-pressed);
+}
+.seed-toggle-button--variant_neutralWeak {
+    --rui-prefix-icon-color: var(--rui-color-fg-neutral);
+    --rui-suffix-icon-color: var(--rui-color-fg-neutral);
+}
+.seed-toggle-button--size_xsmall {
+    height: var(--rui-dimension-x8);
+    border-radius: var(--rui-radius-full);
+    gap: var(--rui-dimension-x1);
+    padding-left: var(--rui-dimension-x3_5);
+    padding-right: var(--rui-dimension-x3_5);
+    padding-top: var(--rui-dimension-x1_5);
+    padding-bottom: var(--rui-dimension-x1_5);
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+    --size: 14px;
+    --thickness: 2px;
+    --rui-prefix-icon-size: var(--rui-dimension-x3_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x3_5);
+}
+.seed-toggle-button--size_small {
+    height: var(--rui-dimension-x9);
+    border-radius: var(--rui-radius-full);
+    gap: var(--rui-dimension-x1);
+    padding-left: var(--rui-dimension-x4);
+    padding-right: var(--rui-dimension-x4);
+    padding-top: var(--rui-dimension-x2);
+    padding-bottom: var(--rui-dimension-x2);
+    font-size: var(--rui-font-size-t4);
+    line-height: var(--rui-line-height-t4);
+    --size: 14px;
+    --thickness: 2px;
+    --rui-prefix-icon-size: var(--rui-dimension-x3_5);
+    --rui-suffix-icon-size: var(--rui-dimension-x3_5);
+}

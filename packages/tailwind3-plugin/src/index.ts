@@ -1,0 +1,702 @@
+// @ts-nocheck
+import plugin from "tailwindcss/plugin";
+
+/**
+ * Seed Design 디자인 토큰을 위한 Tailwind CSS 플러그인
+ * 색상 토큰과 타이포그래피 토큰을 클래스 이름으로 사용할 수 있습니다
+ * 예시: 
+ * - 색상: bg-bg-layer-basement, text-fg-brand, border-stroke-divider
+ * - 타이포그래피: t1-regular, t1-bold, screen-title
+ * - 그라데이션: 
+ *   * bg-gradient-shimmer-neutral-to-r (방향성 포함)
+ *   * bg-gradient-shimmer-neutral-[45deg] (임의 각도)
+ * 
+ * 모든 토큰은 CSS 변수를 사용하여 다크 모드와 자동 호환됩니다.
+ */
+export default plugin(
+  ({ theme, addComponents, matchUtilities }) => {  
+    // typography 유틸리티
+    const typography = theme("typography");
+    if (typography) {
+      addComponents(
+        Object.entries(typography).reduce((acc, [key, value]) => {
+          acc[`.${key}`] = value;
+          return acc;
+        }, {})
+      );
+    }
+
+    // gradient arbitrary value 지원
+    const gradientStopsForArbitrary = {
+      "fade-layer-floating": "#ffffff00 0.00%, #000000 100.00%",
+      "fade-layer-default": "#000000 0.00%, #ffffff00 100.00%",
+      "glow-magic": "#fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%",
+      "glow-magic-pressed": "#fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%",
+      "highlight-magic": "#ff6600 20.00%, #d25aca 100.00%",
+      "highlight-magic-pressed": "#e14f00 20.00%, #ae58bf 100.00%",
+      "shimmer-magic": "#fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%",
+      "shimmer-neutral": "#ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%"
+};
+
+    Object.entries(gradientStopsForArbitrary).forEach(([gradientName, colorStops]) => {
+      matchUtilities(
+        {
+          [`bg-gradient-${gradientName}`]: (value) => ({
+            backgroundImage: `linear-gradient(${value}, ${colorStops})`
+          })
+        },
+        {
+          type: 'any',
+          values: {}
+        }
+      );
+    });
+  },
+  {
+    theme: {
+      extend: {
+        colors: {
+  "palette-gray-00": "var(--rui-color-palette-gray-00)",
+  "palette-gray-100": "var(--rui-color-palette-gray-100)",
+  "palette-gray-200": "var(--rui-color-palette-gray-200)",
+  "palette-gray-300": "var(--rui-color-palette-gray-300)",
+  "palette-gray-400": "var(--rui-color-palette-gray-400)",
+  "palette-gray-500": "var(--rui-color-palette-gray-500)",
+  "palette-gray-600": "var(--rui-color-palette-gray-600)",
+  "palette-gray-700": "var(--rui-color-palette-gray-700)",
+  "palette-gray-800": "var(--rui-color-palette-gray-800)",
+  "palette-gray-900": "var(--rui-color-palette-gray-900)",
+  "palette-gray-1000": "var(--rui-color-palette-gray-1000)",
+  "palette-carrot-100": "var(--rui-color-palette-carrot-100)",
+  "palette-carrot-200": "var(--rui-color-palette-carrot-200)",
+  "palette-carrot-300": "var(--rui-color-palette-carrot-300)",
+  "palette-carrot-400": "var(--rui-color-palette-carrot-400)",
+  "palette-carrot-500": "var(--rui-color-palette-carrot-500)",
+  "palette-carrot-600": "var(--rui-color-palette-carrot-600)",
+  "palette-carrot-700": "var(--rui-color-palette-carrot-700)",
+  "palette-carrot-800": "var(--rui-color-palette-carrot-800)",
+  "palette-carrot-900": "var(--rui-color-palette-carrot-900)",
+  "palette-carrot-1000": "var(--rui-color-palette-carrot-1000)",
+  "palette-blue-100": "var(--rui-color-palette-blue-100)",
+  "palette-blue-200": "var(--rui-color-palette-blue-200)",
+  "palette-blue-300": "var(--rui-color-palette-blue-300)",
+  "palette-blue-400": "var(--rui-color-palette-blue-400)",
+  "palette-blue-500": "var(--rui-color-palette-blue-500)",
+  "palette-blue-600": "var(--rui-color-palette-blue-600)",
+  "palette-blue-700": "var(--rui-color-palette-blue-700)",
+  "palette-blue-800": "var(--rui-color-palette-blue-800)",
+  "palette-blue-900": "var(--rui-color-palette-blue-900)",
+  "palette-blue-1000": "var(--rui-color-palette-blue-1000)",
+  "palette-red-100": "var(--rui-color-palette-red-100)",
+  "palette-red-200": "var(--rui-color-palette-red-200)",
+  "palette-red-300": "var(--rui-color-palette-red-300)",
+  "palette-red-400": "var(--rui-color-palette-red-400)",
+  "palette-red-500": "var(--rui-color-palette-red-500)",
+  "palette-red-600": "var(--rui-color-palette-red-600)",
+  "palette-red-700": "var(--rui-color-palette-red-700)",
+  "palette-red-800": "var(--rui-color-palette-red-800)",
+  "palette-red-900": "var(--rui-color-palette-red-900)",
+  "palette-red-1000": "var(--rui-color-palette-red-1000)",
+  "palette-green-100": "var(--rui-color-palette-green-100)",
+  "palette-green-200": "var(--rui-color-palette-green-200)",
+  "palette-green-300": "var(--rui-color-palette-green-300)",
+  "palette-green-400": "var(--rui-color-palette-green-400)",
+  "palette-green-500": "var(--rui-color-palette-green-500)",
+  "palette-green-600": "var(--rui-color-palette-green-600)",
+  "palette-green-700": "var(--rui-color-palette-green-700)",
+  "palette-green-800": "var(--rui-color-palette-green-800)",
+  "palette-green-900": "var(--rui-color-palette-green-900)",
+  "palette-green-1000": "var(--rui-color-palette-green-1000)",
+  "palette-yellow-100": "var(--rui-color-palette-yellow-100)",
+  "palette-yellow-200": "var(--rui-color-palette-yellow-200)",
+  "palette-yellow-300": "var(--rui-color-palette-yellow-300)",
+  "palette-yellow-400": "var(--rui-color-palette-yellow-400)",
+  "palette-yellow-500": "var(--rui-color-palette-yellow-500)",
+  "palette-yellow-600": "var(--rui-color-palette-yellow-600)",
+  "palette-yellow-700": "var(--rui-color-palette-yellow-700)",
+  "palette-yellow-800": "var(--rui-color-palette-yellow-800)",
+  "palette-yellow-900": "var(--rui-color-palette-yellow-900)",
+  "palette-yellow-1000": "var(--rui-color-palette-yellow-1000)",
+  "palette-purple-100": "var(--rui-color-palette-purple-100)",
+  "palette-purple-200": "var(--rui-color-palette-purple-200)",
+  "palette-purple-300": "var(--rui-color-palette-purple-300)",
+  "palette-purple-400": "var(--rui-color-palette-purple-400)",
+  "palette-purple-500": "var(--rui-color-palette-purple-500)",
+  "palette-purple-600": "var(--rui-color-palette-purple-600)",
+  "palette-purple-700": "var(--rui-color-palette-purple-700)",
+  "palette-purple-800": "var(--rui-color-palette-purple-800)",
+  "palette-purple-900": "var(--rui-color-palette-purple-900)",
+  "palette-purple-1000": "var(--rui-color-palette-purple-1000)",
+  "palette-static-black": "var(--rui-color-palette-static-black)",
+  "palette-static-black-alpha-100": "var(--rui-color-palette-static-black-alpha-100)",
+  "palette-static-black-alpha-200": "var(--rui-color-palette-static-black-alpha-200)",
+  "palette-static-black-alpha-300": "var(--rui-color-palette-static-black-alpha-300)",
+  "palette-static-black-alpha-400": "var(--rui-color-palette-static-black-alpha-400)",
+  "palette-static-black-alpha-500": "var(--rui-color-palette-static-black-alpha-500)",
+  "palette-static-black-alpha-600": "var(--rui-color-palette-static-black-alpha-600)",
+  "palette-static-black-alpha-700": "var(--rui-color-palette-static-black-alpha-700)",
+  "palette-static-black-alpha-800": "var(--rui-color-palette-static-black-alpha-800)",
+  "palette-static-black-alpha-900": "var(--rui-color-palette-static-black-alpha-900)",
+  "palette-static-black-alpha-1000": "var(--rui-color-palette-static-black-alpha-1000)",
+  "palette-static-white": "var(--rui-color-palette-static-white)",
+  "palette-static-white-alpha-50": "var(--rui-color-palette-static-white-alpha-50)",
+  "palette-static-white-alpha-100": "var(--rui-color-palette-static-white-alpha-100)",
+  "palette-static-white-alpha-200": "var(--rui-color-palette-static-white-alpha-200)",
+  "palette-static-white-alpha-300": "var(--rui-color-palette-static-white-alpha-300)",
+  "palette-static-white-alpha-400": "var(--rui-color-palette-static-white-alpha-400)",
+  "palette-static-white-alpha-500": "var(--rui-color-palette-static-white-alpha-500)",
+  "palette-static-white-alpha-600": "var(--rui-color-palette-static-white-alpha-600)",
+  "palette-static-white-alpha-700": "var(--rui-color-palette-static-white-alpha-700)",
+  "palette-static-white-alpha-800": "var(--rui-color-palette-static-white-alpha-800)",
+  "palette-static-white-alpha-900": "var(--rui-color-palette-static-white-alpha-900)",
+  "palette-static-white-alpha-1000": "var(--rui-color-palette-static-white-alpha-1000)",
+  "fg-brand": "var(--rui-color-fg-brand)",
+  "fg-brand-contrast": "var(--rui-color-fg-brand-contrast)",
+  "fg-critical": "var(--rui-color-fg-critical)",
+  "fg-critical-contrast": "var(--rui-color-fg-critical-contrast)",
+  "fg-disabled": "var(--rui-color-fg-disabled)",
+  "fg-informative": "var(--rui-color-fg-informative)",
+  "fg-informative-contrast": "var(--rui-color-fg-informative-contrast)",
+  "fg-neutral": "var(--rui-color-fg-neutral)",
+  "fg-neutral-inverted": "var(--rui-color-fg-neutral-inverted)",
+  "fg-neutral-muted": "var(--rui-color-fg-neutral-muted)",
+  "fg-neutral-subtle": "var(--rui-color-fg-neutral-subtle)",
+  "fg-placeholder": "var(--rui-color-fg-placeholder)",
+  "fg-positive": "var(--rui-color-fg-positive)",
+  "fg-positive-contrast": "var(--rui-color-fg-positive-contrast)",
+  "fg-warning": "var(--rui-color-fg-warning)",
+  "fg-warning-contrast": "var(--rui-color-fg-warning-contrast)",
+  "bg-brand-solid": "var(--rui-color-bg-brand-solid)",
+  "bg-brand-solid-pressed": "var(--rui-color-bg-brand-solid-pressed)",
+  "bg-brand-weak": "var(--rui-color-bg-brand-weak)",
+  "bg-brand-weak-pressed": "var(--rui-color-bg-brand-weak-pressed)",
+  "bg-critical-solid": "var(--rui-color-bg-critical-solid)",
+  "bg-critical-solid-pressed": "var(--rui-color-bg-critical-solid-pressed)",
+  "bg-critical-weak": "var(--rui-color-bg-critical-weak)",
+  "bg-critical-weak-pressed": "var(--rui-color-bg-critical-weak-pressed)",
+  "bg-disabled": "var(--rui-color-bg-disabled)",
+  "bg-informative-solid": "var(--rui-color-bg-informative-solid)",
+  "bg-informative-solid-pressed": "var(--rui-color-bg-informative-solid-pressed)",
+  "bg-informative-weak": "var(--rui-color-bg-informative-weak)",
+  "bg-informative-weak-pressed": "var(--rui-color-bg-informative-weak-pressed)",
+  "bg-layer-basement": "var(--rui-color-bg-layer-basement)",
+  "bg-layer-default": "var(--rui-color-bg-layer-default)",
+  "bg-layer-default-pressed": "var(--rui-color-bg-layer-default-pressed)",
+  "bg-layer-fill": "var(--rui-color-bg-layer-fill)",
+  "bg-layer-floating": "var(--rui-color-bg-layer-floating)",
+  "bg-layer-floating-pressed": "var(--rui-color-bg-layer-floating-pressed)",
+  "bg-magic-weak": "var(--rui-color-bg-magic-weak)",
+  "bg-neutral-inverted": "var(--rui-color-bg-neutral-inverted)",
+  "bg-neutral-inverted-pressed": "var(--rui-color-bg-neutral-inverted-pressed)",
+  "bg-neutral-solid": "var(--rui-color-bg-neutral-solid)",
+  "bg-neutral-solid-muted": "var(--rui-color-bg-neutral-solid-muted)",
+  "bg-neutral-solid-muted-pressed": "var(--rui-color-bg-neutral-solid-muted-pressed)",
+  "bg-neutral-weak": "var(--rui-color-bg-neutral-weak)",
+  "bg-neutral-weak-alpha": "var(--rui-color-bg-neutral-weak-alpha)",
+  "bg-neutral-weak-alpha-pressed": "var(--rui-color-bg-neutral-weak-alpha-pressed)",
+  "bg-neutral-weak-pressed": "var(--rui-color-bg-neutral-weak-pressed)",
+  "bg-overlay": "var(--rui-color-bg-overlay)",
+  "bg-overlay-muted": "var(--rui-color-bg-overlay-muted)",
+  "bg-positive-solid": "var(--rui-color-bg-positive-solid)",
+  "bg-positive-solid-pressed": "var(--rui-color-bg-positive-solid-pressed)",
+  "bg-positive-weak": "var(--rui-color-bg-positive-weak)",
+  "bg-positive-weak-pressed": "var(--rui-color-bg-positive-weak-pressed)",
+  "bg-transparent": "var(--rui-color-bg-transparent)",
+  "bg-transparent-pressed": "var(--rui-color-bg-transparent-pressed)",
+  "bg-warning-solid": "var(--rui-color-bg-warning-solid)",
+  "bg-warning-solid-pressed": "var(--rui-color-bg-warning-solid-pressed)",
+  "bg-warning-weak": "var(--rui-color-bg-warning-weak)",
+  "bg-warning-weak-pressed": "var(--rui-color-bg-warning-weak-pressed)",
+  "stroke-brand-solid": "var(--rui-color-stroke-brand-solid)",
+  "stroke-brand-weak": "var(--rui-color-stroke-brand-weak)",
+  "stroke-critical-solid": "var(--rui-color-stroke-critical-solid)",
+  "stroke-critical-weak": "var(--rui-color-stroke-critical-weak)",
+  "stroke-informative-solid": "var(--rui-color-stroke-informative-solid)",
+  "stroke-informative-weak": "var(--rui-color-stroke-informative-weak)",
+  "stroke-neutral-contrast": "var(--rui-color-stroke-neutral-contrast)",
+  "stroke-neutral-muted": "var(--rui-color-stroke-neutral-muted)",
+  "stroke-neutral-solid": "var(--rui-color-stroke-neutral-solid)",
+  "stroke-neutral-subtle": "var(--rui-color-stroke-neutral-subtle)",
+  "stroke-neutral-weak": "var(--rui-color-stroke-neutral-weak)",
+  "stroke-positive-solid": "var(--rui-color-stroke-positive-solid)",
+  "stroke-positive-weak": "var(--rui-color-stroke-positive-weak)",
+  "stroke-warning-solid": "var(--rui-color-stroke-warning-solid)",
+  "stroke-warning-weak": "var(--rui-color-stroke-warning-weak)",
+  "stroke-focus-ring": "var(--rui-color-stroke-focus-ring)",
+  "manner-temp-l1-bg": "var(--rui-color-manner-temp-l1-bg)",
+  "manner-temp-l1-text": "var(--rui-color-manner-temp-l1-text)",
+  "manner-temp-l10-bg": "var(--rui-color-manner-temp-l10-bg)",
+  "manner-temp-l10-text": "var(--rui-color-manner-temp-l10-text)",
+  "manner-temp-l2-bg": "var(--rui-color-manner-temp-l2-bg)",
+  "manner-temp-l2-text": "var(--rui-color-manner-temp-l2-text)",
+  "manner-temp-l3-bg": "var(--rui-color-manner-temp-l3-bg)",
+  "manner-temp-l3-text": "var(--rui-color-manner-temp-l3-text)",
+  "manner-temp-l4-bg": "var(--rui-color-manner-temp-l4-bg)",
+  "manner-temp-l4-text": "var(--rui-color-manner-temp-l4-text)",
+  "manner-temp-l5-bg": "var(--rui-color-manner-temp-l5-bg)",
+  "manner-temp-l5-text": "var(--rui-color-manner-temp-l5-text)",
+  "manner-temp-l6-bg": "var(--rui-color-manner-temp-l6-bg)",
+  "manner-temp-l6-text": "var(--rui-color-manner-temp-l6-text)",
+  "manner-temp-l7-bg": "var(--rui-color-manner-temp-l7-bg)",
+  "manner-temp-l7-text": "var(--rui-color-manner-temp-l7-text)",
+  "manner-temp-l8-bg": "var(--rui-color-manner-temp-l8-bg)",
+  "manner-temp-l8-text": "var(--rui-color-manner-temp-l8-text)",
+  "manner-temp-l9-bg": "var(--rui-color-manner-temp-l9-bg)",
+  "manner-temp-l9-text": "var(--rui-color-manner-temp-l9-text)",
+  "banner-blue": "var(--rui-color-banner-blue)",
+  "banner-cool-gray": "var(--rui-color-banner-cool-gray)",
+  "banner-green": "var(--rui-color-banner-green)",
+  "banner-orange": "var(--rui-color-banner-orange)",
+  "banner-pink": "var(--rui-color-banner-pink)",
+  "banner-purple": "var(--rui-color-banner-purple)",
+  "banner-red": "var(--rui-color-banner-red)",
+  "banner-teal": "var(--rui-color-banner-teal)",
+  "banner-warm-gray": "var(--rui-color-banner-warm-gray)",
+  "banner-yellow": "var(--rui-color-banner-yellow)",
+  "gradient-stops-fade-layer-floating": "#ffffff00 0.00%, #000000 100.00%",
+  "gradient-stops-fade-layer-default": "#000000 0.00%, #ffffff00 100.00%",
+  "gradient-stops-glow-magic": "#fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%",
+  "gradient-stops-glow-magic-pressed": "#fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%",
+  "gradient-stops-highlight-magic": "#ff6600 20.00%, #d25aca 100.00%",
+  "gradient-stops-highlight-magic-pressed": "#e14f00 20.00%, #ae58bf 100.00%",
+  "gradient-stops-shimmer-magic": "#fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%",
+  "gradient-stops-shimmer-neutral": "#ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%"
+},
+        backgroundImage: {
+  "fade-layer-floating-to-t": "linear-gradient(to top, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-tr": "linear-gradient(to top right, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-r": "linear-gradient(to right, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-br": "linear-gradient(to bottom right, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-b": "linear-gradient(to bottom, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-bl": "linear-gradient(to bottom left, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-l": "linear-gradient(to left, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-floating-to-tl": "linear-gradient(to top left, #ffffff00 0.00%, #000000 100.00%)",
+  "fade-layer-default-to-t": "linear-gradient(to top, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-tr": "linear-gradient(to top right, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-r": "linear-gradient(to right, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-br": "linear-gradient(to bottom right, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-b": "linear-gradient(to bottom, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-bl": "linear-gradient(to bottom left, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-l": "linear-gradient(to left, #000000 0.00%, #ffffff00 100.00%)",
+  "fade-layer-default-to-tl": "linear-gradient(to top left, #000000 0.00%, #ffffff00 100.00%)",
+  "glow-magic-to-t": "linear-gradient(to top, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-tr": "linear-gradient(to top right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-r": "linear-gradient(to right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-br": "linear-gradient(to bottom right, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-b": "linear-gradient(to bottom, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-bl": "linear-gradient(to bottom left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-l": "linear-gradient(to left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-to-tl": "linear-gradient(to top left, #fef6f7 0.00%, #fef0e7 80.00%, #f9f7f5 100.00%)",
+  "glow-magic-pressed-to-t": "linear-gradient(to top, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-tr": "linear-gradient(to top right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-r": "linear-gradient(to right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-br": "linear-gradient(to bottom right, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-b": "linear-gradient(to bottom, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-bl": "linear-gradient(to bottom left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-l": "linear-gradient(to left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "glow-magic-pressed-to-tl": "linear-gradient(to top left, #fbf0f2 0.00%, #ffe8db 80.00%, #f5f2ef 100.00%)",
+  "highlight-magic-to-t": "linear-gradient(to top, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-tr": "linear-gradient(to top right, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-r": "linear-gradient(to right, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-br": "linear-gradient(to bottom right, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-b": "linear-gradient(to bottom, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-bl": "linear-gradient(to bottom left, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-l": "linear-gradient(to left, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-to-tl": "linear-gradient(to top left, #ff6600 20.00%, #d25aca 100.00%)",
+  "highlight-magic-pressed-to-t": "linear-gradient(to top, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-tr": "linear-gradient(to top right, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-r": "linear-gradient(to right, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-br": "linear-gradient(to bottom right, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-b": "linear-gradient(to bottom, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-bl": "linear-gradient(to bottom left, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-l": "linear-gradient(to left, #e14f00 20.00%, #ae58bf 100.00%)",
+  "highlight-magic-pressed-to-tl": "linear-gradient(to top left, #e14f00 20.00%, #ae58bf 100.00%)",
+  "shimmer-magic-to-t": "linear-gradient(to top, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-tr": "linear-gradient(to top right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-r": "linear-gradient(to right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-br": "linear-gradient(to bottom right, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-b": "linear-gradient(to bottom, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-bl": "linear-gradient(to bottom left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-l": "linear-gradient(to left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-magic-to-tl": "linear-gradient(to top left, #fff9f500 0.00%, #fff9f5cc 46.00%, #fff9f5cc 54.00%, #fff9f500 100.00%)",
+  "shimmer-neutral-to-t": "linear-gradient(to top, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-tr": "linear-gradient(to top right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-r": "linear-gradient(to right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-br": "linear-gradient(to bottom right, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-b": "linear-gradient(to bottom, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-bl": "linear-gradient(to bottom left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-l": "linear-gradient(to left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)",
+  "shimmer-neutral-to-tl": "linear-gradient(to top left, #ffffff00 0.00%, #ffffffab 46.00%, #ffffffab 54.00%, #ffffff00 100.00%)"
+},
+        typography: {
+  "screen-title": {
+    "fontSize": "var(--rui-font-size-t10)",
+    "lineHeight": "var(--rui-line-height-t10)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "article-body": {
+    "fontSize": "var(--rui-font-size-t5)",
+    "lineHeight": "var(--rui-line-height-t6)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "article-note": {
+    "fontSize": "var(--rui-font-size-t4)",
+    "lineHeight": "var(--rui-line-height-t5)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t1-regular": {
+    "fontSize": "var(--rui-font-size-t1)",
+    "lineHeight": "var(--rui-line-height-t1)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t1-medium": {
+    "fontSize": "var(--rui-font-size-t1)",
+    "lineHeight": "var(--rui-line-height-t1)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t1-bold": {
+    "fontSize": "var(--rui-font-size-t1)",
+    "lineHeight": "var(--rui-line-height-t1)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t2-regular": {
+    "fontSize": "var(--rui-font-size-t2)",
+    "lineHeight": "var(--rui-line-height-t2)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t2-medium": {
+    "fontSize": "var(--rui-font-size-t2)",
+    "lineHeight": "var(--rui-line-height-t2)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t2-bold": {
+    "fontSize": "var(--rui-font-size-t2)",
+    "lineHeight": "var(--rui-line-height-t2)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t3-regular": {
+    "fontSize": "var(--rui-font-size-t3)",
+    "lineHeight": "var(--rui-line-height-t3)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t3-medium": {
+    "fontSize": "var(--rui-font-size-t3)",
+    "lineHeight": "var(--rui-line-height-t3)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t3-bold": {
+    "fontSize": "var(--rui-font-size-t3)",
+    "lineHeight": "var(--rui-line-height-t3)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t4-regular": {
+    "fontSize": "var(--rui-font-size-t4)",
+    "lineHeight": "var(--rui-line-height-t4)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t4-medium": {
+    "fontSize": "var(--rui-font-size-t4)",
+    "lineHeight": "var(--rui-line-height-t4)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t4-bold": {
+    "fontSize": "var(--rui-font-size-t4)",
+    "lineHeight": "var(--rui-line-height-t4)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t5-regular": {
+    "fontSize": "var(--rui-font-size-t5)",
+    "lineHeight": "var(--rui-line-height-t5)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t5-medium": {
+    "fontSize": "var(--rui-font-size-t5)",
+    "lineHeight": "var(--rui-line-height-t5)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t5-bold": {
+    "fontSize": "var(--rui-font-size-t5)",
+    "lineHeight": "var(--rui-line-height-t5)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t6-regular": {
+    "fontSize": "var(--rui-font-size-t6)",
+    "lineHeight": "var(--rui-line-height-t6)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t6-medium": {
+    "fontSize": "var(--rui-font-size-t6)",
+    "lineHeight": "var(--rui-line-height-t6)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t6-bold": {
+    "fontSize": "var(--rui-font-size-t6)",
+    "lineHeight": "var(--rui-line-height-t6)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t7-regular": {
+    "fontSize": "var(--rui-font-size-t7)",
+    "lineHeight": "var(--rui-line-height-t7)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t7-medium": {
+    "fontSize": "var(--rui-font-size-t7)",
+    "lineHeight": "var(--rui-line-height-t7)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t7-bold": {
+    "fontSize": "var(--rui-font-size-t7)",
+    "lineHeight": "var(--rui-line-height-t7)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t8-bold": {
+    "fontSize": "var(--rui-font-size-t8)",
+    "lineHeight": "var(--rui-line-height-t8)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t9-bold": {
+    "fontSize": "var(--rui-font-size-t9)",
+    "lineHeight": "var(--rui-line-height-t9)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t10-bold": {
+    "fontSize": "var(--rui-font-size-t10)",
+    "lineHeight": "var(--rui-line-height-t10)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t1-static-regular": {
+    "fontSize": "var(--rui-font-size-t1-static)",
+    "lineHeight": "var(--rui-line-height-t1-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t1-static-medium": {
+    "fontSize": "var(--rui-font-size-t1-static)",
+    "lineHeight": "var(--rui-line-height-t1-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t1-static-bold": {
+    "fontSize": "var(--rui-font-size-t1-static)",
+    "lineHeight": "var(--rui-line-height-t1-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t2-static-regular": {
+    "fontSize": "var(--rui-font-size-t2-static)",
+    "lineHeight": "var(--rui-line-height-t2-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t2-static-medium": {
+    "fontSize": "var(--rui-font-size-t2-static)",
+    "lineHeight": "var(--rui-line-height-t2-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t2-static-bold": {
+    "fontSize": "var(--rui-font-size-t2-static)",
+    "lineHeight": "var(--rui-line-height-t2-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t3-static-regular": {
+    "fontSize": "var(--rui-font-size-t3-static)",
+    "lineHeight": "var(--rui-line-height-t3-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t3-static-medium": {
+    "fontSize": "var(--rui-font-size-t3-static)",
+    "lineHeight": "var(--rui-line-height-t3-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t3-static-bold": {
+    "fontSize": "var(--rui-font-size-t3-static)",
+    "lineHeight": "var(--rui-line-height-t3-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t4-static-regular": {
+    "fontSize": "var(--rui-font-size-t4-static)",
+    "lineHeight": "var(--rui-line-height-t4-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t4-static-medium": {
+    "fontSize": "var(--rui-font-size-t4-static)",
+    "lineHeight": "var(--rui-line-height-t4-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t4-static-bold": {
+    "fontSize": "var(--rui-font-size-t4-static)",
+    "lineHeight": "var(--rui-line-height-t4-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t5-static-regular": {
+    "fontSize": "var(--rui-font-size-t5-static)",
+    "lineHeight": "var(--rui-line-height-t5-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t5-static-medium": {
+    "fontSize": "var(--rui-font-size-t5-static)",
+    "lineHeight": "var(--rui-line-height-t5-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t5-static-bold": {
+    "fontSize": "var(--rui-font-size-t5-static)",
+    "lineHeight": "var(--rui-line-height-t5-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t6-static-regular": {
+    "fontSize": "var(--rui-font-size-t6-static)",
+    "lineHeight": "var(--rui-line-height-t6-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t6-static-medium": {
+    "fontSize": "var(--rui-font-size-t6-static)",
+    "lineHeight": "var(--rui-line-height-t6-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t6-static-bold": {
+    "fontSize": "var(--rui-font-size-t6-static)",
+    "lineHeight": "var(--rui-line-height-t6-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t7-static-regular": {
+    "fontSize": "var(--rui-font-size-t7-static)",
+    "lineHeight": "var(--rui-line-height-t7-static)",
+    "fontWeight": "var(--rui-font-weight-regular)"
+  },
+  "t7-static-medium": {
+    "fontSize": "var(--rui-font-size-t7-static)",
+    "lineHeight": "var(--rui-line-height-t7-static)",
+    "fontWeight": "var(--rui-font-weight-medium)"
+  },
+  "t7-static-bold": {
+    "fontSize": "var(--rui-font-size-t7-static)",
+    "lineHeight": "var(--rui-line-height-t7-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t8-static-bold": {
+    "fontSize": "var(--rui-font-size-t8-static)",
+    "lineHeight": "var(--rui-line-height-t8-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t9-static-bold": {
+    "fontSize": "var(--rui-font-size-t9-static)",
+    "lineHeight": "var(--rui-line-height-t9-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  },
+  "t10-static-bold": {
+    "fontSize": "var(--rui-font-size-t10-static)",
+    "lineHeight": "var(--rui-line-height-t10-static)",
+    "fontWeight": "var(--rui-font-weight-bold)"
+  }
+},
+        spacing: {
+  "x0_5": "var(--rui-dimension-x0_5)",
+  "x1": "var(--rui-dimension-x1)",
+  "x1_5": "var(--rui-dimension-x1_5)",
+  "x2": "var(--rui-dimension-x2)",
+  "x2_5": "var(--rui-dimension-x2_5)",
+  "x3": "var(--rui-dimension-x3)",
+  "x3_5": "var(--rui-dimension-x3_5)",
+  "x4": "var(--rui-dimension-x4)",
+  "x4_5": "var(--rui-dimension-x4_5)",
+  "x5": "var(--rui-dimension-x5)",
+  "x6": "var(--rui-dimension-x6)",
+  "x7": "var(--rui-dimension-x7)",
+  "x8": "var(--rui-dimension-x8)",
+  "x9": "var(--rui-dimension-x9)",
+  "x10": "var(--rui-dimension-x10)",
+  "x12": "var(--rui-dimension-x12)",
+  "x13": "var(--rui-dimension-x13)",
+  "x14": "var(--rui-dimension-x14)",
+  "x16": "var(--rui-dimension-x16)",
+  "spacing-x-between-chips": "var(--rui-dimension-spacing-x-between-chips)",
+  "spacing-x-global-gutter": "var(--rui-dimension-spacing-x-global-gutter)",
+  "spacing-y-component-default": "var(--rui-dimension-spacing-y-component-default)",
+  "spacing-y-nav-to-title": "var(--rui-dimension-spacing-y-nav-to-title)",
+  "spacing-y-screen-bottom": "var(--rui-dimension-spacing-y-screen-bottom)",
+  "spacing-y-between-text": "var(--rui-dimension-spacing-y-between-text)"
+},
+        borderRadius: {
+  "r0_5": "var(--rui-radius-r0_5)",
+  "r1": "var(--rui-radius-r1)",
+  "r1_5": "var(--rui-radius-r1_5)",
+  "r2": "var(--rui-radius-r2)",
+  "r2_5": "var(--rui-radius-r2_5)",
+  "r3": "var(--rui-radius-r3)",
+  "r3_5": "var(--rui-radius-r3_5)",
+  "r4": "var(--rui-radius-r4)",
+  "r5": "var(--rui-radius-r5)",
+  "r6": "var(--rui-radius-r6)",
+  "full": "var(--rui-radius-full)"
+},
+        fontSize: {
+  "t1": "var(--rui-font-size-t1)",
+  "t2": "var(--rui-font-size-t2)",
+  "t3": "var(--rui-font-size-t3)",
+  "t4": "var(--rui-font-size-t4)",
+  "t5": "var(--rui-font-size-t5)",
+  "t6": "var(--rui-font-size-t6)",
+  "t7": "var(--rui-font-size-t7)",
+  "t8": "var(--rui-font-size-t8)",
+  "t9": "var(--rui-font-size-t9)",
+  "t10": "var(--rui-font-size-t10)",
+  "t1-static": "var(--rui-font-size-t1-static)",
+  "t2-static": "var(--rui-font-size-t2-static)",
+  "t3-static": "var(--rui-font-size-t3-static)",
+  "t4-static": "var(--rui-font-size-t4-static)",
+  "t5-static": "var(--rui-font-size-t5-static)",
+  "t6-static": "var(--rui-font-size-t6-static)",
+  "t7-static": "var(--rui-font-size-t7-static)",
+  "t8-static": "var(--rui-font-size-t8-static)",
+  "t9-static": "var(--rui-font-size-t9-static)",
+  "t10-static": "var(--rui-font-size-t10-static)"
+},
+        lineHeight: {
+  "t1": "var(--rui-line-height-t1)",
+  "t2": "var(--rui-line-height-t2)",
+  "t3": "var(--rui-line-height-t3)",
+  "t4": "var(--rui-line-height-t4)",
+  "t5": "var(--rui-line-height-t5)",
+  "t6": "var(--rui-line-height-t6)",
+  "t7": "var(--rui-line-height-t7)",
+  "t8": "var(--rui-line-height-t8)",
+  "t9": "var(--rui-line-height-t9)",
+  "t10": "var(--rui-line-height-t10)",
+  "t1-static": "var(--rui-line-height-t1-static)",
+  "t2-static": "var(--rui-line-height-t2-static)",
+  "t3-static": "var(--rui-line-height-t3-static)",
+  "t4-static": "var(--rui-line-height-t4-static)",
+  "t5-static": "var(--rui-line-height-t5-static)",
+  "t6-static": "var(--rui-line-height-t6-static)",
+  "t7-static": "var(--rui-line-height-t7-static)",
+  "t8-static": "var(--rui-line-height-t8-static)",
+  "t9-static": "var(--rui-line-height-t9-static)",
+  "t10-static": "var(--rui-line-height-t10-static)"
+},
+        fontWeight: {
+  "regular": "var(--rui-font-weight-regular)",
+  "medium": "var(--rui-font-weight-medium)",
+  "bold": "var(--rui-font-weight-bold)"
+},
+        transitionDuration: {
+  "d1": "var(--rui-duration-d1)",
+  "d2": "var(--rui-duration-d2)",
+  "d3": "var(--rui-duration-d3)",
+  "d4": "var(--rui-duration-d4)",
+  "d5": "var(--rui-duration-d5)",
+  "d6": "var(--rui-duration-d6)",
+  "color-transition": "var(--rui-duration-color-transition)"
+},
+        transitionTimingFunction: {
+  "linear": "var(--rui-timing-function-linear)",
+  "easing": "var(--rui-timing-function-easing)",
+  "enter": "var(--rui-timing-function-enter)",
+  "exit": "var(--rui-timing-function-exit)",
+  "enter-expressive": "var(--rui-timing-function-enter-expressive)",
+  "exit-expressive": "var(--rui-timing-function-exit-expressive)"
+},
+        boxShadow: {
+  "s1": "var(--rui-shadow-s1)",
+  "s2": "var(--rui-shadow-s2)",
+  "s3": "var(--rui-shadow-s3)"
+},
+      },
+    },
+  },
+);

@@ -1,0 +1,305 @@
+.seed-text {
+    margin: 0;
+    color: var(--rui-text-color);
+    font-size: var(--rui-font-size);
+    font-weight: var(--rui-font-weight);
+    line-height: var(--rui-line-height);
+    text-align: var(--rui-text-align);
+    user-select: var(--rui-user-select);
+    --rui-text-color: inherit;
+    --rui-font-size: inherit;
+    --rui-font-weight: inherit;
+    --rui-line-height: inherit;
+    --rui-text-align: inherit;
+    --rui-user-select: inherit;
+    --rui-white-space: inherit;
+    --rui-max-lines: initial
+}
+.seed-text--textStyle_screenTitle {
+    --rui-font-size: var(--rui-font-size-t10);
+    --rui-line-height: var(--rui-line-height-t10);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_articleBody {
+    --rui-font-size: var(--rui-font-size-t5);
+    --rui-line-height: var(--rui-line-height-t6);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_articleNote {
+    --rui-font-size: var(--rui-font-size-t4);
+    --rui-line-height: var(--rui-line-height-t5);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t1Regular {
+    --rui-font-size: var(--rui-font-size-t1);
+    --rui-line-height: var(--rui-line-height-t1);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t1Medium {
+    --rui-font-size: var(--rui-font-size-t1);
+    --rui-line-height: var(--rui-line-height-t1);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t1Bold {
+    --rui-font-size: var(--rui-font-size-t1);
+    --rui-line-height: var(--rui-line-height-t1);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t2Regular {
+    --rui-font-size: var(--rui-font-size-t2);
+    --rui-line-height: var(--rui-line-height-t2);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t2Medium {
+    --rui-font-size: var(--rui-font-size-t2);
+    --rui-line-height: var(--rui-line-height-t2);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t2Bold {
+    --rui-font-size: var(--rui-font-size-t2);
+    --rui-line-height: var(--rui-line-height-t2);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t3Regular {
+    --rui-font-size: var(--rui-font-size-t3);
+    --rui-line-height: var(--rui-line-height-t3);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t3Medium {
+    --rui-font-size: var(--rui-font-size-t3);
+    --rui-line-height: var(--rui-line-height-t3);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t3Bold {
+    --rui-font-size: var(--rui-font-size-t3);
+    --rui-line-height: var(--rui-line-height-t3);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t4Regular {
+    --rui-font-size: var(--rui-font-size-t4);
+    --rui-line-height: var(--rui-line-height-t4);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t4Medium {
+    --rui-font-size: var(--rui-font-size-t4);
+    --rui-line-height: var(--rui-line-height-t4);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t4Bold {
+    --rui-font-size: var(--rui-font-size-t4);
+    --rui-line-height: var(--rui-line-height-t4);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t5Regular {
+    --rui-font-size: var(--rui-font-size-t5);
+    --rui-line-height: var(--rui-line-height-t5);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t5Medium {
+    --rui-font-size: var(--rui-font-size-t5);
+    --rui-line-height: var(--rui-line-height-t5);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t5Bold {
+    --rui-font-size: var(--rui-font-size-t5);
+    --rui-line-height: var(--rui-line-height-t5);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t6Regular {
+    --rui-font-size: var(--rui-font-size-t6);
+    --rui-line-height: var(--rui-line-height-t6);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t6Medium {
+    --rui-font-size: var(--rui-font-size-t6);
+    --rui-line-height: var(--rui-line-height-t6);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t6Bold {
+    --rui-font-size: var(--rui-font-size-t6);
+    --rui-line-height: var(--rui-line-height-t6);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t7Regular {
+    --rui-font-size: var(--rui-font-size-t7);
+    --rui-line-height: var(--rui-line-height-t7);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t7Medium {
+    --rui-font-size: var(--rui-font-size-t7);
+    --rui-line-height: var(--rui-line-height-t7);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t7Bold {
+    --rui-font-size: var(--rui-font-size-t7);
+    --rui-line-height: var(--rui-line-height-t7);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t8Bold {
+    --rui-font-size: var(--rui-font-size-t8);
+    --rui-line-height: var(--rui-line-height-t8);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t9Bold {
+    --rui-font-size: var(--rui-font-size-t9);
+    --rui-line-height: var(--rui-line-height-t9);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t10Bold {
+    --rui-font-size: var(--rui-font-size-t10);
+    --rui-line-height: var(--rui-line-height-t10);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t1StaticRegular {
+    --rui-font-size: var(--rui-font-size-t1-static);
+    --rui-line-height: var(--rui-line-height-t1-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t1StaticMedium {
+    --rui-font-size: var(--rui-font-size-t1-static);
+    --rui-line-height: var(--rui-line-height-t1-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t1StaticBold {
+    --rui-font-size: var(--rui-font-size-t1-static);
+    --rui-line-height: var(--rui-line-height-t1-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t2StaticRegular {
+    --rui-font-size: var(--rui-font-size-t2-static);
+    --rui-line-height: var(--rui-line-height-t2-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t2StaticMedium {
+    --rui-font-size: var(--rui-font-size-t2-static);
+    --rui-line-height: var(--rui-line-height-t2-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t2StaticBold {
+    --rui-font-size: var(--rui-font-size-t2-static);
+    --rui-line-height: var(--rui-line-height-t2-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t3StaticRegular {
+    --rui-font-size: var(--rui-font-size-t3-static);
+    --rui-line-height: var(--rui-line-height-t3-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t3StaticMedium {
+    --rui-font-size: var(--rui-font-size-t3-static);
+    --rui-line-height: var(--rui-line-height-t3-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t3StaticBold {
+    --rui-font-size: var(--rui-font-size-t3-static);
+    --rui-line-height: var(--rui-line-height-t3-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t4StaticRegular {
+    --rui-font-size: var(--rui-font-size-t4-static);
+    --rui-line-height: var(--rui-line-height-t4-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t4StaticMedium {
+    --rui-font-size: var(--rui-font-size-t4-static);
+    --rui-line-height: var(--rui-line-height-t4-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t4StaticBold {
+    --rui-font-size: var(--rui-font-size-t4-static);
+    --rui-line-height: var(--rui-line-height-t4-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t5StaticRegular {
+    --rui-font-size: var(--rui-font-size-t5-static);
+    --rui-line-height: var(--rui-line-height-t5-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t5StaticMedium {
+    --rui-font-size: var(--rui-font-size-t5-static);
+    --rui-line-height: var(--rui-line-height-t5-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t5StaticBold {
+    --rui-font-size: var(--rui-font-size-t5-static);
+    --rui-line-height: var(--rui-line-height-t5-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t6StaticRegular {
+    --rui-font-size: var(--rui-font-size-t6-static);
+    --rui-line-height: var(--rui-line-height-t6-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t6StaticMedium {
+    --rui-font-size: var(--rui-font-size-t6-static);
+    --rui-line-height: var(--rui-line-height-t6-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t6StaticBold {
+    --rui-font-size: var(--rui-font-size-t6-static);
+    --rui-line-height: var(--rui-line-height-t6-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t7StaticRegular {
+    --rui-font-size: var(--rui-font-size-t7-static);
+    --rui-line-height: var(--rui-line-height-t7-static);
+    --rui-font-weight: var(--rui-font-weight-regular)
+}
+.seed-text--textStyle_t7StaticMedium {
+    --rui-font-size: var(--rui-font-size-t7-static);
+    --rui-line-height: var(--rui-line-height-t7-static);
+    --rui-font-weight: var(--rui-font-weight-medium)
+}
+.seed-text--textStyle_t7StaticBold {
+    --rui-font-size: var(--rui-font-size-t7-static);
+    --rui-line-height: var(--rui-line-height-t7-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t8StaticBold {
+    --rui-font-size: var(--rui-font-size-t8-static);
+    --rui-line-height: var(--rui-line-height-t8-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t9StaticBold {
+    --rui-font-size: var(--rui-font-size-t9-static);
+    --rui-line-height: var(--rui-line-height-t9-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--textStyle_t10StaticBold {
+    --rui-font-size: var(--rui-font-size-t10-static);
+    --rui-line-height: var(--rui-line-height-t10-static);
+    --rui-font-weight: var(--rui-font-weight-bold)
+}
+.seed-text--maxLines_none {
+    overflow: unset;
+    min-width: unset;
+    text-overflow: unset;
+    white-space: var(--rui-white-space);
+    -webkit-line-clamp: unset
+}
+.seed-text--maxLines_single {
+    display: block;
+    overflow: hidden;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: var(--rui-max-lines)
+}
+.seed-text--maxLines_multi {
+    display: -webkit-box;
+    overflow: hidden;
+    min-width: 0;
+    text-overflow: ellipsis;
+    white-space: initial;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--rui-max-lines)
+}
+.seed-text--textDecorationLine_none {
+    text-decoration-line: none
+}
+.seed-text--textDecorationLine_line-through {
+    text-decoration-line: line-through
+}
+.seed-text--textDecorationLine_underline {
+    text-decoration-line: underline
+}

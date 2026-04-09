@@ -1,0 +1,11 @@
+:root[data-seed] {
+  --rui-alert-dialog-backdrop-background: var(--rui-semantic-color-overlay-dim);
+  --rui-alert-dialog-content-background: var(--rui-semantic-color-paper-dialog);
+  --rui-alert-dialog-title-color: var(--rui-scale-color-gray-900);
+  --rui-alert-dialog-description-color: var(--rui-scale-color-gray-900);
+
+  --rui-box-button-focus-border: 2px solid var(--rui-scale-color-blue-600);
+
+  box-shadow: 0 0 0 2px var(--rui-scale-color-blue-600);
+  background: linear-gradient(to bottom, var(--rui-scale-color-blue-600), var(--rui-scale-color-blue-700));
+}

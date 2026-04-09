@@ -1,0 +1,60 @@
+@layer seed-components {
+  .seed-image-frame-reaction-button__root {
+    box-sizing: border-box;
+    cursor: pointer;
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    background: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    display: inline-flex;
+    position: relative;
+  }
+
+  .seed-image-frame-reaction-button__root:before {
+    content: "";
+    top: calc((var(--rui-dimension-x10)  - var(--rui-dimension-x6)) / 2 * -1);
+    right: calc((var(--rui-dimension-x10)  - var(--rui-dimension-x6)) / 2 * -1);
+    bottom: calc((var(--rui-dimension-x10)  - var(--rui-dimension-x6)) / 2 * -1);
+    left: calc((var(--rui-dimension-x10)  - var(--rui-dimension-x6)) / 2 * -1);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    position: absolute;
+  }
+
+  .seed-image-frame-reaction-button__root:is(:focus, [data-focus]) {
+    outline: none;
+  }
+
+  .seed-image-frame-reaction-button__root:is(:focus-visible, [data-focus-visible]):before {
+    border-radius: var(--rui-radius-r1);
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+  }
+
+  .seed-image-frame-reaction-button__fillIcon {
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    pointer-events: none;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+  }
+
+  .seed-image-frame-reaction-button__lineIcon {
+    width: var(--rui-dimension-x6);
+    height: var(--rui-dimension-x6);
+    color: var(--rui-color-palette-static-white);
+    pointer-events: none;
+    margin: auto;
+    position: absolute;
+    inset: 0;
+  }
+
+  .seed-image-frame-reaction-button__lineIcon:is([aria-pressed="true"], [data-pressed]) {
+    color: var(--rui-color-bg-transparent);
+  }
+}

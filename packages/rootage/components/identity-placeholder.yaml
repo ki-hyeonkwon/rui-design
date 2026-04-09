@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: identity-placeholder
+  name: Identity Placeholder
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+      image:
+        properties:
+          color:
+            type: color
+  definitions:
+    base:
+      enabled:
+        root:
+          color: $color.palette.gray-500
+        image:
+          color: $color.palette.static-white-alpha-800

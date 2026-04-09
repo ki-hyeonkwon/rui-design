@@ -1,0 +1,151 @@
+.seed-input-button__root {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    isolation: isolate;
+    height: var(--rui-dimension-x13);
+    gap: var(--rui-dimension-x2_5);
+    padding-left: var(--rui-dimension-x4);
+    padding-right: var(--rui-dimension-x4);
+}
+.seed-input-button__button {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    border-radius: var(--rui-radius-r3);
+    background-color: var(--rui-color-bg-transparent);
+    box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-weak);
+    transition: background-color var(--rui-duration-color-transition) var(--rui-timing-function-easing), outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+}
+.seed-input-button__button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 2px;
+    transition: border-color 0.1s var(--rui-timing-function-easing);
+    pointer-events: none;
+}
+.seed-input-button__button[data-disabled] {
+    cursor: not-allowed;
+    background-color: var(--rui-color-bg-disabled);
+}
+@media (hover: hover) {
+    .seed-input-button__button:not([data-disabled]):not(:is([data-readonly])):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-transparent-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-input-button__button:not([data-disabled]):not(:is([data-readonly])):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-transparent-pressed);
+    }
+}
+.seed-input-button__button:is([data-readonly]):not([data-disabled]) {
+    cursor: default;
+    background-color: var(--rui-color-bg-disabled);
+}
+.seed-input-button__button {
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-input-button__button:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-input-button__button:is(:invalid, [data-invalid])::after {
+    border-width: 2px;
+    border-color: var(--rui-color-stroke-critical-solid);
+}
+.seed-input-button__value {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    pointer-events: none;
+}
+.seed-input-button__value[data-disabled] {
+    color: var(--rui-color-fg-disabled);
+}
+.seed-input-button__value:is([data-readonly]):not([data-disabled]) {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-input-button__placeholder {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-placeholder);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex-grow: 1;
+    pointer-events: none;
+}
+.seed-input-button__placeholder[data-disabled] {
+    color: var(--rui-color-fg-disabled);
+}
+.seed-input-button__placeholder:is([data-readonly]):not([data-disabled]) {
+    color: var(--rui-color-fg-placeholder);
+}
+.seed-input-button__prefixText {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral-muted);
+    pointer-events: none;
+}
+.seed-input-button__prefixIcon {
+    width: var(--rui-dimension-x5);
+    height: var(--rui-dimension-x5);
+    flex-shrink: 0;
+    color: var(--rui-color-fg-neutral-muted);
+    pointer-events: none;
+}
+.seed-input-button__suffixText {
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral-muted);
+    pointer-events: none;
+}
+.seed-input-button__suffixIcon {
+    width: var(--rui-dimension-x5);
+    height: var(--rui-dimension-x5);
+    flex-shrink: 0;
+    color: var(--rui-color-fg-neutral-muted);
+    pointer-events: none;
+}
+.seed-input-button__clearButton {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    border-radius: var(--rui-radius-full);
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-input-button__clearButton:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-input-button__clearButton {
+    --rui-icon-size: 22px;
+    --rui-icon-color: var(--rui-color-fg-neutral-subtle);
+}

@@ -1,0 +1,10 @@
+.seed-select-box-group {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(var(--rui-select-box-group--columns, 1), minmax(0, 1fr));
+    row-gap: var(--rui-dimension-spacing-y-component-default);
+    column-gap: var(--rui-dimension-x3);
+}
+.seed-select-box-group:not([data-columns='1']) {
+    grid-auto-rows: 1fr;
+}

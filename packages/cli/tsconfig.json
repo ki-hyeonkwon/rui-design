@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "isolatedModules": false,
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "typeRoots": ["../../node_modules/@types"],
+    "types": ["bun"],
+    "paths": {
+      "@/*": ["./*"]
+    }
+  }
+}

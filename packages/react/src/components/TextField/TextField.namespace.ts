@@ -1,0 +1,16 @@
+export {
+  TextFieldRoot as Root,
+  TextFieldInput as Input,
+  TextFieldTextarea as Textarea,
+  TextFieldPrefixIcon as PrefixIcon,
+  TextFieldPrefixText as PrefixText,
+  TextFieldSuffixIcon as SuffixIcon,
+  TextFieldSuffixText as SuffixText,
+  type TextFieldRootProps as RootProps,
+  type TextFieldInputProps as InputProps,
+  type TextFieldTextareaProps as TextareaProps,
+  type TextFieldPrefixIconProps as PrefixIconProps,
+  type TextFieldPrefixTextProps as PrefixTextProps,
+  type TextFieldSuffixIconProps as SuffixIconProps,
+  type TextFieldSuffixTextProps as SuffixTextProps,
+} from "./TextField";

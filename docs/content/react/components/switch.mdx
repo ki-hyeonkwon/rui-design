@@ -1,0 +1,124 @@
+---
+title: Switch
+description: 특정 설정 및 상태를 즉시 켜거나 끌 수 있도록 하는 컴포넌트입니다.
+---
+
+<ComponentExample name="react/switch/preview">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/preview.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+## Installation
+
+```package-install
+npx @rui/cli@latest add ui:switch
+```
+
+<ManualInstallation name="switch" />
+
+## Props
+
+### `Switch`
+
+<react-type-table path="./registry/ui/switch.tsx" name="SwitchProps" />
+
+### `Switchmark`
+
+<react-type-table path="./registry/ui/switch.tsx" name="SwitchmarkProps" />
+
+## Examples
+
+### Sizes
+
+<Callout title="Deprecated Props" type="warning">
+  `size="medium"`과 `size="small"`은 더 이상 사용되지 않습니다. 대신 `size="32"`와 `size="16"`을 사용하세요.
+</Callout>
+
+<ComponentExample name="react/switch/sizes">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/sizes.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Tones
+
+#### Brand
+
+<ComponentExample name="react/switch/brand">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/brand.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Neutral
+
+<ComponentExample name="react/switch/neutral">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/neutral.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Long Label
+
+<ComponentExample name="react/switch/long-label">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/long-label.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Disabled
+
+<ComponentExample name="react/switch/disabled">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/disabled.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Listening to Value Changes
+
+`onCheckedChange`를 사용하여 스위치의 선택 상태 변경을 감지할 수 있습니다.
+
+이벤트를 활용해야 하는 경우 `inputProps`를 통해 내부 `<input>` 요소에 직접 이벤트 핸들러를 추가할 수 있습니다.
+
+<ComponentExample name="react/switch/value-changes">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/value-changes.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Use Cases
+
+#### Using `Switchmark`
+
+`Switchmark`는 레이블을 제외한 스위치 컴포넌트로, 커스텀 레이아웃을 위해 사용할 수 있습니다.
+
+<ComponentExample name="react/switch/switchmark">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/switch/switchmark.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>

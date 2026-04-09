@@ -1,0 +1,13 @@
+import { ActionButton, Box } from "@rui/react";
+
+function App() {
+  return (
+    <Box display="flex" p="x6" gap="x4" borderColor="stroke.neutralMuted" borderWidth={1}>
+      <ActionButton>Hello</ActionButton>
+      <ActionButton variant="neutralSolid">Hello</ActionButton>
+      <ActionButton variant="neutralWeak">Hello</ActionButton>
+    </Box>
+  );
+}
+
+export default App;

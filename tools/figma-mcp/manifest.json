@@ -1,0 +1,21 @@
+{
+  "name": "RUI Design MCP",
+  "api": "1.0.0",
+  "main": "dist/main/code.js",
+  "ui": "dist/index.html",
+  "editorType": ["figma", "dev"],
+  "capabilities": ["inspect"],
+  "id": "1496384010980477154",
+  "enablePrivatePluginApi": true,
+  "documentAccess": "dynamic-page",
+  "permissions": ["currentuser", "teamlibrary"],
+  "networkAccess": {
+    "allowedDomains": ["http://localhost:3055", "ws://localhost:3055", "https://us.i.posthog.com"],
+    "devAllowedDomains": [
+      "http://localhost:3055",
+      "ws://localhost:3055",
+      "https://us.i.posthog.com"
+    ],
+    "reasoning": "allow to communicate with Figma through MCP."
+  }
+}

@@ -1,0 +1,16 @@
+export const brand = "var(--rui-color-fg-brand)";
+export const brandContrast = "var(--rui-color-fg-brand-contrast)";
+export const critical = "var(--rui-color-fg-critical)";
+export const criticalContrast = "var(--rui-color-fg-critical-contrast)";
+export const disabled = "var(--rui-color-fg-disabled)";
+export const informative = "var(--rui-color-fg-informative)";
+export const informativeContrast = "var(--rui-color-fg-informative-contrast)";
+export const neutral = "var(--rui-color-fg-neutral)";
+export const neutralInverted = "var(--rui-color-fg-neutral-inverted)";
+export const neutralMuted = "var(--rui-color-fg-neutral-muted)";
+export const neutralSubtle = "var(--rui-color-fg-neutral-subtle)";
+export const placeholder = "var(--rui-color-fg-placeholder)";
+export const positive = "var(--rui-color-fg-positive)";
+export const positiveContrast = "var(--rui-color-fg-positive-contrast)";
+export const warning = "var(--rui-color-fg-warning)";
+export const warningContrast = "var(--rui-color-fg-warning-contrast)";

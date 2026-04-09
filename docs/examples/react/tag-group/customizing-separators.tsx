@@ -1,0 +1,21 @@
+import { VStack } from "@rui/react";
+import { TagGroupRoot, TagGroupItem } from "rui/ui/tag-group";
+
+export default function TagGroupCustomizingSeparators() {
+  return (
+    <VStack gap="spacingY.componentDefault" align="center">
+      <TagGroupRoot separator=" | " size="t4">
+        <TagGroupItem label="가" />
+        <TagGroupItem label="나" />
+        <TagGroupItem label="다" />
+        <TagGroupItem label="라" />
+      </TagGroupRoot>
+      <TagGroupRoot separator=" " size="t4">
+        <TagGroupItem label="가" />
+        <TagGroupItem label="나" />
+        <TagGroupItem label="다" />
+        <TagGroupItem label="라" />
+      </TagGroupRoot>
+    </VStack>
+  );
+}

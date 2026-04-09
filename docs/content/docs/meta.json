@@ -1,0 +1,14 @@
+{
+  "title": "Design",
+  "description": "SEED 디자인 문서",
+  "icon": "Palette",
+  "pages": [
+    "index",
+    "progress-board",
+    "foundation",
+    "components",
+    "guidelines",
+    "migration",
+    "resources"
+  ]
+}

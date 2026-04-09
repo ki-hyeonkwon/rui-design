@@ -1,0 +1,80 @@
+import type { StaticActivityComponentType } from "@stackflow/react/future";
+import { useFlow } from "@stackflow/react/future";
+
+import {
+  AppBar,
+  AppBarLeft,
+  AppBarMain,
+  AppBarBackButton,
+  AppBarIconButton,
+  AppBarRight,
+} from "rui/ui/app-bar";
+import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
+import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
+import { ActionButton } from "rui/ui/action-button";
+import { HelpBubbleTrigger } from "rui/ui/help-bubble";
+
+declare module "@stackflow/config" {
+  interface Register {
+    ActivityHelpBubble: {};
+  }
+}
+
+const ActivityHelpBubble: StaticActivityComponentType<"ActivityHelpBubble"> = () => {
+  const { push } = useFlow();
+
+  return (
+    <AppScreen>
+      <AppBar>
+        <AppBarLeft>
+          <AppBarBackButton />
+        </AppBarLeft>
+        <AppBarMain>Help Bubble</AppBarMain>
+        <AppBarRight>
+          <AppBarIconButton aria-label="Home" onClick={() => push("ActivityHome", {})}>
+            <IconHouseLine />
+          </AppBarIconButton>
+        </AppBarRight>
+      </AppBar>
+      <AppScreenContent>
+        <div style={{ display: "flex", paddingTop: "20vh", justifyContent: "center" }}>
+          <HelpBubbleTrigger title="Flip 테스트">
+            <ActionButton>Flip 테스트</ActionButton>
+          </HelpBubbleTrigger>
+        </div>
+        <div style={{ display: "flex", paddingTop: "20vh", justifyContent: "center" }}>
+          <HelpBubbleTrigger flip={false} title="Flip off 테스트">
+            <ActionButton>Flip off 테스트</ActionButton>
+          </HelpBubbleTrigger>
+        </div>
+        <div style={{ display: "flex", paddingTop: "20vh", justifyContent: "flex-end" }}>
+          <HelpBubbleTrigger
+            title="Slide 테스트"
+            description={"어흥어흥어흥어흥어흥 야옹야옹야옹야옹야옹야옹"}
+            contentProps={{ maxWidth: "200px" }}
+          >
+            <ActionButton>Slide 테스트</ActionButton>
+          </HelpBubbleTrigger>
+        </div>
+        <div style={{ display: "flex", paddingTop: "20vh", justifyContent: "center" }}>
+          <HelpBubbleTrigger
+            title="Close Button 테스트"
+            description={"어흥어흥어흥어흥어흥 야옹야옹야옹야옹야옹야옹"}
+            showCloseButton
+            contentProps={{ maxWidth: "200px" }}
+          >
+            <ActionButton>Close Button 테스트</ActionButton>
+          </HelpBubbleTrigger>
+        </div>
+        <div style={{ display: "flex", paddingTop: "20vh", justifyContent: "center" }}>
+          <HelpBubbleTrigger title="Placement=bottom 테스트" placement="bottom">
+            <ActionButton>Placement=bottom 테스트</ActionButton>
+          </HelpBubbleTrigger>
+        </div>
+        <div style={{ height: "100vh" }} />
+      </AppScreenContent>
+    </AppScreen>
+  );
+};
+
+export default ActivityHelpBubble;

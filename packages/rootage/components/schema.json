@@ -1,0 +1,597 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ComponentSpecModel",
+  "type": "object",
+  "properties": {
+    "kind": {
+      "type": "string",
+      "const": "ComponentSpec"
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "deprecated": {
+          "type": "string"
+        },
+        "lastUpdated": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "name"],
+      "additionalProperties": true
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "$ref": "#/definitions/componentSpecSchema"
+        },
+        "definitions": {
+          "$ref": "#/definitions/definitions"
+        }
+      }
+    }
+  },
+  "required": ["kind", "metadata", "data"],
+  "additionalProperties": false,
+  "definitions": {
+    "componentSpecSchema": {
+      "type": "object",
+      "properties": {
+        "slots": {
+          "$ref": "#/definitions/slotsSchema"
+        },
+        "variants": {
+          "$ref": "#/definitions/variantsSchema"
+        }
+      },
+      "additionalProperties": false
+    },
+    "slotsSchema": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/slotSchema"
+      }
+    },
+    "slotSchema": {
+      "type": "object",
+      "properties": {
+        "properties": {
+          "$ref": "#/definitions/slotPropertiesSchema"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": ["properties"],
+      "additionalProperties": false
+    },
+    "slotPropertiesSchema": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/slotPropertySchema"
+      }
+    },
+    "slotPropertySchema": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["color", "dimension", "number", "duration", "cubicBezier", "shadow", "gradient"]
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "required": ["type"],
+      "additionalProperties": false
+    },
+    "variantsSchema": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/variantSchema"
+      }
+    },
+    "variantSchema": {
+      "type": "object",
+      "properties": {
+        "values": {
+          "$ref": "#/definitions/variantValuesSchema"
+        },
+        "defaultValue": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "variantValuesSchema": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "definitions": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "$ref": "#/definitions/variant"
+        }
+      },
+      "patternProperties": {
+        "^.*=.*$": {
+          "$ref": "#/definitions/variant"
+        }
+      },
+      "additionalProperties": false
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/state"
+      }
+    },
+    "state": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/slot"
+      }
+    },
+    "slot": {
+      "type": "object",
+      "additionalProperties": {
+        "$ref": "#/definitions/righthandValue"
+      }
+    },
+    "righthandValue": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/colorShorthand"
+        },
+        {
+          "$ref": "#/definitions/dimensionShorthand"
+        },
+        {
+          "$ref": "#/definitions/durationShorthand"
+        },
+        {
+          "$ref": "#/definitions/numberShorthand"
+        },
+        {
+          "$ref": "#/definitions/cubicBezier"
+        },
+        {
+          "$ref": "#/definitions/shadow"
+        },
+        {
+          "$ref": "#/definitions/gradient"
+        },
+        {
+          "$ref": "#/definitions/tokenRef"
+        }
+      ]
+    },
+    "colorShorthand": {
+      "type": "string",
+      "pattern": "^#[0-9a-fA-F]{6}([0-9a-fA-F]{2})?$"
+    },
+    "dimensionShorthand": {
+      "type": "string",
+      "pattern": "^-?\\d+(\\.\\d+)?(px|rem)$"
+    },
+    "durationShorthand": {
+      "type": "string",
+      "pattern": "^\\d+(\\.\\d+)?(s|ms)$"
+    },
+    "numberShorthand": {
+      "type": "number"
+    },
+    "cubicBezier": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "cubicBezier"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      },
+      "required": ["type", "value"],
+      "additionalProperties": false
+    },
+    "shadow": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "shadow"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "anyOf": [
+                  { "$ref": "#/definitions/colorShorthand" },
+                  { "$ref": "#/definitions/tokenRef" }
+                ]
+              },
+              "offsetX": {
+                "$ref": "#/definitions/dimensionShorthand"
+              },
+              "offsetY": {
+                "$ref": "#/definitions/dimensionShorthand"
+              },
+              "blur": {
+                "$ref": "#/definitions/dimensionShorthand"
+              },
+              "spread": {
+                "$ref": "#/definitions/dimensionShorthand"
+              }
+            },
+            "required": ["color", "offsetX", "offsetY", "blur", "spread"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["type", "value"],
+      "additionalProperties": false
+    },
+    "gradient": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "gradient"
+        },
+        "value": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "color": {
+                "anyOf": [
+                  { "$ref": "#/definitions/colorShorthand" },
+                  { "$ref": "#/definitions/tokenRef" }
+                ]
+              },
+              "position": {
+                "type": "number"
+              }
+            },
+            "required": ["color", "position"],
+            "additionalProperties": false
+          }
+        }
+      },
+      "required": ["type", "value"],
+      "additionalProperties": false
+    },
+    "tokenRef": {
+      "type": "string",
+      "anyOf": [
+        { "const": "$color.banner.blue", "title": "$color.banner.blue", "description": "theme-light: #e1f7ff\ntheme-dark: #0d2a3a", "markdownDescription": "- theme-light: `#e1f7ff`\n\n- theme-dark: `#0d2a3a`" },
+        { "const": "$color.banner.cool-gray", "title": "$color.banner.cool-gray", "description": "theme-light: #ebf1f5\ntheme-dark: #242c33", "markdownDescription": "- theme-light: `#ebf1f5`\n\n- theme-dark: `#242c33`" },
+        { "const": "$color.banner.green", "title": "$color.banner.green", "description": "theme-light: #f0fbe5\ntheme-dark: #1e361c", "markdownDescription": "- theme-light: `#f0fbe5`\n\n- theme-dark: `#1e361c`" },
+        { "const": "$color.banner.orange", "title": "$color.banner.orange", "description": "theme-light: #fff2e1\ntheme-dark: #42230a", "markdownDescription": "- theme-light: `#fff2e1`\n\n- theme-dark: `#42230a`" },
+        { "const": "$color.banner.pink", "title": "$color.banner.pink", "description": "theme-light: #ffebf1\ntheme-dark: #3b172c", "markdownDescription": "- theme-light: `#ffebf1`\n\n- theme-dark: `#3b172c`" },
+        { "const": "$color.banner.purple", "title": "$color.banner.purple", "description": "theme-light: #f5ecff\ntheme-dark: #2e1e45", "markdownDescription": "- theme-light: `#f5ecff`\n\n- theme-dark: `#2e1e45`" },
+        { "const": "$color.banner.red", "title": "$color.banner.red", "description": "theme-light: #ffecee\ntheme-dark: #3a0f15", "markdownDescription": "- theme-light: `#ffecee`\n\n- theme-dark: `#3a0f15`" },
+        { "const": "$color.banner.teal", "title": "$color.banner.teal", "description": "theme-light: #e6faf6\ntheme-dark: #143633", "markdownDescription": "- theme-light: `#e6faf6`\n\n- theme-dark: `#143633`" },
+        { "const": "$color.banner.warm-gray", "title": "$color.banner.warm-gray", "description": "theme-light: #f2f0ee\ntheme-dark: #2f2b27", "markdownDescription": "- theme-light: `#f2f0ee`\n\n- theme-dark: `#2f2b27`" },
+        { "const": "$color.banner.yellow", "title": "$color.banner.yellow", "description": "theme-light: #fffae1\ntheme-dark: #3e2b00", "markdownDescription": "- theme-light: `#fffae1`\n\n- theme-dark: `#3e2b00`" },
+        { "const": "$color.bg.brand-solid", "title": "$color.bg.brand-solid", "description": "theme-light: $color.palette.blue-600\ntheme-dark: $color.palette.blue-700", "markdownDescription": "- theme-light: `$color.palette.blue-600`\n\n- theme-dark: `$color.palette.blue-700`" },
+        { "const": "$color.bg.brand-solid-pressed", "title": "$color.bg.brand-solid-pressed", "description": "theme-light: $color.palette.blue-700\ntheme-dark: $color.palette.blue-800", "markdownDescription": "- theme-light: `$color.palette.blue-700`\n\n- theme-dark: `$color.palette.blue-800`" },
+        { "const": "$color.bg.brand-weak", "title": "$color.bg.brand-weak", "description": "theme-light: $color.palette.blue-100\ntheme-dark: $color.palette.blue-100", "markdownDescription": "- theme-light: `$color.palette.blue-100`\n\n- theme-dark: `$color.palette.blue-100`" },
+        { "const": "$color.bg.brand-weak-pressed", "title": "$color.bg.brand-weak-pressed", "description": "theme-light: $color.palette.blue-200\ntheme-dark: $color.palette.blue-200", "markdownDescription": "- theme-light: `$color.palette.blue-200`\n\n- theme-dark: `$color.palette.blue-200`" },
+        { "const": "$color.bg.critical-solid", "title": "$color.bg.critical-solid", "description": "theme-light: $color.palette.red-700\ntheme-dark: $color.palette.red-600", "markdownDescription": "- theme-light: `$color.palette.red-700`\n\n- theme-dark: `$color.palette.red-600`" },
+        { "const": "$color.bg.critical-solid-pressed", "title": "$color.bg.critical-solid-pressed", "description": "theme-light: $color.palette.red-800\ntheme-dark: $color.palette.red-700", "markdownDescription": "- theme-light: `$color.palette.red-800`\n\n- theme-dark: `$color.palette.red-700`" },
+        { "const": "$color.bg.critical-weak", "title": "$color.bg.critical-weak", "description": "theme-light: $color.palette.red-100\ntheme-dark: $color.palette.red-100", "markdownDescription": "- theme-light: `$color.palette.red-100`\n\n- theme-dark: `$color.palette.red-100`" },
+        { "const": "$color.bg.critical-weak-pressed", "title": "$color.bg.critical-weak-pressed", "description": "theme-light: $color.palette.red-200\ntheme-dark: $color.palette.red-200", "markdownDescription": "- theme-light: `$color.palette.red-200`\n\n- theme-dark: `$color.palette.red-200`" },
+        { "const": "$color.bg.disabled", "title": "$color.bg.disabled", "description": "theme-light: $color.palette.gray-200\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-200`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.bg.informative-solid", "title": "$color.bg.informative-solid", "description": "theme-light: $color.palette.gray-700\ntheme-dark: $color.palette.gray-600", "markdownDescription": "- theme-light: `$color.palette.gray-700`\n\n- theme-dark: `$color.palette.gray-600`" },
+        { "const": "$color.bg.informative-solid-pressed", "title": "$color.bg.informative-solid-pressed", "description": "theme-light: $color.palette.gray-800\ntheme-dark: $color.palette.gray-700", "markdownDescription": "- theme-light: `$color.palette.gray-800`\n\n- theme-dark: `$color.palette.gray-700`" },
+        { "const": "$color.bg.informative-weak", "title": "$color.bg.informative-weak", "description": "theme-light: $color.palette.gray-100\ntheme-dark: $color.palette.gray-100", "markdownDescription": "- theme-light: `$color.palette.gray-100`\n\n- theme-dark: `$color.palette.gray-100`" },
+        { "const": "$color.bg.informative-weak-pressed", "title": "$color.bg.informative-weak-pressed", "description": "theme-light: $color.palette.gray-200\ntheme-dark: $color.palette.gray-200", "markdownDescription": "- theme-light: `$color.palette.gray-200`\n\n- theme-dark: `$color.palette.gray-200`" },
+        { "const": "$color.bg.layer-basement", "title": "$color.bg.layer-basement", "description": "theme-light: $color.palette.gray-200\ntheme-dark: $color.palette.gray-00", "markdownDescription": "- theme-light: `$color.palette.gray-200`\n\n- theme-dark: `$color.palette.gray-00`" },
+        { "const": "$color.bg.layer-default", "title": "$color.bg.layer-default", "description": "theme-light: $color.palette.gray-00\ntheme-dark: $color.palette.gray-100", "markdownDescription": "- theme-light: `$color.palette.gray-00`\n\n- theme-dark: `$color.palette.gray-100`" },
+        { "const": "$color.bg.layer-default-pressed", "title": "$color.bg.layer-default-pressed", "description": "theme-light: $color.palette.gray-100\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-100`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.bg.layer-fill", "title": "$color.bg.layer-fill", "description": "theme-light: $color.palette.gray-100\ntheme-dark: $color.palette.gray-200", "markdownDescription": "- theme-light: `$color.palette.gray-100`\n\n- theme-dark: `$color.palette.gray-200`" },
+        { "const": "$color.bg.layer-floating", "title": "$color.bg.layer-floating", "description": "theme-light: $color.palette.gray-00\ntheme-dark: $color.palette.gray-200", "markdownDescription": "- theme-light: `$color.palette.gray-00`\n\n- theme-dark: `$color.palette.gray-200`" },
+        { "const": "$color.bg.layer-floating-pressed", "title": "$color.bg.layer-floating-pressed", "description": "theme-light: $color.palette.gray-100\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-100`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.bg.magic-weak", "title": "$color.bg.magic-weak", "description": "theme-light: #f9f2ee\ntheme-dark: #201f1f", "markdownDescription": "- theme-light: `#f9f2ee`\n\n- theme-dark: `#201f1f`" },
+        { "const": "$color.bg.neutral-inverted", "title": "$color.bg.neutral-inverted", "description": "theme-light: $color.palette.gray-900\ntheme-dark: $color.palette.gray-1000", "markdownDescription": "- theme-light: `$color.palette.gray-900`\n\n- theme-dark: `$color.palette.gray-1000`" },
+        { "const": "$color.bg.neutral-inverted-pressed", "title": "$color.bg.neutral-inverted-pressed", "description": "theme-light: $color.palette.gray-800\ntheme-dark: $color.palette.gray-800", "markdownDescription": "- theme-light: `$color.palette.gray-800`\n\n- theme-dark: `$color.palette.gray-800`" },
+        { "const": "$color.bg.neutral-solid", "title": "$color.bg.neutral-solid", "description": "theme-light: $color.palette.gray-1000\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-1000`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.bg.neutral-solid-muted", "title": "$color.bg.neutral-solid-muted", "description": "theme-light: $color.palette.gray-800\ntheme-dark: $color.palette.gray-400", "markdownDescription": "- theme-light: `$color.palette.gray-800`\n\n- theme-dark: `$color.palette.gray-400`" },
+        { "const": "$color.bg.neutral-solid-muted-pressed", "title": "$color.bg.neutral-solid-muted-pressed", "description": "theme-light: $color.palette.gray-900\ntheme-dark: $color.palette.gray-500", "markdownDescription": "- theme-light: `$color.palette.gray-900`\n\n- theme-dark: `$color.palette.gray-500`" },
+        { "const": "$color.bg.neutral-weak", "title": "$color.bg.neutral-weak", "description": "theme-light: $color.palette.gray-200\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-200`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.bg.neutral-weak-alpha", "title": "$color.bg.neutral-weak-alpha", "description": "theme-light: $color.palette.static-black-alpha-200\ntheme-dark: $color.palette.static-white-alpha-200", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-200`\n\n- theme-dark: `$color.palette.static-white-alpha-200`" },
+        { "const": "$color.bg.neutral-weak-alpha-pressed", "title": "$color.bg.neutral-weak-alpha-pressed", "description": "theme-light: $color.palette.static-black-alpha-300\ntheme-dark: $color.palette.static-white-alpha-300", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-300`\n\n- theme-dark: `$color.palette.static-white-alpha-300`" },
+        { "const": "$color.bg.neutral-weak-pressed", "title": "$color.bg.neutral-weak-pressed", "description": "theme-light: $color.palette.gray-300\ntheme-dark: $color.palette.gray-400", "markdownDescription": "- theme-light: `$color.palette.gray-300`\n\n- theme-dark: `$color.palette.gray-400`" },
+        { "const": "$color.bg.overlay", "title": "$color.bg.overlay", "description": "theme-light: $color.palette.static-black-alpha-700\ntheme-dark: $color.palette.static-black-alpha-700", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-700`\n\n- theme-dark: `$color.palette.static-black-alpha-700`" },
+        { "const": "$color.bg.overlay-muted", "title": "$color.bg.overlay-muted", "description": "theme-light: $color.palette.static-black-alpha-500\ntheme-dark: $color.palette.static-black-alpha-500", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-500`\n\n- theme-dark: `$color.palette.static-black-alpha-500`" },
+        { "const": "$color.bg.positive-solid", "title": "$color.bg.positive-solid", "description": "theme-light: $color.palette.green-700\ntheme-dark: $color.palette.green-500", "markdownDescription": "- theme-light: `$color.palette.green-700`\n\n- theme-dark: `$color.palette.green-500`" },
+        { "const": "$color.bg.positive-solid-pressed", "title": "$color.bg.positive-solid-pressed", "description": "theme-light: $color.palette.green-800\ntheme-dark: $color.palette.green-600", "markdownDescription": "- theme-light: `$color.palette.green-800`\n\n- theme-dark: `$color.palette.green-600`" },
+        { "const": "$color.bg.positive-weak", "title": "$color.bg.positive-weak", "description": "theme-light: $color.palette.green-100\ntheme-dark: $color.palette.green-100", "markdownDescription": "- theme-light: `$color.palette.green-100`\n\n- theme-dark: `$color.palette.green-100`" },
+        { "const": "$color.bg.positive-weak-pressed", "title": "$color.bg.positive-weak-pressed", "description": "theme-light: $color.palette.green-200\ntheme-dark: $color.palette.green-200", "markdownDescription": "- theme-light: `$color.palette.green-200`\n\n- theme-dark: `$color.palette.green-200`" },
+        { "const": "$color.bg.transparent", "title": "$color.bg.transparent", "description": "theme-light: #00000000\ntheme-dark: #ffffff00", "markdownDescription": "- theme-light: `#00000000`\n\n- theme-dark: `#ffffff00`" },
+        { "const": "$color.bg.transparent-pressed", "title": "$color.bg.transparent-pressed", "description": "theme-light: $color.palette.static-black-alpha-100\ntheme-dark: $color.palette.static-white-alpha-50", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-100`\n\n- theme-dark: `$color.palette.static-white-alpha-50`" },
+        { "const": "$color.bg.warning-solid", "title": "$color.bg.warning-solid", "description": "theme-light: $color.palette.yellow-300\ntheme-dark: $color.palette.yellow-800", "markdownDescription": "- theme-light: `$color.palette.yellow-300`\n\n- theme-dark: `$color.palette.yellow-800`" },
+        { "const": "$color.bg.warning-solid-pressed", "title": "$color.bg.warning-solid-pressed", "description": "theme-light: $color.palette.yellow-400\ntheme-dark: $color.palette.yellow-900", "markdownDescription": "- theme-light: `$color.palette.yellow-400`\n\n- theme-dark: `$color.palette.yellow-900`" },
+        { "const": "$color.bg.warning-weak", "title": "$color.bg.warning-weak", "description": "theme-light: $color.palette.yellow-100\ntheme-dark: $color.palette.yellow-100", "markdownDescription": "- theme-light: `$color.palette.yellow-100`\n\n- theme-dark: `$color.palette.yellow-100`" },
+        { "const": "$color.bg.warning-weak-pressed", "title": "$color.bg.warning-weak-pressed", "description": "theme-light: $color.palette.yellow-200\ntheme-dark: $color.palette.yellow-200", "markdownDescription": "- theme-light: `$color.palette.yellow-200`\n\n- theme-dark: `$color.palette.yellow-200`" },
+        { "const": "$color.fg.brand", "title": "$color.fg.brand", "description": "theme-light: $color.palette.blue-600\ntheme-dark: $color.palette.blue-700", "markdownDescription": "- theme-light: `$color.palette.blue-600`\n\n- theme-dark: `$color.palette.blue-700`" },
+        { "const": "$color.fg.brand-contrast", "title": "$color.fg.brand-contrast", "description": "theme-light: $color.palette.blue-700\ntheme-dark: $color.palette.blue-700", "markdownDescription": "- theme-light: `$color.palette.blue-700`\n\n- theme-dark: `$color.palette.blue-700`" },
+        { "const": "$color.fg.critical", "title": "$color.fg.critical", "description": "theme-light: $color.palette.red-700\ntheme-dark: $color.palette.red-700", "markdownDescription": "- theme-light: `$color.palette.red-700`\n\n- theme-dark: `$color.palette.red-700`" },
+        { "const": "$color.fg.critical-contrast", "title": "$color.fg.critical-contrast", "description": "theme-light: $color.palette.red-900\ntheme-dark: $color.palette.red-900", "markdownDescription": "- theme-light: `$color.palette.red-900`\n\n- theme-dark: `$color.palette.red-900`" },
+        { "const": "$color.fg.disabled", "title": "$color.fg.disabled", "description": "theme-light: $color.palette.gray-500\ntheme-dark: $color.palette.gray-500", "markdownDescription": "- theme-light: `$color.palette.gray-500`\n\n- theme-dark: `$color.palette.gray-500`" },
+        { "const": "$color.fg.informative", "title": "$color.fg.informative", "description": "theme-light: $color.palette.gray-700\ntheme-dark: $color.palette.gray-700", "markdownDescription": "- theme-light: `$color.palette.gray-700`\n\n- theme-dark: `$color.palette.gray-700`" },
+        { "const": "$color.fg.informative-contrast", "title": "$color.fg.informative-contrast", "description": "theme-light: $color.palette.gray-900\ntheme-dark: $color.palette.gray-900", "markdownDescription": "- theme-light: `$color.palette.gray-900`\n\n- theme-dark: `$color.palette.gray-900`" },
+        { "const": "$color.fg.neutral", "title": "$color.fg.neutral", "description": "theme-light: $color.palette.gray-1000\ntheme-dark: $color.palette.gray-1000", "markdownDescription": "- theme-light: `$color.palette.gray-1000`\n\n- theme-dark: `$color.palette.gray-1000`" },
+        { "const": "$color.fg.neutral-inverted", "title": "$color.fg.neutral-inverted", "description": "theme-light: $color.palette.gray-00\ntheme-dark: $color.palette.gray-100", "markdownDescription": "- theme-light: `$color.palette.gray-00`\n\n- theme-dark: `$color.palette.gray-100`" },
+        { "const": "$color.fg.neutral-muted", "title": "$color.fg.neutral-muted", "description": "theme-light: $color.palette.gray-800\ntheme-dark: $color.palette.gray-800", "markdownDescription": "- theme-light: `$color.palette.gray-800`\n\n- theme-dark: `$color.palette.gray-800`" },
+        { "const": "$color.fg.neutral-subtle", "title": "$color.fg.neutral-subtle", "description": "theme-light: $color.palette.gray-700\ntheme-dark: $color.palette.gray-700", "markdownDescription": "- theme-light: `$color.palette.gray-700`\n\n- theme-dark: `$color.palette.gray-700`" },
+        { "const": "$color.fg.placeholder", "title": "$color.fg.placeholder", "description": "theme-light: $color.palette.gray-600\ntheme-dark: $color.palette.gray-600", "markdownDescription": "- theme-light: `$color.palette.gray-600`\n\n- theme-dark: `$color.palette.gray-600`" },
+        { "const": "$color.fg.positive", "title": "$color.fg.positive", "description": "theme-light: $color.palette.green-700\ntheme-dark: $color.palette.green-700", "markdownDescription": "- theme-light: `$color.palette.green-700`\n\n- theme-dark: `$color.palette.green-700`" },
+        { "const": "$color.fg.positive-contrast", "title": "$color.fg.positive-contrast", "description": "theme-light: $color.palette.green-900\ntheme-dark: $color.palette.green-900", "markdownDescription": "- theme-light: `$color.palette.green-900`\n\n- theme-dark: `$color.palette.green-900`" },
+        { "const": "$color.fg.warning", "title": "$color.fg.warning", "description": "theme-light: $color.palette.yellow-700\ntheme-dark: $color.palette.yellow-700", "markdownDescription": "- theme-light: `$color.palette.yellow-700`\n\n- theme-dark: `$color.palette.yellow-700`" },
+        { "const": "$color.fg.warning-contrast", "title": "$color.fg.warning-contrast", "description": "theme-light: $color.palette.yellow-900\ntheme-dark: $color.palette.yellow-900", "markdownDescription": "- theme-light: `$color.palette.yellow-900`\n\n- theme-dark: `$color.palette.yellow-900`" },
+        { "const": "$color.manner-temp.l1.bg", "title": "$color.manner-temp.l1.bg", "description": "theme-light: #f1f2f3\ntheme-dark: #292929", "markdownDescription": "- theme-light: `#f1f2f3`\n\n- theme-dark: `#292929`" },
+        { "const": "$color.manner-temp.l1.text", "title": "$color.manner-temp.l1.text", "description": "theme-light: #757b85\ntheme-dark: #b8b8b9", "markdownDescription": "- theme-light: `#757b85`\n\n- theme-dark: `#b8b8b9`" },
+        { "const": "$color.manner-temp.l10.bg", "title": "$color.manner-temp.l10.bg", "description": "theme-light: #ffebee\ntheme-dark: #34040a", "markdownDescription": "- theme-light: `#ffebee`\n\n- theme-dark: `#34040a`" },
+        { "const": "$color.manner-temp.l10.text", "title": "$color.manner-temp.l10.text", "description": "theme-light: #cb0123\ntheme-dark: #fb6f82", "markdownDescription": "- theme-light: `#cb0123`\n\n- theme-dark: `#fb6f82`" },
+        { "const": "$color.manner-temp.l2.bg", "title": "$color.manner-temp.l2.bg", "description": "theme-light: #f8f4ec\ntheme-dark: #332605", "markdownDescription": "- theme-light: `#f8f4ec`\n\n- theme-dark: `#332605`" },
+        { "const": "$color.manner-temp.l2.text", "title": "$color.manner-temp.l2.text", "description": "theme-light: #ab863f\ntheme-dark: #f5db97", "markdownDescription": "- theme-light: `#ab863f`\n\n- theme-dark: `#f5db97`" },
+        { "const": "$color.manner-temp.l3.bg", "title": "$color.manner-temp.l3.bg", "description": "theme-light: #fff5e5\ntheme-dark: #372b01", "markdownDescription": "- theme-light: `#fff5e5`\n\n- theme-dark: `#372b01`" },
+        { "const": "$color.manner-temp.l3.text", "title": "$color.manner-temp.l3.text", "description": "theme-light: #e08a00\ntheme-dark: #fdda65", "markdownDescription": "- theme-light: `#e08a00`\n\n- theme-dark: `#fdda65`" },
+        { "const": "$color.manner-temp.l4.bg", "title": "$color.manner-temp.l4.bg", "description": "theme-light: #fff3e5\ntheme-dark: #372301", "markdownDescription": "- theme-light: `#fff3e5`\n\n- theme-dark: `#372301`" },
+        { "const": "$color.manner-temp.l4.text", "title": "$color.manner-temp.l4.text", "description": "theme-light: #f57e00\ntheme-dark: #fbbe55", "markdownDescription": "- theme-light: `#f57e00`\n\n- theme-dark: `#fbbe55`" },
+        { "const": "$color.manner-temp.l5.bg", "title": "$color.manner-temp.l5.bg", "description": "theme-light: #fff1e5\ntheme-dark: #371f01", "markdownDescription": "- theme-light: `#fff1e5`\n\n- theme-dark: `#371f01`" },
+        { "const": "$color.manner-temp.l5.text", "title": "$color.manner-temp.l5.text", "description": "theme-light: #ff7300\ntheme-dark: #faac4b", "markdownDescription": "- theme-light: `#ff7300`\n\n- theme-dark: `#faac4b`" },
+        { "const": "$color.manner-temp.l6.bg", "title": "$color.manner-temp.l6.bg", "description": "theme-light: #fff0e5\ntheme-dark: #351b03", "markdownDescription": "- theme-light: `#fff0e5`\n\n- theme-dark: `#351b03`" },
+        { "const": "$color.manner-temp.l6.text", "title": "$color.manner-temp.l6.text", "description": "theme-light: #ff6600\ntheme-dark: #fc9855", "markdownDescription": "- theme-light: `#ff6600`\n\n- theme-dark: `#fc9855`" },
+        { "const": "$color.manner-temp.l7.bg", "title": "$color.manner-temp.l7.bg", "description": "theme-light: #ffefe5\ntheme-dark: #371701", "markdownDescription": "- theme-light: `#ffefe5`\n\n- theme-dark: `#371701`" },
+        { "const": "$color.manner-temp.l7.text", "title": "$color.manner-temp.l7.text", "description": "theme-light: #ff5100\ntheme-dark: #f97a25", "markdownDescription": "- theme-light: `#ff5100`\n\n- theme-dark: `#f97a25`" },
+        { "const": "$color.manner-temp.l8.bg", "title": "$color.manner-temp.l8.bg", "description": "theme-light: #ffeee5\ntheme-dark: #380f00", "markdownDescription": "- theme-light: `#ffeee5`\n\n- theme-dark: `#380f00`" },
+        { "const": "$color.manner-temp.l8.text", "title": "$color.manner-temp.l8.text", "description": "theme-light: #ff3300\ntheme-dark: #fe6a34", "markdownDescription": "- theme-light: `#ff3300`\n\n- theme-dark: `#fe6a34`" },
+        { "const": "$color.manner-temp.l9.bg", "title": "$color.manner-temp.l9.bg", "description": "theme-light: #fdeded\ntheme-dark: #380500", "markdownDescription": "- theme-light: `#fdeded`\n\n- theme-dark: `#380500`" },
+        { "const": "$color.manner-temp.l9.text", "title": "$color.manner-temp.l9.text", "description": "theme-light: #e82c45\ntheme-dark: #fe6a5d", "markdownDescription": "- theme-light: `#e82c45`\n\n- theme-dark: `#fe6a5d`" },
+        { "const": "$color.palette.blue-100", "title": "$color.palette.blue-100", "description": "theme-light: #eff6ff\ntheme-dark: #202742", "markdownDescription": "- theme-light: `#eff6ff`\n\n- theme-dark: `#202742`" },
+        { "const": "$color.palette.blue-1000", "title": "$color.palette.blue-1000", "description": "theme-light: #032451\ntheme-dark: #e5f0fe", "markdownDescription": "- theme-light: `#032451`\n\n- theme-dark: `#e5f0fe`" },
+        { "const": "$color.palette.blue-200", "title": "$color.palette.blue-200", "description": "theme-light: #e2edfc\ntheme-dark: #1e3352", "markdownDescription": "- theme-light: `#e2edfc`\n\n- theme-dark: `#1e3352`" },
+        { "const": "$color.palette.blue-300", "title": "$color.palette.blue-300", "description": "theme-light: #cbdffa\ntheme-dark: #1a4275", "markdownDescription": "- theme-light: `#cbdffa`\n\n- theme-dark: `#1a4275`" },
+        { "const": "$color.palette.blue-400", "title": "$color.palette.blue-400", "description": "theme-light: #aacefd\ntheme-dark: #0f559e", "markdownDescription": "- theme-light: `#aacefd`\n\n- theme-dark: `#0f559e`" },
+        { "const": "$color.palette.blue-500", "title": "$color.palette.blue-500", "description": "theme-light: #85b8fd\ntheme-dark: #1964d8", "markdownDescription": "- theme-light: `#85b8fd`\n\n- theme-dark: `#1964d8`" },
+        { "const": "$color.palette.blue-600", "title": "$color.palette.blue-600", "description": "theme-light: #5e98fe\ntheme-dark: #1e82eb", "markdownDescription": "- theme-light: `#5e98fe`\n\n- theme-dark: `#1e82eb`" },
+        { "const": "$color.palette.blue-700", "title": "$color.palette.blue-700", "description": "theme-light: #217cf9\ntheme-dark: #41a2f9", "markdownDescription": "- theme-light: `#217cf9`\n\n- theme-dark: `#41a2f9`" },
+        { "const": "$color.palette.blue-800", "title": "$color.palette.blue-800", "description": "theme-light: #135fcd\ntheme-dark: #83bcf9", "markdownDescription": "- theme-light: `#135fcd`\n\n- theme-dark: `#83bcf9`" },
+        { "const": "$color.palette.blue-900", "title": "$color.palette.blue-900", "description": "theme-light: #0b4596\ntheme-dark: #b9d7fb", "markdownDescription": "- theme-light: `#0b4596`\n\n- theme-dark: `#b9d7fb`" },
+        { "const": "$color.palette.carrot-100", "title": "$color.palette.carrot-100", "description": "theme-light: #fff2ec\ntheme-dark: #31241f", "markdownDescription": "- theme-light: `#fff2ec`\n\n- theme-dark: `#31241f`" },
+        { "const": "$color.palette.carrot-1000", "title": "$color.palette.carrot-1000", "description": "theme-light: #471601\ntheme-dark: #f4eeea", "markdownDescription": "- theme-light: `#471601`\n\n- theme-dark: `#f4eeea`" },
+        { "const": "$color.palette.carrot-200", "title": "$color.palette.carrot-200", "description": "theme-light: #ffe8db\ntheme-dark: #4b291c", "markdownDescription": "- theme-light: `#ffe8db`\n\n- theme-dark: `#4b291c`" },
+        { "const": "$color.palette.carrot-300", "title": "$color.palette.carrot-300", "description": "theme-light: #ffd5c0\ntheme-dark: #6b311c", "markdownDescription": "- theme-light: `#ffd5c0`\n\n- theme-dark: `#6b311c`" },
+        { "const": "$color.palette.carrot-400", "title": "$color.palette.carrot-400", "description": "theme-light: #ffb999\ntheme-dark: #923600", "markdownDescription": "- theme-light: `#ffb999`\n\n- theme-dark: `#923600`" },
+        { "const": "$color.palette.carrot-500", "title": "$color.palette.carrot-500", "description": "theme-light: #ff9364\ntheme-dark: #bd4201", "markdownDescription": "- theme-light: `#ff9364`\n\n- theme-dark: `#bd4201`" },
+        { "const": "$color.palette.carrot-600", "title": "$color.palette.carrot-600", "description": "theme-light: #ff6600\ntheme-dark: #e65200", "markdownDescription": "- theme-light: `#ff6600`\n\n- theme-dark: `#e65200`" },
+        { "const": "$color.palette.carrot-700", "title": "$color.palette.carrot-700", "description": "theme-light: #e14d00\ntheme-dark: #ff6600", "markdownDescription": "- theme-light: `#e14d00`\n\n- theme-dark: `#ff6600`" },
+        { "const": "$color.palette.carrot-800", "title": "$color.palette.carrot-800", "description": "theme-light: #b93901\ntheme-dark: #ff9e65", "markdownDescription": "- theme-light: `#b93901`\n\n- theme-dark: `#ff9e65`" },
+        { "const": "$color.palette.carrot-900", "title": "$color.palette.carrot-900", "description": "theme-light: #862b00\ntheme-dark: #eecebc", "markdownDescription": "- theme-light: `#862b00`\n\n- theme-dark: `#eecebc`" },
+        { "const": "$color.palette.gray-00", "title": "$color.palette.gray-00", "description": "theme-light: #ffffff\ntheme-dark: #000000", "markdownDescription": "- theme-light: `#ffffff`\n\n- theme-dark: `#000000`" },
+        { "const": "$color.palette.gray-100", "title": "$color.palette.gray-100", "description": "theme-light: #f7f8f9\ntheme-dark: #16171b", "markdownDescription": "- theme-light: `#f7f8f9`\n\n- theme-dark: `#16171b`" },
+        { "const": "$color.palette.gray-1000", "title": "$color.palette.gray-1000", "description": "theme-light: #1a1c20\ntheme-dark: #f3f4f5", "markdownDescription": "- theme-light: `#1a1c20`\n\n- theme-dark: `#f3f4f5`" },
+        { "const": "$color.palette.gray-200", "title": "$color.palette.gray-200", "description": "theme-light: #f3f4f5\ntheme-dark: #1d2025", "markdownDescription": "- theme-light: `#f3f4f5`\n\n- theme-dark: `#1d2025`" },
+        { "const": "$color.palette.gray-300", "title": "$color.palette.gray-300", "description": "theme-light: #eeeff1\ntheme-dark: #2b2e35", "markdownDescription": "- theme-light: `#eeeff1`\n\n- theme-dark: `#2b2e35`" },
+        { "const": "$color.palette.gray-400", "title": "$color.palette.gray-400", "description": "theme-light: #dcdee3\ntheme-dark: #393d46", "markdownDescription": "- theme-light: `#dcdee3`\n\n- theme-dark: `#393d46`" },
+        { "const": "$color.palette.gray-500", "title": "$color.palette.gray-500", "description": "theme-light: #d1d3d8\ntheme-dark: #5b606a", "markdownDescription": "- theme-light: `#d1d3d8`\n\n- theme-dark: `#5b606a`" },
+        { "const": "$color.palette.gray-600", "title": "$color.palette.gray-600", "description": "theme-light: #b0b3ba\ntheme-dark: #868b94", "markdownDescription": "- theme-light: `#b0b3ba`\n\n- theme-dark: `#868b94`" },
+        { "const": "$color.palette.gray-700", "title": "$color.palette.gray-700", "description": "theme-light: #868b94\ntheme-dark: #b0b3ba", "markdownDescription": "- theme-light: `#868b94`\n\n- theme-dark: `#b0b3ba`" },
+        { "const": "$color.palette.gray-800", "title": "$color.palette.gray-800", "description": "theme-light: #555d6d\ntheme-dark: #dcdee3", "markdownDescription": "- theme-light: `#555d6d`\n\n- theme-dark: `#dcdee3`" },
+        { "const": "$color.palette.gray-900", "title": "$color.palette.gray-900", "description": "theme-light: #2a3038\ntheme-dark: #e9eaec", "markdownDescription": "- theme-light: `#2a3038`\n\n- theme-dark: `#e9eaec`" },
+        { "const": "$color.palette.green-100", "title": "$color.palette.green-100", "description": "theme-light: #edfaf6\ntheme-dark: #202926", "markdownDescription": "- theme-light: `#edfaf6`\n\n- theme-dark: `#202926`" },
+        { "const": "$color.palette.green-1000", "title": "$color.palette.green-1000", "description": "theme-light: #0a2b24\ntheme-dark: #d4f6ef", "markdownDescription": "- theme-light: `#0a2b24`\n\n- theme-dark: `#d4f6ef`" },
+        { "const": "$color.palette.green-200", "title": "$color.palette.green-200", "description": "theme-light: #d9f6e9\ntheme-dark: #20362e", "markdownDescription": "- theme-light: `#d9f6e9`\n\n- theme-dark: `#20362e`" },
+        { "const": "$color.palette.green-300", "title": "$color.palette.green-300", "description": "theme-light: #b9e9d2\ntheme-dark: #20493b", "markdownDescription": "- theme-light: `#b9e9d2`\n\n- theme-dark: `#20493b`" },
+        { "const": "$color.palette.green-400", "title": "$color.palette.green-400", "description": "theme-light: #7ddcb3\ntheme-dark: #19604c", "markdownDescription": "- theme-light: `#7ddcb3`\n\n- theme-dark: `#19604c`" },
+        { "const": "$color.palette.green-500", "title": "$color.palette.green-500", "description": "theme-light: #42c593\ntheme-dark: #117956", "markdownDescription": "- theme-light: `#42c593`\n\n- theme-dark: `#117956`" },
+        { "const": "$color.palette.green-600", "title": "$color.palette.green-600", "description": "theme-light: #10ab7d\ntheme-dark: #1b946d", "markdownDescription": "- theme-light: `#10ab7d`\n\n- theme-dark: `#1b946d`" },
+        { "const": "$color.palette.green-700", "title": "$color.palette.green-700", "description": "theme-light: #079171\ntheme-dark: #22b27f", "markdownDescription": "- theme-light: `#079171`\n\n- theme-dark: `#22b27f`" },
+        { "const": "$color.palette.green-800", "title": "$color.palette.green-800", "description": "theme-light: #00745f\ntheme-dark: #35ce9a", "markdownDescription": "- theme-light: `#00745f`\n\n- theme-dark: `#35ce9a`" },
+        { "const": "$color.palette.green-900", "title": "$color.palette.green-900", "description": "theme-light: #075445\ntheme-dark: #93e5c0", "markdownDescription": "- theme-light: `#075445`\n\n- theme-dark: `#93e5c0`" },
+        { "const": "$color.palette.purple-100", "title": "$color.palette.purple-100", "description": "theme-light: #f5f3fe\ntheme-dark: #28213b", "markdownDescription": "- theme-light: `#f5f3fe`\n\n- theme-dark: `#28213b`" },
+        { "const": "$color.palette.purple-1000", "title": "$color.palette.purple-1000", "description": "theme-light: #29175d\ntheme-dark: #f0edfc", "markdownDescription": "- theme-light: `#29175d`\n\n- theme-dark: `#f0edfc`" },
+        { "const": "$color.palette.purple-200", "title": "$color.palette.purple-200", "description": "theme-light: #efeafe\ntheme-dark: #3b2873", "markdownDescription": "- theme-light: `#efeafe`\n\n- theme-dark: `#3b2873`" },
+        { "const": "$color.palette.purple-300", "title": "$color.palette.purple-300", "description": "theme-light: #e1d8ff\ntheme-dark: #443081", "markdownDescription": "- theme-light: `#e1d8ff`\n\n- theme-dark: `#443081`" },
+        { "const": "$color.palette.purple-400", "title": "$color.palette.purple-400", "description": "theme-light: #d0c0ff\ntheme-dark: #5a3bb1", "markdownDescription": "- theme-light: `#d0c0ff`\n\n- theme-dark: `#5a3bb1`" },
+        { "const": "$color.palette.purple-500", "title": "$color.palette.purple-500", "description": "theme-light: #b8a1ff\ntheme-dark: #764fd9", "markdownDescription": "- theme-light: `#b8a1ff`\n\n- theme-dark: `#764fd9`" },
+        { "const": "$color.palette.purple-600", "title": "$color.palette.purple-600", "description": "theme-light: #9f84fb\ntheme-dark: #8e6bee", "markdownDescription": "- theme-light: `#9f84fb`\n\n- theme-dark: `#8e6bee`" },
+        { "const": "$color.palette.purple-700", "title": "$color.palette.purple-700", "description": "theme-light: #8969ea\ntheme-dark: #a78df0", "markdownDescription": "- theme-light: `#8969ea`\n\n- theme-dark: `#a78df0`" },
+        { "const": "$color.palette.purple-800", "title": "$color.palette.purple-800", "description": "theme-light: #6d50cb\ntheme-dark: #beadf2", "markdownDescription": "- theme-light: `#6d50cb`\n\n- theme-dark: `#beadf2`" },
+        { "const": "$color.palette.purple-900", "title": "$color.palette.purple-900", "description": "theme-light: #50379b\ntheme-dark: #d9cefa", "markdownDescription": "- theme-light: `#50379b`\n\n- theme-dark: `#d9cefa`" },
+        { "const": "$color.palette.red-100", "title": "$color.palette.red-100", "description": "theme-light: #fdf0f0\ntheme-dark: #322323", "markdownDescription": "- theme-light: `#fdf0f0`\n\n- theme-dark: `#322323`" },
+        { "const": "$color.palette.red-1000", "title": "$color.palette.red-1000", "description": "theme-light: #4a1209\ntheme-dark: #fdf2f2", "markdownDescription": "- theme-light: `#4a1209`\n\n- theme-dark: `#fdf2f2`" },
+        { "const": "$color.palette.red-200", "title": "$color.palette.red-200", "description": "theme-light: #fde7e7\ntheme-dark: #4f2624", "markdownDescription": "- theme-light: `#fde7e7`\n\n- theme-dark: `#4f2624`" },
+        { "const": "$color.palette.red-300", "title": "$color.palette.red-300", "description": "theme-light: #fed4d2\ntheme-dark: #742826", "markdownDescription": "- theme-light: `#fed4d2`\n\n- theme-dark: `#742826`" },
+        { "const": "$color.palette.red-400", "title": "$color.palette.red-400", "description": "theme-light: #feb7b3\ntheme-dark: #a12621", "markdownDescription": "- theme-light: `#feb7b3`\n\n- theme-dark: `#a12621`" },
+        { "const": "$color.palette.red-500", "title": "$color.palette.red-500", "description": "theme-light: #fe928d\ntheme-dark: #ca2319", "markdownDescription": "- theme-light: `#fe928d`\n\n- theme-dark: `#ca2319`" },
+        { "const": "$color.palette.red-600", "title": "$color.palette.red-600", "description": "theme-light: #fc6a66\ntheme-dark: #f73526", "markdownDescription": "- theme-light: `#fc6a66`\n\n- theme-dark: `#f73526`" },
+        { "const": "$color.palette.red-700", "title": "$color.palette.red-700", "description": "theme-light: #fa342c\ntheme-dark: #ff6e60", "markdownDescription": "- theme-light: `#fa342c`\n\n- theme-dark: `#ff6e60`" },
+        { "const": "$color.palette.red-800", "title": "$color.palette.red-800", "description": "theme-light: #ca1d13\ntheme-dark: #ffa299", "markdownDescription": "- theme-light: `#ca1d13`\n\n- theme-dark: `#ffa299`" },
+        { "const": "$color.palette.red-900", "title": "$color.palette.red-900", "description": "theme-light: #921708\ntheme-dark: #f8c5c3", "markdownDescription": "- theme-light: `#921708`\n\n- theme-dark: `#f8c5c3`" },
+        { "const": "$color.palette.static-black", "title": "$color.palette.static-black", "description": "theme-light: #000000\ntheme-dark: #000000", "markdownDescription": "- theme-light: `#000000`\n\n- theme-dark: `#000000`" },
+        { "const": "$color.palette.static-black-alpha-100", "title": "$color.palette.static-black-alpha-100", "description": "theme-light: #00000007\ntheme-dark: #00000007", "markdownDescription": "- theme-light: `#00000007`\n\n- theme-dark: `#00000007`" },
+        { "const": "$color.palette.static-black-alpha-1000", "title": "$color.palette.static-black-alpha-1000", "description": "theme-light: #000000e3\ntheme-dark: #000000e3", "markdownDescription": "- theme-light: `#000000e3`\n\n- theme-dark: `#000000e3`" },
+        { "const": "$color.palette.static-black-alpha-200", "title": "$color.palette.static-black-alpha-200", "description": "theme-light: #0000000c\ntheme-dark: #0000000c", "markdownDescription": "- theme-light: `#0000000c`\n\n- theme-dark: `#0000000c`" },
+        { "const": "$color.palette.static-black-alpha-300", "title": "$color.palette.static-black-alpha-300", "description": "theme-light: #00000010\ntheme-dark: #00000010", "markdownDescription": "- theme-light: `#00000010`\n\n- theme-dark: `#00000010`" },
+        { "const": "$color.palette.static-black-alpha-400", "title": "$color.palette.static-black-alpha-400", "description": "theme-light: #00000021\ntheme-dark: #00000021", "markdownDescription": "- theme-light: `#00000021`\n\n- theme-dark: `#00000021`" },
+        { "const": "$color.palette.static-black-alpha-500", "title": "$color.palette.static-black-alpha-500", "description": "theme-light: #0000002c\ntheme-dark: #0000002c", "markdownDescription": "- theme-light: `#0000002c`\n\n- theme-dark: `#0000002c`" },
+        { "const": "$color.palette.static-black-alpha-600", "title": "$color.palette.static-black-alpha-600", "description": "theme-light: #0000004c\ntheme-dark: #0000004c", "markdownDescription": "- theme-light: `#0000004c`\n\n- theme-dark: `#0000004c`" },
+        { "const": "$color.palette.static-black-alpha-700", "title": "$color.palette.static-black-alpha-700", "description": "theme-light: #00000074\ntheme-dark: #00000074", "markdownDescription": "- theme-light: `#00000074`\n\n- theme-dark: `#00000074`" },
+        { "const": "$color.palette.static-black-alpha-800", "title": "$color.palette.static-black-alpha-800", "description": "theme-light: #000000a2\ntheme-dark: #000000a2", "markdownDescription": "- theme-light: `#000000a2`\n\n- theme-dark: `#000000a2`" },
+        { "const": "$color.palette.static-black-alpha-900", "title": "$color.palette.static-black-alpha-900", "description": "theme-light: #000000d0\ntheme-dark: #000000d0", "markdownDescription": "- theme-light: `#000000d0`\n\n- theme-dark: `#000000d0`" },
+        { "const": "$color.palette.static-white", "title": "$color.palette.static-white", "description": "theme-light: #ffffff\ntheme-dark: #ffffff", "markdownDescription": "- theme-light: `#ffffff`\n\n- theme-dark: `#ffffff`" },
+        { "const": "$color.palette.static-white-alpha-100", "title": "$color.palette.static-white-alpha-100", "description": "theme-light: #ffffff17\ntheme-dark: #ffffff17", "markdownDescription": "- theme-light: `#ffffff17`\n\n- theme-dark: `#ffffff17`" },
+        { "const": "$color.palette.static-white-alpha-1000", "title": "$color.palette.static-white-alpha-1000", "description": "theme-light: #fffffff4\ntheme-dark: #fffffff4", "markdownDescription": "- theme-light: `#fffffff4`\n\n- theme-dark: `#fffffff4`" },
+        { "const": "$color.palette.static-white-alpha-200", "title": "$color.palette.static-white-alpha-200", "description": "theme-light: #ffffff20\ntheme-dark: #ffffff20", "markdownDescription": "- theme-light: `#ffffff20`\n\n- theme-dark: `#ffffff20`" },
+        { "const": "$color.palette.static-white-alpha-300", "title": "$color.palette.static-white-alpha-300", "description": "theme-light: #ffffff2e\ntheme-dark: #ffffff2e", "markdownDescription": "- theme-light: `#ffffff2e`\n\n- theme-dark: `#ffffff2e`" },
+        { "const": "$color.palette.static-white-alpha-400", "title": "$color.palette.static-white-alpha-400", "description": "theme-light: #ffffff3d\ntheme-dark: #ffffff3d", "markdownDescription": "- theme-light: `#ffffff3d`\n\n- theme-dark: `#ffffff3d`" },
+        { "const": "$color.palette.static-white-alpha-50", "title": "$color.palette.static-white-alpha-50", "description": "theme-light: #ffffff0d\ntheme-dark: #ffffff0d", "markdownDescription": "- theme-light: `#ffffff0d`\n\n- theme-dark: `#ffffff0d`" },
+        { "const": "$color.palette.static-white-alpha-500", "title": "$color.palette.static-white-alpha-500", "description": "theme-light: #ffffff60\ntheme-dark: #ffffff60", "markdownDescription": "- theme-light: `#ffffff60`\n\n- theme-dark: `#ffffff60`" },
+        { "const": "$color.palette.static-white-alpha-600", "title": "$color.palette.static-white-alpha-600", "description": "theme-light: #ffffff8b\ntheme-dark: #ffffff8b", "markdownDescription": "- theme-light: `#ffffff8b`\n\n- theme-dark: `#ffffff8b`" },
+        { "const": "$color.palette.static-white-alpha-700", "title": "$color.palette.static-white-alpha-700", "description": "theme-light: #ffffffb3\ntheme-dark: #ffffffb3", "markdownDescription": "- theme-light: `#ffffffb3`\n\n- theme-dark: `#ffffffb3`" },
+        { "const": "$color.palette.static-white-alpha-800", "title": "$color.palette.static-white-alpha-800", "description": "theme-light: #ffffffde\ntheme-dark: #ffffffde", "markdownDescription": "- theme-light: `#ffffffde`\n\n- theme-dark: `#ffffffde`" },
+        { "const": "$color.palette.static-white-alpha-900", "title": "$color.palette.static-white-alpha-900", "description": "theme-light: #ffffffea\ntheme-dark: #ffffffea", "markdownDescription": "- theme-light: `#ffffffea`\n\n- theme-dark: `#ffffffea`" },
+        { "const": "$color.palette.yellow-100", "title": "$color.palette.yellow-100", "description": "theme-light: #fff7de\ntheme-dark: #302819", "markdownDescription": "- theme-light: `#fff7de`\n\n- theme-dark: `#302819`" },
+        { "const": "$color.palette.yellow-1000", "title": "$color.palette.yellow-1000", "description": "theme-light: #2c2512\ntheme-dark: #f7f0cd", "markdownDescription": "- theme-light: `#2c2512`\n\n- theme-dark: `#f7f0cd`" },
+        { "const": "$color.palette.yellow-200", "title": "$color.palette.yellow-200", "description": "theme-light: #fdefb9\ntheme-dark: #413218", "markdownDescription": "- theme-light: `#fdefb9`\n\n- theme-dark: `#413218`" },
+        { "const": "$color.palette.yellow-300", "title": "$color.palette.yellow-300", "description": "theme-light: #fbdc65\ntheme-dark: #543e15", "markdownDescription": "- theme-light: `#fbdc65`\n\n- theme-dark: `#543e15`" },
+        { "const": "$color.palette.yellow-400", "title": "$color.palette.yellow-400", "description": "theme-light: #e9c647\ntheme-dark: #714e15", "markdownDescription": "- theme-light: `#e9c647`\n\n- theme-dark: `#714e15`" },
+        { "const": "$color.palette.yellow-500", "title": "$color.palette.yellow-500", "description": "theme-light: #d4ab28\ntheme-dark: #91601b", "markdownDescription": "- theme-light: `#d4ab28`\n\n- theme-dark: `#91601b`" },
+        { "const": "$color.palette.yellow-600", "title": "$color.palette.yellow-600", "description": "theme-light: #c49725\ntheme-dark: #b6720d", "markdownDescription": "- theme-light: `#c49725`\n\n- theme-dark: `#b6720d`" },
+        { "const": "$color.palette.yellow-700", "title": "$color.palette.yellow-700", "description": "theme-light: #9b7821\ntheme-dark: #ca901c", "markdownDescription": "- theme-light: `#9b7821`\n\n- theme-dark: `#ca901c`" },
+        { "const": "$color.palette.yellow-800", "title": "$color.palette.yellow-800", "description": "theme-light: #755b22\ntheme-dark: #dab156", "markdownDescription": "- theme-light: `#755b22`\n\n- theme-dark: `#dab156`" },
+        { "const": "$color.palette.yellow-900", "title": "$color.palette.yellow-900", "description": "theme-light: #4f3e1f\ntheme-dark: #e5d49b", "markdownDescription": "- theme-light: `#4f3e1f`\n\n- theme-dark: `#e5d49b`" },
+        { "const": "$color.stroke.brand-solid", "title": "$color.stroke.brand-solid", "description": "theme-light: $color.palette.blue-700\ntheme-dark: $color.palette.blue-700", "markdownDescription": "- theme-light: `$color.palette.blue-700`\n\n- theme-dark: `$color.palette.blue-700`" },
+        { "const": "$color.stroke.brand-weak", "title": "$color.stroke.brand-weak", "description": "theme-light: $color.palette.blue-300\ntheme-dark: $color.palette.blue-300", "markdownDescription": "- theme-light: `$color.palette.blue-300`\n\n- theme-dark: `$color.palette.blue-300`" },
+        { "const": "$color.stroke.critical-solid", "title": "$color.stroke.critical-solid", "description": "theme-light: $color.palette.red-700\ntheme-dark: $color.palette.red-700", "markdownDescription": "- theme-light: `$color.palette.red-700`\n\n- theme-dark: `$color.palette.red-700`" },
+        { "const": "$color.stroke.critical-weak", "title": "$color.stroke.critical-weak", "description": "theme-light: $color.palette.red-300\ntheme-dark: $color.palette.red-300", "markdownDescription": "- theme-light: `$color.palette.red-300`\n\n- theme-dark: `$color.palette.red-300`" },
+        { "const": "$color.stroke.focus-ring", "title": "$color.stroke.focus-ring", "description": "theme-light: $color.palette.blue-600\ntheme-dark: $color.palette.blue-600", "markdownDescription": "- theme-light: `$color.palette.blue-600`\n\n- theme-dark: `$color.palette.blue-600`" },
+        { "const": "$color.stroke.informative-solid", "title": "$color.stroke.informative-solid", "description": "theme-light: $color.palette.gray-700\ntheme-dark: $color.palette.gray-700", "markdownDescription": "- theme-light: `$color.palette.gray-700`\n\n- theme-dark: `$color.palette.gray-700`" },
+        { "const": "$color.stroke.informative-weak", "title": "$color.stroke.informative-weak", "description": "theme-light: $color.palette.gray-300\ntheme-dark: $color.palette.gray-300", "markdownDescription": "- theme-light: `$color.palette.gray-300`\n\n- theme-dark: `$color.palette.gray-300`" },
+        { "const": "$color.stroke.neutral-contrast", "title": "$color.stroke.neutral-contrast", "description": "theme-light: $color.palette.gray-1000\ntheme-dark: $color.palette.gray-1000", "markdownDescription": "- theme-light: `$color.palette.gray-1000`\n\n- theme-dark: `$color.palette.gray-1000`" },
+        { "const": "$color.stroke.neutral-muted", "title": "$color.stroke.neutral-muted", "description": "theme-light: $color.palette.static-black-alpha-300\ntheme-dark: $color.palette.static-white-alpha-100", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-300`\n\n- theme-dark: `$color.palette.static-white-alpha-100`" },
+        { "const": "$color.stroke.neutral-solid", "title": "$color.stroke.neutral-solid", "description": "theme-light: $color.palette.gray-800\ntheme-dark: $color.palette.gray-800", "markdownDescription": "- theme-light: `$color.palette.gray-800`\n\n- theme-dark: `$color.palette.gray-800`" },
+        { "const": "$color.stroke.neutral-subtle", "title": "$color.stroke.neutral-subtle", "description": "theme-light: $color.palette.static-black-alpha-200\ntheme-dark: $color.palette.static-white-alpha-50", "markdownDescription": "- theme-light: `$color.palette.static-black-alpha-200`\n\n- theme-dark: `$color.palette.static-white-alpha-50`" },
+        { "const": "$color.stroke.neutral-weak", "title": "$color.stroke.neutral-weak", "description": "theme-light: $color.palette.gray-400\ntheme-dark: $color.palette.gray-400", "markdownDescription": "- theme-light: `$color.palette.gray-400`\n\n- theme-dark: `$color.palette.gray-400`" },
+        { "const": "$color.stroke.positive-solid", "title": "$color.stroke.positive-solid", "description": "theme-light: $color.palette.green-700\ntheme-dark: $color.palette.green-700", "markdownDescription": "- theme-light: `$color.palette.green-700`\n\n- theme-dark: `$color.palette.green-700`" },
+        { "const": "$color.stroke.positive-weak", "title": "$color.stroke.positive-weak", "description": "theme-light: $color.palette.green-300\ntheme-dark: $color.palette.green-300", "markdownDescription": "- theme-light: `$color.palette.green-300`\n\n- theme-dark: `$color.palette.green-300`" },
+        { "const": "$color.stroke.warning-solid", "title": "$color.stroke.warning-solid", "description": "theme-light: $color.palette.yellow-700\ntheme-dark: $color.palette.yellow-700", "markdownDescription": "- theme-light: `$color.palette.yellow-700`\n\n- theme-dark: `$color.palette.yellow-700`" },
+        { "const": "$color.stroke.warning-weak", "title": "$color.stroke.warning-weak", "description": "theme-light: $color.palette.yellow-300\ntheme-dark: $color.palette.yellow-300", "markdownDescription": "- theme-light: `$color.palette.yellow-300`\n\n- theme-dark: `$color.palette.yellow-300`" },
+        { "const": "$dimension.spacing-x.between-chips", "title": "$dimension.spacing-x.between-chips", "description": "default: $dimension.x2", "markdownDescription": "- default: `$dimension.x2`" },
+        { "const": "$dimension.spacing-x.global-gutter", "title": "$dimension.spacing-x.global-gutter", "description": "default: $dimension.x4", "markdownDescription": "- default: `$dimension.x4`" },
+        { "const": "$dimension.spacing-y.between-text", "title": "$dimension.spacing-y.between-text", "description": "default: $dimension.x1_5", "markdownDescription": "- default: `$dimension.x1_5`" },
+        { "const": "$dimension.spacing-y.component-default", "title": "$dimension.spacing-y.component-default", "description": "default: $dimension.x3", "markdownDescription": "- default: `$dimension.x3`" },
+        { "const": "$dimension.spacing-y.nav-to-title", "title": "$dimension.spacing-y.nav-to-title", "description": "default: $dimension.x5", "markdownDescription": "- default: `$dimension.x5`" },
+        { "const": "$dimension.spacing-y.screen-bottom", "title": "$dimension.spacing-y.screen-bottom", "description": "default: $dimension.x14", "markdownDescription": "- default: `$dimension.x14`" },
+        { "const": "$dimension.x0_5", "title": "$dimension.x0_5", "description": "default: 2px", "markdownDescription": "- default: `2px`" },
+        { "const": "$dimension.x1", "title": "$dimension.x1", "description": "default: 4px", "markdownDescription": "- default: `4px`" },
+        { "const": "$dimension.x1_5", "title": "$dimension.x1_5", "description": "default: 6px", "markdownDescription": "- default: `6px`" },
+        { "const": "$dimension.x10", "title": "$dimension.x10", "description": "default: 40px", "markdownDescription": "- default: `40px`" },
+        { "const": "$dimension.x12", "title": "$dimension.x12", "description": "default: 48px", "markdownDescription": "- default: `48px`" },
+        { "const": "$dimension.x13", "title": "$dimension.x13", "description": "default: 52px", "markdownDescription": "- default: `52px`" },
+        { "const": "$dimension.x14", "title": "$dimension.x14", "description": "default: 56px", "markdownDescription": "- default: `56px`" },
+        { "const": "$dimension.x16", "title": "$dimension.x16", "description": "default: 64px", "markdownDescription": "- default: `64px`" },
+        { "const": "$dimension.x2", "title": "$dimension.x2", "description": "default: 8px", "markdownDescription": "- default: `8px`" },
+        { "const": "$dimension.x2_5", "title": "$dimension.x2_5", "description": "default: 10px", "markdownDescription": "- default: `10px`" },
+        { "const": "$dimension.x3", "title": "$dimension.x3", "description": "default: 12px", "markdownDescription": "- default: `12px`" },
+        { "const": "$dimension.x3_5", "title": "$dimension.x3_5", "description": "default: 14px", "markdownDescription": "- default: `14px`" },
+        { "const": "$dimension.x4", "title": "$dimension.x4", "description": "default: 16px", "markdownDescription": "- default: `16px`" },
+        { "const": "$dimension.x4_5", "title": "$dimension.x4_5", "description": "default: 18px", "markdownDescription": "- default: `18px`" },
+        { "const": "$dimension.x5", "title": "$dimension.x5", "description": "default: 20px", "markdownDescription": "- default: `20px`" },
+        { "const": "$dimension.x6", "title": "$dimension.x6", "description": "default: 24px", "markdownDescription": "- default: `24px`" },
+        { "const": "$dimension.x7", "title": "$dimension.x7", "description": "default: 28px", "markdownDescription": "- default: `28px`" },
+        { "const": "$dimension.x8", "title": "$dimension.x8", "description": "default: 32px", "markdownDescription": "- default: `32px`" },
+        { "const": "$dimension.x9", "title": "$dimension.x9", "description": "default: 36px", "markdownDescription": "- default: `36px`" },
+        { "const": "$duration.color-transition", "title": "$duration.color-transition", "description": "default: $duration.d3", "markdownDescription": "- default: `$duration.d3`" },
+        { "const": "$duration.d1", "title": "$duration.d1", "description": "default: 50ms", "markdownDescription": "- default: `50ms`" },
+        { "const": "$duration.d2", "title": "$duration.d2", "description": "default: 100ms", "markdownDescription": "- default: `100ms`" },
+        { "const": "$duration.d3", "title": "$duration.d3", "description": "default: 150ms", "markdownDescription": "- default: `150ms`" },
+        { "const": "$duration.d4", "title": "$duration.d4", "description": "default: 200ms", "markdownDescription": "- default: `200ms`" },
+        { "const": "$duration.d5", "title": "$duration.d5", "description": "default: 250ms", "markdownDescription": "- default: `250ms`" },
+        { "const": "$duration.d6", "title": "$duration.d6", "description": "default: 300ms", "markdownDescription": "- default: `300ms`" },
+        { "const": "$font-size.t1", "title": "$font-size.t1", "description": "default: 0.6875rem", "markdownDescription": "- default: `0.6875rem`" },
+        { "const": "$font-size.t1-static", "title": "$font-size.t1-static", "description": "default: 11px", "markdownDescription": "- default: `11px`" },
+        { "const": "$font-size.t10", "title": "$font-size.t10", "description": "default: 1.625rem", "markdownDescription": "- default: `1.625rem`" },
+        { "const": "$font-size.t10-static", "title": "$font-size.t10-static", "description": "default: 26px", "markdownDescription": "- default: `26px`" },
+        { "const": "$font-size.t2", "title": "$font-size.t2", "description": "default: 0.75rem", "markdownDescription": "- default: `0.75rem`" },
+        { "const": "$font-size.t2-static", "title": "$font-size.t2-static", "description": "default: 12px", "markdownDescription": "- default: `12px`" },
+        { "const": "$font-size.t3", "title": "$font-size.t3", "description": "default: 0.8125rem", "markdownDescription": "- default: `0.8125rem`" },
+        { "const": "$font-size.t3-static", "title": "$font-size.t3-static", "description": "default: 13px", "markdownDescription": "- default: `13px`" },
+        { "const": "$font-size.t4", "title": "$font-size.t4", "description": "default: 0.875rem", "markdownDescription": "- default: `0.875rem`" },
+        { "const": "$font-size.t4-static", "title": "$font-size.t4-static", "description": "default: 14px", "markdownDescription": "- default: `14px`" },
+        { "const": "$font-size.t5", "title": "$font-size.t5", "description": "default: 1rem", "markdownDescription": "- default: `1rem`" },
+        { "const": "$font-size.t5-static", "title": "$font-size.t5-static", "description": "default: 16px", "markdownDescription": "- default: `16px`" },
+        { "const": "$font-size.t6", "title": "$font-size.t6", "description": "default: 1.125rem", "markdownDescription": "- default: `1.125rem`" },
+        { "const": "$font-size.t6-static", "title": "$font-size.t6-static", "description": "default: 18px", "markdownDescription": "- default: `18px`" },
+        { "const": "$font-size.t7", "title": "$font-size.t7", "description": "default: 1.25rem", "markdownDescription": "- default: `1.25rem`" },
+        { "const": "$font-size.t7-static", "title": "$font-size.t7-static", "description": "default: 20px", "markdownDescription": "- default: `20px`" },
+        { "const": "$font-size.t8", "title": "$font-size.t8", "description": "default: 1.375rem", "markdownDescription": "- default: `1.375rem`" },
+        { "const": "$font-size.t8-static", "title": "$font-size.t8-static", "description": "default: 22px", "markdownDescription": "- default: `22px`" },
+        { "const": "$font-size.t9", "title": "$font-size.t9", "description": "default: 1.5rem", "markdownDescription": "- default: `1.5rem`" },
+        { "const": "$font-size.t9-static", "title": "$font-size.t9-static", "description": "default: 24px", "markdownDescription": "- default: `24px`" },
+        { "const": "$font-weight.bold", "title": "$font-weight.bold", "description": "default: 700", "markdownDescription": "- default: `700`" },
+        { "const": "$font-weight.medium", "title": "$font-weight.medium", "description": "default: 500", "markdownDescription": "- default: `500`" },
+        { "const": "$font-weight.regular", "title": "$font-weight.regular", "description": "default: 400", "markdownDescription": "- default: `400`" },
+        { "const": "$gradient.fade-layer-default", "title": "$gradient.fade-layer-default", "description": "theme-light: 0%: #000000, 100%: #ffffff00\ntheme-dark: 0%: #000000, 100%: #16171b00", "markdownDescription": "- theme-light: `0%: #000000, 100%: #ffffff00`\n\n- theme-dark: `0%: #000000, 100%: #16171b00`" },
+        { "const": "$gradient.fade-layer-floating", "title": "$gradient.fade-layer-floating", "description": "theme-light: 0%: #ffffff00, 100%: #000000\ntheme-dark: 0%: #1d202500, 100%: #000000", "markdownDescription": "- theme-light: `0%: #ffffff00, 100%: #000000`\n\n- theme-dark: `0%: #1d202500, 100%: #000000`" },
+        { "const": "$gradient.glow-magic", "title": "$gradient.glow-magic", "description": "theme-light: 0%: #fef6f7, 80%: #fef0e7, 100%: #f9f7f5\ntheme-dark: 0%: #2d252d, 80%: #3a312b, 100%: #333232", "markdownDescription": "- theme-light: `0%: #fef6f7, 80%: #fef0e7, 100%: #f9f7f5`\n\n- theme-dark: `0%: #2d252d, 80%: #3a312b, 100%: #333232`" },
+        { "const": "$gradient.glow-magic-pressed", "title": "$gradient.glow-magic-pressed", "description": "theme-light: 0%: #fbf0f2, 80%: #ffe8db, 100%: #f5f2ef\ntheme-dark: 0%: #3e333e, 80%: #51453e, 100%: #434242", "markdownDescription": "- theme-light: `0%: #fbf0f2, 80%: #ffe8db, 100%: #f5f2ef`\n\n- theme-dark: `0%: #3e333e, 80%: #51453e, 100%: #434242`" },
+        { "const": "$gradient.highlight-magic", "title": "$gradient.highlight-magic", "description": "theme-light: 20%: #ff6600, 100%: #d25aca\ntheme-dark: 20%: #ff6600, 100%: #d25aca", "markdownDescription": "- theme-light: `20%: #ff6600, 100%: #d25aca`\n\n- theme-dark: `20%: #ff6600, 100%: #d25aca`" },
+        { "const": "$gradient.highlight-magic-pressed", "title": "$gradient.highlight-magic-pressed", "description": "theme-light: 20%: #e14f00, 100%: #ae58bf\ntheme-dark: 20%: #ff9e65, 100%: #e89bee", "markdownDescription": "- theme-light: `20%: #e14f00, 100%: #ae58bf`\n\n- theme-dark: `20%: #ff9e65, 100%: #e89bee`" },
+        { "const": "$gradient.shimmer-magic", "title": "$gradient.shimmer-magic", "description": "theme-light: 0%: #fff9f500, 46%: #fff9f5cc, 54%: #fff9f5cc, 100%: #fff9f500\ntheme-dark: 0%: #fff9f500, 46%: #fff9f51a, 54%: #fff9f51a, 100%: #fff9f500", "markdownDescription": "- theme-light: `0%: #fff9f500, 46%: #fff9f5cc, 54%: #fff9f5cc, 100%: #fff9f500`\n\n- theme-dark: `0%: #fff9f500, 46%: #fff9f51a, 54%: #fff9f51a, 100%: #fff9f500`" },
+        { "const": "$gradient.shimmer-neutral", "title": "$gradient.shimmer-neutral", "description": "theme-light: 0%: #ffffff00, 46%: #ffffffab, 54%: #ffffffab, 100%: #ffffff00\ntheme-dark: 0%: #ffffff00, 46%: #ffffff1a, 54%: #ffffff1a, 100%: #ffffff00", "markdownDescription": "- theme-light: `0%: #ffffff00, 46%: #ffffffab, 54%: #ffffffab, 100%: #ffffff00`\n\n- theme-dark: `0%: #ffffff00, 46%: #ffffff1a, 54%: #ffffff1a, 100%: #ffffff00`" },
+        { "const": "$line-height.t1", "title": "$line-height.t1", "description": "default: 0.9375rem", "markdownDescription": "- default: `0.9375rem`" },
+        { "const": "$line-height.t1-static", "title": "$line-height.t1-static", "description": "default: 15px", "markdownDescription": "- default: `15px`" },
+        { "const": "$line-height.t10", "title": "$line-height.t10", "description": "default: 2.1875rem", "markdownDescription": "- default: `2.1875rem`" },
+        { "const": "$line-height.t10-static", "title": "$line-height.t10-static", "description": "default: 35px", "markdownDescription": "- default: `35px`" },
+        { "const": "$line-height.t2", "title": "$line-height.t2", "description": "default: 1rem", "markdownDescription": "- default: `1rem`" },
+        { "const": "$line-height.t2-static", "title": "$line-height.t2-static", "description": "default: 16px", "markdownDescription": "- default: `16px`" },
+        { "const": "$line-height.t3", "title": "$line-height.t3", "description": "default: 1.125rem", "markdownDescription": "- default: `1.125rem`" },
+        { "const": "$line-height.t3-static", "title": "$line-height.t3-static", "description": "default: 18px", "markdownDescription": "- default: `18px`" },
+        { "const": "$line-height.t4", "title": "$line-height.t4", "description": "default: 1.1875rem", "markdownDescription": "- default: `1.1875rem`" },
+        { "const": "$line-height.t4-static", "title": "$line-height.t4-static", "description": "default: 19px", "markdownDescription": "- default: `19px`" },
+        { "const": "$line-height.t5", "title": "$line-height.t5", "description": "default: 1.375rem", "markdownDescription": "- default: `1.375rem`" },
+        { "const": "$line-height.t5-static", "title": "$line-height.t5-static", "description": "default: 22px", "markdownDescription": "- default: `22px`" },
+        { "const": "$line-height.t6", "title": "$line-height.t6", "description": "default: 1.5rem", "markdownDescription": "- default: `1.5rem`" },
+        { "const": "$line-height.t6-static", "title": "$line-height.t6-static", "description": "default: 24px", "markdownDescription": "- default: `24px`" },
+        { "const": "$line-height.t7", "title": "$line-height.t7", "description": "default: 1.6875rem", "markdownDescription": "- default: `1.6875rem`" },
+        { "const": "$line-height.t7-static", "title": "$line-height.t7-static", "description": "default: 27px", "markdownDescription": "- default: `27px`" },
+        { "const": "$line-height.t8", "title": "$line-height.t8", "description": "default: 1.875rem", "markdownDescription": "- default: `1.875rem`" },
+        { "const": "$line-height.t8-static", "title": "$line-height.t8-static", "description": "default: 30px", "markdownDescription": "- default: `30px`" },
+        { "const": "$line-height.t9", "title": "$line-height.t9", "description": "default: 2rem", "markdownDescription": "- default: `2rem`" },
+        { "const": "$line-height.t9-static", "title": "$line-height.t9-static", "description": "default: 32px", "markdownDescription": "- default: `32px`" },
+        { "const": "$radius.full", "title": "$radius.full", "description": "default: 9999px", "markdownDescription": "- default: `9999px`" },
+        { "const": "$radius.r0_5", "title": "$radius.r0_5", "description": "default: 2px", "markdownDescription": "- default: `2px`" },
+        { "const": "$radius.r1", "title": "$radius.r1", "description": "default: 4px", "markdownDescription": "- default: `4px`" },
+        { "const": "$radius.r1_5", "title": "$radius.r1_5", "description": "default: 6px", "markdownDescription": "- default: `6px`" },
+        { "const": "$radius.r2", "title": "$radius.r2", "description": "default: 8px", "markdownDescription": "- default: `8px`" },
+        { "const": "$radius.r2_5", "title": "$radius.r2_5", "description": "default: 10px", "markdownDescription": "- default: `10px`" },
+        { "const": "$radius.r3", "title": "$radius.r3", "description": "default: 12px", "markdownDescription": "- default: `12px`" },
+        { "const": "$radius.r3_5", "title": "$radius.r3_5", "description": "default: 14px", "markdownDescription": "- default: `14px`" },
+        { "const": "$radius.r4", "title": "$radius.r4", "description": "default: 16px", "markdownDescription": "- default: `16px`" },
+        { "const": "$radius.r5", "title": "$radius.r5", "description": "default: 20px", "markdownDescription": "- default: `20px`" },
+        { "const": "$radius.r6", "title": "$radius.r6", "description": "default: 24px", "markdownDescription": "- default: `24px`" },
+        { "const": "$shadow.s1", "title": "$shadow.s1", "description": "theme-light: 0px 1px 4px 0px #00000014\ntheme-dark: 0px 1px 4px 0px #00000080", "markdownDescription": "- theme-light: `0px 1px 4px 0px #00000014`\n\n- theme-dark: `0px 1px 4px 0px #00000080`" },
+        { "const": "$shadow.s2", "title": "$shadow.s2", "description": "theme-light: 0px 2px 10px 0px #0000001a\ntheme-dark: 0px 2px 10px 0px #000000ad", "markdownDescription": "- theme-light: `0px 2px 10px 0px #0000001a`\n\n- theme-dark: `0px 2px 10px 0px #000000ad`" },
+        { "const": "$shadow.s3", "title": "$shadow.s3", "description": "theme-light: 0px 4px 16px 0px #0000001f\ntheme-dark: 0px 4px 16px 0px #000000cc", "markdownDescription": "- theme-light: `0px 4px 16px 0px #0000001f`\n\n- theme-dark: `0px 4px 16px 0px #000000cc`" },
+        { "const": "$timing-function.easing", "title": "$timing-function.easing", "description": "default: 0.35, 0, 0.35, 1", "markdownDescription": "- default: `0.35, 0, 0.35, 1`" },
+        { "const": "$timing-function.enter", "title": "$timing-function.enter", "description": "default: 0, 0, 0.15, 1", "markdownDescription": "- default: `0, 0, 0.15, 1`" },
+        { "const": "$timing-function.enter-expressive", "title": "$timing-function.enter-expressive", "description": "default: 0.03, 0.4, 0.1, 1", "markdownDescription": "- default: `0.03, 0.4, 0.1, 1`" },
+        { "const": "$timing-function.exit", "title": "$timing-function.exit", "description": "default: 0.35, 0, 1, 1", "markdownDescription": "- default: `0.35, 0, 1, 1`" },
+        { "const": "$timing-function.exit-expressive", "title": "$timing-function.exit-expressive", "description": "default: 0.35, 0, 0.95, 0.55", "markdownDescription": "- default: `0.35, 0, 0.95, 0.55`" },
+        { "const": "$timing-function.linear", "title": "$timing-function.linear", "description": "default: 0, 0, 1, 1", "markdownDescription": "- default: `0, 0, 1, 1`" }
+      ]
+    }
+  }
+}

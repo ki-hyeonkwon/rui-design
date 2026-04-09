@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+
+  overflow: hidden;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-text-size-adjust: none;
+}

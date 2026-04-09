@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: chip-tablist
+  name: Chip Tablist
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          paddingX:
+            type: dimension
+          gap:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        root:
+          paddingX: $dimension.x4
+          gap: 8px
+    variant=neutralSolid:
+      enabled:
+        root:
+          gap: 8px
+    variant=neutralOutline:
+      enabled:
+        root:
+          gap: 8px
+    variant=brandSolid:
+      enabled:
+        root:
+          gap: 8px

@@ -1,0 +1,16 @@
+export const brandSolid = "var(--rui-color-stroke-brand-solid)";
+export const brandWeak = "var(--rui-color-stroke-brand-weak)";
+export const criticalSolid = "var(--rui-color-stroke-critical-solid)";
+export const criticalWeak = "var(--rui-color-stroke-critical-weak)";
+export const informativeSolid = "var(--rui-color-stroke-informative-solid)";
+export const informativeWeak = "var(--rui-color-stroke-informative-weak)";
+export const neutralContrast = "var(--rui-color-stroke-neutral-contrast)";
+export const neutralMuted = "var(--rui-color-stroke-neutral-muted)";
+export const neutralSolid = "var(--rui-color-stroke-neutral-solid)";
+export const neutralSubtle = "var(--rui-color-stroke-neutral-subtle)";
+export const neutralWeak = "var(--rui-color-stroke-neutral-weak)";
+export const positiveSolid = "var(--rui-color-stroke-positive-solid)";
+export const positiveWeak = "var(--rui-color-stroke-positive-weak)";
+export const warningSolid = "var(--rui-color-stroke-warning-solid)";
+export const warningWeak = "var(--rui-color-stroke-warning-weak)";
+export const focusRing = "var(--rui-color-stroke-focus-ring)";

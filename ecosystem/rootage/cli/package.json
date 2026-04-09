@@ -1,0 +1,42 @@
+{
+  "name": "@rui/rootage-cli",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "ecosystem/rootage/cli"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "bin": {
+    "rootage": "./bin/index.mjs"
+  },
+  "files": [
+    "src",
+    "bin"
+  ],
+  "scripts": {
+    "build": "bun build.mjs",
+    "rootage:build": "bun build.mjs",
+    "dev": "bun dev.mjs",
+    "lint:publish": "bun publint"
+  },
+  "dependencies": {
+    "@rui/rootage-artifacts": "1.2.6",
+    "@rui/rootage-core": "0.0.0",
+    "fs-extra": "^11.3.0",
+    "yaml": "^2.7.1",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/yargs": "^17.0.33",
+    "esbuild": "^0.27.0",
+    "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

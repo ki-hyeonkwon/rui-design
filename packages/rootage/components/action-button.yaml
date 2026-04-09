@@ -1,0 +1,460 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: action-button
+  name: Action Button
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          colorDuration:
+            type: duration
+          colorTimingFunction:
+            type: cubicBezier
+          color:
+            type: color
+          strokeColor:
+            type: color
+          strokeWidth:
+            type: dimension
+          minHeight:
+            type: dimension
+          minWidth:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          gap:
+            type: dimension
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+      label:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+      icon:
+        description: layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      prefixIcon:
+        description: 주로 액션의 의미를 보조합니다. suffixIcon과 함께 사용할 수 없습니다.
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      suffixIcon:
+        description: Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사용할 수 없습니다.
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      progressCircle:
+        properties:
+          trackColor:
+            type: color
+          rangeColor:
+            type: color
+          size:
+            type: dimension
+          thickness:
+            type: dimension
+    variants:
+      variant:
+        values:
+          brandSolid:
+            description: 브랜드의 핵심 가치를 전달하며, 사용자 간 연결이 일어나는 서비스의 주요 기능에 사용합니다. 한 화면에 하나만 사용하는 것을 권장합니다.
+          neutralSolid:
+            description: 대부분의 화면에서 CTA로 사용합니다. 한 화면에 하나만 사용하는 것을 권장합니다.
+          neutralWeak:
+            description: CTA를 제외한 대부분의 액션에 사용됩니다.
+          criticalSolid:
+            description: 삭제나 초기화처럼 되돌릴 수 없는 중요한 작업에 사용합니다.
+          neutralOutline:
+            description: variant=brandSolid, neutralSolid, criticalSolid와 함께 사용할 수 없으며, variant=brandOutline과 조합하여 사용하는 것을 권장합니다.
+          brandOutline:
+            description: variant=brandSolid, neutralSolid, criticalSolid와 함께 사용할 수 없으며, variant=neutralOutline과 조합하여 사용하는 것을 권장합니다.
+          ghost:
+            description: 배경 없이 텍스트와 아이콘만 표시됩니다. 모두 동일한 색상을 사용하는 조건에서 icon, prefix icon, suffix icon, label에 정의된 color를 변경할 수 있으며, label의 fontWeight를 `$font-weight.regular` 또는 `$font-weight.medium`으로 변경하여 주목도를 조절할 수 있습니다.
+      size:
+        values:
+          xsmall:
+            description: 작은 공간에서 효율적으로 사용할 수 있는 Pill 형태로 제공됩니다.
+          small:
+            description: 화면 중앙에서 범용적으로 사용됩니다.
+          medium:
+            description: 화면 중앙에서 범용적으로 사용됩니다.
+          large:
+            description: 주로 CTA 역할로 사용됩니다.
+      layout:
+        values:
+          withText:
+            description: 텍스트와 함께 아이콘을 표시할 수 있습니다.
+          iconOnly:
+            description: 아이콘만으로 의미를 전달하기 때문에 접근성이 떨어집니다. 꼭 필요한 경우에만 접근성 레이블과 함께 사용하는 것을 권장합니다.
+  definitions:
+    base:
+      enabled:
+        root:
+          colorDuration: $duration.color-transition
+          colorTimingFunction: $timing-function.easing
+        label:
+          fontWeight: $font-weight.bold
+    variant=brandSolid:
+      enabled:
+        root:
+          color: $color.bg.brand-solid
+        label:
+          color: $color.palette.static-white
+        icon:
+          color: $color.palette.static-white
+        prefixIcon:
+          color: $color.palette.static-white
+        suffixIcon:
+          color: $color.palette.static-white
+        progressCircle:
+          trackColor: $color.palette.static-white-alpha-300
+          rangeColor: $color.palette.static-white
+      pressed:
+        root:
+          color: $color.bg.brand-solid-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.brand-solid-pressed
+    variant=neutralSolid:
+      enabled:
+        root:
+          color: $color.bg.neutral-inverted
+        label:
+          color: $color.fg.neutral-inverted
+        icon:
+          color: $color.fg.neutral-inverted
+        prefixIcon:
+          color: $color.fg.neutral-inverted
+        suffixIcon:
+          color: $color.fg.neutral-inverted
+        progressCircle:
+          trackColor: $color.palette.static-white-alpha-300
+          rangeColor: $color.palette.static-white
+      pressed:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+    variant=neutralWeak:
+      enabled:
+        root:
+          color: $color.bg.neutral-weak
+        label:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        progressCircle:
+          trackColor: $color.palette.gray-500
+          rangeColor: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.neutral-weak-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.neutral-weak-pressed
+    variant=criticalSolid:
+      enabled:
+        root:
+          color: $color.bg.critical-solid
+        label:
+          color: $color.palette.static-white
+        icon:
+          color: $color.palette.static-white
+        prefixIcon:
+          color: $color.palette.static-white
+        suffixIcon:
+          color: $color.palette.static-white
+        progressCircle:
+          trackColor: $color.palette.static-white-alpha-300
+          rangeColor: $color.palette.static-white
+      pressed:
+        root:
+          color: $color.bg.critical-solid-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.critical-solid-pressed
+    variant=neutralOutline:
+      enabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+          strokeWidth: 1px
+        label:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        progressCircle:
+          trackColor: $color.palette.gray-500
+          rangeColor: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.transparent
+    variant=brandOutline:
+      enabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+          strokeWidth: 1px
+        label:
+          color: $color.fg.brand
+        icon:
+          color: $color.fg.brand
+        prefixIcon:
+          color: $color.fg.brand
+        suffixIcon:
+          color: $color.fg.brand
+        progressCircle:
+          trackColor: $color.palette.carrot-200
+          rangeColor: $color.bg.brand-solid
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.transparent
+    variant=ghost:
+      enabled:
+        root:
+          color: "#ffffff00"
+        label:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        progressCircle:
+          trackColor: $color.palette.gray-500
+          rangeColor: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          color: "#ffffff00"
+        label:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        suffixIcon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.transparent-pressed
+    size=xsmall:
+      enabled:
+        root:
+          minHeight: $dimension.x8
+          cornerRadius: $radius.full
+        progressCircle:
+          size: 14px
+          thickness: 2px
+    size=xsmall, layout=withText:
+      enabled:
+        root:
+          gap: $dimension.x1
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x1_5
+        prefixIcon:
+          size: $dimension.x3_5
+        suffixIcon:
+          size: $dimension.x3_5
+        label:
+          fontSize: $font-size.t3
+          lineHeight: $line-height.t3
+    size=xsmall, layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x8
+          paddingX: $dimension.x1_5
+          paddingY: $dimension.x1_5
+        icon:
+          size: $dimension.x3_5
+    size=small:
+      enabled:
+        root:
+          minHeight: $dimension.x9
+          cornerRadius: $radius.r2
+        progressCircle:
+          size: 14px
+          thickness: 2px
+    size=small, layout=withText:
+      enabled:
+        root:
+          gap: $dimension.x1
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x2
+        prefixIcon:
+          size: $dimension.x3_5
+        suffixIcon:
+          size: $dimension.x3_5
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+    size=small, layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x9
+          paddingX: $dimension.x2
+          paddingY: $dimension.x2
+        icon:
+          size: $dimension.x4
+    size=medium:
+      enabled:
+        root:
+          minHeight: $dimension.x10
+          cornerRadius: $radius.r2
+        progressCircle:
+          size: 16px
+          thickness: 2px
+    size=medium, layout=withText:
+      enabled:
+        root:
+          gap: $dimension.x1_5
+          paddingX: $dimension.x4
+          paddingY: $dimension.x2_5
+        prefixIcon:
+          size: $dimension.x4
+        suffixIcon:
+          size: $dimension.x4
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+    size=medium, layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x10
+          paddingX: $dimension.x2_5
+          paddingY: $dimension.x2_5
+        icon:
+          size: 18px
+    size=large:
+      enabled:
+        root:
+          minHeight: $dimension.x13
+          cornerRadius: $radius.r3
+        progressCircle:
+          size: 18px
+          thickness: 2px
+    size=large, layout=withText:
+      enabled:
+        root:
+          gap: $dimension.x2
+          paddingX: $dimension.x5
+          paddingY: $dimension.x3_5
+        prefixIcon:
+          size: 22px
+        suffixIcon:
+          size: 22px
+        label:
+          fontSize: $font-size.t6
+          lineHeight: $line-height.t6
+    size=large, layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x13
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x3_5
+        icon:
+          size: 22px

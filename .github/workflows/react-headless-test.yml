@@ -1,0 +1,26 @@
+name: Test React Headless
+
+on:
+  push:
+    paths:
+      - "packages/react-headless/**/*"
+      - ".github/workflows/react-headless-test.yml"
+      - ".github/actions/setup/action.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup
+
+      - name: Build headless common dependencies
+        run: bun --filter @rui/dom-utils build && bun headless:build
+
+      - name: Run tests
+        run: bun headless:test

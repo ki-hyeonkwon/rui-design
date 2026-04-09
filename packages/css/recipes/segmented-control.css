@@ -1,0 +1,95 @@
+.seed-segmented-control__root {
+    display: grid;
+    box-sizing: border-box;
+    max-width: 100%;
+    position: relative;
+    padding: var(--rui-dimension-x1);
+    border-radius: var(--rui-radius-full);
+    background-color: var(--rui-color-bg-neutral-weak-alpha);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    align-items: center;
+    isolation: isolate;
+}
+.seed-segmented-control__indicator {
+    position: absolute;
+    z-index: -1;
+    will-change: transform;
+    transform: translateX(calc(var(--segment-index) * 100%));
+    top: var(--rui-dimension-x1);
+    bottom: var(--rui-dimension-x1);
+    left: var(--rui-dimension-x1);
+    width: calc((100% - var(--rui-dimension-x1) * 2) / var(--segment-count));
+    border-radius: var(--rui-radius-full);
+    background-color: var(--rui-color-palette-gray-00);
+    box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+    transition: transform var(--rui-duration-d4) var(--rui-timing-function-easing);
+}
+.seed-segmented-control__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    min-width: 86px;
+    min-height: 34px;
+    gap: var(--rui-dimension-x1_5);
+    height: 100%;
+    padding-left: var(--rui-dimension-x6);
+    padding-right: var(--rui-dimension-x6);
+    padding-top: var(--rui-dimension-x1_5);
+    padding-bottom: var(--rui-dimension-x1_5);
+    border-radius: var(--rui-radius-full);
+    font-weight: var(--rui-font-weight-bold);
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    color: var(--rui-color-fg-neutral-subtle);
+    transition: background-color var(--rui-duration-color-transition) var(--rui-timing-function-easing), color var(--rui-duration-color-transition) var(--rui-timing-function-easing), box-shadow var(--rui-duration-color-transition) var(--rui-timing-function-easing), outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+}
+.seed-segmented-control__item:is(:checked, [data-checked]) {
+    color: var(--rui-color-fg-neutral);
+}
+.seed-segmented-control__item {
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-segmented-control__item:is(:focus-visible, [data-focus-visible]) {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: var(--rui-dimension-x0_5);
+}
+.seed-segmented-control__item:is(:disabled, [disabled], [data-disabled]) {
+    cursor: not-allowed;
+    color: var(--rui-color-fg-disabled);
+}
+.seed-segmented-control__item:is(:disabled, [disabled], [data-disabled]):is(:checked, [data-checked]) {
+    background-color: var(--rui-color-bg-disabled);
+    box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+}
+@media (hover: hover) {
+    .seed-segmented-control__item:not(:is(:disabled, [disabled], [data-disabled])):is(:checked, [data-checked]):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-palette-gray-100);
+        box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+    }
+}
+@media (hover: none) {
+    .seed-segmented-control__item:not(:is(:disabled, [disabled], [data-disabled])):is(:checked, [data-checked]):is(:active, [data-active]) {
+        background-color: var(--rui-color-palette-gray-100);
+        box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+    }
+}
+@media (hover: hover) {
+    .seed-segmented-control__item:not(:is(:disabled, [disabled], [data-disabled])):not(:is(:checked, [data-checked])):is(:hover, [data-hover]) {
+        background-color: var(--rui-color-bg-neutral-weak-pressed);
+        box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+    }
+}
+@media (hover: none) {
+    .seed-segmented-control__item:not(:is(:disabled, [disabled], [data-disabled])):not(:is(:checked, [data-checked])):is(:active, [data-active]) {
+        background-color: var(--rui-color-bg-neutral-weak-pressed);
+        box-shadow: inset 0 0 0 1px var(--rui-color-stroke-neutral-muted);
+    }
+}

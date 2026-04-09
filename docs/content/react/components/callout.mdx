@@ -1,0 +1,185 @@
+---
+title: Callout
+description: 사용자에게 중요한 정보나 팁을 시각적으로 강조하여 전달하는 메시지 컴포넌트입니다.
+---
+
+<ComponentExample name="react/callout/preview">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/preview.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+## Installation
+
+```package-install
+npx @rui/cli@latest add ui:callout
+```
+
+<ManualInstallation name="callout" />
+
+## Props
+
+### `Callout`
+
+<react-type-table path="./registry/ui/callout.tsx" name="CalloutProps" />
+
+### `ActionableCallout`
+
+<react-type-table
+  path="./registry/ui/callout.tsx"
+  name="ActionableCalloutProps"
+/>
+
+### `DismissibleCallout`
+
+<react-type-table
+  path="./registry/ui/callout.tsx"
+  name="DismissibleCalloutProps"
+/>
+
+## Examples
+
+### Content Layout
+
+#### Text Only
+
+<ComponentExample name="react/callout/text-only">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/text-only.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### With Icon
+
+<ComponentExample name="react/callout/with-icon">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/with-icon.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### With Title Text
+
+<ComponentExample name="react/callout/with-title-text">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/with-title-text.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### With Link Label
+
+<Callout type="warn">
+`ActionableCallout`에서는 `linkProps`를 제공하지 않아요.
+</Callout>
+
+<ComponentExample name="react/callout/with-link-label">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/with-link-label.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### With All
+
+<ComponentExample name="react/callout/with-all">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/with-all.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Customizable Parts
+
+#### Rendering Link Label as Child
+
+<ComponentExample name="react/callout/link-label-as-child">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/link-label-as-child.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+### Tones
+
+#### Neutral (Default)
+
+<ComponentExample name="react/callout/neutral">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/neutral.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Informative
+
+<ComponentExample name="react/callout/informative">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/informative.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Positive
+
+<ComponentExample name="react/callout/positive">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/positive.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Warning
+
+<ComponentExample name="react/callout/warning">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/warning.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Critical
+
+<ComponentExample name="react/callout/critical">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/critical.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>
+
+#### Magic
+
+<ComponentExample name="react/callout/magic">
+  ```json doc-gen:file
+  {
+    "file": "examples/react/callout/magic.tsx",
+    "codeblock": true
+  }
+  ```
+</ComponentExample>

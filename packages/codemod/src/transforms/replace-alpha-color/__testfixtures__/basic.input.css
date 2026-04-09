@@ -1,0 +1,27 @@
+.overlay {
+  background-color: var(--rui-color-palette-static-black-alpha-50);
+  backdrop-filter: blur(10px);
+}
+
+.shadow {
+  box-shadow: 0 2px 8px var(--rui-color-palette-static-black-alpha-200);
+}
+
+.dark-overlay {
+  background-color: var(--rui-color-palette-static-black-alpha-500);
+  opacity: 0.8;
+}
+
+.light-overlay {
+  background-color: var(--rui-color-palette-static-white-alpha-200);
+  backdrop-filter: brightness(1.1);
+}
+
+.complex-example {
+  background: linear-gradient(
+    to bottom,
+    var(--rui-color-palette-static-black-alpha-50),
+    var(--rui-color-palette-static-black-alpha-200)
+  );
+  border: 1px solid var(--rui-color-palette-static-white-alpha-200);
+}

@@ -1,0 +1,55 @@
+name: Phase 1 Validate
+
+on:
+  pull_request:
+    paths:
+      - "package.json"
+      - "bun.lock"
+      - "scripts/phase1-external-package.ts"
+      - "scripts/phase1-external-package.test.ts"
+      - "scripts/phase1-external-package-smoke.ts"
+      - "scripts/tsconfig.phase1.json"
+      - "packages/react/**/*"
+      - "packages/css/**/*"
+      - "packages/stackflow/**/*"
+      - "packages/cli/**/*"
+      - "packages/tailwind4-theme/**/*"
+      - "packages/react-headless/**/*"
+      - "packages/utils/dom-utils/**/*"
+      - ".github/workflows/phase1-validate.yml"
+      - ".github/actions/setup/action.yml"
+  push:
+    paths:
+      - "package.json"
+      - "bun.lock"
+      - "scripts/phase1-external-package.ts"
+      - "scripts/phase1-external-package.test.ts"
+      - "scripts/phase1-external-package-smoke.ts"
+      - "scripts/tsconfig.phase1.json"
+      - "packages/react/**/*"
+      - "packages/css/**/*"
+      - "packages/stackflow/**/*"
+      - "packages/cli/**/*"
+      - "packages/tailwind4-theme/**/*"
+      - "packages/react-headless/**/*"
+      - "packages/utils/dom-utils/**/*"
+      - ".github/workflows/phase1-validate.yml"
+      - ".github/actions/setup/action.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup
+        with:
+          build-packages: "true"
+
+      - name: Run Phase 1 validation
+        run: bun phase1:validate

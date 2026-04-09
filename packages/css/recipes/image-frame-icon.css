@@ -1,0 +1,6 @@
+.seed-image-frame-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--rui-color-palette-static-white)
+}

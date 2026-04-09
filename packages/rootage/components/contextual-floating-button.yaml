@@ -1,0 +1,161 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: contextual-floating-button
+  name: Contextual Floating Button
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          cornerRadius:
+            type: dimension
+          shadow:
+            type: shadow
+          colorDuration:
+            type: duration
+          colorTimingFunction:
+            type: cubicBezier
+          color:
+            type: color
+          minHeight:
+            type: dimension
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+          gap:
+            type: dimension
+          size:
+            type: dimension
+      progressCircle:
+        properties:
+          size:
+            type: dimension
+          thickness:
+            type: dimension
+          trackColor:
+            type: color
+          rangeColor:
+            type: color
+      label:
+        properties:
+          color:
+            type: color
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+      prefixIcon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+      icon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+    variants:
+      variant:
+        values:
+          solid:
+            description: 배경과 대비되는 강조된 보조 액션으로 중요도 높은 행동 유도 시 적합합니다.
+          layer:
+            description: 시각적 부담 없이 부드럽게 액션을 유도합니다.
+      layout:
+        values:
+          withText:
+            description: label과 prefixIcon을 함께 표시합니다.
+          iconOnly:
+            description: icon만 표시합니다. 아이콘만으로 의미를 전달하기 때문에 접근성 레이블과 함께 사용해야 합니다.
+  definitions:
+    base:
+      enabled:
+        root:
+          cornerRadius: $radius.full
+          shadow: $shadow.s3
+          colorDuration: $duration.color-transition
+          colorTimingFunction: $timing-function.easing
+        progressCircle:
+          size: 16px
+          thickness: 2px
+    variant=solid:
+      enabled:
+        root:
+          color: $color.bg.neutral-inverted
+        progressCircle:
+          trackColor: $color.palette.gray-700
+          rangeColor: $color.fg.neutral-inverted
+        label:
+          color: $color.fg.neutral-inverted
+        prefixIcon:
+          color: $color.fg.neutral-inverted
+        icon:
+          color: $color.fg.neutral-inverted
+      pressed:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+    variant=layer:
+      enabled:
+        root:
+          color: $color.bg.layer-floating
+        progressCircle:
+          trackColor: $color.palette.gray-500
+          rangeColor: $color.fg.neutral
+        label:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.layer-floating-pressed
+      disabled:
+        root:
+          color: $color.bg.disabled
+        label:
+          color: $color.fg.disabled
+        prefixIcon:
+          color: $color.fg.disabled
+        icon:
+          color: $color.fg.disabled
+      loading:
+        root:
+          color: $color.bg.layer-floating-pressed
+    layout=withText:
+      enabled:
+        root:
+          minHeight: 36px
+          paddingX: $dimension.x3_5
+          paddingY: $dimension.x2
+          gap: $dimension.x1
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+          fontWeight: $font-weight.medium
+        prefixIcon:
+          size: 16px
+    layout=iconOnly:
+      enabled:
+        root:
+          size: 44px
+        icon:
+          size: 22px

@@ -1,0 +1,26 @@
+name: Test React
+
+on:
+  push:
+    paths:
+      - "packages/react/**/*"
+      - ".github/workflows/react-test.yml"
+      - ".github/actions/setup/action.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: ./.github/actions/setup
+
+      - name: Build common dependencies
+        run: bun --filter @rui/dom-utils build && bun headless:build && bun --filter @rui/react build
+
+      - name: Run tests
+        run: bun react:test

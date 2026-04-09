@@ -1,0 +1,13 @@
+{
+  "name": "Seed design component spec",
+  "id": "rui-component-spec",
+  "api": "1.0.0",
+  "editorType": ["figma"],
+  "permissions": [],
+  "containsWidget": true,
+  "main": "dist/code.js",
+  "widgetApi": "1.0.0",
+  "networkAccess": {
+    "allowedDomains": ["https://raw.githubusercontent.com", "https://httpbin.org"]
+  }
+}

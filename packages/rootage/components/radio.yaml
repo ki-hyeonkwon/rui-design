@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: radio
+  name: Radio
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          gap:
+            type: dimension
+          minHeight:
+            type: dimension
+      label:
+        properties:
+          color:
+            type: color
+          fontWeight:
+            type: number
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        label:
+          color: $color.fg.neutral
+        root:
+          gap: $dimension.x2
+      disabled:
+        label:
+          color: $color.fg.disabled
+
+    weight=regular:
+      enabled:
+        label:
+          fontWeight: $font-weight.regular
+    weight=bold:
+      enabled:
+        label:
+          fontWeight: $font-weight.bold
+
+    size=medium:
+      enabled:
+        root:
+          minHeight: $dimension.x8
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+
+    size=large:
+      enabled:
+        root:
+          minHeight: $dimension.x9
+        label:
+          fontSize: $font-size.t5
+          lineHeight: $line-height.t5

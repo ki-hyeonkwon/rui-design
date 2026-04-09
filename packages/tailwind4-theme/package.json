@@ -1,0 +1,40 @@
+{
+  "name": "@rui/tailwind4-theme",
+  "version": "1.1.18",
+  "description": "SEED 디자인 토큰을 Tailwind CSS 4.0에서 사용하기 위한 플러그인",
+  "main": "index.css",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/tailwind4-theme"
+  },
+  "files": [
+    "index.css",
+    "README.md"
+  ],
+  "scripts": {
+    "rootage:generate": "rootage tailwind4 ./ --prefix rui",
+    "lint:publish": "bun publint"
+  },
+  "exports": {
+    ".": "./index.css"
+  },
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "plugin",
+    "rui",
+    "design-system"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.4"
+  },
+  "peerDependencies": {
+    "tailwindcss": "4"
+  }
+}

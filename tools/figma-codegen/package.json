@@ -1,0 +1,46 @@
+{
+  "name": "@rui/figma-codegen",
+  "private": true,
+  "version": "0.0.0",
+  "author": "Asher <asher@daangn.com>",
+  "dependencies": {
+    "@rui/figma": "1.3.9"
+  },
+  "devDependencies": {
+    "@create-figma-plugin/build": "^4.0.1",
+    "@create-figma-plugin/tsconfig": "^4.0.0",
+    "@figma/plugin-typings": "^1.123.0",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "build": "build-figma-plugin --typecheck --minify",
+    "dev": "IS_DEV=true build-figma-plugin --typecheck --watch"
+  },
+  "figma-plugin": {
+    "editorType": [
+      "dev"
+    ],
+    "capabilities": [
+      "codegen"
+    ],
+    "codegenLanguages": [
+      {
+        "label": "React",
+        "value": "react"
+      }
+    ],
+    "id": "1469592983561656263",
+    "name": "Seed Design Codegen",
+    "main": "src/main.ts",
+    "documentAccess": "dynamic-page",
+    "networkAccess": {
+      "allowedDomains": [
+        "https://us.i.posthog.com"
+      ]
+    },
+    "permissions": [
+      "currentuser"
+    ]
+  }
+}

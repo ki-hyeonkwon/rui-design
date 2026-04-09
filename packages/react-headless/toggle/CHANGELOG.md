@@ -1,0 +1,59 @@
+# @rui/react-toggle
+
+## 1.0.1
+
+### Patch Changes
+
+- 7e0728a: ToggleButton이 비활성화 상태에서 `aria-disabled="true"`를 갖도록 수정합니다.
+
+## 1.0.0
+
+### Major Changes
+
+- 34f92f2: 🌱 RUI Design 패키지의 첫 메이저 버전을 출시합니다.
+
+### Patch Changes
+
+- Updated dependencies [34f92f2]
+  - @rui/react-primitive@1.0.0
+  - @rui/dom-utils@1.0.0
+
+## 0.0.4
+
+### Patch Changes
+
+- Updated dependencies [29ec9f0]
+  - @rui/react-primitive@0.0.3
+
+## 0.0.3
+
+### Patch Changes
+
+- 7851a31: RSC 지원을 위한 "use client" directive를 추가합니다.
+
+## 0.0.2
+
+### Patch Changes
+
+- e368c69: 패키지 의존성을 최신화합니다.
+- Updated dependencies [e368c69]
+  - @rui/react-primitive@0.0.2
+  - @rui/dom-utils@0.0.2
+
+## 0.0.1
+
+### Patch Changes
+
+- b64023c: Initial release of the next version of Seed Design.
+- Updated dependencies [b64023c]
+  - @rui/react-primitive@0.0.1
+  - @rui/dom-utils@0.0.1
+
+## 0.0.1-rc.0
+
+### Patch Changes
+
+- Seed Design V3 release candidate
+- Updated dependencies
+  - @rui/react-primitive@0.0.1-rc.0
+  - @rui/dom-utils@0.0.1-rc.0

@@ -1,0 +1,10 @@
+export const blue = "var(--rui-color-banner-blue)";
+export const coolGray = "var(--rui-color-banner-cool-gray)";
+export const green = "var(--rui-color-banner-green)";
+export const orange = "var(--rui-color-banner-orange)";
+export const pink = "var(--rui-color-banner-pink)";
+export const purple = "var(--rui-color-banner-purple)";
+export const red = "var(--rui-color-banner-red)";
+export const teal = "var(--rui-color-banner-teal)";
+export const warmGray = "var(--rui-color-banner-warm-gray)";
+export const yellow = "var(--rui-color-banner-yellow)";

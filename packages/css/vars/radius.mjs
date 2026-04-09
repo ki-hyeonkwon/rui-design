@@ -1,0 +1,11 @@
+export const r0_5 = "var(--rui-radius-r0_5)";
+export const r1 = "var(--rui-radius-r1)";
+export const r1_5 = "var(--rui-radius-r1_5)";
+export const r2 = "var(--rui-radius-r2)";
+export const r2_5 = "var(--rui-radius-r2_5)";
+export const r3 = "var(--rui-radius-r3)";
+export const r3_5 = "var(--rui-radius-r3_5)";
+export const r4 = "var(--rui-radius-r4)";
+export const r5 = "var(--rui-radius-r5)";
+export const r6 = "var(--rui-radius-r6)";
+export const full = "var(--rui-radius-full)";

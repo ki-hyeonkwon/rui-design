@@ -1,0 +1,127 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: help-bubble
+  name: Help Bubble
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+          cornerRadius:
+            type: dimension
+          paddingX:
+            type: dimension
+          paddingY:
+            type: dimension
+          gap:
+            type: dimension
+          enterScale:
+            type: number
+          enterOpacity:
+            type: number
+          enterDuration:
+            type: duration
+          enterTimingFunction:
+            type: cubicBezier
+          exitScale:
+            type: number
+          exitOpacity:
+            type: number
+          exitDuration:
+            type: duration
+          exitTimingFunction:
+            type: cubicBezier
+      arrow:
+        properties:
+          color:
+            type: color
+          width:
+            type: dimension
+          height:
+            type: dimension
+          cornerRadius:
+            type: dimension
+          gutter:
+            type: dimension
+            description: arrow와 타겟 요소 사이의 거리를 정의합니다.
+          padding:
+            type: dimension
+            description: arrow와 root의 경계 사이의 최소 간격을 정의합니다.
+      body:
+        properties:
+          gap:
+            type: dimension
+      title:
+        properties:
+          color:
+            type: color
+          fontSize:
+            type: dimension
+          fontWeight:
+            type: number
+          lineHeight:
+            type: dimension
+      description:
+        properties:
+          color:
+            type: color
+          fontSize:
+            type: dimension
+          fontWeight:
+            type: number
+          lineHeight:
+            type: dimension
+      closeButton:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+          targetSize:
+            type: dimension
+          marginTop:
+            type: dimension
+  definitions:
+    base:
+      enabled:
+        root:
+          color: $color.bg.neutral-inverted
+          cornerRadius: $radius.r3
+          paddingX: $dimension.x3
+          paddingY: $dimension.x2_5
+          gap: $dimension.x1
+          enterScale: 0.9
+          enterOpacity: 0
+          enterDuration: $duration.d4
+          enterTimingFunction: $timing-function.enter
+          exitScale: 1
+          exitOpacity: 0
+          exitDuration: $duration.d4
+          exitTimingFunction: $timing-function.easing
+        arrow:
+          color: $color.bg.neutral-inverted
+          width: 12px
+          height: 8px
+          cornerRadius: 2px
+          gutter: 4px
+          padding: 14px
+        body:
+          gap: $dimension.x0_5
+        title:
+          color: $color.fg.neutral-inverted
+          fontSize: $font-size.t3
+          fontWeight: $font-weight.bold
+          lineHeight: $line-height.t3
+        description:
+          color: $color.fg.neutral-inverted
+          fontSize: $font-size.t3
+          fontWeight: $font-weight.regular
+          lineHeight: $line-height.t3
+        closeButton:
+          color: $color.fg.neutral-inverted
+          size: $dimension.x3_5
+          targetSize: 38px
+          marginTop: $dimension.x0_5

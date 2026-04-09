@@ -1,0 +1,517 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1775693219702,
+  "projectRoot": "/Users/kihyeonkwon/Documents/projects/active/ds_clone/rui-design-dev",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {
+      "build": "ultra -r build",
+      "packages:build": "ultra -r --build --filter 'packages/*' build",
+      "ecosystem:build": "ultra -r --build --filter 'ecosystem/*' build",
+      "lint:publish": "bun --filter '*' lint:publish",
+      "lint:knip": "knip",
+      "release": "bun packages:build && bun changeset publish",
+      "version": "changeset version && bun install --no-immutable",
+      "format:all": "bun biome format --fix",
+      "test:all": "bun test",
+      "generate:all": "bun rootage:generate && bun qvism:generate && bun docs:generate",
+      "figma:sync": "bun figma-extractor --config=scripts/.config/figma-extractor.config.ts scripts/data variables && bun run ./scripts/figma-to-rootage.ts",
+      "images:convert": "bun scripts/convert-images-to-webp.ts",
+      "images:preview": "bun scripts/convert-images-to-webp.ts --dry-run",
+      "docs:generate": "bun --filter @rui/docs generate:all",
+      "docs:dev": "bun --filter @rui/docs dev",
+      "docs:build": "bun --filter @rui/docs build",
+      "docs:test": "bun test docs",
+      "docs:test:watch": "bun test --watch docs",
+      "storybook": "bun --filter @rui/docs storybook",
+      "storybook:build": "bun --filter @rui/docs build-storybook",
+      "phase1:test": "bun test ./scripts/phase1-external-package.test.ts",
+      "phase1:typecheck": "tsc -p ./scripts/tsconfig.phase1.json --noEmit && tsc -p ./packages/react/tsconfig.json --noEmit && tsc -p ./packages/stackflow/tsconfig.json --noEmit && tsc -p ./packages/cli/tsconfig.json --noEmit",
+      "phase1:smoke": "bun ./scripts/phase1-external-package-smoke.ts",
+      "phase1:validate": "bun phase1:test && bun phase1:typecheck && bun phase1:smoke",
+      "rootage:build": "ultra -r --build rootage:build",
+      "rootage:generate": "ultra -r --rebuild rootage:generate",
+      "rootage:generate:watch": "watchlist packages/rootage/artifacts -- bun rootage:generate",
+      "rootage:validate": "bun rootage:build && bun ./ecosystem/rootage/cli/bin/index.mjs validate",
+      "rootage:test": "bun rootage:validate && bun test ecosystem/rootage",
+      "rootage:test:watch": "bun test --watch ecosystem/rootage",
+      "qvism:build": "ultra -r --build qvism:build",
+      "qvism:generate": "bun --filter @rui/qvism-preset build && bun --filter @rui/css qvism:generate",
+      "qvism:generate:watch": "watchlist packages/qvism-preset -- bun qvism:generate",
+      "cli:watch": "watchlist packages/cli -- bun --filter @rui/cli dev",
+      "headless:build": "ultra -r --filter 'packages/react-headless/*' build",
+      "headless:test": "bun test packages/react-headless",
+      "headless:test:watch": "bun test --watch packages/react-headless",
+      "react:test": "bun test packages/react",
+      "react:test:watch": "bun test --watch packages/react",
+      "clean:lib": "bun --filter '*' clean",
+      "clean:modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+      "generate:codemod-docs": "bun scripts/generate-codemod-docs.ts",
+      "mcp:start": "bunx --bun @rui/mcp@latest socket"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": true,
+    "workspaces": [
+      "packages/*",
+      "packages/react-headless/*",
+      "packages/utils/*",
+      "tools/*",
+      "ecosystem/*",
+      "ecosystem/rootage/*",
+      "ecosystem/qvism/*",
+      "examples/*",
+      "docs"
+    ],
+    "mainDirectories": [
+      "docs",
+      "examples",
+      "scripts"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "TASKS": {
+      "path": "TASKS",
+      "purpose": null,
+      "fileCount": 0,
+      "lastAccessed": 1775693219633,
+      "keyFiles": []
+    },
+    "docs": {
+      "path": "docs",
+      "purpose": "Documentation",
+      "fileCount": 13,
+      "lastAccessed": 1775693219634,
+      "keyFiles": [
+        "AGENTS.md",
+        "README.md",
+        "chromatic.config.json",
+        "next-env.d.ts",
+        "next.config.mjs"
+      ]
+    },
+    "ecosystem": {
+      "path": "ecosystem",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1775693219683,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "examples": {
+      "path": "examples",
+      "purpose": "Example code",
+      "fileCount": 0,
+      "lastAccessed": 1775693219687,
+      "keyFiles": []
+    },
+    "packages": {
+      "path": "packages",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1775693219687,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "patches": {
+      "path": "patches",
+      "purpose": null,
+      "fileCount": 3,
+      "lastAccessed": 1775693219688,
+      "keyFiles": [
+        "@figma%2Fplugin-typings@1.123.0.patch",
+        "@figma%2Frest-api-spec@0.36.0.patch",
+        "@radix-ui%2Freact-dialog@1.1.15.patch"
+      ]
+    },
+    "scripts": {
+      "path": "scripts",
+      "purpose": "Build/utility scripts",
+      "fileCount": 9,
+      "lastAccessed": 1775693219688,
+      "keyFiles": [
+        "convert-images-to-webp.ts",
+        "figma-to-rootage.ts",
+        "generate-codemod-docs.ts",
+        "happydom.ts",
+        "phase1-external-package-smoke.ts"
+      ]
+    },
+    "skills": {
+      "path": "skills",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1775693219688,
+      "keyFiles": [
+        "AGENTS.md",
+        "skill-rules.json"
+      ]
+    },
+    "tools": {
+      "path": "tools",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1775693219688,
+      "keyFiles": [
+        "AGENTS.md"
+      ]
+    },
+    "types": {
+      "path": "types",
+      "purpose": "Type definitions",
+      "fileCount": 0,
+      "lastAccessed": 1775693219689,
+      "keyFiles": []
+    },
+    "docs/app": {
+      "path": "docs/app",
+      "purpose": "Application code",
+      "fileCount": 10,
+      "lastAccessed": 1775693219690,
+      "keyFiles": [
+        "env.ts",
+        "global.css",
+        "layer-order.css"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "",
+      "accessCount": 60,
+      "lastAccessed": 1775710306990,
+      "type": "directory"
+    },
+    {
+      "path": "packages/rootage/components/action-button.yaml",
+      "accessCount": 17,
+      "lastAccessed": 1775710275557,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/color.yaml",
+      "accessCount": 8,
+      "lastAccessed": 1775710220539,
+      "type": "file"
+    },
+    {
+      "path": ".mcp.json",
+      "accessCount": 6,
+      "lastAccessed": 1775710198819,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/duration.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1775710188318,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/timing-function.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1775710188492,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/dimension.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1775710202709,
+      "type": "file"
+    },
+    {
+      "path": "packages/docs-mcp/src/tools/index.ts",
+      "accessCount": 4,
+      "lastAccessed": 1775710218979,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/shadow.yaml",
+      "accessCount": 4,
+      "lastAccessed": 1775710234974,
+      "type": "file"
+    },
+    {
+      "path": "docs/app/_llms/config.ts",
+      "accessCount": 4,
+      "lastAccessed": 1775710253326,
+      "type": "file"
+    },
+    {
+      "path": "package.json",
+      "accessCount": 4,
+      "lastAccessed": 1775710277687,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/radius.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1775602467657,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/font-size.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1775602468579,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/font-weight.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1775602469610,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/line-height.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1775602469875,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/gradient.yaml",
+      "accessCount": 3,
+      "lastAccessed": 1775602471170,
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "accessCount": 3,
+      "lastAccessed": 1775707969035,
+      "type": "file"
+    },
+    {
+      "path": "packages/docs-mcp/src/config.ts",
+      "accessCount": 3,
+      "lastAccessed": 1775710248020,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage/collections.yaml",
+      "accessCount": 2,
+      "lastAccessed": 1775602359252,
+      "type": "file"
+    },
+    {
+      "path": "docs/app/_llms/AGENTS.md",
+      "accessCount": 2,
+      "lastAccessed": 1775696971833,
+      "type": "file"
+    },
+    {
+      "path": "docs/AGENTS.md",
+      "accessCount": 2,
+      "lastAccessed": 1775696972145,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/ai-integration/index.mdx",
+      "accessCount": 2,
+      "lastAccessed": 1775696998435,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/docs/components/(buttons)/action-button.mdx",
+      "accessCount": 2,
+      "lastAccessed": 1775697002559,
+      "type": "file"
+    },
+    {
+      "path": "packages/docs-mcp/AGENTS.md",
+      "accessCount": 2,
+      "lastAccessed": 1775697003306,
+      "type": "file"
+    },
+    {
+      "path": "packages/mcp/AGENTS.md",
+      "accessCount": 2,
+      "lastAccessed": 1775697003743,
+      "type": "file"
+    },
+    {
+      "path": "docs/app/_llms/get-llm-text.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775697023174,
+      "type": "file"
+    },
+    {
+      "path": "docs/plans/2026-04-08-rui-design-system-fork-plan.md",
+      "accessCount": 2,
+      "lastAccessed": 1775697312321,
+      "type": "file"
+    },
+    {
+      "path": "docs/plans/2026-04-08-rui-phase-1-release-checklist.md",
+      "accessCount": 2,
+      "lastAccessed": 1775697313203,
+      "type": "file"
+    },
+    {
+      "path": "skills/AGENTS.md",
+      "accessCount": 2,
+      "lastAccessed": 1775708087087,
+      "type": "file"
+    },
+    {
+      "path": "packages/qvism-preset/src/recipes/action-button.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775710187584,
+      "type": "file"
+    },
+    {
+      "path": "packages/docs-mcp/src/tools/docs.ts",
+      "accessCount": 2,
+      "lastAccessed": 1775710232118,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/react/components/action-button.mdx",
+      "accessCount": 2,
+      "lastAccessed": 1775710289863,
+      "type": "file"
+    },
+    {
+      "path": "packages/qvism-preset/src/global.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775602390946,
+      "type": "file"
+    },
+    {
+      "path": "packages/css/recipes/action-button.css",
+      "accessCount": 1,
+      "lastAccessed": 1775602391328,
+      "type": "file"
+    },
+    {
+      "path": "packages/css/vars/color/palette.mjs",
+      "accessCount": 1,
+      "lastAccessed": 1775602394886,
+      "type": "file"
+    },
+    {
+      "path": "packages/rootage",
+      "accessCount": 1,
+      "lastAccessed": 1775696960495,
+      "type": "directory"
+    },
+    {
+      "path": "packages/cli/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696971015,
+      "type": "file"
+    },
+    {
+      "path": "packages/react/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696973434,
+      "type": "file"
+    },
+    {
+      "path": "packages/css/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696973681,
+      "type": "file"
+    },
+    {
+      "path": "packages/react-headless/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696983133,
+      "type": "file"
+    },
+    {
+      "path": "packages/qvism-preset/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696983685,
+      "type": "file"
+    },
+    {
+      "path": "packages/AGENTS.md",
+      "accessCount": 1,
+      "lastAccessed": 1775696984172,
+      "type": "file"
+    },
+    {
+      "path": "docs/app/_llms/normalize-llm-body.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775696988695,
+      "type": "file"
+    },
+    {
+      "path": "packages/mcp/src/prompts.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775696990495,
+      "type": "file"
+    },
+    {
+      "path": "packages/mcp/src/tools.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775696991081,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/docs/components/(controls)/checkbox.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1775696992957,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/ai-integration/(mcp)/docs-mcp.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1775696999290,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/ai-integration/(mcp)/figma-mcp.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1775697000139,
+      "type": "file"
+    },
+    {
+      "path": "docs/content/ai-integration/(skills)/cli.mdx",
+      "accessCount": 1,
+      "lastAccessed": 1775697000895,
+      "type": "file"
+    },
+    {
+      "path": "packages/docs-mcp/src/tools/get-rootage.ts",
+      "accessCount": 1,
+      "lastAccessed": 1775697011194,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

@@ -1,0 +1,105 @@
+.seed-dialog__positioner {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overscroll-behavior-y: none;
+    --dialog-z-index: 2;
+    z-index: calc(var(--dialog-z-index) + var(--layer-index, 0))
+}
+.seed-dialog__backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--rui-color-bg-overlay);
+    z-index: calc(var(--dialog-z-index) + var(--layer-index, 0))
+}
+.seed-dialog__content {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    box-sizing: border-box;
+    word-break: break-all;
+    z-index: calc(var(--dialog-z-index) + var(--layer-index, 0));
+    background: var(--rui-color-bg-layer-floating);
+    max-width: 272px;
+    margin: auto var(--rui-dimension-x8);
+    border-radius: var(--rui-radius-r5)
+}
+.seed-dialog__header {
+    display: flex;
+    flex-direction: column;
+    padding-left: var(--rui-dimension-x5);
+    padding-right: var(--rui-dimension-x5);
+    padding-top: var(--rui-dimension-x5);
+    gap: var(--rui-dimension-x1_5)
+}
+.seed-dialog__title {
+    color: var(--rui-color-fg-neutral);
+    font-size: var(--rui-font-size-t7);
+    line-height: var(--rui-line-height-t7);
+    font-weight: var(--rui-font-weight-bold);
+    margin: 0
+}
+.seed-dialog__description {
+    color: var(--rui-color-fg-neutral);
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    margin: 0;
+    white-space: pre-wrap
+}
+.seed-dialog__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: var(--rui-dimension-x5);
+    padding-right: var(--rui-dimension-x5);
+    padding-top: var(--rui-dimension-x4);
+    padding-bottom: var(--rui-dimension-x5)
+}
+.seed-dialog__backdrop--skipAnimation_false:is([data-state="open"], [data-open]) {
+    animation: seed-enter;
+    animation-timing-function: var(--rui-timing-function-enter);
+    animation-duration: var(--rui-duration-d2);
+    --rui-enter-translate-x: 0;
+    --rui-enter-translate-y: 0;
+    --rui-enter-opacity: 0;
+    --rui-enter-scale: 1
+}
+.seed-dialog__backdrop--skipAnimation_false:not(:is([data-state="open"], [data-open])) {
+    animation: seed-exit;
+    animation-timing-function: var(--rui-timing-function-exit);
+    animation-duration: var(--rui-duration-d2);
+    animation-fill-mode: forwards;
+    --rui-exit-translate-x: 0;
+    --rui-exit-translate-y: 0;
+    --rui-exit-opacity: 0;
+    --rui-exit-scale: 1
+}
+.seed-dialog__content--skipAnimation_false:is([data-state="open"], [data-open]) {
+    animation: seed-enter;
+    animation-timing-function: var(--rui-timing-function-enter-expressive);
+    animation-duration: var(--rui-duration-d4);
+    --rui-enter-translate-x: 0;
+    --rui-enter-translate-y: 0;
+    --rui-enter-opacity: 0;
+    --rui-enter-scale: 1.3
+}
+.seed-dialog__content--skipAnimation_false:not(:is([data-state="open"], [data-open])) {
+    animation: seed-exit;
+    animation-timing-function: var(--rui-timing-function-exit);
+    animation-duration: var(--rui-duration-d2);
+    animation-fill-mode: forwards;
+    --rui-exit-translate-x: 0;
+    --rui-exit-translate-y: 0;
+    --rui-exit-opacity: 0;
+    --rui-exit-scale: 1
+}

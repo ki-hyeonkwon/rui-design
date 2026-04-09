@@ -1,0 +1,169 @@
+.seed-list-item__root {
+    box-sizing: border-box;
+    border: none;
+    font-family: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    display: flex;
+    width: 100%;
+    isolation: isolate;
+    padding-left: var(--rui-dimension-spacing-x-global-gutter);
+    padding-right: var(--rui-dimension-spacing-x-global-gutter);
+    padding-top: var(--rui-dimension-x3);
+    padding-bottom: var(--rui-dimension-x3);
+    --rui-box-align-items: center;
+    align-items: var(--rui-box-align-items);
+}
+.seed-list-item__prefix {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    --rui-box-padding-right: var(--rui-dimension-x3);
+    padding-right: var(--rui-box-padding-right);
+    --rui-focus-ring: none;
+    --rui-icon-size: 22px;
+    --rui-icon-color: var(--rui-color-fg-neutral);
+}
+.seed-list-item__prefix:is(:disabled, [disabled], [data-disabled]) {
+    --rui-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-list-item__suffix {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    --rui-box-position: initial;
+    position: var(--rui-box-position);
+    --rui-box-gap: var(--rui-dimension-x1);
+    gap: var(--rui-box-gap);
+    --rui-focus-ring: none;
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral-subtle);
+    --rui-icon-size: 18px;
+    --rui-icon-color: var(--rui-color-fg-neutral-subtle);
+}
+.seed-list-item__suffix:is(:disabled, [disabled], [data-disabled]) {
+    --rui-icon-color: var(--rui-color-fg-disabled);
+}
+.seed-list-item__content {
+    display: inline-flex;
+    box-sizing: border-box;
+    text-align: start;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    --rui-box-gap: var(--rui-dimension-x0_5);
+    gap: var(--rui-box-gap);
+    --rui-box-padding-right: var(--rui-dimension-x2_5);
+    padding: 0 var(--rui-box-padding-right) 0 0;
+    text-decoration: none;
+}
+.seed-list-item__content::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: var(--rui-dimension-x0_5) solid transparent;
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+    transition: outline-color var(--rui-duration-d3) var(--rui-timing-function-easing);
+}
+.seed-list-item__content:is(:focus, [data-focus]) {
+    outline: none;
+}
+.seed-list-item__content:is(:focus-visible, [data-focus-visible])::after {
+    outline: var(--rui-dimension-x0_5) solid var(--rui-color-stroke-focus-ring);
+    outline-offset: calc(var(--rui-dimension-x0_5) * -1);
+}
+.seed-list-item__content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition-property: background-color, left, right, border-radius;
+    transition-duration: var(--rui-duration-color-transition);
+    transition-timing-function: var(--rui-timing-function-easing);
+}
+@media (hover: hover) {
+    .seed-list-item__content:is(button, a):not(:is(:disabled, [disabled], [data-disabled])):is(:hover, [data-hover])::before {
+        background-color: var(--rui-color-bg-transparent-pressed);
+        left: var(--rui-dimension-x1_5);
+        right: var(--rui-dimension-x1_5);
+        border-radius: var(--list-item-border-radius, var(--rui-dimension-x2_5));
+    }
+}
+@media (hover: none) {
+    .seed-list-item__content:is(button, a):not(:is(:disabled, [disabled], [data-disabled])):is(:active, [data-active])::before {
+        background-color: var(--rui-color-bg-transparent-pressed);
+        left: var(--rui-dimension-x1_5);
+        right: var(--rui-dimension-x1_5);
+        border-radius: var(--list-item-border-radius, var(--rui-dimension-x2_5));
+    }
+}
+@media (hover: hover) {
+    .seed-list-item__content:not(:is(:disabled, [disabled], [data-disabled]))[data-hover]::before {
+        background-color: var(--rui-color-bg-transparent-pressed);
+        left: var(--rui-dimension-x1_5);
+        right: var(--rui-dimension-x1_5);
+        border-radius: var(--list-item-border-radius, var(--rui-dimension-x2_5));
+    }
+}
+@media (hover: none) {
+    .seed-list-item__content:not(:is(:disabled, [disabled], [data-disabled]))[data-active]::before {
+        background-color: var(--rui-color-bg-transparent-pressed);
+        left: var(--rui-dimension-x1_5);
+        right: var(--rui-dimension-x1_5);
+        border-radius: var(--list-item-border-radius, var(--rui-dimension-x2_5));
+    }
+}
+.seed-list-item__title {
+    flex-shrink: 0;
+    font-size: var(--rui-font-size-t5);
+    line-height: var(--rui-line-height-t5);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral);
+}
+.seed-list-item__title:is(:disabled, [disabled], [data-disabled]) {
+    color: var(--rui-color-fg-disabled);
+}
+.seed-list-item__detail {
+    font-size: var(--rui-font-size-t3);
+    line-height: var(--rui-line-height-t3);
+    font-weight: var(--rui-font-weight-regular);
+    color: var(--rui-color-fg-neutral-subtle);
+}
+.seed-list-item__detail:is(:disabled, [disabled], [data-disabled]) {
+    color: var(--rui-color-fg-disabled);
+}
+.seed-list-item__content--highlighted_true::before {
+    background-color: var(--rui-color-bg-brand-weak);
+}
+@media (hover: hover) {
+    .seed-list-item__content--highlighted_true:is(button, a):not(:is(:disabled, [disabled], [data-disabled])):is(:hover, [data-hover])::before {
+        background-color: var(--rui-color-bg-brand-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-list-item__content--highlighted_true:is(button, a):not(:is(:disabled, [disabled], [data-disabled])):is(:active, [data-active])::before {
+        background-color: var(--rui-color-bg-brand-weak-pressed);
+    }
+}
+@media (hover: hover) {
+    .seed-list-item__content--highlighted_true:not(:is(:disabled, [disabled], [data-disabled]))[data-hover]::before {
+        background-color: var(--rui-color-bg-brand-weak-pressed);
+    }
+}
+@media (hover: none) {
+    .seed-list-item__content--highlighted_true:not(:is(:disabled, [disabled], [data-disabled]))[data-active]::before {
+        background-color: var(--rui-color-bg-brand-weak-pressed);
+    }
+}

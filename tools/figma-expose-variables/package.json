@@ -1,0 +1,21 @@
+{
+  "name": "@rui/figma-expose-variables",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "test": "bun tsc && bun build",
+    "tsc": "tsc --noEmit -p .",
+    "build": "bun bundle --minify",
+    "bundle": "bun apply-manifest && esbuild src/main.mts --target=es2016 --bundle --outfile=dist/main.js",
+    "dev": "bun apply-manifest && concurrently -n tsc,build 'bun tsc --preserveWatchOutput --watch' 'bun bundle --watch'",
+    "apply-manifest": "rm -rf dist && mkdir dist && cp src/manifest.json dist"
+  },
+  "dependencies": {
+    "@create-figma-plugin/utilities": "^4.0.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.123.0",
+    "concurrently": "^9.1.2",
+    "esbuild": "^0.27.0"
+  }
+}

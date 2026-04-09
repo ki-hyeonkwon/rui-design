@@ -1,0 +1,20 @@
+{
+  "name": "@rui/rootage-artifacts",
+  "version": "1.2.6",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/rootage"
+  },
+  "scripts": {
+    "rootage:generate": "bun rootage json-schema ./components"
+  },
+  "main": "package.json",
+  "files": [
+    "*.yaml",
+    "components/*.yaml"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

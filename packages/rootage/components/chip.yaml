@@ -1,0 +1,267 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: chip
+  name: Chip
+  lastUpdated: 25-07-17
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+          cornerRadius:
+            type: dimension
+          strokeColor:
+            type: color
+          strokeWidth:
+            type: dimension
+          height:
+            type: dimension
+          paddingX:
+            type: dimension
+          minWidth:
+            type: dimension
+          colorDuration:
+            type: duration
+          colorTimingFunction:
+            type: cubicBezier
+          opacity:
+            type: number
+      label:
+        properties:
+          color:
+            type: color
+          fontSize:
+            type: dimension
+          lineHeight:
+            type: dimension
+          fontWeight:
+            type: number
+          paddingX:
+            type: dimension
+      prefixIcon:
+        description: Icon, Avatar, Image를 넣을 수 있습니다. 들어오는 요소에 따라 좌측 여백이 달라집니다.
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+          paddingLeft:
+            type: dimension
+      prefixAvatar:
+        properties:
+          size:
+            type: dimension
+      suffixIcon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+          paddingRight:
+            type: dimension
+      icon:
+        properties:
+          color:
+            type: color
+          size:
+            type: dimension
+    variants:
+      variant:
+        values:
+          solid:
+            description: 기본 스타일입니다.
+          outlineStrong:
+            description: 명확한 구분이 필요한 경우 사용합니다.
+          outlineWeak:
+            description: Selection 사용 시 주목도가 낮은 스타일로 권장됩니다.
+  definitions:
+    base:
+      enabled:
+        root:
+          colorDuration: $duration.color-transition
+          colorTimingFunction: $timing-function.easing
+          cornerRadius: $radius.full
+        prefixIcon:
+          paddingLeft: $dimension.x1_5
+        prefixAvatar:
+          size: $dimension.x6
+        suffixIcon:
+          paddingRight: $dimension.x1_5
+        label:
+          fontWeight: $font-weight.medium
+          paddingX: $dimension.x1_5
+        icon:
+          color: $color.fg.neutral
+
+    variant=solid:
+      enabled:
+        root:
+          color: $color.bg.neutral-weak-alpha
+        label:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.neutral-weak-alpha-pressed
+      disabled:
+        root:
+          opacity: 0.5
+      selected:
+        root:
+          color: $color.bg.neutral-inverted
+        label:
+          color: $color.fg.neutral-inverted
+        prefixIcon:
+          color: $color.fg.neutral-inverted
+        suffixIcon:
+          color: $color.fg.neutral-inverted
+        icon:
+          color: $color.fg.neutral-inverted
+      selected, pressed:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+      selected, disabled:
+        root:
+          opacity: 0.5
+
+    variant=outlineStrong:
+      enabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+          strokeWidth: 1px
+        label:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          opacity: 0.5
+      selected:
+        root:
+          color: $color.bg.neutral-inverted
+        label:
+          color: $color.fg.neutral-inverted
+        prefixIcon:
+          color: $color.fg.neutral-inverted
+        suffixIcon:
+          color: $color.fg.neutral-inverted
+        icon:
+          color: $color.fg.neutral-inverted
+      selected, pressed:
+        root:
+          color: $color.bg.neutral-inverted-pressed
+      selected, disabled:
+        root:
+          opacity: 0.5
+
+    variant=outlineWeak:
+      enabled:
+        root:
+          color: $color.bg.transparent
+          strokeColor: $color.stroke.neutral-muted
+          strokeWidth: 1px
+        label:
+          color: $color.fg.neutral
+        prefixIcon:
+          color: $color.fg.neutral
+        suffixIcon:
+          color: $color.fg.neutral
+        icon:
+          color: $color.fg.neutral
+      pressed:
+        root:
+          color: $color.bg.transparent-pressed
+      disabled:
+        root:
+          opacity: 0.5
+      selected:
+        root:
+          strokeColor: $color.stroke.neutral-contrast
+          color: $color.bg.neutral-weak
+      selected, pressed:
+        root:
+          color: $color.bg.neutral-weak-pressed
+      selected, disabled:
+        root:
+          opacity: 0.5
+
+    size=small:
+      enabled:
+        root:
+          height: 32px
+          paddingX: $dimension.x1_5
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+        prefixIcon:
+          size: $dimension.x3_5
+        suffixIcon:
+          size: $dimension.x3_5
+        prefixAvatar:
+          size: $dimension.x5
+        icon:
+          size: $dimension.x3_5
+    size=medium:
+      enabled:
+        root:
+          height: 36px
+          paddingX: $dimension.x2
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+        prefixIcon:
+          size: $dimension.x4
+        suffixIcon:
+          size: $dimension.x3_5
+        prefixAvatar:
+          size: $dimension.x6
+        icon:
+          size: $dimension.x4
+    size=large:
+      enabled:
+        root:
+          height: 40px
+          paddingX: $dimension.x2_5
+        label:
+          fontSize: $font-size.t4
+          lineHeight: $line-height.t4
+        prefixIcon:
+          size: $dimension.x4
+          paddingLeft: $dimension.x1_5
+        suffixIcon:
+          size: $dimension.x4
+        prefixAvatar:
+          size: $dimension.x7
+        icon:
+          size: $dimension.x4
+
+    layout=withText: {}
+
+    size=small,layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x8
+    size=medium,layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x9
+    size=large,layout=iconOnly:
+      enabled:
+        root:
+          minWidth: $dimension.x10

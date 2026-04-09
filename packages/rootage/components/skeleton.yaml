@@ -1,0 +1,73 @@
+# yaml-language-server: $schema=./schema.json
+kind: ComponentSpec
+metadata:
+  id: skeleton
+  name: Skeleton
+data:
+  schema:
+    slots:
+      root:
+        properties:
+          color:
+            type: color
+          cornerRadius:
+            type: dimension
+      shimmer:
+        properties:
+          duration:
+            type: duration
+          timingFunction:
+            type: cubicBezier
+          gradient:
+            type: gradient
+    variants:
+      tone:
+        values:
+          neutral:
+            description: 데이터를 불러오는 일반적인 로딩 경험에 사용합니다.
+          magic:
+            description: AI 기능이 활성화되었을 때 사용합니다.
+      radius:
+        values:
+          "0":
+            description: 기본값입니다.
+          "8":
+            description: 텍스트 콘텐츠에 사용합니다.
+          "16":
+            description: 카드 및 썸네일에 사용합니다.
+          full:
+            description: Avatar(원형) 콘텐츠에 사용합니다.
+  definitions:
+    base:
+      enabled:
+        shimmer:
+          duration: 1.5s
+          timingFunction: $timing-function.easing
+    radius=0:
+      enabled:
+        root:
+          cornerRadius: 0px
+    radius=8:
+      enabled:
+        root:
+          cornerRadius: 8px
+    radius=16:
+      enabled:
+        root:
+          cornerRadius: 16px
+    radius=full:
+      enabled:
+        root:
+          cornerRadius: $radius.full
+    tone=neutral:
+      enabled:
+        root:
+          color: $color.palette.gray-200
+        shimmer:
+          gradient: $gradient.shimmer-neutral
+    tone=magic:
+      enabled:
+        root:
+          color: $color.bg.magic-weak
+        shimmer:
+          gradient: $gradient.shimmer-magic

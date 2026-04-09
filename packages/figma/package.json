@@ -1,0 +1,56 @@
+{
+  "name": "@rui/figma",
+  "version": "1.3.9",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/figma"
+  },
+  "author": "Asher <asher@daangn.com>",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js",
+      "require": "./lib/index.cjs"
+    },
+    "./codegen": {
+      "types": "./lib/codegen/index.d.ts",
+      "import": "./lib/codegen/index.js",
+      "require": "./lib/codegen/index.cjs"
+    },
+    "./codegen/targets/react": {
+      "types": "./lib/codegen/targets/react/index.d.ts",
+      "import": "./lib/codegen/targets/react/index.js",
+      "require": "./lib/codegen/targets/react/index.cjs"
+    }
+  },
+  "main": "./lib/index.cjs",
+  "sideEffects": false,
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "bunchee",
+    "lint:publish": "bun publint",
+    "sync-entities": "find src/entities/data/__generated__ -mindepth 1 -maxdepth 1 ! -name 'archive' -exec rm -rf {} + 2>/dev/null; bun figma-extractor src/entities/data/__generated__"
+  },
+  "dependencies": {
+    "@rui/css": "1.2.7",
+    "change-case": "^5.4.4",
+    "ts-pattern": "^5.7.0"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.123.0",
+    "@figma/rest-api-spec": "^0.36.0",
+    "@karrotmarket/icon-data": "^1.22.0",
+    "@rui/figma-extractor": "^1.1.0",
+    "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

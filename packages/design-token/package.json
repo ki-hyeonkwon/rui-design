@@ -1,0 +1,34 @@
+{
+  "name": "@rui/design-token",
+  "version": "1.0.4",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "packages/design-token"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "require": "./lib/index.cjs",
+      "import": "./lib/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "lib"
+  ],
+  "scripts": {
+    "prepack": "rm -rf lib && bun run build",
+    "build": "bun build.mjs && tsc",
+    "dev": "bun dev.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}

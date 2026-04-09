@@ -1,0 +1,45 @@
+.seed-skeleton {
+    display: inline-block;
+    box-sizing: border-box;
+    overflow: hidden;
+    --rui-box-width: initial;
+    --rui-box-height: initial;
+    width: var(--rui-box-width);
+    height: var(--rui-box-height);
+}
+.seed-skeleton::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    animation-fill-mode: forwards;
+    animation-name: slide-x;
+    animation-duration: 1.5s;
+    animation-timing-function: var(--rui-timing-function-easing);
+    animation-iteration-count: infinite;
+}
+.seed-skeleton--radius_0 {
+    border-radius: 0px;
+}
+.seed-skeleton--radius_8 {
+    border-radius: 8px;
+}
+.seed-skeleton--radius_16 {
+    border-radius: 16px;
+}
+.seed-skeleton--radius_full {
+    border-radius: var(--rui-radius-full);
+}
+.seed-skeleton--tone_neutral {
+    background: var(--rui-color-palette-gray-200);
+}
+.seed-skeleton--tone_neutral::after {
+    background-image: linear-gradient(90deg, var(--rui-gradient-shimmer-neutral));
+}
+.seed-skeleton--tone_magic {
+    background: var(--rui-color-bg-magic-weak);
+}
+.seed-skeleton--tone_magic::after {
+    background-image: linear-gradient(90deg, var(--rui-gradient-shimmer-magic));
+}

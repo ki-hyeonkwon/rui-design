@@ -1,0 +1,71 @@
+import { useFlow, type StaticActivityComponentType } from "@stackflow/react/future";
+import {
+  AppBar,
+  AppBarBackButton,
+  AppBarLeft,
+  AppBarMain,
+  AppBarIconButton,
+  AppBarRight,
+} from "rui/ui/app-bar";
+import { AppScreen, AppScreenContent } from "rui/ui/app-screen";
+import { IconHouseLine } from "@karrotmarket/react-monochrome-icon";
+
+import { avatarStackVariantMap } from "@rui/css/recipes/avatar-stack";
+
+import { ComponentAnalyzer } from "../components/ComponentAnalyzer";
+import { Avatar, AvatarStack, type AvatarStackProps } from "rui/ui/avatar";
+import { IdentityPlaceholder } from "rui/ui/identity-placeholder";
+
+const initialVariants = {
+  size: "64",
+} satisfies AvatarStackProps;
+
+declare module "@stackflow/config" {
+  interface Register {
+    ActivityAvatarStack: {};
+  }
+}
+
+const ActivityAvatarStack: StaticActivityComponentType<"ActivityAvatarStack"> = () => {
+  const { push } = useFlow();
+
+  return (
+    <AppScreen>
+      <AppBar>
+        <AppBarLeft>
+          <AppBarBackButton />
+        </AppBarLeft>
+        <AppBarMain>Avatar</AppBarMain>
+        <AppBarRight>
+          <AppBarIconButton aria-label="Home" onClick={() => push("ActivityHome", {})}>
+            <IconHouseLine />
+          </AppBarIconButton>
+        </AppBarRight>
+      </AppBar>
+      <AppScreenContent>
+        <ComponentAnalyzer
+          variantsMap={avatarStackVariantMap}
+          initialVariants={initialVariants}
+          render={(variants) => (
+            <AvatarStack {...variants}>
+              <Avatar
+                src="https://avatars.githubusercontent.com/u/54893898?v=4"
+                fallback={<IdentityPlaceholder />}
+              />
+              <Avatar
+                src="https://avatars.githubusercontent.com/u/102206520?v=4"
+                fallback={<IdentityPlaceholder />}
+              />
+              <Avatar
+                src="https://avatars.githubusercontent.com/u/56245920?v=4"
+                fallback={<IdentityPlaceholder />}
+              />
+            </AvatarStack>
+          )}
+        />
+      </AppScreenContent>
+    </AppScreen>
+  );
+};
+
+export default ActivityAvatarStack;

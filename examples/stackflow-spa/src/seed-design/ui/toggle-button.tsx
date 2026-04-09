@@ -1,0 +1,24 @@
+import {
+  ToggleButton as SeedToggleButton,
+  type ToggleButtonProps as SeedToggleButtonProps,
+} from "@rui/react";
+import * as React from "react";
+import { LoadingIndicator } from "./loading-indicator";
+
+export interface ToggleButtonProps extends SeedToggleButtonProps {}
+
+/**
+ * @see https://rui-design.io/react/components/toggle-button
+ * If `asChild` is enabled, manual handling of `LoadingIndicator` is required.
+ */
+export const ToggleButton = React.forwardRef<
+  React.ElementRef<typeof SeedToggleButton>,
+  ToggleButtonProps
+>(({ loading = false, children, ...otherProps }, ref) => {
+  return (
+    <SeedToggleButton ref={ref} loading={loading} {...otherProps}>
+      {loading && !otherProps.asChild ? <LoadingIndicator>{children}</LoadingIndicator> : children}
+    </SeedToggleButton>
+  );
+});
+ToggleButton.displayName = "ToggleButton";

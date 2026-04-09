@@ -1,0 +1,38 @@
+{
+  "name": "@rui/qvism-cli",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rui-design/rui-design.git",
+    "directory": "ecosystem/qvism/cli"
+  },
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "bin": {
+    "qvism": "./bin/qvism.mjs"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "qvism:build": "bun run build",
+    "lint:publish": "bun publint"
+  },
+  "dependencies": {
+    "@rui/qvism-core": "0.0.0",
+    "cac": "^6.7.14",
+    "cosmiconfig": "^9.0.0",
+    "fs-extra": "^11.3.0"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "typescript": "^5.9.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

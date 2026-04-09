@@ -1,0 +1,166 @@
+---
+title: Configuration
+description: rui.json 설정을 안내해요.
+---
+
+
+## rui.json 만들기
+
+`rui.json` 파일은 CLI로 생성하거나 직접 추가할 수 있어요.
+
+<Tabs items={['CLI로 추가', '직접 추가']}>
+<Tab value="CLI로 추가">
+
+<Card icon={<IconTerminal />} title="CLI" href="/react/getting-started/cli/commands#init">
+
+CLI로 rui을 추가하는 방법을 알아봐요.
+
+</Card>
+
+</Tab>
+
+<Tab value="직접 추가">
+아래 파일을 프로젝트 루트에 생성해주세요.
+
+```json title="rui.json"
+{
+  "rsc": false,
+  "tsx": true,
+  "path": "./rui",
+  "telemetry": true
+}
+```
+</Tab>
+</Tabs>
+
+## 기본 형태
+
+```json title="rui.json"
+{
+  "rsc": false,
+  "tsx": true,
+  "path": "./rui",
+  "telemetry": true
+}
+```
+
+<Callout>
+`rui.json`은 엄격하게 파싱돼요. 문서에 없는 키를 임의로 추가하면 CLI 실행 시 오류가 날 수 있어요.
+</Callout>
+
+## 옵션 한눈에 보기
+
+| 옵션 | 타입 | 기본값 | 설명 |
+|------|------|--------|------|
+| `path` | `string` | 없음 (init에서는 `./rui`) | 스니펫이 생성될 루트 경로 |
+| `rsc` | `boolean` | `false` | React Server Components 사용 여부에 맞춰 `"use client"` 유지/제거 |
+| `tsx` | `boolean` | `true` | 생성 파일을 TypeScript(`.ts/.tsx`) 또는 JavaScript(`.js/.jsx`)로 변환 |
+| `telemetry` | `boolean` | `true` | 익명 사용 데이터 수집 여부 |
+| `$schema` | `string` | 선택값 | JSON 스키마 힌트용 필드 (CLI 동작에는 영향 없음) |
+
+### path
+
+`path`는 스니펫이 생성되는 루트 디렉토리예요.
+
+`add`/`add-all` 실행 시 파일은 `path` 아래에 레지스트리 ID와 스니펫 내부 경로 기준으로 생성돼요.
+고정된 폴더 구조가 아니라, 선택한 항목에 따라 구조가 달라져요.
+
+```json title="rui.json"
+{
+  "path": "./rui"
+}
+```
+
+<Files>
+  <Folder name="rui (path)" defaultOpen>
+    <Folder name="ui (레지스트리 ID 예시)" defaultOpen>
+      <File name="action-button.tsx" />
+      <File name="tabs.tsx" />
+    </Folder>
+    <Folder name="breeze (레지스트리 ID 예시)" defaultOpen>
+      <File name="animate-number.tsx" />
+    </Folder>
+    <Folder name="utils (스니펫 내부 경로 예시)" defaultOpen>
+      <File name="classnames.ts" />
+    </Folder>
+  </Folder>
+</Files>
+
+### rsc
+
+[React Server Components](https://react.dev/reference/rsc/server-components)를 사용할지 설정해요.
+
+스니펫에 이미 있는 `"use client"` directive를 유지할지 결정해요.
+- `true`: `"use client"`를 유지해요.
+- `false`: 파일 최상단의 `"use client"`를 제거해요.
+
+```json title="rui.json"
+{
+  "rsc": true | false // default: false
+}
+```
+
+### tsx
+
+TypeScript를 사용할지 설정해요.
+
+`false`로 설정하면 `.ts/.tsx` 파일이 `.js/.jsx`로 변환돼요.
+
+```json title="rui.json"
+{
+  "tsx": true | false // default: true
+}
+```
+
+### telemetry
+
+텔레메트리 데이터 수집 여부를 설정해요.
+
+RUI Design CLI는 개선을 위해 익명 사용 데이터를 수집해요.
+프로젝트 경로, 파일 내용, 소스 코드는 수집하지 않아요.
+
+```json title="rui.json"
+{
+  "telemetry": true | false // default: true
+}
+```
+
+#### 우선순위
+
+아래 순서로 텔레메트리 활성화 여부를 판단해요.
+1. `DISABLE_TELEMETRY=true` 환경 변수
+2. `SEED_DISABLE_TELEMETRY=true` 환경 변수
+3. `rui.json`의 `telemetry`
+4. 기본값 `true`
+
+#### 수집되는 데이터 예시
+- 실행 이벤트: `init`, `add`, `add-all`, `compat`
+- 실행 통계: 실행 시간(`duration_ms`), 추가된 항목 수
+- 설정 정보: `tsx`, `rsc`, `include_deprecated`, `yes_option` 등
+
+#### 수집되지 않는 데이터
+- 프로젝트 경로, 생성된 파일 경로
+- 스니펫 파일 내용
+- 소스 코드
+- 개인 식별 정보
+
+#### 비활성화 방법
+
+**1. rui.json 설정**
+```json
+{
+  "telemetry": false
+}
+```
+
+**2. 환경 변수 설정**
+```bash
+export DISABLE_TELEMETRY=true
+# 또는
+export SEED_DISABLE_TELEMETRY=true
+```
+
+### $schema
+
+`$schema`는 선택적으로 추가할 수 있는 문자열 필드예요.
+현재 CLI 동작에는 영향을 주지 않고, 에디터의 JSON 자동완성/검증 용도로만 사용할 수 있어요.

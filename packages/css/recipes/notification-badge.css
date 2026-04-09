@@ -1,0 +1,29 @@
+.seed-notification-badge {
+    display: inline-flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    text-transform: none;
+    text-align: start;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none;
+    background-color: var(--rui-color-bg-brand-solid);
+    color: var(--rui-color-palette-static-white)
+}
+.seed-notification-badge--size_small {
+    width: 6px;
+    height: 6px;
+    border-radius: var(--rui-radius-full)
+}
+.seed-notification-badge--size_large {
+    min-height: 18px;
+    border-radius: var(--rui-radius-full);
+    padding-left: var(--rui-dimension-x1);
+    padding-right: var(--rui-dimension-x1);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: var(--rui-font-size-t1);
+    line-height: var(--rui-line-height-t1);
+    font-weight: var(--rui-font-weight-bold)
+}
