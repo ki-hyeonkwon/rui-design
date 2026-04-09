@@ -4,8 +4,11 @@ import { aiIntegrationOptions } from "../layout.config";
 import { RootProvider } from "fumadocs-ui/provider/next";
 import DefaultSearchDialog from "@/components/search/search";
 import { TAGS } from "@/app/api/search/constants";
+import { aiIntegrationSource } from "@/app/source";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default async function Layout({ children }: { children: ReactNode }) {
+  const transformedTree = await aiIntegrationSource.getTransformedAiIntegrationPageTree();
+
   return (
     <RootProvider
       search={{
@@ -16,7 +19,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         },
       }}
     >
-      <DocsLayout {...aiIntegrationOptions}>{children}</DocsLayout>
+      <DocsLayout {...aiIntegrationOptions} tree={transformedTree}>
+        {children}
+      </DocsLayout>
     </RootProvider>
   );
 }

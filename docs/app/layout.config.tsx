@@ -1,10 +1,3 @@
-import {
-  aiIntegrationSource,
-  breezeSource,
-  lynxSource,
-  reactSource,
-  docsSource,
-} from "@/app/source";
 import { ReactVersionSwitcher } from "@/components/react-version-switcher";
 import { IconSparkle2, IconTree } from "@karrotmarket/react-multicolor-icon";
 import clsx from "clsx";
@@ -116,31 +109,26 @@ export const baseOptions: Omit<DocsLayoutProps, "tree"> = {
   },
 };
 
-export const docsOptions: DocsLayoutProps = {
+export const docsOptions: Omit<DocsLayoutProps, "tree"> = {
   ...baseOptions,
-  tree: await docsSource.getTransformedPageTree(),
 };
 
-export const reactOptions: DocsLayoutProps = {
+export const reactOptions: Omit<DocsLayoutProps, "tree"> = {
   ...baseOptions,
   sidebar: {
     ...baseOptions.sidebar,
     banner: <ReactVersionSwitcher />,
   },
-  tree: await reactSource.getTransformedReactPageTree(),
 };
 
-export const lynxOptions: DocsLayoutProps = {
+export const lynxOptions: Omit<DocsLayoutProps, "tree"> = {
   ...baseOptions,
-  tree: await lynxSource.getTransformedLynxPageTree(),
 };
 
-export const breezeOptions: DocsLayoutProps = {
+export const breezeOptions: Omit<DocsLayoutProps, "tree"> = {
   ...baseOptions,
-  tree: await breezeSource.getTransformedBreezePageTree(),
 };
 
-export const aiIntegrationOptions: DocsLayoutProps = {
+export const aiIntegrationOptions: Omit<DocsLayoutProps, "tree"> = {
   ...baseOptions,
-  tree: await aiIntegrationSource.getTransformedAiIntegrationPageTree(),
 };

@@ -5,8 +5,11 @@ import { RootProvider } from "fumadocs-ui/provider/next";
 import DefaultSearchDialog from "@/components/search/search";
 import { TAGS } from "@/app/api/search/constants";
 import { MotionProvider } from "@/components/MotionProvider";
+import { breezeSource } from "@/app/source";
 
-export default function Layout({ children }: { children: ReactNode }) {
+export default async function Layout({ children }: { children: ReactNode }) {
+  const transformedTree = await breezeSource.getTransformedBreezePageTree();
+
   return (
     <MotionProvider>
       <RootProvider
@@ -18,7 +21,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           },
         }}
       >
-        <DocsLayout {...breezeOptions}>{children}</DocsLayout>
+        <DocsLayout {...breezeOptions} tree={transformedTree}>
+          {children}
+        </DocsLayout>
       </RootProvider>
     </MotionProvider>
   );
