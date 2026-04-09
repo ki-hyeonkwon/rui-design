@@ -1,14 +1,20 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it } from "bun:test";
 import { LoadingIndicator } from "./LoadingIndicator";
-import { PendingButtonProvider } from "./usePendingButton";
+import { PendingButtonProvider, usePendingButton } from "./usePendingButton";
+
+function LoadingProvider(props: { children: React.ReactNode }) {
+  const value = usePendingButton({ loading: true, disabled: false });
+
+  return <PendingButtonProvider value={value}>{props.children}</PendingButtonProvider>;
+}
 
 describe("LoadingIndicator", () => {
   it("renders the rui loading indicator class", () => {
     const { container } = render(
-      <PendingButtonProvider value={{ loading: true, disabled: false, stateProps: { "data-loading": "" } }}>
+      <LoadingProvider>
         <LoadingIndicator indicator={<svg data-testid="spinner" />}>Action Button</LoadingIndicator>
-      </PendingButtonProvider>,
+      </LoadingProvider>,
     );
 
     const loadingIndicator = container.querySelector(".rui-loading-indicator");
@@ -19,11 +25,11 @@ describe("LoadingIndicator", () => {
 
   it("keeps the hidden placeholder span for button width preservation", () => {
     const { container } = render(
-      <PendingButtonProvider value={{ loading: true, disabled: false, stateProps: { "data-loading": "" } }}>
+      <LoadingProvider>
         <LoadingIndicator indicator={<svg data-testid="spinner" />}>
           <span data-testid="label">Action Button</span>
         </LoadingIndicator>
-      </PendingButtonProvider>,
+      </LoadingProvider>,
     );
 
     const loadingIndicator = container.querySelector(".rui-loading-indicator");
