@@ -33,6 +33,7 @@ async function main() {
   const INTER_PACKAGE_DELAY = 10_000;
   const BATCH_COOLDOWN = 120_000;
   let publishedCount = 0;
+  const failedPackages: string[] = [];
 
   for (const workspacePackage of publishOrder) {
     const packageName = workspacePackage.manifest.name!;
@@ -49,7 +50,13 @@ async function main() {
       continue;
     }
 
-    await publishWithRetry(workspacePackage, { packageName, version: localVersion });
+    const ok = await publishWithRetry(workspacePackage, { packageName, version: localVersion });
+
+    if (!ok) {
+      failedPackages.push(packageName);
+      continue;
+    }
+
     publishedCount += 1;
 
     if (publishedCount % BATCH_SIZE === 0) {
@@ -58,6 +65,13 @@ async function main() {
     } else {
       await sleep(INTER_PACKAGE_DELAY);
     }
+  }
+
+  if (failedPackages.length > 0) {
+    console.error(
+      `\n⚠️  ${failedPackages.length} package(s) failed to publish (rate limited):\n${failedPackages.map((n) => `  - ${n}`).join("\n")}\nRe-run the workflow later to retry these packages.`,
+    );
+    process.exitCode = 1;
   }
 }
 
@@ -163,7 +177,7 @@ function getPublishedVersion(packageName: string) {
 async function publishWithRetry(
   workspacePackage: WorkspacePackage,
   options: { packageName: string; version: string },
-) {
+): Promise<boolean> {
   const retryDelays = [30_000, 60_000, 180_000, 600_000] as const;
 
   for (let attempt = 0; attempt <= retryDelays.length; attempt += 1) {
@@ -175,7 +189,7 @@ async function publishWithRetry(
 
     if (result.status === 0) {
       console.log(`published ${options.packageName}@${options.version}`);
-      return;
+      return true;
     }
 
     const combinedOutput = `${result.stdout}\n${result.stderr}`;
@@ -184,7 +198,7 @@ async function publishWithRetry(
       console.log(
         `skip ${options.packageName}@${options.version} (already published during retry window)`,
       );
-      return;
+      return true;
     }
 
     const delay = retryDelays[attempt];
@@ -197,6 +211,13 @@ async function publishWithRetry(
       continue;
     }
 
+    if (isRateLimitError(combinedOutput)) {
+      console.error(
+        `giving up on ${options.packageName}@${options.version} after ${retryDelays.length} retries (rate limited)`,
+      );
+      return false;
+    }
+
     throw new Error(
       [
         `Failed to publish ${options.packageName}@${options.version}`,
@@ -207,6 +228,8 @@ async function publishWithRetry(
         .join("\n"),
     );
   }
+
+  return false;
 }
 
 function isRateLimitError(output: string) {
