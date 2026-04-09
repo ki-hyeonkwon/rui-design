@@ -21,12 +21,18 @@ async function main() {
   const phase1PackageSet = new Set<string>(PHASE1_SMOKE_INSTALL_PACKAGE_NAMES);
   const publicPackages = [...workspacePackages.values()].filter(
     (workspacePackage) =>
-      isPublicRidedsPackage(workspacePackage) && phase1PackageSet.has(workspacePackage.manifest.name!),
+      isPublicRidedsPackage(workspacePackage) &&
+      phase1PackageSet.has(workspacePackage.manifest.name!),
   );
   const packagesByName = new Map(
     publicPackages.map((workspacePackage) => [workspacePackage.manifest.name!, workspacePackage]),
   );
   const publishOrder = topologicallySortPublicPackages(publicPackages, packagesByName);
+
+  const BATCH_SIZE = 5;
+  const INTER_PACKAGE_DELAY = 10_000;
+  const BATCH_COOLDOWN = 120_000;
+  let publishedCount = 0;
 
   for (const workspacePackage of publishOrder) {
     const packageName = workspacePackage.manifest.name!;
@@ -44,8 +50,14 @@ async function main() {
     }
 
     await publishWithRetry(workspacePackage, { packageName, version: localVersion });
-    // Spread registry writes out to reduce npm rate limiting.
-    await sleep(2_000);
+    publishedCount += 1;
+
+    if (publishedCount % BATCH_SIZE === 0) {
+      console.log(`batch cooldown: published ${publishedCount} packages, waiting 2 minutes...`);
+      await sleep(BATCH_COOLDOWN);
+    } else {
+      await sleep(INTER_PACKAGE_DELAY);
+    }
   }
 }
 
@@ -132,6 +144,11 @@ function getPublishedVersion(packageName: string) {
     return null;
   }
 
+  if (isRateLimitError(combinedOutput)) {
+    console.warn(`rate limited querying ${packageName}; treating as unpublished`);
+    return null;
+  }
+
   throw new Error(
     [
       `Failed to query published version for ${packageName}`,
@@ -147,7 +164,7 @@ async function publishWithRetry(
   workspacePackage: WorkspacePackage,
   options: { packageName: string; version: string },
 ) {
-  const retryDelays = [15_000, 30_000, 60_000] as const;
+  const retryDelays = [30_000, 60_000, 180_000, 600_000] as const;
 
   for (let attempt = 0; attempt <= retryDelays.length; attempt += 1) {
     const result = spawnSync("npm", ["publish", "--access", "public"], {
@@ -164,7 +181,9 @@ async function publishWithRetry(
     const combinedOutput = `${result.stdout}\n${result.stderr}`;
 
     if (combinedOutput.includes("You cannot publish over the previously published versions")) {
-      console.log(`skip ${options.packageName}@${options.version} (already published during retry window)`);
+      console.log(
+        `skip ${options.packageName}@${options.version} (already published during retry window)`,
+      );
       return;
     }
 
