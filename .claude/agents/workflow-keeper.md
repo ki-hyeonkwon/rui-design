@@ -18,9 +18,9 @@ tools: Read, Glob, Grep, Bash
 
 | 패턴 | 소스 | 재생성 명령어 |
 |------|------|--------------|
-| `packages/css/**/*.ts` | rootage | `bun generate` |
-| `packages/css/**/*.css` | rootage | `bun generate` |
-| `**/vars.ts` | qvism-preset | `bun generate` |
+| `packages/css/**/*.ts` | rootage | `bun generate:all` |
+| `packages/css/**/*.css` | rootage | `bun generate:all` |
+| `**/vars.ts` | qvism-preset | `bun generate:all` |
 | `docs/registry/*.json` | registry-*.ts | `bun --filter @rui/docs generate:registry` |
 | `**/dist/**` | 소스 코드 | `bun build` |
 | `**/__generated__/**` | 다양한 소스 | 해당 generate 스크립트 |
@@ -39,7 +39,7 @@ tools: Read, Glob, Grep, Bash
 ```text
 [필수 순서]
 1. packages/rootage/components/[name]/*.yaml 수정
-2. bun generate (CSS 생성)
+2. bun generate:all (CSS 및 문서 생성)
 3. packages/react-headless/[name]/ 수정 (필요시)
 4. packages/react/[name]/ 수정 (필요시)
 5. docs/ 문서 업데이트
@@ -51,7 +51,7 @@ tools: Read, Glob, Grep, Bash
 ```text
 [필수 순서]
 1. packages/rootage/tokens/*.yaml 수정
-2. bun generate (vars.ts 생성)
+2. bun generate:all (vars.ts 생성 포함)
 3. 사용처 업데이트
 ```
 
@@ -78,7 +78,7 @@ git diff --cached --name-only | grep -E "(packages/css/|vars\.ts|registry.*\.jso
 ```bash
 # rootage 변경 후 css 재생성 필요 여부
 git diff --name-only HEAD | grep "packages/rootage/" && \
-  echo "⚠️ bun generate 실행 필요"
+  echo "⚠️ bun generate:all 실행 필요"
 ```
 
 ## 출력 형식
@@ -98,7 +98,7 @@ git diff --name-only HEAD | grep "packages/rootage/" && \
   → packages/rootage/components/button/ui-spec.yaml
 
 수정 후 재생성:
-  $ bun generate
+  $ bun generate:all
 ```
 
 ### 동기화 필요 시
@@ -112,7 +112,7 @@ git diff --name-only HEAD | grep "packages/rootage/" && \
   - packages/rootage/components/chip/*.yaml
 
 필요한 명령어:
-  $ bun generate
+  $ bun generate:all
 
 영향받는 파일:
   - packages/css/components/chip/

@@ -1,6 +1,6 @@
 ---
 name: breeze-developer
-description: Seed Breeze 컴포넌트 개발 전문가. 유용한 UI 유틸리티 컴포넌트를 개발하고 CSS Modules로 스타일링합니다.
+description: RUI Breeze 컴포넌트 개발 전문가. 유용한 UI 유틸리티 컴포넌트를 개발하고 CSS Modules로 스타일링합니다.
 tools: Read, Write, Edit, MultiEdit, Bash, Glob, Grep, TodoWrite
 ---
 
@@ -70,5 +70,5 @@ Math.floor(Math.random() * 99999) + 1;
 ## 주의사항
 
 - 컴포넌트는 독립적으로 작동해야 함
-- SEED 디자인 시스템에 종속되지 않도록 설계
+- RUI 내부 구현 세부에 과도하게 종속되지 않도록 설계
 - 복사해서 바로 사용 가능한 코드 제공

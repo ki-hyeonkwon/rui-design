@@ -32,7 +32,7 @@ const GENERATED_FILE_PATTERNS: Array<{
   {
     pattern: /packages\/qvism-preset\/src\/vars\/.*/,
     source: "packages/rootage/",
-    regenerateCommand: "bun generate",
+    regenerateCommand: "bun generate:all",
   },
   {
     pattern: /docs\/registry\/.*\.json$/,

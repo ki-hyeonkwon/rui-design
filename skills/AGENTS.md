@@ -1,11 +1,11 @@
 ## 디렉토리 개요
-레포 루트 기준 `skills/`는 rui 스킬의 단일 원천(source of truth)이다. Claude가 읽는 `.claude/skills`와 `.claude/plugins/rui/skills`는 이 디렉토리를 참조하도록 연결한다.
+레포 루트 기준 `skills/`는 rui 스킬의 단일 원천(source of truth)이다. Claude가 읽는 `.claude/skills`와 현재 플러그인 경로인 `.claude/plugins/seed-design/skills`는 이 디렉토리를 참조하도록 연결한다.
 
 ## 파일 작성 컨벤션
 - 스킬 디렉토리명은 kebab-case를 사용한다.
 - 각 스킬 디렉토리는 반드시 `SKILL.md`를 포함한다.
 - 부가 자료는 `references/`, `scripts/`, `assets/` 하위에 둔다.
-- Claude 훅 규칙 파일은 루트의 `skill-rules.json`으로 관리한다.
+- Claude 훅 규칙 파일은 `skills/skill-rules.json`을 원본으로 관리한다.
 - 신규/수정은 이 디렉토리에서만 수행하고, 반영 시 `.agents/skills`로 복사한다.
 
 ## 코드 작성 컨벤션
