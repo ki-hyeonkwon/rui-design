@@ -19,7 +19,7 @@
     "ecosystem:build": "ultra -r --build --filter 'ecosystem/*' build",
     "lint:publish": "bun --filter '*' lint:publish",
     "lint:knip": "knip",
-    "release": "bun packages:build && bun changeset publish",
+    "release": "bun packages:build && bun ./scripts/publish-public-packages.ts",
     "version": "changeset version && bun install --no-immutable",
     "format:all": "bun biome format --fix",
     "test:all": "bun test",

@@ -3,7 +3,6 @@ name: Release
 on:
   push:
     branches:
-      - main
       - dev
     paths:
       - "packages/**"
@@ -13,11 +12,13 @@ on:
       - ".github/actions/setup/action.yml"
   workflow_dispatch:
 
-concurrency: ${{ github.workflow }}-${{ github.ref }}
+concurrency:
+  group: ${{ github.workflow }}-publish
+  cancel-in-progress: false
 
 jobs:
   release:
-    name: Release Seed Design Packages
+    name: Release RUI Design Packages
     runs-on: ubuntu-latest
     permissions:
       contents: write
